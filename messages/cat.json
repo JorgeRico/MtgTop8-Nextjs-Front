@@ -1,0 +1,204 @@
+{
+    "home" : {
+            "title" : "MTG Legacy stats - Lligues i Tornejos Magic The Gathering - CAT Legacy",
+            "description" : "Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+            "text-title"  : "Lligues MTG - Legacy",
+            "text-description" : "Tornejos de Catalunya - Magic The Gathering",
+            "Current Leagues" : "Lligues actuals - Legacy",
+            "Past Leagues" : "Lligues pasades - Legacy"
+        },
+"footer" : {
+        "copyright" : "The literal and graphical information presented on this site about Magic: The Gathering, including card images and mana symbols, is copyright Wizards of the Coast, LLC. Scryfall is not produced by or endorsed by Wizards of the Coast",
+        "Magic The Gathering Tournaments Stats" : "Estadistiques de tornejos de Magic The Gathering",
+        "Legacy Catalan Tournaments" : "Tornejos de Legacy de Catalunya",
+        "Explore current leagues, view standings and decks" : "Explora les lligues actuals, revisa tops i baralles guanyadores",
+        "Explore past leagues, view standings and decks" : "Explora les lligues pasades, revisa tops i baralles guanyadores",
+        "check on instagram - mtg - legacy.cat" : "Segueix-nos a instagram - Magic The Gathering - legacy.cat",
+        "check on x - mtg - legacy.cat" : "Segueix-nos a x - Magic The Gathering - legacy.cat",
+        "check on youtube channel - mtg - catmagiclegacy" : "Segueix-nos al nostre canal de youtube - Magic The Gathering - catmagiclegacy",
+        "check on twitch channel - mtg - catmagiclegacy" : "Segueix-nos al nostre canal de Twitch - Magic the gathering - catmagiclegacy",
+        "Change language" : "Canvia l'idioma",
+        "Follow us" : "Segueix-nos"
+    },
+
+
+        
+    "tournaments" : {
+        "title" : {
+            "players" : "jugadors"
+        },
+        "players" : {
+            "Top Players" : "Top Jugadors"
+        },
+        "block" : {
+            "Date" : "Data",
+            "players" : "jugadors",
+            "View Tournament" : "Veure el Torneig"
+        }
+    },
+    "deck" : {
+        "Sideboard": "Sideboard",
+        "Planeswalkers" : "Planeswalkers",
+        "Creatures" : "Criatures",
+        "Instants" : "Instantanis",
+        "Sorceries" : "Conjurs",
+        "Artifacts" : "Artefactes",
+        "Enchantments" : "Encantaments",
+        "Lands" : "Terres",
+        "Maindeck total cards" : "Maindeck total cartes",
+        "Sideboard total cards" : "Sideboard total cartes"
+    },
+    "league" : {
+        "Format" : "Format",
+        "View league"  : "View Veure lliga",
+        "tournament" : {
+            "Location" : "Ubicació",
+            "Tournaments" : "Tornejos",
+            "Format" : "Format",
+            "Average Players" : "Mitjana de jugadors",
+            "Classification" : "Clasificació"
+        },
+        "list" : {
+            "Tournaments" : "Tornejos"
+        }
+    },
+    "player" : {
+        "View deck" : "Veure baralla",
+        "Player" : "Jugador",
+        "Deck" : "Baralla"
+    },
+    "cards" : {
+        "modal" : {
+            "Close" : "Tancar"
+        }
+    },
+    "stats" : {                                
+        "Top Players" : "Top Jugadors",
+        "Card Stats" : "Estadistiques Cartes",
+        "Top Cards" : "Top Cartes",
+        "Top Creatures" : "Top Criatures",
+        "Top Instants" : "Top Instantanis",
+        "Top Sorceries" : "Top Conjurs",
+        "Top Artifacts" : "Top Artefactes",
+        "Top Enchantments" : "Top Encantaments",
+        "Top Planeswalkers" : "Top Planeswalkers",
+        "Top Lands" : "Top Terres",
+        "Deck Stats" : "Estadistiques Baralla",
+        "Top Mainboard Cards" : "Top Mainboard Cartes",
+        "Top Sideboard Cards" : "Top Sideboard Cartes",
+        "Stats" : "Estadistiques",
+        "All tournament stats" : "Estadistiques de tots els tornejos",
+        "Most played cards and main deck and sideboard card stats" : "Cartes més jugades y estadistiques de les cartes del main i del sideboard",
+        "Total" : "Total",
+        "Name" : "Nom",
+        "Player Stats" : "Estadistiques jugadors",
+        "View" : "Veure"
+    },
+    "header" : {
+        "Contact us" : "Contacte",
+        "Decklist" : "Decklist",
+        "mtg legacy" : "mtg legacy",
+        "breadcrumb" : {
+            "tournament" : "torneig",
+            "league" : "lliga"
+        }
+    },
+    "errors" : {
+        "league" : {
+            "Sorry, now we don't have tournaments registered for this league" : "Ho sentim molt, no tenim cap torneig registrat per aquesta lliga"
+        },
+        "contact" : {
+            "Pay 3 extra manas and try again" : "Paga 3 manas extres i prova de nou.",
+            "Please, fill all data fields" : "Si us plau, omple tots els camps del formulari."
+        },
+        "decklist" : {
+            "Incorrect form - fill form correctly" : "Formulari incorrecte - Si us plau, omple el formulari correctament",
+            "Incorrect form - card incorrect format" : "Formulari incorrecte - Cartes amb un format incorrecte",
+            "Incorrect sideboard - Maximum 15 cards" : "Formulari incorrecte - Sideboard - Màxim de 15 cartes"
+        },
+        "stats" : {
+            "Sorry, now we don't have tournaments registered for this league" : "Ho sentim molt, no tenim cap torneig registrat per aquesta lliga"
+        }
+    },
+    "forms" : {
+        "decklist" : {
+            "Your name" : "Nom",
+            "Your surname" : "Cognom",
+            "Event name" : "Event",
+            "Your Deck name" : "Nom de la baralla",
+            "Your mainboard cards" : "Cartes del mainboard",
+            "Your sideboard cards" : "Cartes del sideboard",
+            "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
+            "Generate Decklist pdf" : "Generar pdf",
+            "Name" : "Nom",
+            "Surname" : "Cognom",
+            "Deck name" : "Deck Nom de la baralla",
+            "Mainboard cards" : "Cartes del Mainboard",
+            "Sideboard cards" : "Cartes del Sideboard"
+        },
+        "contact" : {
+            "Your name" : "Nom",
+            "Name" : "Nom",
+            "Your email" : " Email",
+            "E-mail" : "E-mail",
+            "Your message" : "Missatge",
+            "Submit" : "Enviar",
+            "Message" : "Missatge"
+        }
+    },
+    "success" : {
+        "Thank you for contacting us," : "Gràcies per contactar amb nosaltres,",
+        "Your query is in the stack. In response we'll play a brainstorm" : "La teva consulta es posa a la pila.  En resposta jugarem un brainstorm"
+    },
+    
+    "alt-tags" : {
+        "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
+        "legacy mtg cat mail" : "legacy mtg cat correu electronic",
+        "mtg legacy image" : "mtg legacy imatge",
+        "mtg stats" : "mtg stats",
+        "mtg location" : "mtg ubicació",
+        "mtg stats list image" : "mtg stats llista d'imatges",
+        "Cup Champion" : "Copa de campió"
+    },
+    "seo-tags" : {
+        "tournaments" : {
+            "title" : "Mtg Stats - Tornejos Magic The Gathering - CAT Legacy",
+            "description" : "Tournament - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+            "stats" : "Estadistiques de Tornejos"
+        },
+        "not-found" : {
+            "title" : "MTG Legacy stats - Pàgina no trobada - CAT Legacy",
+            "description" : "Pàgina no trobada - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+            "breadcrumb" : "404 pàgina no trobada",
+            "text-title"  : "Error 404 - Pàgina no trobada",
+            "text-description" : "Aquesta direcció no existeix.  Si us plau, revisa-la i prova de nou."
+        },
+        "leagues" : {
+            "title" : "Mtg Stats - Lligues Magic The Gathering - CAT Legacy",
+            "description" : "League - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+            "stats" : "Estadistiques de la temporada"
+        },
+        
+        "past-leagues" : {
+            "text-description" : "Explora les lligues pasades, revisa tops i baralles guanyadores",
+            "pagination" : "Lligues pasades"
+        },
+        "current-leagues" : {
+            "text-description" : "Explora les lligues actuals, revisa tops i baralles guanyadores",
+            "pagination" : "Lligues actuals"
+        },
+        "decklist-form" : {
+            "title" : "MTG Legacy stats - Formulari creació de llista de baralla - Lligues i Tornejos Magic The Gathering - CAT Legacy",
+            "description" : "Baralla - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+            "text-title" : "Generador de Baralla",
+            "text-description" : "Crea la llista de la teva baralla en un pdf"
+        },
+        "contact-form" : {
+            "title" : "MTG Legacy stats - Formulari de Contact - Lligues i Tornejos Magic The Gathering - Legacy - Catalunya - CAT Legacy",
+            "description" : "Contacte - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+            "text-title" : "Contacta amb nosaltres",
+            "text-description" : "Consulta informació sobre lligues, clasificacions i tot el que vulguis . . .",
+            "breadcrumb" : "contacte"
+        }
+    }
+}

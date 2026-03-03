@@ -1,0 +1,203 @@
+{
+    "home" : {
+        "title" : "MTG Legacy stats - MAgic The Gathering - CAT Legacy",
+        "description" : "Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
+        "text-title"  : "MTG Leagues - Legacy",
+        "text-description" : "Torneos de Magic The Gathering en Cataluña",
+        "Current Leagues" : "Ligas actuales - Legacy",
+        "Past Leagues" : "Ligas pasadas - Legacy"
+    },
+
+    "footer" : {
+        "copyright" : "The literal and graphical information presented on this site about Magic: The Gathering, including card images and mana symbols, is copyright Wizards of the Coast, LLC. Scryfall is not produced by or endorsed by Wizards of the Coast",
+        "Magic The Gathering Tournaments Stats" : "Magic The Gathering Estadisticas de torneos",
+        "Legacy Catalan Tournaments" : "Torneos de Magic The Gathering - Legacy en Cataluña",
+        "Explore current leagues, view standings and decks" : "Explora las ligas actuales, revisa tops y barajas",
+        "Explore past leagues, view standings and decks" : "Explora las ligas pasadas, revisa tops y barajas",
+        "check on instagram - mtg - legacy.cat" : "Siguenos en instagram - magic the gathering - legacy.cat",
+        "check on x - mtg - legacy.cat" : "Siguenos en x - magic the gathering - legacy.cat",
+        "check on youtube channel - mtg - catmagiclegacy" : "Sigue nuestro canal de youtube - magic the gathering - catmagiclegacy",
+        "check on twitch channel - mtg - catmagiclegacy" : "Siguenos en nuestro canal de twitch - magic the gathering - catmagiclegacy",
+        "Change language" : "Cambia el idioma",
+        "Follow us" : "Siguenos"
+    },
+
+    "tournaments" : {
+        "title" : {
+            "players" : "jugadores"
+        },
+        "players" : {
+            "Top Players" : "Top Jugadores"
+        },
+        "block" : {
+            "Date" : "Fecha",
+            "players" : "jugadores",
+            "View Tournament" : "Ver Torneo"
+        }
+    },
+    "deck" : {
+        "Sideboard": "Sideboard",
+        "Planeswalkers" : "Planeswalkers",
+        "Creatures" : "Criaturas",
+        "Instants" : "Instantaneos",
+        "Sorceries" : "Conjuros",
+        "Artifacts" : "Artefactos",
+        "Enchantments" : "Encantamientos",
+        "Lands" : "Tierras",
+        "Maindeck total cards" : "Maindeck total cartas",
+        "Sideboard total cards" : "Sideboard total cartas"
+    },
+    "league" : {
+        "Format" : "Formato",
+        "View league"  : "Ver liga",
+        "tournament" : {
+            "Location" : "Ubicación",
+            "Tournaments" : "Torneos",
+            "Format" : "Formato",
+            "Average Players" : "Media de jugadores",
+            "Classification" : "Clasificación"
+        },
+        "list" : {
+            "Tournaments" : "Torneos"
+        }
+    },
+    "player" : {
+        "View deck" : "Ver baraja",
+        "Player" : "Jugador",
+        "Deck" : "Baraja"
+    },
+    "cards" : {
+        "modal" : {
+            "Close" : "Cerrar"
+        }
+    },
+    "stats" : {                                
+        "Top Players" : "Top Jugadores",
+        "Card Stats" : "Estadisticas de cartas",
+        "Top Cards" : "Top Cartas",
+        "Top Creatures" : "Top Criaturas",
+        "Top Instants" : "Top Instantaneos",
+        "Top Sorceries" : "Top Conjuros",
+        "Top Artifacts" : "Top Artefactos",
+        "Top Enchantments" : "Top Encantamientos",
+        "Top Planeswalkers" : "Top Planeswalkers",
+        "Top Lands" : "Top Tierras",
+        "Deck Stats" : "Estadisticas de las barajas",
+        "Top Mainboard Cards" : "Top Mainboard Cartas",
+        "Top Sideboard Cards" : "Top Sideboard Cartas",
+        "Stats" : "Estadisticas",
+        "All tournament stats" : "Estadisticas de todos los torneos",
+        "Most played cards and main deck and sideboard card stats" : "Estadisticas de las cartas más jugadas, tanto en el mainboard y en el sideboard",
+        "Total" : "Total",
+        "Name" : "Nombre",
+        "Player Stats" : "Estadisticas jugadores",
+        "View" : "Ver"
+    },
+    "header" : {
+        "Contact us" : "Contacto",
+        "Decklist" : "Decklist",
+        "mtg legacy" : "mtg legacy",
+        "breadcrumb" : {
+            "tournament" : "torneo",
+            "league" : "liga"
+        }
+    },
+    "errors" : {
+        "league" : {
+            "Sorry, now we don't have tournaments registered for this league" : "Lo siento, no tenemos torneos registrados para esta liga"
+        },
+        "contact" : {
+            "Pay 3 extra manas and try again" : "Paga 3 manas extra y vuelve a probar.",
+            "Please, fill all data fields" : "Por favor, rellena todos los datos del formulario."
+        },
+        "decklist" : {
+            "Incorrect form - fill form correctly" : "Formulario incorrecto - rellena el formulario correctamente",
+            "Incorrect form - card incorrect format" : "Formulario incorrecto - cartas con formato incorrecto",
+            "Incorrect sideboard - Maximum 15 cards" : "Sideboard incorrecto - Máximo 15 cartas"
+        },
+        "stats" : {
+            "Sorry, now we don't have tournaments registered for this league" : "Lo siento, no tenemos torneos registrados para esta liga"
+        }
+    },
+    "forms" : {
+        "decklist" : {
+            "Your name" : "Nombre",
+            "Your surname" : "Apellido",
+            "Event name" : "Evento",
+            "Your Deck name" : "Nombre de la baraja",
+            "Your mainboard cards" : "Cartas mainboard",
+            "Your sideboard cards" : "Cartas sideboard",
+            "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
+            "Generate Decklist pdf" : "Genera Decklist pdf",
+            "Name" : "Nombre",
+            "Surname" : "Apellido",
+            "Deck name" : "Baraja",
+            "Mainboard cards" : "Cartas Mainboard",
+            "Sideboard cards" : "Cartas Sideboard"
+        },
+        "contact" : {
+            "Your name" : "Nombre",
+            "Name" : "Nombre",
+            "Your email" : "E-mail",
+            "E-mail" : "E-mail",
+            "Your message" : "Mensaje",
+            "Submit" : "Enviar",
+            "Message" : "Mensaje"
+        }
+    },
+    "success" : {
+        "Thank you for contacting us," : "Gracias por contactar con nosotros,",
+        "Your query is in the stack. In response we'll play a brainstorm" : "Tu petición está en la pila. En respuesta jugaremos un brainstorm"
+    },
+    
+    "alt-tags" : {
+        "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
+        "legacy mtg cat mail" : "legacy mtg cat mail",
+        "mtg legacy image" : "mtg legacy image",
+        "mtg stats" : "mtg stats",
+        "mtg location" : "mtg location",
+        "mtg stats list image" : "mtg stats list image",
+        "Cup Champion" : "Cup Champion"
+    },
+    "seo-tags" : {
+        "tournaments" : {
+            "title" : "MTG Stats - Torneos Magic The Gathering - CAT Legacy",
+            "description" : "Torneos - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
+            "stats" : "Estadisticas de torneos"
+        },
+        "not-found" : {
+            "title" : "MTG Legacy stats - Página no encontrada - CAT Legacy",
+            "description" : "Página no encontrada - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
+            "breadcrumb" : "404 página no encontrada",
+            "text-title"  : "Error 404 - Página no encontrada",
+            "text-description" : "La url no existe.  Por favor, revisa la dirección y prueba de nuevo."
+        },
+        "leagues" : {
+            "title" : "MTG Stats - Ligas de Magic The Gathering - CAT Legacy",
+            "description" : "League - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
+            "stats" : "Estadisticas de la temporada"
+        },
+       
+        "past-leagues" : {
+            "text-description" : "Explora las ligas pasadas, revisa tops y barajas",
+            "pagination" : "Ligas pasadas"
+        },
+        "current-leagues" : {
+            "text-description" : "Explora las ligas actuales, revisa tops y barajas",
+            "pagination" : "Ligas actuales"
+        },
+        "decklist-form" : {
+            "title" : "MTG Legacy stats - CAT Legacy - Decklist",
+            "description" : "Decklist - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
+            "text-title" : "Decklist generator",
+            "text-description" : "Imprime tu baraja de torneo en un fichero pdf"
+        },
+        "contact-form" : {
+            "title" : "MTG Legacy stats - CAT Legacy - Contact",
+            "description" : "Contacto - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
+            "text-title" : "Contactanos",
+            "text-description" : "Pregunta por información sobre ligas, clasificaciones o cualquier cosa que se te ocurra . . .",
+            "breadcrumb" : "contacto"
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.logos {
+    width: 100px;
+}
+
+.topLine {
+    height: 5px;
+    background: var(--background-black);
+}
+
+.padBox {
+    padding: 15px 20px;
+}
+
+.padTournamentBox {
+    padding: 10px 15px;
+}
+
+.padStatsBox {
+    padding: 15px 20px;
+}
+
+.paddingStatsBox {
+    padding: 15px 5px 15px 15px;
+}
+
+@media (max-width: 645px) {
+    .tournamentDescription {
+        max-width: 200px;
+    }
+}
+
+.headerInfo {
+    width: 230px;
+}
+
+.padheader {
+    padding: 5px 20px;
+}
+
+@media (max-width: 590px) {
+    .tournamentDescription {
+        margin-bottom: 20px;
+    }
+
+    .listButton {
+        width: 100%;
+    }
+
+    .headerRight {
+        display: none;
+    }
+
+    .headerInfo {
+        width: auto;
+        margin-right: 25px;
+    }
+
+    .header {
+        & .pBody {
+            padding: 25px 0px 25px 20px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .tournamentDescription {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+.cardImgUrl {
+    height: 27px;
+    width: 20px;
+}
+
+.radius-50 {
+    border-radius: 50px;
+}
+
+.cupBox {
+    width: 25px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.cupIcon {
+    filter: invert(1);
+    /* opacity: 0.6; */
+}
+
+button { 
+    padding: 10px 20px; 
+}

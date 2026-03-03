@@ -1,0 +1,40 @@
+.languageBox {
+    display: flex;
+    gap: 10px;
+    padding: 1px;
+    border-radius: 5px;
+    flex-direction: column;
+    width: 125px;
+    margin-bottom: 2px;
+    align-items: center;
+
+    & button {
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: normal;
+        transition: all 0.2s ease;
+        color: white;
+        border: 1px solid #545151;
+        background: none;
+        padding: 8px 20px;
+    }
+
+    & button.selected {
+        background: var(--background-even);
+    }
+
+    & .uppercase {
+        text-transform: uppercase;
+    }
+}
+
+.header {
+    & .languageBox.dropdown {
+        position: absolute;
+        z-index: 1;
+    } 
+}
