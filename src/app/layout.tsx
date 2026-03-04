@@ -14,7 +14,7 @@ export default async function RootLayout({children}: LayoutProps<'/'>) {
                 <body>
                     <Header></Header>
                     <main className="overflowHidden container">
-                        <section className="left w100 overflowHidden">
+                        <section className="left w100 overflowHidden pBody">
                             {children}
                         </section>
                     </main>
