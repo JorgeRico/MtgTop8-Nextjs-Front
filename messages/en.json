@@ -7,21 +7,37 @@
         "Current Leagues" : "Current Leagues - Legacy",
         "Past Leagues" : "Past Leagues - Legacy"
     },
-
+    "header" : {
+        "Contact us" : "Contact",
+        "Decklist" : "Decklist",
+        "mtg legacy" : "mtg legacy",
+        "breadcrumb" : {
+            "tournament" : "tournament",
+            "league" : "league"
+        }
+    },
     "footer" : {
         "copyright" : "The literal and graphical information presented on this site about Magic: The Gathering, including card images and mana symbols, is copyright Wizards of the Coast, LLC. Scryfall is not produced by or endorsed by Wizards of the Coast",
         "Magic The Gathering Tournaments Stats" : "Magic The Gathering Tournaments Stats",
         "Legacy Catalan Tournaments" : "Legacy Catalan Tournaments",
         "Explore current leagues, view standings and decks" : "Explore current leagues, view standings and decks",
         "Explore past leagues, view standings and decks" : "Explore past leagues, view standings and decks",
-        "check on instagram - mtg - legacy.cat" : "check on instagram - mtg - legacy.cat",
-        "check on x - mtg - legacy.cat" : "check on x - mtg - legacy.cat",
+        "check on instagram" : "check on instagram - mtg - legacy.cat",
+        "check on x" : "check on x - mtg - legacy.cat",
         "check on youtube channel - mtg - catmagiclegacy" : "check on youtube channel - mtg - catmagiclegacy",
         "check on twitch channel - mtg - catmagiclegacy" : "check on twitch channel - mtg - catmagiclegacy",
         "Change language" : "Change language",
         "Follow us" : "Follow us"
     },
-
+    "alt-tags" : {
+        "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
+        "legacy mtg cat mail" : "legacy mtg cat mail",
+        "mtg legacy image" : "mtg legacy image",
+        "mtg stats" : "mtg stats",
+        "mtg location" : "mtg location",
+        "mtg stats list image" : "mtg stats list image",
+        "Cup Champion" : "Cup Champion"
+    },
 
 
 
@@ -96,15 +112,7 @@
         "Player Stats" : "Player Stats",
         "View" : "View"
     },
-    "header" : {
-        "Contact us" : "Contact",
-        "Decklist" : "Decklist",
-        "mtg legacy" : "mtg legacy",
-        "breadcrumb" : {
-            "tournament" : "tournament",
-            "league" : "league"
-        }
-    },
+    
     "errors" : {
         "league" : {
             "Sorry, now we don't have tournaments registered for this league" : "Sorry, now we don't have tournaments registered for this league"
@@ -150,18 +158,10 @@
     },
     "success" : {
         "Thank you for contacting us," : "Thank you for contacting us,",
-        "Your query is in the stack. In response we'll play a brainstorm" : "Your query is in the stack. In response we'll play a brainstorm"
+        "Your query is in the stack In response we'll play a brainstorm" : "Your query is in the stack. In response we'll play a brainstorm"
     },
     
-    "alt-tags" : {
-        "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
-        "legacy mtg cat mail" : "legacy mtg cat mail",
-        "mtg legacy image" : "mtg legacy image",
-        "mtg stats" : "mtg stats",
-        "mtg location" : "mtg location",
-        "mtg stats list image" : "mtg stats list image",
-        "Cup Champion" : "Cup Champion"
-    },
+    
     "seo-tags" : {
         "tournaments" : {
             "title" : "Mtg Stats - Legacy Tournament",

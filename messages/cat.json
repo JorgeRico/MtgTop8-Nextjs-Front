@@ -1,26 +1,43 @@
 {
     "home" : {
-            "title" : "MTG Legacy stats - Lligues i Tornejos Magic The Gathering - CAT Legacy",
-            "description" : "Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
-            "text-title"  : "Lligues MTG - Legacy",
-            "text-description" : "Tornejos de Catalunya - Magic The Gathering",
-            "Current Leagues" : "Lligues actuals - Legacy",
-            "Past Leagues" : "Lligues pasades - Legacy"
-        },
-"footer" : {
+        "title" : "MTG Legacy stats - Lligues i Tornejos Magic The Gathering - CAT Legacy",
+        "description" : "Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+        "text-title"  : "Lligues MTG - Legacy",
+        "text-description" : "Tornejos de Catalunya - Magic The Gathering",
+        "Current Leagues" : "Lligues actuals - Legacy",
+        "Past Leagues" : "Lligues pasades - Legacy"
+    },
+    "header" : {
+        "Contact us" : "Contacte",
+        "Decklist" : "Decklist",
+        "mtg legacy" : "mtg legacy",
+        "breadcrumb" : {
+            "tournament" : "torneig",
+            "league" : "lliga"
+        }
+    },
+    "footer" : {
         "copyright" : "The literal and graphical information presented on this site about Magic: The Gathering, including card images and mana symbols, is copyright Wizards of the Coast, LLC. Scryfall is not produced by or endorsed by Wizards of the Coast",
         "Magic The Gathering Tournaments Stats" : "Estadistiques de tornejos de Magic The Gathering",
         "Legacy Catalan Tournaments" : "Tornejos de Legacy de Catalunya",
         "Explore current leagues, view standings and decks" : "Explora les lligues actuals, revisa tops i baralles guanyadores",
         "Explore past leagues, view standings and decks" : "Explora les lligues pasades, revisa tops i baralles guanyadores",
-        "check on instagram - mtg - legacy.cat" : "Segueix-nos a instagram - Magic The Gathering - legacy.cat",
-        "check on x - mtg - legacy.cat" : "Segueix-nos a x - Magic The Gathering - legacy.cat",
+        "check on instagram" : "Segueix-nos a instagram - Magic The Gathering - legacy.cat",
+        "check on x" : "Segueix-nos a x - Magic The Gathering - legacy.cat",
         "check on youtube channel - mtg - catmagiclegacy" : "Segueix-nos al nostre canal de youtube - Magic The Gathering - catmagiclegacy",
         "check on twitch channel - mtg - catmagiclegacy" : "Segueix-nos al nostre canal de Twitch - Magic the gathering - catmagiclegacy",
         "Change language" : "Canvia l'idioma",
         "Follow us" : "Segueix-nos"
     },
-
+    "alt-tags" : {
+        "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
+        "legacy mtg cat mail" : "legacy mtg cat correu electronic",
+        "mtg legacy image" : "mtg legacy imatge",
+        "mtg stats" : "mtg stats",
+        "mtg location" : "mtg ubicació",
+        "mtg stats list image" : "mtg stats llista d'imatges",
+        "Cup Champion" : "Copa de campió"
+    },
 
         
     "tournaments" : {
@@ -94,15 +111,7 @@
         "Player Stats" : "Estadistiques jugadors",
         "View" : "Veure"
     },
-    "header" : {
-        "Contact us" : "Contacte",
-        "Decklist" : "Decklist",
-        "mtg legacy" : "mtg legacy",
-        "breadcrumb" : {
-            "tournament" : "torneig",
-            "league" : "lliga"
-        }
-    },
+    
     "errors" : {
         "league" : {
             "Sorry, now we don't have tournaments registered for this league" : "Ho sentim molt, no tenim cap torneig registrat per aquesta lliga"
@@ -148,18 +157,10 @@
     },
     "success" : {
         "Thank you for contacting us," : "Gràcies per contactar amb nosaltres,",
-        "Your query is in the stack. In response we'll play a brainstorm" : "La teva consulta es posa a la pila.  En resposta jugarem un brainstorm"
+        "Your query is in the stack In response we'll play a brainstorm" : "La teva consulta es posa a la pila.  En resposta jugarem un brainstorm"
     },
     
-    "alt-tags" : {
-        "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
-        "legacy mtg cat mail" : "legacy mtg cat correu electronic",
-        "mtg legacy image" : "mtg legacy imatge",
-        "mtg stats" : "mtg stats",
-        "mtg location" : "mtg ubicació",
-        "mtg stats list image" : "mtg stats llista d'imatges",
-        "Cup Champion" : "Copa de campió"
-    },
+    
     "seo-tags" : {
         "tournaments" : {
             "title" : "Mtg Stats - Tornejos Magic The Gathering - CAT Legacy",
