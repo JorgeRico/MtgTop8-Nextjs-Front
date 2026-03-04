@@ -11,7 +11,7 @@ type Props = {
 // import {cookies} from 'next/headers';
 
 export default function LocaleSwitcher({changeLocaleAction}: Props) {
-    const locale = useLocale();
+    const locale = await getLocale();
 
     // async function changeLocaleAction(locale: Locale) {
     //     'use server';
