@@ -13,9 +13,11 @@ export default async function RootLayout({children}: LayoutProps<'/'>) {
             <html lang={locale}>
                 <body>
                     <Header></Header>
-                    <main className="overflowHidden container">
-                        <section className="left w100 overflowHidden pBody">
-                            {children}
+                    <main className="overflowHidden container pBody">
+                        <section className="left w100">
+                            <article className="pBody overflowHidden">
+                                {children}
+                            </article>
                         </section>
                     </main>
                     <Footer></Footer>
