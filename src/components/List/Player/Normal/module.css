@@ -1,0 +1,74 @@
+.playersBoxHeader, .playersBox {
+    width: 40em;
+}
+
+.playersBoxHeader{
+    background: var(--background-even);
+}
+
+.item {
+    display: flex;
+    justify-items: flex-start;
+    padding: 0 20px 0 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.viewDeck {
+    padding: 7px 15px 6px 15px;
+    
+    & button {
+        padding: 7px 15px;
+    }
+}
+
+@media (max-width: 691px) {
+    .playersBoxHeader {
+        display: none;
+    }
+    
+    .playersBox {
+        width: 96%;
+    }
+
+    .viewDeck {
+        width: 200px;
+        margin: 1px 48px 10px 48px;
+
+        & button {
+            width: 200px;
+            max-width: 200px;
+        }
+    }
+
+    .deckName {
+        width: 100%;
+        margin: 0 48px;
+    }
+
+    .tournaments {
+        & h2.f20 {
+            font-size: 18px;
+        }
+
+        & h2 {
+            & span {
+                padding-top: 3px;
+            }
+        }
+
+        & h2.f24 {
+            font-size: 20px;
+            
+            & span {
+                padding-top: 1px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .player {
+        width: auto;
+    }
+}

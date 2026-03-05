@@ -1,0 +1,51 @@
+.maindeck {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.sideboard {
+    width: 35%;
+}
+  
+.maindeck > .deckItems, .sideboard > .deckItems {
+    padding: 0 10px;
+    flex: 1 1 40%;
+    max-width: 350px;
+}
+
+h4 {
+    font-weight: 600;
+    background: var(--background-red);
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.cardItem {
+    padding: 5px 10px;
+}
+
+@media (max-width: 950px) {
+    .playerList, .maindeck {
+        width: 100%;
+    }
+    
+    .sideboard {
+        width: 100%;
+    }
+}
+
+@media (max-width: 620px) {
+    .maindeck > .deckItems {
+        flex: 1 1 100%;
+    }
+}
+
+.modalImg {
+    padding: 0;
+    float: left;
+    text-align: center;
+    margin-right: 15px;
+}

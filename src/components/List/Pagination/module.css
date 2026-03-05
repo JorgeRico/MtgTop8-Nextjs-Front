@@ -1,0 +1,64 @@
+.pagButton, .arrowButton, .current {
+    color: var(--text-primary);
+}
+
+.pagButton {
+    padding: 5px 8px;
+    margin-left: 10px;
+    background: none;
+    float: left;
+    border: 1px solid var(--color-gray);
+    border-radius: 3px;
+}
+
+.arrowButton {
+    padding: 4px;
+    margin-left: 8px;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.disabled {
+    pointer-events: none;
+    color: var(--text-grey);
+}
+
+.current {
+    background: var(--background-red);
+}
+
+.padPagination {
+    padding: 20px 10px;
+
+    & article {
+        float: left;
+    }
+}
+
+
+@media (max-width: 590px) {
+    .padPagination {
+        & article {
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .total, .pages {
+        display: none !important;
+    }
+
+    .padPagination {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    button {
+        margin-left: 10px;
+    }
+}
