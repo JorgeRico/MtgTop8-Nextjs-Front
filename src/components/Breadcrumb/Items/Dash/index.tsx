@@ -1,6 +1,6 @@
 const DashItemBreadcrumb: React.FC = () => {
     return (
-        <div className="left ml5">'/'</div>
+        <div className="left ml5">/</div>
     );
 }
 
