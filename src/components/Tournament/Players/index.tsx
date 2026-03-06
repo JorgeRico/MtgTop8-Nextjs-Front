@@ -1,0 +1,69 @@
+import { useState, useEffect } from "react";
+import endpoints from "@/services/endpoints.tsx";
+import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi.tsx';
+import PlayerList from "@/components/List/Player/Normal";
+import PlayersBlured from "@/components/List/Player/Fake";
+import Title from "@/components/Tournament/Title";
+import TournamentTitleBlured from "@/components/Tournament/Fake";
+import SubTitle from "@/components/HTag/SubTitle";
+import ListImage from "@/components/Icons/List";
+import { useTranslations } from 'next-intl';
+
+type MyComponentProps = {
+    id         : number;
+    tournament : PropTypes.object;
+}
+
+const TournamentPlayers: React.FC<MyComponentProps> = ({ id, tournament }) => {
+    const [ renderPlayers, setRenderPlayers] = useState([]);
+    const [ showPlayers, setShowPlayers ]    = useState(false);
+    const t                                  = useTranslations('tournaments');
+
+    useEffect(() => {
+        async function apiCall() {
+            await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_PLAYERS, id))
+            .then((response) => {
+                setRenderPlayers(response.data);
+                setShowPlayers(true);
+            })
+            .catch((err) => {
+                console.log('error tournament')
+            });
+        }
+
+        apiCall();
+    }, []);
+
+    return (
+        <>
+            {showPlayers === false ? (
+                <TournamentTitleBlured></TournamentTitleBlured>
+            ) : (
+                <Title tournament={tournament} isBlured={false}></Title>
+            )}
+            <section className="left w100 mt40 mb10">
+                <SubTitle title={
+                        <>
+                            <ListImage></ListImage>
+                            <span className="left ml10 mt3">{`${t('players.Top Players')} ${tournament.name ? '- ' + tournament.name : ''}`}</span>
+                        </>
+                    }
+                />
+            </section>
+            <section className="left w100 mb20">
+                {showPlayers === false ? (
+                        <PlayersBlured></PlayersBlured>
+                    ) : (
+                        <>
+                            {renderPlayers.length > 0 && (
+                                <PlayerList items={renderPlayers} isBlured={false} />
+                            )}
+                        </>
+                    )
+                }
+            </section>
+        </>
+    )
+}
+
+export default TournamentPlayers;

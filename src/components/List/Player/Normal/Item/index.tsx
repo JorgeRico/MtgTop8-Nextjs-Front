@@ -55,29 +55,31 @@ const TournamentPlayerItem: React.FC<MyComponentProps> = ({ item, index }) => {
     }
 
     return (
-        <section className="item left mb15 bg-footer border-red overflowHidden playersBox" id={'player-'+(index+1)}>
-            <BlockLine
-                position = {index+1}
-                player   = {item.name}
-                deck     = {item.deckName}
-            />
-            <div className="left viewDeck" onClick={() => handleCards((index+1), item.idDeck)}>
-                <Button buttonText={t('View deck')} id={'button-deck-'+(index+1)}/>
-            </div>
-        </section>
+        <>
+            <section className="item left mb15 bg-footer border-red overflowHidden playersBox" id={'player-'+(index+1)}>
+                <BlockLine
+                    position = {index+1}
+                    player   = {item.name}
+                    deck     = {item.deckName}
+                />
+                <div className="left viewDeck" onClick={() => handleCards((index+1), item.idDeck)}>
+                    <Button buttonText={t('View deck')} id={'button-deck-'+(index+1)}/>
+                </div>
+            </section>
 
-        <section className="left w100 clear"></section>
+            <section className="left w100 clear"></section>
 
-        <section className="left w100 none decklists mb20" id={'deck-'+(index+1)}>
-            <article className="deck overflowHidden">
-                {loading === true &&
-                    <BluredDeck></BluredDeck>
-                }
-                {renderDeckItems && (
-                    <Deck items={renderDeckItems} deckName={item.deckName} isBlured={false} />
-                )}
-            </article>
-        </section>
+            <section className="left w100 none decklists mb20" id={'deck-'+(index+1)}>
+                <article className="deck overflowHidden">
+                    {loading === true &&
+                        <BluredDeck></BluredDeck>
+                    }
+                    {renderDeckItems && (
+                        <Deck items={renderDeckItems} deckName={item.deckName} isBlured={false} />
+                    )}
+                </article>
+            </section>
+        </>
     )
 }
 

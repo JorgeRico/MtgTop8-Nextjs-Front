@@ -4,7 +4,6 @@ import statsTypes from "@/services/stats-types.tsx";
 import CardTypeList from "@/components/List/Deck/Normal/CardTypeList";
 import DeckCard from "@/components/List/Deck/Normal/Card";
 import { useTranslations } from 'next-intl';
-import DeckMainboard from '@/components/List/Deck/Normal/Mainboard';
 
 type MyComponentProps = {
     items : PropTypes.array
@@ -50,17 +49,19 @@ const DeckMainboard: React.FC<MyComponentProps> = ({ items }) => {
     }, [items.length > 0]);
 
     return (
-        {items.length > 0 && (
-            <article className="left maindeck">
-                <CardTypeList items={planeswalkerItems} text={t('Planeswalkers')}></CardTypeList>
-                <CardTypeList items={creatureItems} text={t('Creatures')}></CardTypeList>
-                <CardTypeList items={instantItems} text={t('Instants')}></CardTypeList>
-                <CardTypeList items={sorceryItems} text={t('Sorceries')}></CardTypeList>
-                <CardTypeList items={artifactItems} text={t('Artifacts')}></CardTypeList>
-                <CardTypeList items={enchantmentItems} text={t('Enchantments')}></CardTypeList>
-                <CardTypeList items={landItems} text={t('Lands')}></CardTypeList>
-            </article>
-        )}
+        <>
+            {items.length > 0 && (
+                <article className="left maindeck">
+                    <CardTypeList items={planeswalkerItems} text={t('Planeswalkers')}></CardTypeList>
+                    <CardTypeList items={creatureItems} text={t('Creatures')}></CardTypeList>
+                    <CardTypeList items={instantItems} text={t('Instants')}></CardTypeList>
+                    <CardTypeList items={sorceryItems} text={t('Sorceries')}></CardTypeList>
+                    <CardTypeList items={artifactItems} text={t('Artifacts')}></CardTypeList>
+                    <CardTypeList items={enchantmentItems} text={t('Enchantments')}></CardTypeList>
+                    <CardTypeList items={landItems} text={t('Lands')}></CardTypeList>
+                </article>
+            )}
+        </>
     )
 }
 

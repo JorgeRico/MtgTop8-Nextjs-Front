@@ -1,6 +1,5 @@
 import Deck from "@/components/List/Deck/Normal";
 import decklist from "@/fakeData/decklist.tsx";
-import BluredDeck from './index';
 
 const BluredDeck: React.FC = () => {
     return (

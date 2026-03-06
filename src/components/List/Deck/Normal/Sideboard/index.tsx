@@ -4,7 +4,6 @@ import statsTypes from "@/services/stats-types.tsx";
 import CardTypeList from "@/components/List/Deck/Normal/CardTypeList";
 import DeckCard from "@/components/List/Deck/Normal/Card";
 import { useTranslations } from 'next-intl';
-import DeckSideboard from './index';
 
 type MyComponentProps = {
     items : PropTypes.array
@@ -35,11 +34,13 @@ const DeckSideboard: React.FC<MyComponentProps> = ({ items }) => {
     }, [items.length > 0]);
 
     return (
-        {items.length > 0 && (
-            <article className="left sideboard">
-                <CardTypeList items={sideItems} text={t('Sideboard')}></CardTypeList>
-            </article>
-        )}
+        <>
+            {items.length > 0 && (
+                <article className="left sideboard">
+                    <CardTypeList items={sideItems} text={t('Sideboard')}></CardTypeList>
+                </article>
+            )}
+        </>
     )
 }
 

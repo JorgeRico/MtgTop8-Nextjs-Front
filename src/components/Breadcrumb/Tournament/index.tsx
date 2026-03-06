@@ -14,15 +14,17 @@ const BreadcrumbTournament: React.FC<MyComponentProps> = ({ title, date, endpoin
     const t = useTranslations('header');
 
     return (
-        <HomeItemBreadcrumb></HomeItemBreadcrumb>
-        <DashItemBreadcrumb></DashItemBreadcrumb>
-        <TitleItemBreadcrumb title={t('breadcrumb.league')}></TitleItemBreadcrumb>
-        <DashItemBreadcrumb></DashItemBreadcrumb>
-        <TitleLinkItemBreadcrumb title={title} endpoint={endpoint}></TitleLinkItemBreadcrumb>
-        <DashItemBreadcrumb></DashItemBreadcrumb>
-        <TitleItemBreadcrumb title={t('breadcrumb.tournament')}></TitleItemBreadcrumb>
-        <DashItemBreadcrumb></DashItemBreadcrumb>
-        <TitleItemBreadcrumb title={date}></TitleItemBreadcrumb>
+        <>
+            <HomeItemBreadcrumb></HomeItemBreadcrumb>
+            <DashItemBreadcrumb></DashItemBreadcrumb>
+            <TitleItemBreadcrumb title={t('breadcrumb.league')}></TitleItemBreadcrumb>
+            <DashItemBreadcrumb></DashItemBreadcrumb>
+            <TitleLinkItemBreadcrumb title={title} endpoint={endpoint}></TitleLinkItemBreadcrumb>
+            <DashItemBreadcrumb></DashItemBreadcrumb>
+            <TitleItemBreadcrumb title={t('breadcrumb.tournament')}></TitleItemBreadcrumb>
+            <DashItemBreadcrumb></DashItemBreadcrumb>
+            <TitleItemBreadcrumb title={date}></TitleItemBreadcrumb>
+        </>
     );
 }
 

@@ -36,13 +36,15 @@ const DeckDescription: React.FC<MyComponentProps> = ({ items, deckName }) => {
     }, [items.length > 0]);
 
     return (
-        {items.length > 0 && (
-            <article className="left w100 f24 ml12">
-                <div className="left w100">{deckName}</div>
-                <div className="left w100 f14 mt10">{t('Maindeck total cards')}: {totalMaindeck}</div>
-                <div className="left w100 f14 mt5 mb10">{t('Sideboard total cards')}: {totalSideboard}</div>
-            </article>
-        )}
+        <>
+            {items.length > 0 && (
+                <article className="left w100 f24 ml12">
+                    <div className="left w100">{deckName}</div>
+                    <div className="left w100 f14 mt10">{t('Maindeck total cards')}: {totalMaindeck}</div>
+                    <div className="left w100 f14 mt5 mb10">{t('Sideboard total cards')}: {totalSideboard}</div>
+                </article>
+            )}
+        </>
     )
 }
 

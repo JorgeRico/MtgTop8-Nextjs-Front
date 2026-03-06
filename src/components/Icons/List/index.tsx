@@ -10,8 +10,8 @@ const ListImage: React.FC = () => {
             src       = "/images/list.webp"
             height    = {24}
             width     = {24}
-            alt       = {t('alt-tags.mtg stats list image')}
-            title     = {t('alt-tags.mtg stats list image')}
+            alt       = {t('mtg stats list image')}
+            title     = {t('mtg stats list image')}
             priority
         />
     );

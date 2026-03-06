@@ -3,17 +3,23 @@ import "./module.css";
 import PlayerItem from "@/components/List/Player/Normal/Item";
 import TournamentHeaderPlayers from "@/components/List/Player/Normal/Header";
 
+type MyComponentProps = {
+    items    : PropTypes.array;
+    isBlured : boolean;
+}
 
-const TournamentPlayers: React.FC<MyComponentProps>({ items, isBlured }) {
+const TournamentPlayers: React.FC<MyComponentProps> = ({ items, isBlured }) => {
     return (
-        <section className={isBlured ? "blink blured" : ""}>
-            <TournamentHeaderPlayers></TournamentHeaderPlayers>
-            {(items.length > 0) && (
-                items.map((item, index) => (
-                    <PlayerItem item={item} index={index} key={uuidv4()}></PlayerItem>
-                ))
-            )}
-        </section>
+        <>
+            <section className={isBlured ? "blink blured" : ""}>
+                <TournamentHeaderPlayers></TournamentHeaderPlayers>
+                {(items.length > 0) && (
+                    items.map((item, index) => (
+                        <PlayerItem item={item} index={index} key={uuidv4()}></PlayerItem>
+                    ))
+                )}
+            </section>
+        </>
     )
 }
 

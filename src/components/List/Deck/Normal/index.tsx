@@ -11,13 +11,15 @@ type MyComponentProps = {
 
 const Deck: React.FC<MyComponentProps> = ({ items, deckName, isBlured }) => {
     return (
-        {items.length > 0 && (
-            <article className={isBlured ? "blink blured" : ""}>
-                <DeckDescription items={items} deckName={deckName}></DeckDescription>
-                <DeckMainboard items={items}></DeckMainboard>
-                <DeckSideboard items={items}></DeckSideboard>
-            </article>
-        )}
+        <>
+            {items.length > 0 && (
+                <article className={isBlured ? "blink blured" : ""}>
+                    <DeckDescription items={items} deckName={deckName}></DeckDescription>
+                    <DeckMainboard items={items}></DeckMainboard>
+                    <DeckSideboard items={items}></DeckSideboard>
+                </article>
+            )}
+        </>
     )
 }
 
