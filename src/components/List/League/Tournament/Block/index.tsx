@@ -20,7 +20,7 @@ type MyComponentProps = {
 }
 
 const LeagueTournamentBlock: React.FC<MyComponentProps> = ({ leagueName, format, renderElements, url, isBlured, numPlayers, classification, location, locationName }) => {
-    const t = useTranslations('tournament');
+    const t = useTranslations('league');
 
     const getLocation = () => {
         return (
@@ -28,44 +28,55 @@ const LeagueTournamentBlock: React.FC<MyComponentProps> = ({ leagueName, format,
                 <Link href={`https://maps.app.goo.gl/${location}`} className="" target="_blank" rel="noopener noreferrer" title="">
                     <HTag
                         Tag  = "p"
-                        text = {
-                            <span className="left mr5">{t('Location')}:</span>
-                            <LocationImage></LocationImage>
-                            <span className="left ml5">{locationName}</span>
-                        }
+                        text = {getLocationText()}
                     />
                 </Link>
             </div>
         )
     }
 
+    const getLocationText = () => {
+        return (
+            <>
+                <span className="left mr5">{t('tournament.Location')}:</span>
+                <LocationImage></LocationImage>
+                <span className="left ml5">{locationName}</span>
+            </>
+        )
+    }
+
     return (
-        <div className={`left w100 mt40 mb40 ${isBlured ? 'blink blured' : ''}`}>
-            <div className="left">
-                <div className="left mr10">
-                    <Image
-                        src="/images/trophy.webp"
-                        height={32}
-                        width={32}
-                        alt={`${t('Tournaments')} - ${leagueName}`}
-                        title={`${t('Tournaments')} - ${leagueName}`}
-                        priority
-                    />
+        <>
+            <div className={`left w100 mt40 mb40 ${isBlured ? 'blink blured' : ''}`}>
+                <div className="left">
+                    <div className="left mr10">
+                        <Image
+                            src    = "/images/trophy.webp"
+                            height = {32}
+                            width  = {32}
+                            alt    = {`${t('tournament.Tournaments')} - ${leagueName}`}
+                            title  = {`${t('tournament.Tournaments')} - ${leagueName}`}
+                            priority
+                        />
+                    </div>
+                    {leagueName &&
+                        <HTag Tag="h1" text={`${t('tournament.Tournaments')} - ${leagueName}`} className="left f24 mb5" />
+                    }
                 </div>
-                {leagueName &&
-                    <HTag Tag="h1" text={`${t('Tournaments')} - ${leagueName}`} className="left f24 mb5" />
-                }
+                {location != null && getLocation()}
+                <div className="left w100 f14">{t('tournament.Format')}: {format}</div>
+                <div className="left w100 f14 mt5">{t('tournament.Average Players')}: {numPlayers}</div>
+                {classification != null && (
+                    <div className="left w100 f14 mt5">{t('tournament.Classification')}: {classification}</div>
+                )}
             </div>
-            {location != null && getLocation()}
-            <div className="left w100 f14">{t('Format')}: {format}</div>
-            <div className="left w100 f14 mt5">{t('Average Players')}: {numPlayers}</div>
-            {classification != null && (
-                <div className="left w100 f14 mt5">{t('Classification')}: {classification}</div>
-            )}
-        </div>
-        <div className={`left w100 mb10 ${isBlured ? 'blink blured' : ''}`}>
-            <TournamentList url={url} items={renderElements}/>
-        </div>
+            <div className={`left w100 mb10 ${isBlured ? 'blink blured' : ''}`}>
+                <TournamentList
+                    url={url}
+                    items={renderElements}
+                />
+            </div>
+        </>
     )
 }
 

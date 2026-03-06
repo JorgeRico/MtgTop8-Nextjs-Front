@@ -11,11 +11,13 @@ const BreadcrumbLeague: React.FC<MyComponentProps> = ({ title }) => {
     const t = useTranslations('header');
 
     return (
-        <HomeItemBreadcrumb></HomeItemBreadcrumb>
-        <DashItemBreadcrumb></DashItemBreadcrumb>
-        <TitleItemBreadcrumb title={t('breadcrumb.league')}></TitleItemBreadcrumb>
-        <DashItemBreadcrumb></DashItemBreadcrumb>
-        <TitleItemBreadcrumb title={title}></TitleItemBreadcrumb>
+        <>
+            <HomeItemBreadcrumb></HomeItemBreadcrumb>
+            <DashItemBreadcrumb></DashItemBreadcrumb>
+            <TitleItemBreadcrumb title={t('breadcrumb.league')}></TitleItemBreadcrumb>
+            <DashItemBreadcrumb></DashItemBreadcrumb>
+            <TitleItemBreadcrumb title={title}></TitleItemBreadcrumb>
+        </>
     );
 }
 

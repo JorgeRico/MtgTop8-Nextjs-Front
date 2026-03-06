@@ -16,12 +16,12 @@ const TournamentItem: React.FC<MyComponentProps> = ({ name, description, buttonT
             <div className="wAuto padBox overflowHidden border-red">
                 <div className="cupBox border-grey left radius5 bg-red p5 w-25">
                     <Image
-                        className="cupIcon w-15"
-                        src="/images/cup.webp"
-                        height={14}
-                        width={15}
-                        alt={t('Cup Champion')}
-                        title={t('Cup Champion')}
+                        className = "cupIcon w-15"
+                        src       = "/images/cup.webp"
+                        height    = {14}
+                        width     = {15}
+                        alt       = {t('Cup Champion')}
+                        title     = {t('Cup Champion')}
                         priority
                     />
                 </div>
@@ -38,4 +38,4 @@ const TournamentItem: React.FC<MyComponentProps> = ({ name, description, buttonT
     )
 }
 
-export default TournamentITem;
+export default TournamentItem;

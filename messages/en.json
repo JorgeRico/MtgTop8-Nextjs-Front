@@ -38,9 +38,6 @@
         "mtg stats list image" : "mtg stats list image",
         "Cup Champion" : "Cup Champion"
     },
-
-
-
     "tournaments" : {
         "title" : {
             "players" : "jugadores"
@@ -90,7 +87,7 @@
             "Close" : "Close"
         }
     },
-    "stats" : {                                
+    "stats" : {
         "Top Players" : "Top Players",
         "Card Stats" : "Card Stats",
         "Top Cards" : "Top Cards",
@@ -112,7 +109,6 @@
         "Player Stats" : "Player Stats",
         "View" : "View"
     },
-    
     "errors" : {
         "league" : {
             "Sorry, now we don't have tournaments registered for this league" : "Sorry, now we don't have tournaments registered for this league"
@@ -160,8 +156,6 @@
         "Thank you for contacting us," : "Thank you for contacting us,",
         "Your query is in the stack In response we'll play a brainstorm" : "Your query is in the stack. In response we'll play a brainstorm"
     },
-    
-    
     "seo-tags" : {
         "tournaments" : {
             "title" : "Mtg Stats - Legacy Tournament",
@@ -180,7 +174,6 @@
             "description" : "League - Catalan MTG Legacy leagues, tournaments, players and cards",
             "stats" : "Season Stats"
         },
-       
         "past-leagues" : {
             "text-description" : "Explore past leagues, view standings and decks",
             "pagination" : "Past Leagues"

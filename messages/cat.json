@@ -38,8 +38,6 @@
         "mtg stats list image" : "mtg stats llista d'imatges",
         "Cup Champion" : "Copa de campió"
     },
-
-        
     "tournaments" : {
         "title" : {
             "players" : "jugadors"
@@ -89,7 +87,7 @@
             "Close" : "Tancar"
         }
     },
-    "stats" : {                                
+    "stats" : {
         "Top Players" : "Top Jugadors",
         "Card Stats" : "Estadistiques Cartes",
         "Top Cards" : "Top Cartes",
@@ -111,7 +109,6 @@
         "Player Stats" : "Estadistiques jugadors",
         "View" : "Veure"
     },
-    
     "errors" : {
         "league" : {
             "Sorry, now we don't have tournaments registered for this league" : "Ho sentim molt, no tenim cap torneig registrat per aquesta lliga"
@@ -159,8 +156,6 @@
         "Thank you for contacting us," : "Gràcies per contactar amb nosaltres,",
         "Your query is in the stack In response we'll play a brainstorm" : "La teva consulta es posa a la pila.  En resposta jugarem un brainstorm"
     },
-    
-    
     "seo-tags" : {
         "tournaments" : {
             "title" : "Mtg Stats - Tornejos Magic The Gathering - CAT Legacy",
@@ -179,7 +174,6 @@
             "description" : "League - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
             "stats" : "Estadistiques de la temporada"
         },
-        
         "past-leagues" : {
             "text-description" : "Explora les lligues pasades, revisa tops i baralles guanyadores",
             "pagination" : "Lligues pasades"

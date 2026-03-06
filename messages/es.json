@@ -88,7 +88,7 @@
             "Close" : "Cerrar"
         }
     },
-    "stats" : {                                
+    "stats" : {
         "Top Players" : "Top Jugadores",
         "Card Stats" : "Estadisticas de cartas",
         "Top Cards" : "Top Cartas",
@@ -110,7 +110,6 @@
         "Player Stats" : "Estadisticas jugadores",
         "View" : "Ver"
     },
-    
     "errors" : {
         "league" : {
             "Sorry, now we don't have tournaments registered for this league" : "Lo siento, no tenemos torneos registrados para esta liga"
@@ -158,8 +157,6 @@
         "Thank you for contacting us," : "Gracias por contactar con nosotros,",
         "Your query is in the stack In response we'll play a brainstorm" : "Tu petición está en la pila. En respuesta jugaremos un brainstorm"
     },
-    
-    
     "seo-tags" : {
         "tournaments" : {
             "title" : "MTG Stats - Torneos Magic The Gathering - CAT Legacy",
@@ -178,7 +175,6 @@
             "description" : "League - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
             "stats" : "Estadisticas de la temporada"
         },
-       
         "past-leagues" : {
             "text-description" : "Explora las ligas pasadas, revisa tops y barajas",
             "pagination" : "Ligas pasadas"

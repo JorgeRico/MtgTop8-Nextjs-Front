@@ -7,7 +7,7 @@ import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
 
 type MyComponentProps = {
-    id           : string;
+    id           : number;
     format       : string;
     leagueName   : string;
     location     : string;
@@ -57,28 +57,38 @@ const LeagueTournament: React.FC<MyComponentProps> = ({ id, format, leagueName, 
     }, []);
 
     return (
-        {showElements === false ? (
-                (noResults === true) ? (
-                    <div className="radius5 cardsList bg-footer padStatsBox">
-                        {t("errors.league.Sorry, now we don't have tournaments registered for this league")}
-                    </div>
+        <>
+            {!showElements ? (
+                    (noResults === true) ? (
+                        <div className="radius5 cardsList bg-footer padStatsBox">
+                            {t("errors.league.Sorry, now we don't have tournaments registered for this league")}
+                        </div>
+                    ) : (
+                        <BluredTournamentList></BluredTournamentList>
+                    )
                 ) : (
-                    <BluredTournamentList></BluredTournamentList>
-                )
-            ) : (
-                <LeagueTournamentBlock
-                    format         = {format}
-                    leagueName     = {leagueName}
-                    renderElements = {renderElements}
-                    url            = {endpoints.HTTP_TOURNAMENT}
-                    isBlured       = {false}
-                    numPlayers     = {numPlayers}
-                    classification = {classification}
-                    location       = {location}
-                    locationName   = {locationName}
-                />
-                <Pagination text={t('list.Tournaments')} total={total} itemsPerPage={total} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>
-        )}
+                    <>
+                        <LeagueTournamentBlock
+                            format         = {format}
+                            leagueName     = {leagueName}
+                            renderElements = {renderElements}
+                            url            = {endpoints.HTTP_TOURNAMENT}
+                            isBlured       = {false}
+                            numPlayers     = {numPlayers}
+                            classification = {classification}
+                            location       = {location}
+                            locationName   = {locationName}
+                        />
+                        <Pagination
+                            text           = {t('list.Tournaments')}
+                            total          = {total}
+                            itemsPerPage   = {total}
+                            currentPage    = {currentPage}
+                            setCurrentPage = {setCurrentPage}>
+                        </Pagination>
+                    </>
+            )}
+        </>
     )
 }
 
