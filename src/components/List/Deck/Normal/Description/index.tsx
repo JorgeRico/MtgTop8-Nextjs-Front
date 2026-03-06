@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import statsTypes from "@/services/stats-types.tsx";
+import statsTypes from "@/services/stats-types";
 import { useTranslations } from 'next-intl';
 
 type MyComponentProps = {

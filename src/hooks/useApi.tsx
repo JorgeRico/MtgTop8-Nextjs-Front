@@ -25,6 +25,6 @@ export function addUrlPaginationParams (endpoint: string, numItems: number, curr
     return url.toString();
 }
 
-export function replaceUrlIdParam (endpoint: string, value: string): string {
+export function replaceUrlIdParam (endpoint: string, value: any): string {
     return endpoint.replace('{id}', value)
 }

@@ -13,12 +13,12 @@ import Image from "next/image";
 const DeckListForm: React.FC = () => {
     const [ showButton, setShowButton ]     = useState(true);
     const [ showError, setShowError ]       = useState(false);
-    const [ toSend, setToSend ]             = useState({ name: '', surname: '', event: '', deckName: '', mainboard: [], sideboard: [] });
-    const form                              = useRef();
+    const [ toSend, setToSend ]             = useState<any>({ name: '', surname: '', event: '', deckName: '', mainboard: [], sideboard: [] });
+    const form                              = useRef(null);
     const [ line ]                          = useState(18);
     const [ cardGap ]                       = useState(43);
     const [ size ]                          = useState(12);
-    const [ errorMessage, setErrorMessage ] = useState(null);
+    const [ errorMessage, setErrorMessage ] = useState('');
     const t                                 = useTranslations('forms');
     const errors                            = useTranslations('errors');
     const tags                              = useTranslations('alt-tags');
@@ -47,7 +47,7 @@ const DeckListForm: React.FC = () => {
             setTimeout(() => {setShowButton(true)}, 2000);
             setTimeout(() => {setShowError(false)}, 2000);
 
-            throw new Error(errors('decklist.Incorrect sideboard - Maximum 15 cards'));
+            // throw new Error(errors('decklist.Incorrect sideboard - Maximum 15 cards'));
         }
 
         numberOfCards(totalMainboard, totalSideboard, firstPage, fontFamily, values);
@@ -93,7 +93,7 @@ const DeckListForm: React.FC = () => {
     function cardsList(cards) {
         const cardsSplitted = cards.split('\n');
 
-        let items = [];
+        let items: any[] = [];
 
         cardsSplitted.forEach(item => {
             if (item.trim() !== '') {
@@ -112,7 +112,7 @@ const DeckListForm: React.FC = () => {
                     setTimeout(() => {setShowButton(true)}, 2000);
                     setTimeout(() => {setShowError(false)}, 2000);
 
-                    throw new Error(errors('decklist.Incorrect form - card incorrect format'));
+                    // throw new Error(errors('decklist.Incorrect form - card incorrect format'));
                 }
 
                 if (!Number.isNaN(num) && card != '') {
@@ -181,7 +181,7 @@ const DeckListForm: React.FC = () => {
             setTimeout(() => {setShowButton(true)}, 2000);
             setTimeout(() => {setShowError(false)}, 2000);
 
-            throw new Error(errors('decklist.Incorrect form - fill form correctly'));
+            // throw new Error(errors('decklist.Incorrect form - fill form correctly'));
         };
     }
 
@@ -193,19 +193,19 @@ const DeckListForm: React.FC = () => {
         <section className="left w100 mb20">
             <form ref={form} onSubmit={onSubmit} className="left w100 mb40 overflowHidden pointer form decklistForm">
                 <article className="left w100">
-                    <InputForm name="name" placeholder={t('decklist.Your name')} label={t('decklist.Name')} value={toSend.name} handleChange={handleChange}></InputForm>
-                    <InputForm name="surname" placeholder={t('decklist.Your surname')} label={t('decklist.Surname')} value={toSend.surname} handleChange={handleChange}></InputForm>
+                    <InputForm name="name" type="text" placeholder={t('decklist.Your name')} label={t('decklist.Name')} value={toSend.name} toSend={toSend} setToSend={setToSend}></InputForm>
+                    <InputForm name="surname" type="text" placeholder={t('decklist.Your surname')} label={t('decklist.Surname')} value={toSend.surname} toSend={toSend} setToSend={setToSend}></InputForm>
                 </article>
 
                 <article className="left w100">
-                    <InputForm name="event" placeholder={t('decklist.Event name')} label={t('decklist.Event name')} value={toSend.event} handleChange={handleChange}></InputForm>
-                    <InputForm name="deckName" placeholder={t('decklist.Your Deck name')} label={t('decklist.Deck name')} value={toSend.deckName} handleChange={handleChange}></InputForm>
+                    <InputForm name="event" type="text" placeholder={t('decklist.Event name')} label={t('decklist.Event name')} value={toSend.event} toSend={toSend} setToSend={setToSend}></InputForm>
+                    <InputForm name="deckName" type="text" placeholder={t('decklist.Your Deck name')} label={t('decklist.Deck name')} value={toSend.deckName} toSend={toSend} setToSend={setToSend}></InputForm>
                 </article>
 
                 <article className="left w100">
                     <div className="left mb20 w-350">
-                        <TextareaForm name="mainboard" placeholder={t('decklist.Your mainboard cards')} label={t('decklist.Mainboard cards')} value={toSend.mainboard} handleChange={handleChange}></TextareaForm>
-                        <TextareaForm name="sideboard" placeholder={t('decklist.Your sideboard cards')} label={t('decklist.Sideboard cards')} value={toSend.sideboard} handleChange={handleChange}></TextareaForm>
+                        <TextareaForm name="mainboard" placeholder={t('decklist.Your mainboard cards')} label={t('decklist.Mainboard cards')} value={toSend.mainboard} toSend={toSend} setToSend={setToSend}></TextareaForm>
+                        <TextareaForm name="sideboard" placeholder={t('decklist.Your sideboard cards')} label={t('decklist.Sideboard cards')} value={toSend.sideboard} toSend={toSend} setToSend={setToSend}></TextareaForm>
                     </div>
                     <div className="left mb20 w-350 mt35 pdf">
                          <Image

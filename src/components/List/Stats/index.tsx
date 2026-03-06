@@ -1,4 +1,4 @@
-import statsTypes from "@/services/stats-types.tsx"
+import statsTypes from "@/services/stats-types"
 import "./module.css";
 import CardBlockStats from "@/components/List/Stats/Cards";
 import SubTitle from "@/components/HTag/SubTitle";
@@ -6,7 +6,16 @@ import HTag from "@/components/HTag";
 import StatsImage from "@/components/Icons/Stats";
 import { useTranslations } from 'next-intl';
 
-export default function StatsBox({ id, title, isLeague, endpoint, endpointCards, isBlured }) {
+type MyComponentProps = {
+    id            : string;
+    title         : string;
+    isLeague      : boolean;
+    endpoint      : string;
+    endpointCards : string;
+    isBlured      : boolean;
+}
+
+const StatsBox: React.FC<MyComponentProps> = ({ id, title, isLeague, endpoint, endpointCards, isBlured }) => {
     const t = useTranslations('stats');
 
     const headerTitleBlock = (text: string): string => {
@@ -148,3 +157,5 @@ export default function StatsBox({ id, title, isLeague, endpoint, endpointCards,
         </section>
     );
 }
+
+export default StatsBox;

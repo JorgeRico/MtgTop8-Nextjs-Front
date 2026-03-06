@@ -1,5 +1,5 @@
 import PlayerList from "@/components/List/Player/Normal";
-import players from "@/fakeData/playerList.tsx";
+import players from "@/fakeData/playerList";
 
 const TournamentPlayersBlured: React.FC = () => {
     return (

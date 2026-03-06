@@ -10,7 +10,7 @@ import Image from "next/image";
 type MyComponentProps = {
     leagueName     : string;
     format         : string;
-    renderElements : PropTypes.array;
+    renderElements : Array<any>;
     ulr            : string;
     isBlured       : boolean;
     numPlayers     : number;

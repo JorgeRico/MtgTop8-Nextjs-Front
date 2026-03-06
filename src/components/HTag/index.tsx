@@ -1,5 +1,5 @@
 type MyComponentProps = {
-    Tag       : string;
+    Tag       : any;
     className : string;
     text      : string;
 };

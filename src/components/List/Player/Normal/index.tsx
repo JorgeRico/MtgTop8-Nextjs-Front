@@ -4,7 +4,7 @@ import PlayerItem from "@/components/List/Player/Normal/Item";
 import TournamentHeaderPlayers from "@/components/List/Player/Normal/Header";
 
 type MyComponentProps = {
-    items    : PropTypes.array;
+    items    : Array<any>;
     isBlured : boolean;
 }
 

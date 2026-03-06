@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import endpoints from "@/services/endpoints.tsx";
-import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi.tsx';
+import endpoints from "@/services/endpoints";
+import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import BluredTournamentList from "@/components/List/League/Tournament/Fake";
 import LeagueTournamentBlock from "@/components/List/League/Tournament/Block";
 import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
 
 type MyComponentProps = {
-    id           : number;
+    id           : string;
     format       : string;
     leagueName   : string;
-    location     : string;
+    location     : string | null;
     locationName : string;
 }
 

@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 type MyComponentProps = {
     title    : string;
     date     : string;
-    endpoint : number;
+    endpoint : string;
 };
 
 const BreadcrumbTournament: React.FC<MyComponentProps> = ({ title, date, endpoint }) => {

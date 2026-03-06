@@ -3,8 +3,8 @@ import { useTranslations } from 'next-intl';
 import Image from "next/image";
 
 function ErrorMessage({ message }) {
-    const t    = useTranslation('errors');
-    const tags = useTranslation('alt-tags');
+    const t    = useTranslations('errors');
+    const tags = useTranslations('alt-tags');
 
     return (
         <div className="left w100 mb40">

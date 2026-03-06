@@ -3,9 +3,9 @@
 import ListLeague from "@/components/List/League/Normal";
 import BluredLeagueList from "@/components/List/League/Fake";
 import SubTitle from "@/components/HTag/SubTitle";
-import endpoints from "@/services/endpoints.tsx";
+import endpoints from "@/services/endpoints";
 import { useState, useEffect } from "react";
-import { getAxiosEndpoint } from '@/hooks/useApi.tsx';
+import { getAxiosEndpoint } from '@/hooks/useApi';
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
 

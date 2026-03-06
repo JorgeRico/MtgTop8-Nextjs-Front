@@ -2,9 +2,10 @@ import HTag from "@/components/HTag";
 import { useTranslations } from 'next-intl';
 
 type MyComponentProps = {
-    tournament : PropTypes.object;
+    tournament : any;
     isBlured   : boolean;
 }
+
 const TournamentTitle: React.FC<MyComponenntProps> = ({ tournament, isBlured }) => {
     const t = useTranslations('tournaments');
 

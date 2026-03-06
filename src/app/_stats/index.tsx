@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import StatsBox from "@/components/List/Stats";
-import endpoints from "@/services/endpoints.tsx";
+import endpoints from "@/services/endpoints";
 
 type MyComponentProps = {
-    id       : number;
+    id       : string;
     isLeague : boolean;
     title    : string;
 }

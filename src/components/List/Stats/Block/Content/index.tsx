@@ -1,7 +1,7 @@
 import ModalPopUp from "@/components/Modal";
 
 type MyComponentProps = {
-    item     : PropTypes.object,
+    item     : any,
     isPlayer : boolean,
     text     : string
 }

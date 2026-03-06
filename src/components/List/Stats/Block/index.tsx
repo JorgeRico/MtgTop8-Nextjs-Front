@@ -4,7 +4,7 @@ import Header from "@/components/List/Stats/Block/Header";
 import Content from "@/components/List/Stats/Block/Content";
 
 type MyComponentProps = {
-    items    : PropTypes.array;
+    items    : Array<any>;
     isPlayer : boolean;
     text     : string;
 }

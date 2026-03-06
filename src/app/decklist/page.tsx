@@ -1,4 +1,3 @@
-import Layout from "@/views/layout/core";
 import DecklistForm from "@/components/Forms/Decklist";
 import Title from "@/components/HTag/Title";
 import SimpleBreadcrumb from "@/components/Breadcrumb/Simple";

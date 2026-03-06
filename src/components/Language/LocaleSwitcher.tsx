@@ -2,11 +2,13 @@
 
 import {Locale, useLocale} from 'next-intl';
 
-type Props = {
-  changeLocaleAction: (locale: Locale) => Promise<void>;
-};
+// type Props = {
+//   changeLocaleAction: (locale: Locale) => Promise<void>;
+// };
 
-export default function LocaleSwitcher({changeLocaleAction}: Props) {
+// export default function LocaleSwitcher({changeLocaleAction}: Props) {
+export default function LocaleSwitcher() {
+
   const locale = useLocale();
 
   return (
@@ -14,7 +16,7 @@ export default function LocaleSwitcher({changeLocaleAction}: Props) {
       {['en', 'es', 'cat'].map((cur) => (
         <button
           key={cur}
-          onClick={() => changeLocaleAction(cur as Locale)}
+        //   onClick={() => changeLocaleAction(cur as Locale)}
           style={{fontWeight: locale === cur ? 'bold' : 'normal'}}
         >
           {cur.toUpperCase()}

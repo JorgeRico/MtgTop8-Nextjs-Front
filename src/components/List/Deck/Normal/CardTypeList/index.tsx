@@ -2,7 +2,7 @@ import DeckCard from "@/components/List/Deck/Normal/Card";
 import { v4 as uuidv4 } from "uuid";
 
 type MyComponentProps = {
-    items : PropTypes.array;
+    items : Array<any>;
     text  : string;
 }
 

@@ -2,25 +2,25 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from 'next/navigation';
-import Template from "@/views/layout/template";
 import TournamentPlayers from "@/components/Tournament/Players";
 import Stats from "@/app/_stats";
 import Breadcrumb from "@/components/Breadcrumb";
 import TournamentBreadcrumb from "@/components/Breadcrumb/Tournament";
-import endpoints from "@/services/endpoints.tsx";
-import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi.tsx';
-import { getFormat } from '@/hooks/useCommon.tsx';
+import endpoints from "@/services/endpoints";
+import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
+import { getFormat } from '@/hooks/useCommon';
 import { useTranslations } from 'next-intl';
 
 const Tournament: React.FC = () => {
-    const { id }                       = useParams();
-    const [ tournament, setTournament] = useState({idLeague: '', name:'', date:'', players: ''});
-    const [ loading, setLoading ]      = useState(false);
-    const t                            = useTranslations('seo-tags');
+    const params                                = useParams<{ id: string }>();
+    const [ tournament, setTournament]          = useState({idLeague: '', name:'', date:'', players: ''});
+    const [ loading, setLoading ]               = useState(false);
+    const t                                     = useTranslations('seo-tags');
+    const [ breadcrumbText, setBreadcrumbText ] = useState('');
 
     useEffect(() => {
         async function apiCall() {
-            await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_DATA, id))
+            await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_DATA, params.id))
             .then((response) => {
                 setTournament(prevState => ({
                     ...prevState,
@@ -33,6 +33,7 @@ const Tournament: React.FC = () => {
                     'leagueName' : response.data.leagueName
 
                 }));
+                setBreadcrumbText(response.data.leagueName + ' ' + response.data.year);
                 setLoading(true);
             })
             .catch((err) => {
@@ -49,18 +50,18 @@ const Tournament: React.FC = () => {
                 loading   = {loading}
                 component = {
                     <TournamentBreadcrumb
-                        title={`${tournament.leagueName} ${tournament.year}`}
+                        title={breadcrumbText}
                         date={tournament.date}
                         endpoint={endpoints.HTTP_LEAGUE + tournament.idLeague}
                     />
                 }
             />
             <TournamentPlayers
-                id         = {id}
+                id         = {params.id}
                 tournament = {tournament}
             />
             <Stats
-                id       = {id}
+                id       = {params.id}
                 isLeague = {false}
                 title    = {`${t('tournaments.stats')} - ${tournament.name}`}
             />

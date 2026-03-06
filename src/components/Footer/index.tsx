@@ -1,6 +1,6 @@
 import "./module.css";
-import CopyrightFooter from "@/components/Footer/CopyrightFooter.tsx";
-import SocialFooter from "@/components/Footer/SocialFooter.tsx";
+import CopyrightFooter from "@/components/Footer/CopyrightFooter";
+import SocialFooter from "@/components/Footer/SocialFooter";
 
 export default function Footer() {
     return (

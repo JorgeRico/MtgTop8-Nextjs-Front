@@ -1,13 +1,13 @@
 import { v4 as uuidv4 } from "uuid";
 import Link from 'next/link';
 import Button from "@/components/List/Button";
-import { getFormat } from '@/hooks/useCommon.tsx';
+import { getFormat } from '@/hooks/useCommon';
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
 
 type MyComponentProps = {
     url      : string;
-    items    : PropTypes.array;
+    items    : Array<any>;
     isBlured : boolean;
 }
 

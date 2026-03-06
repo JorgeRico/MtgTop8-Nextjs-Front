@@ -1,5 +1,5 @@
 import "./module.css"
-import { createModalLink } from '@/hooks/useCommon.tsx';
+import { createModalLink } from '@/hooks/useCommon';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 

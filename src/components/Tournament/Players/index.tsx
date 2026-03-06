@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import endpoints from "@/services/endpoints.tsx";
-import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi.tsx';
+import endpoints from "@/services/endpoints";
+import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import PlayerList from "@/components/List/Player/Normal";
 import PlayersBlured from "@/components/List/Player/Fake";
 import Title from "@/components/Tournament/Title";
@@ -10,8 +10,8 @@ import ListImage from "@/components/Icons/List";
 import { useTranslations } from 'next-intl';
 
 type MyComponentProps = {
-    id         : number;
-    tournament : PropTypes.object;
+    id         : string;
+    tournament : any;
 }
 
 const TournamentPlayers: React.FC<MyComponentProps> = ({ id, tournament }) => {

@@ -1,7 +1,7 @@
 import ModalPopUp from "@/components/Modal";
 
 type MyComponentProps = {
-    card : PropTypes.object
+    card : any
 }
 const DeckCard: React.FC<MyComponentProps> = ({ card }) => {
     return (

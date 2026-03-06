@@ -1,4 +1,4 @@
-import statsTypes from "@/services/stats-types.tsx";
+import statsTypes from "@/services/stats-types";
 
 export function getFormat(format: string): string {
     if (format === 1) {

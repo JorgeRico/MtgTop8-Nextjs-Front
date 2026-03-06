@@ -3,36 +3,37 @@ import DeckSideboard from "@/components/List/Deck/Normal/Sideboard";
 import DeckMainboard from "@/components/List/Deck/Normal/Mainboard";
 import DeckDescription from "@/components/List/Deck/Normal/Description";
 import { useEffect, useState } from "react";
-import statsTypes from "@/services/stats-types.tsx";
+import statsTypes from "@/services/stats-types";
 
 type MyComponentProps = {
-    items    : PropTypes.array,
-    deckName : string,
-    isBlured : boolean
+    items    : Array<any>;
+    deckName : string;
+    isBlured : boolean;
 }
 
 const Deck: React.FC<MyComponentProps> = ({ items, deckName, isBlured }) => {
-    const [ maindeck, setMaindeck ]             = useState([]);
-    const [ sideboard, setSideboard ]           = useState([]);
+    const [ maindeck, setMaindeck ]             = useState<any>([]);
+    const [ sideboard, setSideboard ]           = useState<any>([]);
     const [ totalMaindeck, setTotalMaindeck ]   = useState(0);
     const [ totalSideboard, setTotalSideboard ] = useState(0);
 
     function getDeckCards(deck) {
-        let itemsListMain = [];
-        let itemsListSide = [];
+        let itemsListMain: any[] = [];
+        let itemsListSide: any[] = [];
         let totalMain  = 0;
         let totalSide  = 0;
 
         for (var i = 0; i < deck.length; i++) {
             if (deck[i].board === statsTypes.MD) {
                 totalMain = totalMain + parseInt(deck[i].num);
-                itemsListMain.push(deck[i])
+                itemsListMain.push(deck[i]);
             }
             if (deck[i].board === statsTypes.SB) {
                 totalSide = totalSide + parseInt(deck[i].num);
-                itemsListSide.push(deck[i])
+                itemsListSide.push(deck[i]);
             }
         }
+
         setMaindeck(itemsListMain)
         setSideboard(itemsListSide)
         setTotalMaindeck(totalMain);

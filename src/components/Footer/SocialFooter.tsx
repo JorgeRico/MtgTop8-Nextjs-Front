@@ -1,7 +1,7 @@
 import SocialLogoFooter from '@/components/Footer/Social/Logo';
 import SocialDescriptionFooter from '@/components/Footer/Social/Description';
 import SocialLinksFooter from '@/components/Footer/Social/Links';
-import Language from "@/components/Language/LocaleSwitcher.tsx";
+import Language from "@/components/Language/LocaleSwitcher";
 import Subtitle from '@/components/HTag/SubTitle';
 import HTag from "@/components/HTag";
 import { useTranslations } from 'next-intl';

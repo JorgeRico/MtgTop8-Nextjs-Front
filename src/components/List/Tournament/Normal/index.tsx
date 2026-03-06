@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 
 type MyComponentProps = {
     url   : string,
-    items : PropTypes.array
+    items : Array<any>
 }
 
 const TournamentList: React.FC<MyComponentProps> = ({ url, items }) => {

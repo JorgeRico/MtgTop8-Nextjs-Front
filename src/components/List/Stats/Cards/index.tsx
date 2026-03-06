@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getAxiosEndpoint } from '@/hooks/useApi.tsx';
+import { getAxiosEndpoint } from '@/hooks/useApi';
 import StatsListBlock from "@/components/List/Stats/Block";
 import BluredStatsList from "@/components/List/Stats/Cards/Fake";
 import Block from "@/components/List/Stats/Cards/Block";

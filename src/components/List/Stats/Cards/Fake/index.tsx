@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import stats from "@/fakeData/statsList.tsx";
+import stats from "@/fakeData/statsList";
 import ContentStatsList from "@/components/List/Stats/Block/Content";
 
 const LoadingCards: React.FC = () => {

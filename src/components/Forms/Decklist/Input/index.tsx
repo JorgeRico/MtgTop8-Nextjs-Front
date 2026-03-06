@@ -1,18 +1,27 @@
+import { useState }from "react";
+
 type MyComponentProps = {
-    name         : string;
-    placeholder  : string;
-    label        : string;
-    value        : string;
-    handleChange : Props.func;
+    name        : string;
+    type        : string;
+    placeholder : string;
+    label       : string;
+    value       : string;
+    toSend      : any;
+    setToSend   : any;
 }
 
-const InputForm: React.FC<MyComponentProps> = ({ name, placeholder, label, value, handleChange }) => {
+const InputForm: React.FC<MyComponentProps> = ({ name, type, placeholder, label, value, toSend, setToSend }) => {
+
+    const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value });
+    };
+
     return (
-        <div className="left mb20 w-350">
+        <div className="left mb20 w100">
             <label className="left w100 mb15">{label}</label>
             <input
-                className="left pad w80"
-                type='text'
+                className="w-300 pad"
+                type={type}
                 name={name}
                 placeholder={placeholder}
                 value={value}

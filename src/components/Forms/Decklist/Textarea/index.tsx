@@ -1,12 +1,17 @@
 type MyComponentProps = {
-    name         : string;
-    placeholder  : string;
-    label        : string;
-    value        : string;
-    handleChange : PropTypes.func;
+    name        : string;
+    placeholder : string;
+    label       : string;
+    value       : string;
+    toSend      : any;
+    setToSend   : any;
 }
 
-const TextareaForm: React.FC<MyComponentProps> = ({ name, placeholder, label, value, handleChange }) => {
+const TextareaForm: React.FC<MyComponentProps> = ({ name, placeholder, label, value, toSend, setToSend }) => {
+    const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value });
+    };
+
     return (
         <label className="left w100 mb15">
             <span className="left mb20">{label}</span>

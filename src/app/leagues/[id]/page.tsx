@@ -2,24 +2,23 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from 'next/navigation';
-import Template from "@/views/layout/template";
 import LeagueTournamentList from "@/components/List/League/Tournament/List";
 import Stats from "@/app/_stats";
-import endpoints from "@/services/endpoints.tsx";
-import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi.tsx';
-import { getFormat } from '@/hooks/useCommon.tsx';
+import endpoints from "@/services/endpoints";
+import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
+import { getFormat } from '@/hooks/useCommon';
 import Breadcrumb from "@/components/Breadcrumb";
 import BreadcrumbLeague from "@/components/Breadcrumb/League";
 import { useTranslations } from 'next-intl';
 
 const League: React.FC = () => {
     const params                                = useParams<{ id: string }>();
-    const [ leagueName, setLeagueName]          = useState(null);
+    const [ leagueName, setLeagueName ]         = useState('');
     const [ showLeagueName, setShowLeagueName ] = useState(false);
-    const [ leagueFormat, setLeagueFormat ]     = useState(null);
+    const [ leagueFormat, setLeagueFormat ]     = useState('');
     const [ location, setLocation ]             = useState(null);
-    const [ locationName, setLocationName ]     = useState(null);
-    const [ year, setYear ]                     = useState(null);
+    const [ locationName, setLocationName ]     = useState('');
+    const [ year, setYear ]                     = useState('');
     const t                                     = useTranslations('seo-tags');
 
     useEffect(() => {

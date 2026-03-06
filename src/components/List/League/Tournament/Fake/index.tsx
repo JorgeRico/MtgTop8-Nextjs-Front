@@ -1,5 +1,5 @@
 import LeagueTournamentBlock from "@/components/List/League/Tournament/Block";
-import tournament from "@/fakeData/tournament.tsx";
+import tournament from "@/fakeData/tournament";
 
 const BluredTournamentList: React.FC = () => {
     return (
