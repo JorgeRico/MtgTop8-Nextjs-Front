@@ -19,32 +19,51 @@ const DeckMainboard: React.FC<MyComponentProps> = ({ items }) => {
     const [ landItems, setLandItems ]                 = useState([]);
     const t                                           = useTranslations('deck');
 
-    function getCardTypes(deck, type) {
-        let itemsList = [];
+    function getCardTypes(deck) {
+        let planeswalkers = [];
+        let creatures     = [];
+        let instants      = [];
+        let sorceries     = [];
+        let artifacts     = [];
+        let enchantments  = [];
+        let lands         = [];
 
-        for (var i = 0; i < length; i++) {
-            if (deck[i].board === t(statsTypes.MD) && deck[i].cardType === type) {
-                itemsList.push(
-                    <DeckCard card={deck[i]} key={uuidv4()}></DeckCard>
-                )
+        for (var i = 0; i < deck.length; i++) {
+            if (deck[i].cardType === statsTypes.PLANESWALKER) {
+                planeswalkers.push(deck[i]);
+            }
+            if (deck[i].cardType === statsTypes.CREATURE) {
+                creatures.push(deck[i]);
+            }
+            if (deck[i].cardType === statsTypes.INSTANT) {
+                instants.push(deck[i]);
+            }
+            if (deck[i].cardType === statsTypes.SORCERY) {
+                sorceries.push(deck[i]);
+            }
+            if (deck[i].cardType === statsTypes.ARTIFACT) {
+                artifacts.push(deck[i]);
+            }
+            if (deck[i].cardType === statsTypes.ENCHANTMENT) {
+                enchantments.push(deck[i]);
+            }
+            if (deck[i].cardType === statsTypes.LAND) {
+                lands.push(deck[i]);
             }
         }
 
-        return itemsList;
-    }
-
-    function setOptions(items) {
-        const statsType = [ t(statsTypes.PLANESWALKER), t(statsTypes.CREATURE), t(statsTypes.INSTANT), t(statsTypes.SORCERY), t(statsTypes.ARTIFACT), t(statsTypes.ENCHANTMENT), t(statsTypes.LAND) ]
-        const operators = [ setPlaneswalkerItems, setCreatureItems, setInstantItems, setSorceryItems, setArtifactItems, setEnchantmentItems, setLandItems]
-
-        for (var i = 0; i < statsType.length; i++) {
-            operators[i](getCardTypes(items, statsType[i]))
-        }
+        setCreatureItems(creatures);
+        setInstantItems(instants);
+        setSorceryItems(sorceries);
+        setPlaneswalkerItems(planeswalkers);
+        setArtifactItems(artifacts);
+        setEnchantmentItems(enchantments);
+        setLandItems(lands);
     }
 
     useEffect(() => {
         if (items.length > 0) {
-            setOptions(items)
+            getCardTypes(items)
         }
     }, [items.length > 0]);
 
@@ -52,13 +71,27 @@ const DeckMainboard: React.FC<MyComponentProps> = ({ items }) => {
         <>
             {items.length > 0 && (
                 <article className="left maindeck">
-                    <CardTypeList items={planeswalkerItems} text={t('Planeswalkers')}></CardTypeList>
-                    <CardTypeList items={creatureItems} text={t('Creatures')}></CardTypeList>
-                    <CardTypeList items={instantItems} text={t('Instants')}></CardTypeList>
-                    <CardTypeList items={sorceryItems} text={t('Sorceries')}></CardTypeList>
-                    <CardTypeList items={artifactItems} text={t('Artifacts')}></CardTypeList>
-                    <CardTypeList items={enchantmentItems} text={t('Enchantments')}></CardTypeList>
-                    <CardTypeList items={landItems} text={t('Lands')}></CardTypeList>
+                    {planeswalkerItems.length > 0 &&
+                        <CardTypeList items={planeswalkerItems} text={t('Planeswalkers')}></CardTypeList>
+                    }
+                    {creatureItems.length > 0 &&
+                        <CardTypeList items={creatureItems} text={t('Creatures')}></CardTypeList>
+                    }
+                    {instantItems.length > 0 &&
+                        <CardTypeList items={instantItems} text={t('Instants')}></CardTypeList>
+                    }
+                    {sorceryItems.length > 0 &&
+                        <CardTypeList items={sorceryItems} text={t('Sorceries')}></CardTypeList>
+                    }
+                    {artifactItems.length > 0 &&
+                        <CardTypeList items={artifactItems} text={t('Artifacts')}></CardTypeList>
+                    }
+                    {enchantmentItems.length > 0 &&
+                        <CardTypeList items={enchantmentItems} text={t('Enchantments')}></CardTypeList>
+                    }
+                    {landItems.length > 0 &&
+                        <CardTypeList items={landItems} text={t('Lands')}></CardTypeList>
+                    }
                 </article>
             )}
         </>
