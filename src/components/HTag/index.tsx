@@ -1,7 +1,7 @@
 type MyComponentProps = {
     Tag       : any;
     className : string;
-    text      : string;
+    text      : any;
 };
 
 const HTag: React.FC<MyComponentProps> = ({ Tag, className, text }) => {

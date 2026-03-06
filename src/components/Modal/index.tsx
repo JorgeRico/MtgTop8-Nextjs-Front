@@ -10,7 +10,7 @@ type MyComponentProps = {
 }
 
 const ModalPopUp: React.FC<MyComponentProps> = ({ img, name, modalType }) => {
-    const [ modalId, setModalId ] = useState(null);
+    const [ modalId, setModalId ] = useState('');
     const t                       = useTranslations('cards');
 
     function handleClick () {

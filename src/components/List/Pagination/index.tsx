@@ -14,7 +14,7 @@ type MyComponentProps = {
 const Pagination: React.FC<MyComponentProps> = ({ text, total, itemsPerPage, currentPage, setCurrentPage, isDisabled = false }) => {
     const [ firstPage ]               = useState(1);
     const [ lastPage ]                = useState(Math.ceil(total / itemsPerPage));
-    const [ pageArray, setPageArray ] = useState([])
+    const [ pageArray, setPageArray ] = useState<any>([]);
 
     const handleClick = (number) => {
         setCurrentPage(number);

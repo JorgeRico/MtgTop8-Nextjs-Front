@@ -1,7 +1,7 @@
 import HTag from "@/components/HTag";
 
 type MyComponentProps = {
-    title: string;
+    title: any;
 };
 
 const SubTitle: React.FC<MyComponentProps> = ({ title }) => {

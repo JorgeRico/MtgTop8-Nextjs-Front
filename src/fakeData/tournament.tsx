@@ -1,36 +1,40 @@
-const url = "#";
+const url    = "#";
 const format = "Legacy";
-const items = [
+const items  = [
     {
-        "id": 28,
-        "name": "Lliga Minoria 2025",
-        "date": "25/01/25",
-        "idLeague": 4,
-        "players": 29,
-        "format": 1
+        "id"             : 28,
+        "name"           : "Lliga Minoria 2025",
+        "date"           : "25/01/25",
+        "idLeague"       : 4,
+        "players"        : 29,
+        "format"         : 1
     },
     {
-        "id": 29,
-        "name": "Lliga Minoria 2025",
-        "date": "22/02/25",
-        "idLeague": 4,
-        "players": 25,
-        "format": 1
+        "id"             : 29,
+        "name"           : "Lliga Minoria 2025",
+        "date"           : "22/02/25",
+        "idLeague"       : 4,
+        "players"        : 25,
+        "format"         : 1
     },
     {
-        "id": 30,
-        "name": "Lliga Minoria 2025",
-        "date": "29/03/25",
-        "idLeague": 4,
-        "players": 23,
-        "format": 1
+        "id"             : 30,
+        "name"           : "Lliga Minoria 2025",
+        "date"           : "29/03/25",
+        "idLeague"       : 4,
+        "players"        : 23,
+        "format"         : 1
     }
 ];
 
 const tournament = {
-    url    : url,
-    format : format,
-    items  : items
+    url            : url,
+    format         : format,
+    items          : items,
+    leagueName     : "Lliga Minoria",
+    classification : "",
+    location       : "",
+    locationName   : "location test"
 }
 
 export default tournament;

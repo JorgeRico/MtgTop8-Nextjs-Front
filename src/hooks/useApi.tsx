@@ -8,7 +8,7 @@ const headers = {
     'Access-Control-Allow-Methods' : 'GET',
 }
 
-export function getAxiosEndpoint (endpoint: string): PropTypes.any {
+export function getAxiosEndpoint (endpoint: string): any {
     return axios.get(
         endpoint,
         { headers: headers }
@@ -19,8 +19,8 @@ export function addUrlPaginationParams (endpoint: string, numItems: number, curr
     const url        = new URL(endpoint);
     const pagination = url.searchParams;
 
-    pagination.set('limit', numItems);
-    pagination.set('page', currentPage);
+    pagination.set('limit', numItems.toString());
+    pagination.set('page', currentPage.toString());
 
     return url.toString();
 }

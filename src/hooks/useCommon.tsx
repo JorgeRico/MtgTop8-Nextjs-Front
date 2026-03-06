@@ -1,12 +1,17 @@
 import statsTypes from "@/services/stats-types";
 
-export function getFormat(format: string): string {
+export function getFormat(format: number): string {
+    let value = '';
+
     if (format === 1) {
-        return statsTypes.LEGACY;
+        value = statsTypes.LEGACY;
     }
+
     if (format === 0) {
-        return statsTypes.VINTAGE;
+        value = statsTypes.VINTAGE;
     }
+
+    return value;
 }
 
 export function createModalLink(name: string, modalType: string): string {

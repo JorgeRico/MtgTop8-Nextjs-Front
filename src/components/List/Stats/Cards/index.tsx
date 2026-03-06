@@ -13,7 +13,7 @@ type MyComponenntProps = {
 }
 
 const StatsBox: React.FC<MyComponenntProps> = ({ text, cardType, endpoint, isPlayer }) => {
-    const [ renderElements, setRenderElements ] = useState([]);
+    const [ renderElements, setRenderElements ] = useState<any>([]);
     const [ noResults, setNoResults ]           = useState(false);
     const t                                     = useTranslations('errors');
 
@@ -33,7 +33,7 @@ const StatsBox: React.FC<MyComponenntProps> = ({ text, cardType, endpoint, isPla
 
     const handleClickCardTypes = () => {
         hideStats();
-        setRenderElements(null);
+        setRenderElements([]);
         showStats();
         apiCardTypeCall()
     }
@@ -44,7 +44,7 @@ const StatsBox: React.FC<MyComponenntProps> = ({ text, cardType, endpoint, isPla
     }
 
     function showStats() {
-        document.querySelector('#' + cardType).classList.toggle('none');
+        document.querySelector('#' + cardType)?.classList.toggle('none');
     }
 
     return (

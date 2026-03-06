@@ -18,7 +18,7 @@ type MyComponentProps = {
 const StatsBox: React.FC<MyComponentProps> = ({ id, title, isLeague, endpoint, endpointCards, isBlured }) => {
     const t = useTranslations('stats');
 
-    const headerTitleBlock = (text: string): string => {
+    const headerTitleBlock = (text: string): any => {
         return (
             <div className="left w100 grey-bottom">
                 <SubTitle title={
@@ -39,11 +39,10 @@ const StatsBox: React.FC<MyComponentProps> = ({ id, title, isLeague, endpoint, e
                         <>
                             {headerTitleBlock(t('Player Stats'))}
                             <CardBlockStats
-                                id={id}
-                                text={t('Top Players')}
-                                endpoint={endpoint.replace('{id}', id).replace('{option}', statsTypes.PLAYERS)}
-                                cardType={statsTypes.PLAYERS}
-                                isPlayer={true}
+                                text     = {t('Top Players')}
+                                endpoint = {endpoint.replace('{id}', id).replace('{option}', statsTypes.PLAYERS)}
+                                cardType = {statsTypes.PLAYERS}
+                                isPlayer = {true}
                             />
                         </>
                     )
@@ -51,84 +50,74 @@ const StatsBox: React.FC<MyComponentProps> = ({ id, title, isLeague, endpoint, e
 
                 {headerTitleBlock(t('Card Stats'))}
                 <CardBlockStats
-                    id={id}
-                    text={t('Top Cards')}
-                    endpoint={endpoint.replace('{id}', id).replace('{option}', statsTypes.TOP)}
-                    cardType={statsTypes.TOP}
-                    isPlayer={false}
+                    text     = {t('Top Cards')}
+                    endpoint = {endpoint.replace('{id}', id).replace('{option}', statsTypes.TOP)}
+                    cardType = {statsTypes.TOP}
+                    isPlayer = {false}
                 />
 
                 <CardBlockStats
-                    id={id}
-                    text={t('Top Creatures')}
-                    endpoint={endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.CREATURE)}
-                    cardType={statsTypes.CREATURE}
-                    isPlayer={false}
+                    text     = {t('Top Creatures')}
+                    endpoint = {endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.CREATURE)}
+                    cardType = {statsTypes.CREATURE}
+                    isPlayer = {false}
                 />
 
                 <CardBlockStats
-                    id={id}
-                    text={t('Top Instants')}
-                    endpoint={endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.INSTANT)}
-                    cardType={statsTypes.INSTANT}
-                    isPlayer={false}
+                    text     = {t('Top Instants')}
+                    endpoint = {endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.INSTANT)}
+                    cardType = {statsTypes.INSTANT}
+                    isPlayer = {false}
                 />
 
                 <CardBlockStats
-                    id={id}
-                    text={t('Top Sorceries')}
-                    endpoint={endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.SORCERY)}
-                    cardType={statsTypes.SORCERY}
-                    isPlayer={false}
+                    text     = {t('Top Sorceries')}
+                    endpoint = {endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.SORCERY)}
+                    cardType = {statsTypes.SORCERY}
+                    isPlayer = {false}
                 />
 
                 <CardBlockStats
-                    id={id}
-                    text={t('Top Artifacts')}
-                    endpoint={endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.ARTIFACT)}
-                    cardType={statsTypes.ARTIFACT}
-                    isPlayer={false}
+                    text     = {t('Top Artifacts')}
+                    endpoint = {endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.ARTIFACT)}
+                    cardType = {statsTypes.ARTIFACT}
+                    isPlayer = {false}
                 />
 
                 <CardBlockStats
-                    id={id}
-                    text={t('Top Enchantments')}
-                    endpoint={endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.ENCHANTMENT)}
-                    cardType={statsTypes.ENCHANTMENT}
-                    isPlayer={false}
+                    text     = {t('Top Enchantments')}
+                    endpoint = {endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.ENCHANTMENT)}
+                    cardType = {statsTypes.ENCHANTMENT}
+                    isPlayer = {false}
                 />
 
                 <CardBlockStats
-                    id={id}
-                    text={t('Top Planeswalkers')}
-                    endpoint={endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.PLANESWALKER)}
-                    cardType={statsTypes.PLANESWALKER}
-                    isPlayer={false}
+                    text     = {t('Top Planeswalkers')}
+                    endpoint = {endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.PLANESWALKER)}
+                    cardType = {statsTypes.PLANESWALKER}
+                    isPlayer = {false}
                 />
 
                 <CardBlockStats
-                    id={id}
-                    text={t('Top Lands')}
-                    endpoint={endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.LAND)}
-                    cardType={statsTypes.LAND}
-                    isPlayer={false}
+                    text     = {t('Top Lands')}
+                    endpoint = {endpointCards.replace('{id}', id).replace('{cardType}', statsTypes.LAND)}
+                    cardType = {statsTypes.LAND}
+                    isPlayer = {false}
                 />
 
                 {headerTitleBlock(t('Deck Stats'))}
                 <CardBlockStats
-                    id={id}
-                    text={t('Top Mainboard Cards')}
-                    endpoint={endpoint.replace('{id}', id).replace('{option}', statsTypes.MAINBOARD)}
-                    cardType={statsTypes.MAINBOARD}
-                    isPlayer={false}
+                    text     = {t('Top Mainboard Cards')}
+                    endpoint = {endpoint.replace('{id}', id).replace('{option}', statsTypes.MAINBOARD)}
+                    cardType = {statsTypes.MAINBOARD}
+                    isPlayer = {false}
                 />
 
                 <CardBlockStats
-                    id={id}
-                    text={t('Top Sideboard Cards')}
-                    endpoint={endpoint.replace('{id}', id).replace('{option}', statsTypes.SIDEBOARD)}
-                    cardType={statsTypes.SIDEBOARD}
-                    isPlayer={false}
+                    text     = {t('Top Sideboard Cards')}
+                    endpoint = {endpoint.replace('{id}', id).replace('{option}', statsTypes.SIDEBOARD)}
+                    cardType = {statsTypes.SIDEBOARD}
+                    isPlayer = {false}
                 />
             </>
         )

@@ -10,12 +10,12 @@ import Image from "next/image";
 type MyComponentProps = {
     leagueName     : string;
     format         : string;
-    renderElements : Array<any>;
-    ulr            : string;
+    renderElements : Array<any> | null;
+    url            : string;
     isBlured       : boolean;
     numPlayers     : number;
-    classification : string;
-    location       : string;
+    classification : string | null;
+    location       : string | null;
     locationName   : string;
 }
 
@@ -27,15 +27,16 @@ const LeagueTournamentBlock: React.FC<MyComponentProps> = ({ leagueName, format,
             <div className="left w100 f14 mb5">
                 <Link href={`https://maps.app.goo.gl/${location}`} className="" target="_blank" rel="noopener noreferrer" title="">
                     <HTag
-                        Tag  = "p"
-                        text = {getLocationText()}
+                        className = ""
+                        Tag       = "p"
+                        text      = {getLocationText()}
                     />
                 </Link>
             </div>
         )
     }
 
-    const getLocationText = () => {
+    const getLocationText = (): any => {
         return (
             <>
                 <span className="left mr5">{t('tournament.Location')}:</span>
@@ -71,10 +72,12 @@ const LeagueTournamentBlock: React.FC<MyComponentProps> = ({ leagueName, format,
                 )}
             </div>
             <div className={`left w100 mb10 ${isBlured ? 'blink blured' : ''}`}>
-                <TournamentList
-                    url={url}
-                    items={renderElements}
-                />
+                {renderElements &&
+                    <TournamentList
+                        url={url}
+                        items={renderElements}
+                    />
+                }
             </div>
         </>
     )

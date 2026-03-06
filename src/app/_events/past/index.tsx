@@ -15,7 +15,7 @@ type MyComponentProps = {
 }
 
 const PastEvents: React.FC<MyComponentProps> = ({ title }) => {
-    const [ pastLeagues, setPastLeagues ]           = useState(null);
+    const [ pastLeagues, setPastLeagues ]           = useState<any>([]);
     const [ showPastElements, setShowPastElements ] = useState(false);
     const [ totalPastLeagues, setTotalPastLeagues ] = useState(0);
     const numItems                                  = 5;
@@ -62,7 +62,7 @@ const PastEvents: React.FC<MyComponentProps> = ({ title }) => {
                     <BluredLeagueList></BluredLeagueList>
                 ) : (
                     <>
-                        {totalPastLeagues != null && (
+                        {totalPastLeagues && (
                             <ListLeague url={endpoints.HTTP_LEAGUE} items={pastLeagues} isBlured={false} />
                         )}
                     </>

@@ -9,6 +9,10 @@ const BluredTournamentList: React.FC = () => {
             url            = {tournament.url}
             isBlured       = {true}
             numPlayers     = {9999}
+            leagueName     = {tournament.leagueName}
+            classification = {tournament.classification}
+            location       = {tournament.location}
+            locationName   = {tournament.locationName}
         />
     )
 }

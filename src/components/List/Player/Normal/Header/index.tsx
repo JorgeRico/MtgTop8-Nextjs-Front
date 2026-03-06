@@ -7,7 +7,7 @@ const TournamentHeaderPlayers: React.FC = () => {
     return (
         <section className="item left mb20 bg-footer border-red overflowHidden playersBoxHeader">
             <BlockLine
-                position = "#"
+                position = {null}
                 player   = {t('Player')}
                 deck     = {t('Deck')}
                 isHeader = {true}

@@ -6,7 +6,7 @@ type MyComponentProps = {
     isBlured   : boolean;
 }
 
-const TournamentTitle: React.FC<MyComponenntProps> = ({ tournament, isBlured }) => {
+const TournamentTitle: React.FC<MyComponentProps> = ({ tournament, isBlured }) => {
     const t = useTranslations('tournaments');
 
     return (
