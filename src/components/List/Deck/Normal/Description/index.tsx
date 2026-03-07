@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import statsTypes from "@/services/stats-types";
+import statsTypes from "@/types/stats-types";
 import { useTranslations } from 'next-intl';
 import { DeckCardDescriptionType } from "@/types/deck";
 

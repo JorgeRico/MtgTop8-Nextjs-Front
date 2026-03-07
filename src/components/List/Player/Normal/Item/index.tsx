@@ -1,7 +1,7 @@
 import { useState, ReactNode } from 'react';
 import "../module.css";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
-import endpoints from "@/services/endpoints";
+import endpoints from "@/types/endpoints";
 import Deck from "@/components/List/Deck/Normal";
 import BluredDeck from "@/components/List/Deck/Fake";
 import Button from "@/components/List/Button";

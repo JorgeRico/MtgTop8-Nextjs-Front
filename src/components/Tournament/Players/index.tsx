@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import endpoints from "@/services/endpoints";
+import endpoints from "@/types/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import PlayerList from "@/components/List/Player/Normal";
 import PlayersBlured from "@/components/List/Player/Fake";

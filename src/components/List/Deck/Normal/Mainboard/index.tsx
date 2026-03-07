@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import statsTypes from "@/services/stats-types";
+import statsTypes from "@/types/stats-types";
 import CardTypeList from "@/components/List/Deck/Normal/CardTypeList";
 import DeckCard from "@/components/List/Deck/Normal/Card";
 import { useTranslations } from 'next-intl';

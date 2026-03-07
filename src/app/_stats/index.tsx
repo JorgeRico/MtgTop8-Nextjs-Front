@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import StatsBox from "@/components/List/Stats";
-import endpoints from "@/services/endpoints";
+import endpoints from "@/types/endpoints";
 import { StatsType } from '@/types/stats';
 
 const LeagueStats: React.FC<StatsType> = ({ id, isLeague, title }) => {

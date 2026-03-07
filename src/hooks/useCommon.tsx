@@ -1,4 +1,4 @@
-import statsTypes from "@/services/stats-types";
+import statsTypes from "@/types/stats-types";
 
 export function getFormat(format: number): string {
     let value = '';

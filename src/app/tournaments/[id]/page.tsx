@@ -6,7 +6,7 @@ import TournamentPlayers from "@/components/Tournament/Players";
 import Stats from "@/app/_stats";
 import Breadcrumb from "@/components/Breadcrumb";
 import TournamentBreadcrumb from "@/components/Breadcrumb/Tournament";
-import endpoints from "@/services/endpoints";
+import endpoints from "@/types/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import { getFormat } from '@/hooks/useCommon';
 import { useTranslations } from 'next-intl';

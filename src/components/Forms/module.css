@@ -51,10 +51,10 @@ textarea {
     }
 
     & input, & textarea {
-        width: 94% !important;
+        width: 93% !important;
     }
 
-    button { 
+    button {
         width: 100%;
         margin: 0 auto;
     }

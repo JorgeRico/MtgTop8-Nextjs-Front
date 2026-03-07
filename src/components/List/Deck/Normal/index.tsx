@@ -3,7 +3,7 @@ import DeckSideboard from "@/components/List/Deck/Normal/Sideboard";
 import DeckMainboard from "@/components/List/Deck/Normal/Mainboard";
 import DeckDescription from "@/components/List/Deck/Normal/Description";
 import { useEffect, useState } from "react";
-import statsTypes from "@/services/stats-types";
+import statsTypes from "@/types/stats-types";
 import { DeckType } from "@/types/deck";
 
 const Deck: React.FC<DeckType> = ({ items, deckName, isBlured }) => {

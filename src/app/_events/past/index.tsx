@@ -3,7 +3,7 @@
 import ListLeague from "@/components/List/League/Normal";
 import BluredLeagueList from "@/components/List/League/Fake";
 import SubTitle from "@/components/HTag/SubTitle";
-import endpoints from "@/services/endpoints";
+import endpoints from "@/types/endpoints";
 import { useState, useEffect } from "react";
 import { getAxiosEndpoint, addUrlPaginationParams } from '@/hooks/useApi';
 import Pagination from "@/components/List/Pagination";

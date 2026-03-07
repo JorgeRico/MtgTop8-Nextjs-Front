@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from 'next/navigation';
 import LeagueTournamentList from "@/components/List/League/Tournament/List";
 import Stats from "@/app/_stats";
-import endpoints from "@/services/endpoints";
+import endpoints from "@/types/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import { getFormat } from '@/hooks/useCommon';
 import Breadcrumb from "@/components/Breadcrumb";

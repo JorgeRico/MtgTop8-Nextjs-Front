@@ -158,6 +158,10 @@ h3 {
     margin-bottom: 0px;
 }
 
+.mAuto {
+    margin: 0 auto;
+}
+
 .mt0 {
     margin-top: 0;
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import endpoints from "@/services/endpoints";
+import endpoints from "@/types/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import BluredTournamentList from "@/components/List/League/Tournament/Fake";
 import LeagueTournamentBlock from "@/components/List/League/Tournament/Block";
