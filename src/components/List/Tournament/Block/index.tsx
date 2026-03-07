@@ -1,14 +1,9 @@
 import Button from "@/components/List/Button";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
+import { TournamentItemType } from "@/types/tournament";
 
-type MyComponentProps = {
-    name        : string,
-    description : string,
-    buttonText  : string
-}
-
-const TournamentItem: React.FC<MyComponentProps> = ({ name, description, buttonText }) => {
+const TournamentItem: React.FC<TournamentItemType> = ({ name, description, buttonText }) => {
     const t = useTranslations('alt-tags');
 
     return (

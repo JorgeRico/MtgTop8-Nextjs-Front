@@ -1,12 +1,8 @@
 import DeckCard from "@/components/List/Deck/Normal/Card";
 import { v4 as uuidv4 } from "uuid";
+import { DeckCardTListType } from "@/types/deck";
 
-type MyComponentProps = {
-    items : Array<any>;
-    text  : string;
-}
-
-const CardTypeList: React.FC<MyComponentProps> = ({ items, text }) => {
+const CardTypeList: React.FC<DeckCardTListType> = ({ items, text }) => {
     return (
         <>
             {(items.length > 0) && (

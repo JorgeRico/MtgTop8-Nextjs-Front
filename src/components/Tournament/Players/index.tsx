@@ -8,19 +8,15 @@ import TournamentTitleBlured from "@/components/Tournament/Fake";
 import SubTitle from "@/components/HTag/SubTitle";
 import ListImage from "@/components/Icons/List";
 import { useTranslations } from 'next-intl';
+import { TournamentSimpleType } from "@/types/tournament";
 
-type MyComponentProps = {
-    id         : string;
-    tournament : any;
-}
-
-const TournamentPlayers: React.FC<MyComponentProps> = ({ id, tournament }) => {
+const TournamentPlayers: React.FC<TournamentSimpleType> = ({ id, tournament }) => {
     const [ renderPlayers, setRenderPlayers] = useState([]);
     const [ showPlayers, setShowPlayers ]    = useState(false);
     const t                                  = useTranslations('tournaments');
 
     useEffect(() => {
-        async function apiCall() {
+        async function apiCall(): Promise<void>{
             await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_PLAYERS, id))
             .then((response) => {
                 setRenderPlayers(response.data);

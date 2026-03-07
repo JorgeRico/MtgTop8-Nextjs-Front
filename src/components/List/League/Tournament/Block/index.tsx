@@ -6,20 +6,9 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 import { ReactNode } from 'react';
 import Image from "next/image";
+import { TournamentBlockType } from "@/types/tournament";
 
-type MyComponentProps = {
-    leagueName     : string;
-    format         : string;
-    renderElements : Array<any> | null;
-    url            : string;
-    isBlured       : boolean;
-    numPlayers     : number;
-    classification : string | null;
-    location       : string | null;
-    locationName   : string;
-}
-
-const LeagueTournamentBlock: React.FC<MyComponentProps> = ({ leagueName, format, renderElements, url, isBlured, numPlayers, classification, location, locationName }) => {
+const LeagueTournamentBlock: React.FC<TournamentBlockType> = ({ leagueName, format, renderElements, url, isBlured, numPlayers, classification, location, locationName }) => {
     const t = useTranslations('league');
 
     const getLocation = () => {

@@ -6,12 +6,12 @@ const LogoIconsImage: React.FC = () => {
 
     return (
         <Image
-            className="f24 logos invertColor"
-            src="/images/mtg-logos.webp"
-            height={17}
-            width={100}
-            alt={t('mtg stats')}
-            title={t('mtg stats')}
+            className = "f24 logos invertColor"
+            src       = "/images/mtg-logos.webp"
+            height    = {17}
+            width     = {100}
+            alt       = {t('mtg stats')}
+            title     = {t('mtg stats')}
             priority
         />
     );

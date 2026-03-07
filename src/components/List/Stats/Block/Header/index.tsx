@@ -1,10 +1,7 @@
 import { useTranslations } from 'next-intl';
+import { StatsPlayerType } from "@/types/stats";
 
-type MyComponentProps = {
-    isPlayer : boolean;
-}
-
-const TopStatsList: React.FC<MyComponentProps> = ({ isPlayer }) => {
+const TopStatsList: React.FC<StatsPlayerType> = ({ isPlayer }) => {
     const t = useTranslations('stats');
 
     const topPlayerStats = () => {

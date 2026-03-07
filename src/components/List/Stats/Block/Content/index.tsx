@@ -1,12 +1,7 @@
 import ModalPopUp from "@/components/Modal";
+import { StatsItemType } from "@/types/stats";
 
-type MyComponentProps = {
-    item     : any,
-    isPlayer : boolean,
-    text     : string
-}
-
-const ContentStatsList: React.FC<MyComponentProps> = ({ item, isPlayer, text }) => {
+const ContentStatsList: React.FC<StatsItemType> = ({ item, isPlayer, text }) => {
     const playerStats = (item) => {
         return (
             <>

@@ -3,7 +3,7 @@ import Title from "@/components/HTag/Title";
 import SimpleBreadcrumb from "@/components/Breadcrumb/Simple";
 import { useTranslations } from 'next-intl';
 
-function Decklist() {
+const Decklist = () => {
     const t = useTranslations('seo-tags');
 
     return (

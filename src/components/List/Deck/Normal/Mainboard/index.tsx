@@ -4,12 +4,9 @@ import statsTypes from "@/services/stats-types";
 import CardTypeList from "@/components/List/Deck/Normal/CardTypeList";
 import DeckCard from "@/components/List/Deck/Normal/Card";
 import { useTranslations } from 'next-intl';
+import { DeckBoardType } from "@/types/deck";
 
-type MyComponentProps = {
-    items : Array<any>
-}
-
-const DeckMainboard: React.FC<MyComponentProps> = ({ items }) => {
+const DeckMainboard: React.FC<DeckBoardType> = ({ items }) => {
     const [ creatureItems, setCreatureItems ]         = useState<any>([]);
     const [ instantItems, setInstantItems ]           = useState<any>([]);
     const [ sorceryItems, setSorceryItems ]           = useState<any>([]);
@@ -19,7 +16,7 @@ const DeckMainboard: React.FC<MyComponentProps> = ({ items }) => {
     const [ landItems, setLandItems ]                 = useState<any>([]);
     const t                                           = useTranslations('deck');
 
-    function getCardTypes(deck) {
+    function getCardTypes(deck: any): void {
         let planeswalkers: any[] = [];
         let creatures    : any[] = [];
         let instants     : any[] = [];

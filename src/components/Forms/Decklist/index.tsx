@@ -23,7 +23,7 @@ const DeckListForm: React.FC = () => {
     const errors                            = useTranslations('errors');
     const tags                              = useTranslations('alt-tags');
 
-    const description = (item, firstPage, fontFamily, values) => {
+    const description = (item: any, firstPage: any, fontFamily: any, values: any): void => {
         const xTop = 42;
         firstPage.drawText(item.name, { x: xTop, y: 250, size: size, font: fontFamily, rotate: degrees(90) });
         firstPage.drawText(item.surname, { x: xTop, y: 70,  size: size, font: fontFamily, rotate: degrees(90) });
@@ -33,7 +33,7 @@ const DeckListForm: React.FC = () => {
         firstPage.drawText(item.event, { x: values.rightColumn + xMove, y: values.height-70, size: size, font: fontFamily });
     }
 
-    const decklist = (items, firstPage, fontFamily, values) => {
+    const decklist = (items: any, firstPage: any, fontFamily: any, values: any): void => {
         const maindeckCards  = cardsList( items.maindeck );
         const sideboardCards = cardsList( items.sideboard );
 
@@ -53,12 +53,12 @@ const DeckListForm: React.FC = () => {
         numberOfCards(totalMainboard, totalSideboard, firstPage, fontFamily, values);
     }
 
-    function numberOfCards(totalMainboard, totalSideboard, firstPage, fontFamily, values) {
+    function numberOfCards(totalMainboard: number, totalSideboard: number, firstPage: any, fontFamily: any, values: any): void {
         firstPage.drawText(totalMainboard.toString(), { x: values.rightColumn - 83, y: 27, size: 18, font: fontFamily });
         firstPage.drawText(totalSideboard.toString(), { x: values.width - 70,   y: 81, size: 17, font: fontFamily });
     }
 
-    function getMaindeck(cards, values, firstPage, fontFamily) {
+    function getMaindeck(cards: any, values: any, firstPage: any, fontFamily: any): number {
         const top          = 214.5;
         const MaindeckY    =  values.height / 2 + top
         let totalMainboard = 0;
@@ -75,7 +75,7 @@ const DeckListForm: React.FC = () => {
         return totalMainboard;
     }
 
-    function getSideboard(cards, values, firstPage, fontFamily) {
+    function getSideboard(cards: any, values: any, firstPage: any, fontFamily): number {
         const sideBoardY   = values.height / 2 - 38;
         let totalSideboard = 0;
 
@@ -90,7 +90,7 @@ const DeckListForm: React.FC = () => {
         return totalSideboard;
     }
 
-    function cardsList(cards) {
+    function cardsList(cards: any): any {
         const cardsSplitted = cards.split('\n');
 
         let items: any[] = [];

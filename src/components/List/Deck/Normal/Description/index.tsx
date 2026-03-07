@@ -1,14 +1,9 @@
 import { useState, useEffect } from "react";
 import statsTypes from "@/services/stats-types";
 import { useTranslations } from 'next-intl';
+import { DeckCardDescriptionType } from "@/types/deck";
 
-type MyComponentProps = {
-    deckName       : string;
-    totalMaindeck  : number;
-    totalSideboard : number;
-}
-
-const DeckDescription: React.FC<MyComponentProps> = ({ totalMaindeck, totalSideboard, deckName }) => {
+const DeckDescription: React.FC<DeckCardDescriptionType> = ({ totalMaindeck, totalSideboard, deckName }) => {
     const t = useTranslations('deck');
 
     return (

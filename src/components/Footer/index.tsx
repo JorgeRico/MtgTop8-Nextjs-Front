@@ -2,7 +2,7 @@ import "./module.css";
 import CopyrightFooter from "@/components/Footer/CopyrightFooter";
 import SocialFooter from "@/components/Footer/SocialFooter";
 
-export default function Footer() {
+const Footer = () => {
     return (
         <footer>
             <SocialFooter></SocialFooter>
@@ -10,3 +10,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export default Footer;

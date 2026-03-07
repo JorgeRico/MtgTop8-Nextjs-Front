@@ -7,3 +7,9 @@ export type LeagueType = {
     name         : string;
     year         : number;
 }
+
+export type LeagueItemsType = {
+    url      : string;
+    items    : Array<any>;
+    isBlured : boolean;
+}

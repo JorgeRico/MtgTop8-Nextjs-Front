@@ -1,11 +1,6 @@
-type MyComponentProps = {
-    position  : number | null;
-    player    : string;
-    deck      : string;
-    isHeader? : boolean;
-}
+import { PlayerLineType } from "@/types/player";
 
-const BlockLine: React.FC<MyComponentProps> = ({ position, player, deck, isHeader = false }) => {
+const BlockLine: React.FC<PlayerLineType> = ({ position, player, deck, isHeader = false }) => {
     return (
         <>
             <div className="padTournamentBox w-20">

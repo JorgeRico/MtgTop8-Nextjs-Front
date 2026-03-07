@@ -7,19 +7,15 @@ import BluredDeck from "@/components/List/Deck/Fake";
 import Button from "@/components/List/Button";
 import BlockLine from "@/components/List/Player/Normal/BlockLine";
 import { useTranslations } from 'next-intl';
+import { PlayerItemType } from "@/types/player";
 
-type MyComponentProps = {
-    item  : any;
-    index : number;
-}
-
-const TournamentPlayerItem: React.FC<MyComponentProps> = ({ item, index }) => {
+const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
     const [ loading, setLoading ]                 = useState(false);
     const [ renderDeckItems, setRenderDeckItems ] = useState([]);
     const t                                       = useTranslations('player');
 
     // api call
-    async function apiCall(id) {
+    async function apiCall(id): Promise<any> {
         setRenderDeckItems([]);
         setLoading(true);
 
@@ -33,12 +29,12 @@ const TournamentPlayerItem: React.FC<MyComponentProps> = ({ item, index }) => {
         });
     }
 
-    function hideDeckLists() {
+    function hideDeckLists(): void {
         const elems = Array.from(document.querySelectorAll('.decklists'));
         elems.forEach(elem => elem.classList.add('none'));
     }
 
-    function handleCards(index: number, idDeck: string) {
+    function handleCards(index: number, idDeck: string): void {
         const element = document.querySelector('#deck-'+index);
         const button  = document.querySelector('#button-deck-'+index);
         button?.setAttribute('disabled', 'true');

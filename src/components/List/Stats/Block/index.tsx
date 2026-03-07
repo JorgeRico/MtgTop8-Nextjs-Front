@@ -2,14 +2,9 @@ import { v4 as uuidv4 } from "uuid";
 import "./module.css"
 import Header from "@/components/List/Stats/Block/Header";
 import Content from "@/components/List/Stats/Block/Content";
+import { StatsArrayItemsType } from "@/types/stats";
 
-type MyComponentProps = {
-    items    : Array<any>;
-    isPlayer : boolean;
-    text     : string;
-}
-
-const StatsList: React.FC<MyComponentProps> = ({ items, isPlayer, text }) => {
+const StatsList: React.FC<StatsArrayItemsType> = ({ items, isPlayer, text }) => {
     return (
         <>
             <Header isPlayer={isPlayer} />

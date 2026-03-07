@@ -3,7 +3,7 @@ import Title from "@/components/HTag/Title";
 import SimpleBreadcrumb from "@/components/Breadcrumb/Simple";
 import { useTranslations } from 'next-intl';
 
-function Contact() {
+const Contact = () => {
     const t = useTranslations('seo-tags');
 
     return (

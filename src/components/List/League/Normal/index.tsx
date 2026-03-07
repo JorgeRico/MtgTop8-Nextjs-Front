@@ -4,14 +4,9 @@ import Button from "@/components/List/Button";
 import { getFormat } from '@/hooks/useCommon';
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
+import { LeagueItemsType } from "@/types/league";
 
-type MyComponentProps = {
-    url      : string;
-    items    : Array<any>;
-    isBlured : boolean;
-}
-
-const LeagueList: React.FC<MyComponentProps> = ({ url, items, isBlured }) => {
+const LeagueList: React.FC<LeagueItemsType> = ({ url, items, isBlured }) => {
     const t    = useTranslations('league');
     const tags = useTranslations('alt-tags');
 
@@ -21,12 +16,12 @@ const LeagueList: React.FC<MyComponentProps> = ({ url, items, isBlured }) => {
                 <div className="wAuto padBox overflowHidden border-red">
                     <div className="cupBox border-grey left radius5 bg-red p5 w-25">
                         <Image
-                            className="cupIcon w-15"
-                            src="/images/cup.webp"
-                            height={14}
-                            width={15}
-                            alt={tags('Cup Champion')}
-                            title={tags('Cup Champion')}
+                            className = "cupIcon w-15"
+                            src       = "/images/cup.webp"
+                            height    = {14}
+                            width     = {15}
+                            alt       = {tags('Cup Champion')}
+                            title     = {tags('Cup Champion')}
                             priority
                         />
                     </div>

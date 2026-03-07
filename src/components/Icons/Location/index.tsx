@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
 
-function LocationImage() {
+const LocationImage: React.FC = () => {
     const t = useTranslations('alt-tags');
 
     return (

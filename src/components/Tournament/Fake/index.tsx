@@ -9,9 +9,7 @@ const TournamentTitleBlured: React.FC = () => {
     }
 
     return (
-        <>
-            <Title tournament={tournament} isBlured={true}></Title>
-        </>
+        <Title tournament={tournament} isBlured={true}></Title>
     )
 }
 

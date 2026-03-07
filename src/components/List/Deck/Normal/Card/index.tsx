@@ -1,9 +1,7 @@
 import ModalPopUp from "@/components/Modal";
+import { DeckCardType } from "@/types/deck";
 
-type MyComponentProps = {
-    card : any
-}
-const DeckCard: React.FC<MyComponentProps> = ({ card }) => {
+const DeckCard: React.FC<DeckCardType> = ({ card }) => {
     return (
         <>
             <article className="cardItem">

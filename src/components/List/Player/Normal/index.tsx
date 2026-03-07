@@ -2,13 +2,9 @@ import { v4 as uuidv4 } from "uuid";
 import "./module.css";
 import PlayerItem from "@/components/List/Player/Normal/Item";
 import TournamentHeaderPlayers from "@/components/List/Player/Normal/Header";
+import { PlayerArrayType } from "@/types/player";
 
-type MyComponentProps = {
-    items    : Array<any>;
-    isBlured : boolean;
-}
-
-const TournamentPlayers: React.FC<MyComponentProps> = ({ items, isBlured }) => {
+const TournamentPlayers: React.FC<PlayerArrayType> = ({ items, isBlured }) => {
     return (
         <>
             <section className={isBlured ? "blink blured" : ""}>

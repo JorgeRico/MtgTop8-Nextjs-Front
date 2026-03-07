@@ -4,7 +4,7 @@ import Title from '@/components/HTag/Title';
 import CurrentEvents from "@/app/_events/current";
 import PastEvents from "@/app/_events/past";
 
-export default function Home() {
+const Home = () => {
     const t = useTranslations('home');
 
     return (
@@ -17,3 +17,5 @@ export default function Home() {
         </main>
     );
 }
+
+export default Home;

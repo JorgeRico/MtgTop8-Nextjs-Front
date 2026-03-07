@@ -6,11 +6,12 @@ const LogoImage: React.FC = () => {
 
     return (
         <Image
-            src="/images/stats-logo.webp"
-            height={25}
-            width={129}
-            alt={t('mtg stats')}
-            title={t('mtg stats')}
+            className = ""
+            src       = "/images/stats-logo.webp"
+            height    = {25}
+            width     = {129}
+            alt       = {t('mtg stats')}
+            title     = {t('mtg stats')}
             priority
         />
     );

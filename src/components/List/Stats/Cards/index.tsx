@@ -38,12 +38,12 @@ const StatsBox: React.FC<MyComponenntProps> = ({ text, cardType, endpoint, isPla
         apiCardTypeCall()
     }
 
-    function hideStats() {
+    function hideStats(): void {
         const elems = Array.from(document.querySelectorAll('.cardStats'));
         elems.forEach(elem => elem.id !== cardType ? elem.classList.add('none') : null);
     }
 
-    function showStats() {
+    function showStats(): void {
         document.querySelector('#' + cardType)?.classList.toggle('none');
     }
 

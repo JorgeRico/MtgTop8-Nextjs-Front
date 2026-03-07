@@ -2,18 +2,13 @@ import "./module.css"
 import { createModalLink } from '@/hooks/useCommon';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { ModalType } from "@/types/modal";
 
-type MyComponentProps = {
-    img       : string;
-    name      : string;
-    modalType : string;
-}
-
-const ModalPopUp: React.FC<MyComponentProps> = ({ img, name, modalType }) => {
+const ModalPopUp: React.FC<ModalType> = ({ img, name, modalType }) => {
     const [ modalId, setModalId ] = useState('');
     const t                       = useTranslations('cards');
 
-    function handleClick () {
+    function handleClick (): void {
         var modal = document.getElementById(modalId);
 
         if (modal != null) {
@@ -22,7 +17,7 @@ const ModalPopUp: React.FC<MyComponentProps> = ({ img, name, modalType }) => {
     }
 
     // When the user clicks on <span> (x), close the modal
-    function handleCloseClick () {
+    function handleCloseClick (): void {
         var modal = document.getElementById(modalId);
 
         if (modal != null) {
@@ -42,7 +37,7 @@ const ModalPopUp: React.FC<MyComponentProps> = ({ img, name, modalType }) => {
     }, []);
 
     return (
-        <>
+        <section>
             <div className="pointer" onClick={() => handleClick()}>
                 <img src={img} className="cardImgUrl" height="27" width="20" />
             </div>
@@ -57,7 +52,7 @@ const ModalPopUp: React.FC<MyComponentProps> = ({ img, name, modalType }) => {
                     </div>
                 </div>
             </div>
-        </>
+        </section>
     );
 }
 
