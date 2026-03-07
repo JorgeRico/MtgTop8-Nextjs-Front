@@ -2,7 +2,7 @@ import "./../module.css";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
 
-function SuccessMessage() {
+const SuccessMessage: React.FC = () => {
     const t    = useTranslations('sucess');
     const tags = useTranslations('alt-tags');
 

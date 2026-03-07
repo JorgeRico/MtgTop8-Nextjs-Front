@@ -8,19 +8,17 @@ import { useState, useEffect } from "react";
 import { getAxiosEndpoint } from '@/hooks/useApi';
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
+import { LeagueType } from '@/types/league';
+import { TitleType } from '@/types/title';
 
-type MyComponentProps = {
-    title : string;
-}
-
-const Events: React.FC<MyComponentProps> = ({ title }) => {
-    const [ currentLeagues, setCurrentLeagues ]           = useState(null);
-    const [ showCurrentElements, setShowCurrentElements ] = useState(false);
-    const [ totalLeagues, setTotalLeagues ]               = useState(0);
+const Events: React.FC<TitleType> = ({ title }) => {
+    const [ currentLeagues, setCurrentLeagues ]           = useState<LeagueType[]>([]);
+    const [ showCurrentElements, setShowCurrentElements ] = useState<boolean>(false);
+    const [ totalLeagues, setTotalLeagues ]               = useState<number>(0);
     const t                                               = useTranslations('seo-tags');
 
     useEffect(() => {
-        async function apiCallCurrent() {
+        async function apiCallCurrent(): Promise<void> {
             await getAxiosEndpoint(endpoints.API_LEAGUE_CURRENT)
             .then((response) => {
                 setCurrentLeagues(response.data);
@@ -36,7 +34,7 @@ const Events: React.FC<MyComponentProps> = ({ title }) => {
     }, []);
 
     return (
-        <section>
+        <main>
             <div className="left w100 mb20 grey-bottom">
                 <div className="left mt15 mr10">
                     <Image
@@ -61,7 +59,7 @@ const Events: React.FC<MyComponentProps> = ({ title }) => {
                     </>
                 )
             }
-        </section>
+        </main>
     );
 }
 

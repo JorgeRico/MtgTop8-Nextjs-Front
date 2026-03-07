@@ -1,9 +1,6 @@
-type MyComponentProps = {
-    component : React.ReactNode;
-    loading   : boolean;
-};
+import { BreadcrumbLoadingType } from "@/types/breadcrumb";
 
-const Breadcrumb: React.FC<MyComponentProps> = ({ component, loading }) => {
+const Breadcrumb: React.FC<BreadcrumbLoadingType> = ({ component, loading }) => {
     return (
         <section className={`left w100 f14 ${loading === false ? 'blink blured' : ''}`}>
             {component}

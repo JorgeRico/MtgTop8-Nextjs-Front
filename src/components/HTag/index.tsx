@@ -1,10 +1,6 @@
-type MyComponentProps = {
-    Tag       : any;
-    className : string;
-    text      : any;
-};
+import { TitleComponentType } from "@/types/title";
 
-const HTag: React.FC<MyComponentProps> = ({ Tag, className, text }) => {
+const HTag: React.FC<TitleComponentType> = ({ Tag, className, text }) => {
     return (
         <Tag className={className}>
             {text}

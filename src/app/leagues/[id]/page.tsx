@@ -13,16 +13,16 @@ import { useTranslations } from 'next-intl';
 
 const League: React.FC = () => {
     const params                                = useParams<{ id: string }>();
-    const [ leagueName, setLeagueName ]         = useState('');
-    const [ showLeagueName, setShowLeagueName ] = useState(false);
-    const [ leagueFormat, setLeagueFormat ]     = useState('');
-    const [ location, setLocation ]             = useState(null);
-    const [ locationName, setLocationName ]     = useState('');
-    const [ year, setYear ]                     = useState('');
+    const [ leagueName, setLeagueName ]         = useState<string>('');
+    const [ showLeagueName, setShowLeagueName ] = useState<boolean>(false);
+    const [ leagueFormat, setLeagueFormat ]     = useState<string>('');
+    const [ location, setLocation ]             = useState<string | null>(null);
+    const [ locationName, setLocationName ]     = useState<string>('');
+    const [ year, setYear ]                     = useState<string>('');
     const t                                     = useTranslations('seo-tags');
 
     useEffect(() => {
-        async function apiCall() {
+        async function apiCall(): Promise<void> {
             await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID, params.id))
                 .then((response) => {
                     setLeagueName(response.data.name);
@@ -42,7 +42,7 @@ const League: React.FC = () => {
     }, []);
 
     return (
-        <>
+        <main>
             <Breadcrumb
                 loading   = {showLeagueName}
                 component = {
@@ -63,7 +63,7 @@ const League: React.FC = () => {
                 isLeague = {true}
                 title    = {`${t('leagues.stats')} ${leagueName ? ' - ' + leagueName : ''}`}
             />
-        </>
+        </main>
     );
 }
 

@@ -1,16 +1,7 @@
 import { useState }from "react";
+import { InputFormType } from "@/types/forms";
 
-type MyComponentProps = {
-    name        : string;
-    type        : string;
-    placeholder : string;
-    label       : string;
-    value       : string;
-    toSend      : any;
-    setToSend   : any;
-}
-
-const InputForm: React.FC<MyComponentProps> = ({ name, type, placeholder, label, value, toSend, setToSend }) => {
+const InputForm: React.FC<InputFormType> = ({ name, type, placeholder, label, value, toSend, setToSend }) => {
 
     const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });

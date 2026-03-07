@@ -1,16 +1,8 @@
 import Link from 'next/link';
 import Image from "next/image";
+import { LinkType } from "@/types/link";
 
-type MyComponentProps = {
-    url       : string;
-    className : string;
-    img       : string;
-    height    : number;
-    width     : number;
-};
-
-const LinkImage: React.FC<MyComponentProps> = ({url, className, img, height, width}) => {
-
+const LinkImage: React.FC<LinkType> = ({url, className, img, height, width}) => {
     return (
         <Link href={url} className={className}>
             <Image

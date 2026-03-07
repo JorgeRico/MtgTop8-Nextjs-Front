@@ -1,10 +1,7 @@
 import HTag from "@/components/HTag";
+import { TitleAnyType } from "@/types/title";
 
-type MyComponentProps = {
-    title: any;
-};
-
-const SubTitle: React.FC<MyComponentProps> = ({ title }) => {
+const SubTitle: React.FC<TitleAnyType> = ({ title }) => {
     return (
         <HTag Tag="h2" className="left mb15 f20" text={title} />
     );

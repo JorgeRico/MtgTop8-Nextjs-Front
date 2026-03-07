@@ -9,23 +9,21 @@ import { getAxiosEndpoint, addUrlPaginationParams } from '@/hooks/useApi';
 import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
+import { LeagueType } from '@/types/league';
+import { TitleType } from '@/types/title';
 
-type MyComponentProps = {
-    title : string;
-}
-
-const PastEvents: React.FC<MyComponentProps> = ({ title }) => {
-    const [ pastLeagues, setPastLeagues ]           = useState<any>([]);
-    const [ showPastElements, setShowPastElements ] = useState(false);
-    const [ totalPastLeagues, setTotalPastLeagues ] = useState(0);
-    const numItems                                  = 5;
-    const [ currentPage, setCurrentPage ]           = useState(1);
+const PastEvents: React.FC<TitleType> = ({ title }) => {
+    const [ pastLeagues, setPastLeagues ]           = useState<LeagueType[]>([]);
+    const [ showPastElements, setShowPastElements ] = useState<boolean>(false);
+    const [ totalPastLeagues, setTotalPastLeagues ] = useState<number>(0);
+    const numItems : number                         = 5;
+    const [ currentPage, setCurrentPage ]           = useState<number>(1);
     const t                                         = useTranslations('seo-tags');
 
     useEffect(() => {
-        async function apiCallPast() {
+        async function apiCallPast(): Promise<void> {
             setShowPastElements(false);
-            setPastLeagues(null);
+            setPastLeagues([]);
 
             await getAxiosEndpoint(addUrlPaginationParams(endpoints.API_LEAGUE_PAST, numItems, currentPage))
             .then((response) => {
@@ -43,7 +41,7 @@ const PastEvents: React.FC<MyComponentProps> = ({ title }) => {
     }, [currentPage]);
 
     return (
-        <section>
+        <main>
             <div className="left w100 mt20 mb20 grey-bottom">
                 <div className="left mt15 mr10">
                     <Image
@@ -71,7 +69,7 @@ const PastEvents: React.FC<MyComponentProps> = ({ title }) => {
             {totalPastLeagues > 0 &&
                 <Pagination text={t('past-leagues.pagination')} total={totalPastLeagues} itemsPerPage={numItems} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>
             }
-        </section>
+        </main>
     );
 }
 

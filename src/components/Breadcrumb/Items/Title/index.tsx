@@ -1,8 +1,6 @@
-type MyComponentProps = {
-    title : string;
-};
+import { TitleType } from '@/types/title';
 
-const TitleItemBreadcrumb: React.FC<MyComponentProps> = ({ title }) => {
+const TitleItemBreadcrumb: React.FC<TitleType> = ({ title }) => {
     return (
         <div className="left ml5">
             {title}

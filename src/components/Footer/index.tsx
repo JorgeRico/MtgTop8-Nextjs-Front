@@ -4,11 +4,9 @@ import SocialFooter from "@/components/Footer/SocialFooter";
 
 export default function Footer() {
     return (
-        <>
-            <footer>
-                <SocialFooter></SocialFooter>
-                <CopyrightFooter></CopyrightFooter>
-            </footer>
-        </>
+        <footer>
+            <SocialFooter></SocialFooter>
+            <CopyrightFooter></CopyrightFooter>
+        </footer>
     );
 }

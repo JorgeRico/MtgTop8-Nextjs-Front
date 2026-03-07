@@ -1,13 +1,6 @@
-type MyComponentProps = {
-    name        : string;
-    placeholder : string;
-    label       : string;
-    value       : string;
-    toSend      : any;
-    setToSend   : any;
-}
+import { TextareaFormType } from "@/types/forms";
 
-const TextareaForm: React.FC<MyComponentProps> = ({ name, placeholder, label, value, toSend, setToSend }) => {
+const TextareaForm: React.FC<TextareaFormType> = ({ name, placeholder, label, value, toSend, setToSend }) => {
     const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
     };

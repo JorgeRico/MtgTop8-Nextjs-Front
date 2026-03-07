@@ -6,11 +6,11 @@ function NotFound() {
     const t = useTranslations('seo-tags');
 
     return (
-        <>
+        <main>
             <SimpleBreadcrumb title={t('not-found.breadcrumb')} />
             <Title title={t('not-found.text-title')} />
             <p className="mb40 color-gray">{t('not-found.text-description')}</p>
-        </>
+        </main>
     );
 }
 

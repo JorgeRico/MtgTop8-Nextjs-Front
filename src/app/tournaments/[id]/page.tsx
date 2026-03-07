@@ -10,16 +10,17 @@ import endpoints from "@/services/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import { getFormat } from '@/hooks/useCommon';
 import { useTranslations } from 'next-intl';
+import { TournamentType } from "@/types/tournament";
 
 const Tournament: React.FC = () => {
     const params                                = useParams<{ id: string }>();
-    const [ tournament, setTournament]          = useState({idLeague: '', name:'', date:'', players: ''});
-    const [ loading, setLoading ]               = useState(false);
+    const [ tournament, setTournament]          = useState<TournamentType>({idLeague: '', name:'', date:'', players: ''});
+    const [ loading, setLoading ]               = useState<boolean>(false);
     const t                                     = useTranslations('seo-tags');
-    const [ breadcrumbText, setBreadcrumbText ] = useState('');
+    const [ breadcrumbText, setBreadcrumbText ] = useState<string>('');
 
     useEffect(() => {
-        async function apiCall() {
+        async function apiCall(): Promise<void> {
             await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_DATA, params.id))
             .then((response) => {
                 setTournament(prevState => ({
@@ -45,7 +46,7 @@ const Tournament: React.FC = () => {
     }, []);
 
     return (
-        <>
+        <main>
             <Breadcrumb
                 loading   = {loading}
                 component = {
@@ -65,7 +66,7 @@ const Tournament: React.FC = () => {
                 isLeague = {false}
                 title    = {`${t('tournaments.stats')} - ${tournament.name}`}
             />
-        </>
+        </main>
     );
 }
 

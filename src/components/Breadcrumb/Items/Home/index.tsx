@@ -12,6 +12,7 @@ const HomeItemBreadcrumb: React.FC = () => {
                 width     = {19}
                 height    = {19}
                 className = "invertColor"
+                title     = ""
             />
         </div>
     );
