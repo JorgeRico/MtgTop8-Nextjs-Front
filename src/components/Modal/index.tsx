@@ -25,7 +25,9 @@ const ModalPopUp: React.FC<ModalType> = ({ img, name, modalType }) => {
         }
     }
 
-    document.addEventListener('mousedown', handleCloseClick);
+    if (typeof document !== "undefined") {
+        document.addEventListener('mousedown', handleCloseClick);
+    }
 
     useEffect(() => {
         setModalId(createModalLink(name, modalType));

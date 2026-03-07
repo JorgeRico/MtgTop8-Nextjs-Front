@@ -19,3 +19,10 @@ export type StatsItemType = {
     isPlayer : boolean;
     text     : string;
 }
+
+export type StatsCardItemType = {
+    text     : string;
+    cardType : string;
+    endpoint : string;
+    isPlayer : boolean;
+}

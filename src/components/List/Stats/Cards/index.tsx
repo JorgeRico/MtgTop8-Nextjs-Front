@@ -4,34 +4,31 @@ import StatsListBlock from "@/components/List/Stats/Block";
 import BluredStatsList from "@/components/List/Stats/Cards/Fake";
 import Block from "@/components/List/Stats/Cards/Block";
 import { useTranslations } from 'next-intl';
+import { StatsCardItemType } from "@/types/stats";
 
-type MyComponenntProps = {
-    text     : string;
-    cardType : string;
-    endpoint : string;
-    isPlayer : boolean;
-}
-
-const StatsBox: React.FC<MyComponenntProps> = ({ text, cardType, endpoint, isPlayer }) => {
+const StatsBox: React.FC<StatsCardItemType> = ({ text, cardType, endpoint, isPlayer }) => {
     const [ renderElements, setRenderElements ] = useState<any>([]);
     const [ noResults, setNoResults ]           = useState(false);
+    const [ isLoading, setIsLoading ]           = useState(true);
     const t                                     = useTranslations('errors');
 
     // api call
-    async function apiCardTypeCall() {
+    async function apiCardTypeCall(): Promise<any> {
         await getAxiosEndpoint(endpoint)
             .then((response) => {
                 setRenderElements(response.data.stats);
+                setIsLoading(false);
             })
             .catch((err) => {
                 if (err.status === 404) {
                     setNoResults(true);
+                    setIsLoading(false);
                 }
                 console.log('error League card stats')
             });
     }
 
-    const handleClickCardTypes = () => {
+    const handleClickCardTypes = (): void => {
         hideStats();
         setRenderElements([]);
         showStats();
@@ -53,15 +50,15 @@ const StatsBox: React.FC<MyComponenntProps> = ({ text, cardType, endpoint, isPla
                 <Block text={text}></Block>
             </span>
             <div className="left mt10 mb30 overflowHidden cardStats none" id={cardType}>
-                {!renderElements ? (
-                    (noResults === true) ? (
-                        <div className="radius5 cardsList bg-footer padStatsBox">
-                            {t("stats.Sorry, now we don't have tournaments registered for this league")}
-                        </div>
-                    ) : (
-                        <BluredStatsList></BluredStatsList>
-                    )
-                ) : (
+                {isLoading && (
+                    <BluredStatsList></BluredStatsList>
+                )}
+                {(isLoading === false && noResults === true) && (
+                    <div className="radius5 cardsList bg-footer padStatsBox">
+                        {t("stats.Sorry, now we don't have tournaments registered for this league")}
+                    </div>
+                )}
+                {(isLoading === false && noResults === false) && (
                     <StatsListBlock items={renderElements} isPlayer={isPlayer} text={text} />
                 )}
             </div>

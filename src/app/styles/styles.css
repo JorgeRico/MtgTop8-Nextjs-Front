@@ -90,6 +90,15 @@
     /* opacity: 0.6; */
 }
 
-button { 
-    padding: 10px 20px; 
+button {
+    padding: 10px 20px;
+}
+
+.homeIcon {
+    margin-left: -5px;
+
+    & img {
+        width: 19px;
+        margin-top: 0px;
+    }
 }
