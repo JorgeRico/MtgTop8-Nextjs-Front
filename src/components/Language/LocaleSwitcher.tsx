@@ -12,17 +12,17 @@ type Props = {
 
 export default function LocaleSwitcher({changeLocaleAction}: Props) {
     const locale           = useLocale();
-    const langContainerRef = useRef(null);
+    const langContainerRef = useRef<null | HTMLDivElement>(null);;
 
     const handleClickButton = () => {
         const element = langContainerRef;
-        element.current.classList.toggle('none');
+        element.current?.classList.toggle('none');
     };
 
     const changeLanguage = (languageCode) => {
         const element = langContainerRef;
         changeLocaleAction(languageCode as Locale)
-        element.current.classList.toggle('none');
+        element.current?.classList.toggle('none');
     };
 
     const getLangInfo = (lang) => {
