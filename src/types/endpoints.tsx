@@ -4,6 +4,7 @@ const endpoints = {
     API_HOME                  : '/',
     API_HEALTH                : host_url + 'health',
 
+    API_LEAGUE_ALL            : host_url + 'leagues/all',
     API_LEAGUE_ID             : host_url + 'leagues/{id}',
     API_LEAGUE_HOME           : host_url + 'leagues/home',
     API_LEAGUE_CURRENT        : host_url + 'leagues/current',
@@ -12,6 +13,7 @@ const endpoints = {
     API_LEAGUE_STATS          : host_url + 'leagues/{id}/stats/{option}',
     API_LEAGUE_CARD_STATS     : host_url + 'leagues/{id}/cards/{cardType}/stats',
 
+    API_TOURNAMENT_ALL        : host_url + 'tournaments/all',
     API_TOURNAMENT_DATA       : host_url + 'tournaments/{id}',
     API_TOURNAMENT_PLAYERS    : host_url + 'tournaments/{id}/players',
     API_TOURNAMENT_STATS      : host_url + 'tournaments/{id}/stats/{option}',
