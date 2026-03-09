@@ -3,6 +3,22 @@ import { useTranslations } from 'next-intl';
 import Title from '@/components/HTag/Title';
 import CurrentEvents from "@/app/_events/current";
 import PastEvents from "@/app/_events/past";
+import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
+
+interface MetadataProps {
+    params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({params,}: MetadataProps): Promise<Metadata> {
+    const { locale } = await params;
+    const t          = await getTranslations({ locale, namespace: 'home' });
+
+    return {
+        title       : t('title'),
+        description : t('description')
+    }
+}
 
 const Home = () => {
     const t = useTranslations('home');
