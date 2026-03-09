@@ -15,7 +15,12 @@ export async function generateMetadata({params,}: MetadataProps): Promise<Metada
 
     return {
         title       : t('contact-form.title'),
-        description : t('contact-form.description')
+        description : t('contact-form.description'),
+        openGraph   : {
+            title       : t('contact-form.title'),
+            description : t('contact-form.description'),
+            url         : new URL(process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app' + '/contact')
+        }
     }
 }
 

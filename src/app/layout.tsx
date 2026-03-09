@@ -15,8 +15,27 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
     title: {
-        template: '%s | example.com',
-        default: 'Home | example.com',
+        template : '%s | MTG Stats - Eternal Català',
+        default  : 'MTG Stats - Eternal Català',
+    },
+    description : "%s | MTG Stats - Eternal Català",
+    keywords    : "Magic the Gathering, Eternal Català, Legacy, Lliga Catalana de Legacy, LCL, Vintage, Lliga Catalana de Vintage, Lliga Minoria, mtg, tcg, stats",
+    robots      : "index, follow",
+    openGraph   : {
+        title       : "%s | MTG Stats - Eternal Català",
+        description : "%s | MTG Stats - Eternal Català",
+        url         : new URL(process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app'),
+        siteName    : "MTG Stats - Eternal Català",
+        images: [
+            {
+                url    : new URL(await process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app' + '/mtg-stats-eternal-catala.jpg'),
+                width  : 1000,
+                height : 829,
+                alt    : "MTG Stats - Eternal Català"
+            },
+        ],
+        locale : "en_US",
+        type   : "website",
     },
 }
 
