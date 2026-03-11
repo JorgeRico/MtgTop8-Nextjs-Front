@@ -19,9 +19,8 @@ const DeckListForm: React.FC = () => {
     const [ cardGap ]                       = useState(43);
     const [ size ]                          = useState(12);
     const [ errorMessage, setErrorMessage ] = useState('');
-    const t                                 = useTranslations('forms');
+    const t                                 = useTranslations('decklist');
     const errors                            = useTranslations('errors');
-    const tags                              = useTranslations('alt-tags');
 
     const description = (item: any, firstPage: any, fontFamily: any, values: any): void => {
         const xTop = 42;
@@ -43,11 +42,9 @@ const DeckListForm: React.FC = () => {
         // max items check
         if (totalSideboard > 15 ) {
             setShowError(true);
-            setErrorMessage(errors('decklist.Incorrect sideboard - Maximum 15 cards'));
+            setErrorMessage(errors('forms.Incorrect sideboard - Maximum 15 cards'));
             setTimeout(() => {setShowButton(true)}, 2000);
             setTimeout(() => {setShowError(false)}, 2000);
-
-            // throw new Error(errors('decklist.Incorrect sideboard - Maximum 15 cards'));
         }
 
         numberOfCards(totalMainboard, totalSideboard, firstPage, fontFamily, values);
@@ -108,11 +105,9 @@ const DeckListForm: React.FC = () => {
                     card = item.slice(3);
                 } else {
                     setShowError(true);
-                    setErrorMessage(errors('decklist.Incorrect form - card incorrect format'));
+                    setErrorMessage(errors('forms.Incorrect form - card incorrect format'));
                     setTimeout(() => {setShowButton(true)}, 2000);
                     setTimeout(() => {setShowError(false)}, 2000);
-
-                    // throw new Error(errors('decklist.Incorrect form - card incorrect format'));
                 }
 
                 if (!Number.isNaN(num) && card != '') {
@@ -130,7 +125,7 @@ const DeckListForm: React.FC = () => {
 
         try {
             // Fetch an existing PDF document
-            const url              = 'src/assets/pdf/decklist.pdf'
+            const url              = '/pdf/decklist.pdf'
             const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
 
             // Load a PDFDocument from the existing PDF bytes
@@ -177,11 +172,9 @@ const DeckListForm: React.FC = () => {
         } catch(err) {
             // console.log('FAILED...', err);
             setShowError(true);
-            setErrorMessage(errors('decklist.Incorrect form - fill form correctly'));
+            setErrorMessage(errors('forms.Incorrect form - fill form correctly'));
             setTimeout(() => {setShowButton(true)}, 2000);
             setTimeout(() => {setShowError(false)}, 2000);
-
-            // throw new Error(errors('decklist.Incorrect form - fill form correctly'));
         };
     }
 
@@ -193,19 +186,19 @@ const DeckListForm: React.FC = () => {
         <section className="left w100 mb20">
             <form ref={form} onSubmit={onSubmit} className="left w100 mb40 overflowHidden pointer form decklistForm">
                 <article className="left w100">
-                    <InputForm name="name" type="text" placeholder={t('decklist.Your name')} label={t('decklist.Name')} value={toSend.name} toSend={toSend} setToSend={setToSend}></InputForm>
-                    <InputForm name="surname" type="text" placeholder={t('decklist.Your surname')} label={t('decklist.Surname')} value={toSend.surname} toSend={toSend} setToSend={setToSend}></InputForm>
+                    <InputForm name="name" type="text" placeholder={t('Your name')} label={t('Name')} value={toSend.name} toSend={toSend} setToSend={setToSend}></InputForm>
+                    <InputForm name="surname" type="text" placeholder={t('Your surname')} label={t('Surname')} value={toSend.surname} toSend={toSend} setToSend={setToSend}></InputForm>
                 </article>
 
                 <article className="left w100">
-                    <InputForm name="event" type="text" placeholder={t('decklist.Event name')} label={t('decklist.Event name')} value={toSend.event} toSend={toSend} setToSend={setToSend}></InputForm>
-                    <InputForm name="deckName" type="text" placeholder={t('decklist.Your Deck name')} label={t('decklist.Deck name')} value={toSend.deckName} toSend={toSend} setToSend={setToSend}></InputForm>
+                    <InputForm name="event" type="text" placeholder={t('Event name')} label={t('Event name')} value={toSend.event} toSend={toSend} setToSend={setToSend}></InputForm>
+                    <InputForm name="deckName" type="text" placeholder={t('Your Deck name')} label={t('Deck name')} value={toSend.deckName} toSend={toSend} setToSend={setToSend}></InputForm>
                 </article>
 
                 <article className="left w100">
                     <div className="left mb20 w-350">
-                        <TextareaForm name="mainboard" placeholder={t('decklist.Your mainboard cards')} label={t('decklist.Mainboard cards')} value={toSend.mainboard} toSend={toSend} setToSend={setToSend}></TextareaForm>
-                        <TextareaForm name="sideboard" placeholder={t('decklist.Your sideboard cards')} label={t('decklist.Sideboard cards')} value={toSend.sideboard} toSend={toSend} setToSend={setToSend}></TextareaForm>
+                        <TextareaForm name="mainboard" placeholder={t('Your mainboard cards')} label={t('Mainboard cards')} value={toSend.mainboard} toSend={toSend} setToSend={setToSend}></TextareaForm>
+                        <TextareaForm name="sideboard" placeholder={t('Your sideboard cards')} label={t('Sideboard cards')} value={toSend.sideboard} toSend={toSend} setToSend={setToSend}></TextareaForm>
                     </div>
                     <div className="left mb20 w-350 mt35 pdf">
                          <Image
@@ -214,8 +207,8 @@ const DeckListForm: React.FC = () => {
                             width={280}
                             height={366}
                             sizes="100vw"
-                            alt={tags('decklist pdf - mtg legacy cat')}
-                            title={tags('decklist pdf - mtg legacy cat')}
+                            alt={t('decklist pdf - mtg legacy cat')}
+                            title={t('decklist pdf - mtg legacy cat')}
                             priority
                         />
                     </div>
@@ -223,7 +216,7 @@ const DeckListForm: React.FC = () => {
 
                 {showButton == true &&
                     <div className="left w100">
-                        <button className="pointer pad bg-red color-white" type='submit'>{t('decklist.Generate Decklist pdf')}</button>
+                        <button className="pointer pad bg-red color-white" type='submit'>{t('Generate Decklist pdf')}</button>
                     </div>
                 }
 

@@ -113,11 +113,9 @@
         "league" : {
             "Sorry, now we don't have tournaments registered for this league" : "Sorry, now we don't have tournaments registered for this league"
         },
-        "contact" : {
+        "forms" : {
             "Pay 3 extra manas and try again" : "Pay 3 extra manas and try again.",
-            "Please, fill all data fields" : "Please, fill all data fields."
-        },
-        "decklist" : {
+            "Please, fill all data fields" : "Please, fill all data fields.",
             "Incorrect form - fill form correctly" : "Incorrect form - fill form correctly",
             "Incorrect form - card incorrect format" : "Incorrect form - card incorrect format",
             "Incorrect sideboard - Maximum 15 cards" : "Incorrect sideboard - Maximum 15 cards"
@@ -127,21 +125,6 @@
         }
     },
     "forms" : {
-        "decklist" : {
-            "Your name" : "Your name",
-            "Your surname" : "Your surname",
-            "Event name" : "Event name",
-            "Your Deck name" : "Your Deck name",
-            "Your mainboard cards" : "Your mainboard cards",
-            "Your sideboard cards" : "Your sideboard cards",
-            "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
-            "Generate Decklist pdf" : "Generate Decklist pdf",
-            "Name" : "Name",
-            "Surname" : "Surname",
-            "Deck name" : "Deck name",
-            "Mainboard cards" : "Mainboard cards",
-            "Sideboard cards" : "Sideboard cards"
-        },
         "contact" : {
             "Your name" : "Your name",
             "Name" : "Name",
@@ -156,18 +139,37 @@
         "Thank you for contacting us," : "Thank you for contacting us,",
         "Your query is in the stack In response we'll play a brainstorm" : "Your query is in the stack. In response we'll play a brainstorm"
     },
+    "not-found" : {
+        "title" : "MTG Legacy stats - CAT Legacy - Page not found",
+        "description" : "Catalan MTG Legacy leagues, tournaments, players and cards - Page not found",
+        "breadcrumb" : "404 page not found",
+        "text-title"  : "Error 404 - Page not found",
+        "text-description" : "This url does not exist. Please check the address and try again."
+    },
+    "decklist" : {
+        "title" : "MTG Legacy stats - CAT Legacy - Decklist",
+        "description" : "Decklist - Catalan MTG Legacy leagues, tournaments, players and cards",
+        "text-title" : "Decklist generator",
+        "text-description" : "Print your deck on a tournament pdf stylesheet",
+        "Your name" : "Your name",
+        "Your surname" : "Your surname",
+        "Event name" : "Event name",
+        "Your Deck name" : "Your Deck name",
+        "Your mainboard cards" : "Your mainboard cards",
+        "Your sideboard cards" : "Your sideboard cards",
+        "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
+        "Generate Decklist pdf" : "Generate Decklist pdf",
+        "Name" : "Name",
+        "Surname" : "Surname",
+        "Deck name" : "Deck name",
+        "Mainboard cards" : "Mainboard cards",
+        "Sideboard cards" : "Sideboard cards"
+    },
     "seo-tags" : {
         "tournaments" : {
             "title" : "Mtg Stats - Legacy Tournament",
             "description" : "Tournament - Catalan MTG Legacy leagues, tournaments, players and cards",
             "stats" : "Tournament Stats"
-        },
-        "not-found" : {
-            "title" : "MTG Legacy stats - CAT Legacy - Page not found",
-            "description" : "Catalan MTG Legacy leagues, tournaments, players and cards - Page not found",
-            "breadcrumb" : "404 page not found",
-            "text-title"  : "Error 404 - Page not found",
-            "text-description" : "This url does not exist. Please check the address and try again."
         },
         "leagues" : {
             "title" : "Mtg Stats - Legacy League",
@@ -181,12 +183,6 @@
         "current-leagues" : {
             "text-description" : "Explore current leagues, view standings and decks",
             "pagination" : "Current Leagues"
-        },
-        "decklist-form" : {
-            "title" : "MTG Legacy stats - CAT Legacy - Decklist",
-            "description" : "Decklist - Catalan MTG Legacy leagues, tournaments, players and cards",
-            "text-title" : "Decklist generator",
-            "text-description" : "Print your deck on a tournament pdf stylesheet"
         },
         "contact-form" : {
             "title" : "MTG Legacy stats - CAT Legacy - Contact",

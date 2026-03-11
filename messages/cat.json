@@ -113,11 +113,9 @@
         "league" : {
             "Sorry, now we don't have tournaments registered for this league" : "Ho sentim molt, no tenim cap torneig registrat per aquesta lliga"
         },
-        "contact" : {
+        "forms" : {
             "Pay 3 extra manas and try again" : "Paga 3 manas extres i prova de nou.",
-            "Please, fill all data fields" : "Si us plau, omple tots els camps del formulari."
-        },
-        "decklist" : {
+            "Please, fill all data fields" : "Si us plau, omple tots els camps del formulari.",
             "Incorrect form - fill form correctly" : "Formulari incorrecte - Si us plau, omple el formulari correctament",
             "Incorrect form - card incorrect format" : "Formulari incorrecte - Cartes amb un format incorrecte",
             "Incorrect sideboard - Maximum 15 cards" : "Formulari incorrecte - Sideboard - Màxim de 15 cartes"
@@ -127,21 +125,6 @@
         }
     },
     "forms" : {
-        "decklist" : {
-            "Your name" : "Nom",
-            "Your surname" : "Cognom",
-            "Event name" : "Event",
-            "Your Deck name" : "Nom de la baralla",
-            "Your mainboard cards" : "Cartes del mainboard",
-            "Your sideboard cards" : "Cartes del sideboard",
-            "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
-            "Generate Decklist pdf" : "Generar pdf",
-            "Name" : "Nom",
-            "Surname" : "Cognom",
-            "Deck name" : "Deck Nom de la baralla",
-            "Mainboard cards" : "Cartes del Mainboard",
-            "Sideboard cards" : "Cartes del Sideboard"
-        },
         "contact" : {
             "Your name" : "Nom",
             "Name" : "Nom",
@@ -156,18 +139,37 @@
         "Thank you for contacting us," : "Gràcies per contactar amb nosaltres,",
         "Your query is in the stack In response we'll play a brainstorm" : "La teva consulta es posa a la pila.  En resposta jugarem un brainstorm"
     },
+    "not-found" : {
+        "title" : "MTG Legacy stats - Pàgina no trobada - CAT Legacy",
+        "description" : "Pàgina no trobada - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+        "breadcrumb" : "404 pàgina no trobada",
+        "text-title"  : "Error 404 - Pàgina no trobada",
+        "text-description" : "Aquesta direcció no existeix.  Si us plau, revisa-la i prova de nou."
+    },
+    "decklist" : {
+        "title" : "MTG Legacy stats - Formulari creació de llista de baralla - Lligues i Tornejos Magic The Gathering - CAT Legacy",
+        "description" : "Baralla - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+        "text-title" : "Generador de Baralla",
+        "text-description" : "Crea la llista de la teva baralla en un pdf",
+        "Your name" : "Nom",
+        "Your surname" : "Cognom",
+        "Event name" : "Event",
+        "Your Deck name" : "Nom de la baralla",
+        "Your mainboard cards" : "Cartes del mainboard",
+        "Your sideboard cards" : "Cartes del sideboard",
+        "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
+        "Generate Decklist pdf" : "Generar pdf",
+        "Name" : "Nom",
+        "Surname" : "Cognom",
+        "Deck name" : "Deck Nom de la baralla",
+        "Mainboard cards" : "Cartes del Mainboard",
+        "Sideboard cards" : "Cartes del Sideboard"
+    },
     "seo-tags" : {
         "tournaments" : {
             "title" : "Mtg Stats - Tornejos Magic The Gathering - CAT Legacy",
             "description" : "Tournament - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
             "stats" : "Estadistiques de Tornejos"
-        },
-        "not-found" : {
-            "title" : "MTG Legacy stats - Pàgina no trobada - CAT Legacy",
-            "description" : "Pàgina no trobada - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
-            "breadcrumb" : "404 pàgina no trobada",
-            "text-title"  : "Error 404 - Pàgina no trobada",
-            "text-description" : "Aquesta direcció no existeix.  Si us plau, revisa-la i prova de nou."
         },
         "leagues" : {
             "title" : "Mtg Stats - Lligues Magic The Gathering - CAT Legacy",
@@ -181,12 +183,6 @@
         "current-leagues" : {
             "text-description" : "Explora les lligues actuals, revisa tops i baralles guanyadores",
             "pagination" : "Lligues actuals"
-        },
-        "decklist-form" : {
-            "title" : "MTG Legacy stats - Formulari creació de llista de baralla - Lligues i Tornejos Magic The Gathering - CAT Legacy",
-            "description" : "Baralla - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
-            "text-title" : "Generador de Baralla",
-            "text-description" : "Crea la llista de la teva baralla en un pdf"
         },
         "contact-form" : {
             "title" : "MTG Legacy stats - Formulari de Contact - Lligues i Tornejos Magic The Gathering - Legacy - Catalunya - CAT Legacy",

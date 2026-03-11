@@ -114,11 +114,9 @@
         "league" : {
             "Sorry, now we don't have tournaments registered for this league" : "Lo siento, no tenemos torneos registrados para esta liga"
         },
-        "contact" : {
+        "forms" : {
             "Pay 3 extra manas and try again" : "Paga 3 manas extra y vuelve a probar.",
-            "Please, fill all data fields" : "Por favor, rellena todos los datos del formulario."
-        },
-        "decklist" : {
+            "Please, fill all data fields" : "Por favor, rellena todos los datos del formulario.",
             "Incorrect form - fill form correctly" : "Formulario incorrecto - rellena el formulario correctamente",
             "Incorrect form - card incorrect format" : "Formulario incorrecto - cartas con formato incorrecto",
             "Incorrect sideboard - Maximum 15 cards" : "Sideboard incorrecto - Máximo 15 cartas"
@@ -128,21 +126,6 @@
         }
     },
     "forms" : {
-        "decklist" : {
-            "Your name" : "Nombre",
-            "Your surname" : "Apellido",
-            "Event name" : "Evento",
-            "Your Deck name" : "Nombre de la baraja",
-            "Your mainboard cards" : "Cartas mainboard",
-            "Your sideboard cards" : "Cartas sideboard",
-            "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
-            "Generate Decklist pdf" : "Genera Decklist pdf",
-            "Name" : "Nombre",
-            "Surname" : "Apellido",
-            "Deck name" : "Baraja",
-            "Mainboard cards" : "Cartas Mainboard",
-            "Sideboard cards" : "Cartas Sideboard"
-        },
         "contact" : {
             "Your name" : "Nombre",
             "Name" : "Nombre",
@@ -157,18 +140,37 @@
         "Thank you for contacting us," : "Gracias por contactar con nosotros,",
         "Your query is in the stack In response we'll play a brainstorm" : "Tu petición está en la pila. En respuesta jugaremos un brainstorm"
     },
+    "not-found" : {
+        "title" : "MTG Legacy stats - Página no encontrada - CAT Legacy",
+        "description" : "Página no encontrada - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
+        "breadcrumb" : "404 página no encontrada",
+        "text-title"  : "Error 404 - Página no encontrada",
+        "text-description" : "La url no existe.  Por favor, revisa la dirección y prueba de nuevo."
+    },
+    "decklist" : {
+        "title" : "MTG Legacy stats - CAT Legacy - Decklist",
+        "description" : "Decklist - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
+        "text-title" : "Decklist generator",
+        "text-description" : "Imprime tu baraja de torneo en un fichero pdf",
+        "Your name" : "Nombre",
+        "Your surname" : "Apellido",
+        "Event name" : "Evento",
+        "Your Deck name" : "Nombre de la baraja",
+        "Your mainboard cards" : "Cartas mainboard",
+        "Your sideboard cards" : "Cartas sideboard",
+        "decklist pdf - mtg legacy cat" : "decklist pdf - mtg legacy cat",
+        "Generate Decklist pdf" : "Genera Decklist pdf",
+        "Name" : "Nombre",
+        "Surname" : "Apellido",
+        "Deck name" : "Baraja",
+        "Mainboard cards" : "Cartas Mainboard",
+        "Sideboard cards" : "Cartas Sideboard"
+    },
     "seo-tags" : {
         "tournaments" : {
             "title" : "MTG Stats - Torneos Magic The Gathering - CAT Legacy",
             "description" : "Torneos - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
             "stats" : "Estadisticas de torneos"
-        },
-        "not-found" : {
-            "title" : "MTG Legacy stats - Página no encontrada - CAT Legacy",
-            "description" : "Página no encontrada - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
-            "breadcrumb" : "404 página no encontrada",
-            "text-title"  : "Error 404 - Página no encontrada",
-            "text-description" : "La url no existe.  Por favor, revisa la dirección y prueba de nuevo."
         },
         "leagues" : {
             "title" : "MTG Stats - Ligas de Magic The Gathering - CAT Legacy",
@@ -182,12 +184,6 @@
         "current-leagues" : {
             "text-description" : "Explora las ligas actuales, revisa tops y barajas",
             "pagination" : "Ligas actuales"
-        },
-        "decklist-form" : {
-            "title" : "MTG Legacy stats - CAT Legacy - Decklist",
-            "description" : "Decklist - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
-            "text-title" : "Decklist generator",
-            "text-description" : "Imprime tu baraja de torneo en un fichero pdf"
         },
         "contact-form" : {
             "title" : "MTG Legacy stats - CAT Legacy - Contact",

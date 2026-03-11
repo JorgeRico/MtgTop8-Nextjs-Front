@@ -24,13 +24,13 @@ export async function generateMetadata({params,}: MetadataProps): Promise<Metada
 }
 
 const NotFound = () => {
-    const t = useTranslations('seo-tags');
+    const t = useTranslations('not-found');
 
     return (
         <main>
-            <SimpleBreadcrumb title={t('not-found.breadcrumb')} />
-            <Title title={t('not-found.text-title')} />
-            <p className="mb40 color-gray">{t('not-found.text-description')}</p>
+            <SimpleBreadcrumb title={t('breadcrumb')} />
+            <Title title={t('text-title')} />
+            <p className="mb40 color-gray">{t('text-description')}</p>
         </main>
     );
 }

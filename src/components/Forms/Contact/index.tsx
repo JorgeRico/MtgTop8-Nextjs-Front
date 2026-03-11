@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
                             }
 
                             {showError == true &&
-                                <Error message={errors('contact.Please, fill all data fields.')}></Error>
+                                <Error message={errors('forms.Please, fill all data fields.')}></Error>
                             }
                         </form>
                     </>
