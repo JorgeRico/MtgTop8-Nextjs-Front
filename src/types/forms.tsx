@@ -1,20 +1,18 @@
 export type InputFormType = {
-    name        : string;
-    type        : string;
-    placeholder : string;
-    label       : string;
-    value       : string;
-    toSend      : any;
-    setToSend   : any;
+    name         : string;
+    type         : string;
+    placeholder  : string;
+    label        : string;
+    value        : string;
+    handleChange : any;
 }
 
 export type TextareaFormType = {
-    name        : string;
-    placeholder : string;
-    label       : string;
-    value       : string;
-    toSend      : any;
-    setToSend   : any;
+    name         : string;
+    placeholder  : string;
+    label        : string;
+    value        : string;
+    handleChange : any;
 }
 
 export type ErrorMessageFormType = {
