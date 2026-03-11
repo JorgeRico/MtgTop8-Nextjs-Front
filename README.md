@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mtg Tournament website
 
-## Getting Started
+#### Description
 
-First, run the development server:
+````
+> Tournament website
+> Technology: Nextjs + emailjs
+> Can be tested on docker
+````
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Execute on local
+````
+- rename .env_example to .env
+- pnpm install
+- npm run dev
+````
+- [http://localhost:3000/](http://localhost:3000/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## MTG Stats project
 
-## Learn More
+#### Description
 
-To learn more about Next.js, take a look at the following resources:
+````
+> All repositories used to develop mtg stats website
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> Public development React website + fastapi api    + postgresql (Supabase)
+> CMS development    React website + expressjs api  + postgresql (Supabase)
+> Actual Data from python scrapper (mtgtop8 website + scryfall website)
+> Old data (before 2022) access old database data
+````
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Api
+- [https://github.com/JorgeRico/MtgTop8Api](https://github.com/JorgeRico/MtgTop8Api)
+#### Front
+- [https://github.com/JorgeRico/MtgTop8React](https://github.com/JorgeRico/MtgTop8React)
+#### BBDD
+- [https://github.com/JorgeRico/MTGTop8Database](https://github.com/JorgeRico/MTGTop8Database)
+#### Backoffice API
+- [https://github.com/JorgeRico/MtgTop8-Backoffice-api](https://github.com/JorgeRico/MtgTop8-Backoffice-api)
+#### Backoffice Front
+- [https://github.com/JorgeRico/MtgTop8-Backoffice-front](https://github.com/JorgeRico/MtgTop8-Backoffice-front)
+#### Python scrapper
+- Supabase [https://github.com/JorgeRico/MtgTop8Scrapper-Supabase](https://github.com/JorgeRico/MtgTop8Scrapper-Supabase)
+- Mysql (previous version, not full updated) [https://github.com/JorgeRico/MtgTop8Scrapper](https://github.com/JorgeRico/MtgTop8Scrapper)
+- Access data to mysql [https://github.com/JorgeRico/MtgTop8AccessData](https://github.com/JorgeRico/MtgTop8AccessData)
 
-## Deploy on Vercel
+#### Websites
+- [https://mtg-stats.vercel.app/](https://mtg-stats.vercel.app/)
+- [https://mtg-top8-backoffice-front.vercel.app/](https://mtg-top8-backoffice-front.vercel.app/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### References
+- <https://fastapi.tiangolo.com/>
+- <https://hub.docker.com/>
+- <https://www.emailjs.com/>
+
