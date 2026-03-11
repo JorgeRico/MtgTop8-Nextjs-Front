@@ -124,19 +124,22 @@
             "Sorry, now we don't have tournaments registered for this league" : "Ho sentim molt, no tenim cap torneig registrat per aquesta lliga"
         }
     },
-    "forms" : {
-        "contact" : {
-            "Your name" : "Nom",
-            "Name" : "Nom",
-            "Your email" : " Email",
-            "E-mail" : "E-mail",
-            "Your message" : "Missatge",
-            "Submit" : "Enviar",
-            "Message" : "Missatge"
-        }
+    "contact" : {
+        "title" : "MTG Legacy stats - Formulari de Contact - Lligues i Tornejos Magic The Gathering - Legacy - Catalunya - CAT Legacy",
+        "description" : "Contacte - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+        "text-title" : "Contacta amb nosaltres",
+        "text-description" : "Consulta informació sobre lligues, clasificacions i tot el que vulguis . . .",
+        "breadcrumb" : "contacte",
+        "Your name" : "Nom",
+        "Name" : "Nom",
+        "Your email" : " Email",
+        "E-mail" : "E-mail",
+        "Your message" : "Missatge",
+        "Submit" : "Enviar",
+        "Message" : "Missatge"
     },
     "success" : {
-        "Thank you for contacting us," : "Gràcies per contactar amb nosaltres,",
+        "Thank you for contacting us" : "Gràcies per contactar amb nosaltres,",
         "Your query is in the stack In response we'll play a brainstorm" : "La teva consulta es posa a la pila.  En resposta jugarem un brainstorm"
     },
     "not-found" : {
@@ -183,13 +186,6 @@
         "current-leagues" : {
             "text-description" : "Explora les lligues actuals, revisa tops i baralles guanyadores",
             "pagination" : "Lligues actuals"
-        },
-        "contact-form" : {
-            "title" : "MTG Legacy stats - Formulari de Contact - Lligues i Tornejos Magic The Gathering - Legacy - Catalunya - CAT Legacy",
-            "description" : "Contacte - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
-            "text-title" : "Contacta amb nosaltres",
-            "text-description" : "Consulta informació sobre lligues, clasificacions i tot el que vulguis . . .",
-            "breadcrumb" : "contacte"
         }
     }
 }

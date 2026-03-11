@@ -11,27 +11,27 @@ interface MetadataProps {
 
 export async function generateMetadata({params,}: MetadataProps): Promise<Metadata> {
     const { locale } = await params;
-    const t          = await getTranslations({ locale, namespace: 'seo-tags' });
+    const t          = await getTranslations({ locale, namespace: 'contact' });
 
     return {
-        title       : t('contact-form.title'),
-        description : t('contact-form.description'),
+        title       : t('title'),
+        description : t('description'),
         openGraph   : {
-            title       : t('contact-form.title'),
-            description : t('contact-form.description'),
+            title       : t('title'),
+            description : t('description'),
             url         : new URL(process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app' + '/contact')
         }
     }
 }
 
 const Contact = () => {
-    const t = useTranslations('seo-tags');
+    const t = useTranslations('contact');
 
     return (
         <main className="left w100">
-            <SimpleBreadcrumb title={t('contact-form.breadcrumb')} />
-            <Title title={t('contact-form.text-title')} />
-            <p className="mb40 color-gray">{t('contact-form.text-description')}</p>
+            <SimpleBreadcrumb title={t('breadcrumb')} />
+            <Title title={t('text-title')} />
+            <p className="mb40 color-gray">{t('text-description')}</p>
             <ContactForm></ContactForm>
         </main>
     );

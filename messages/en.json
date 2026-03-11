@@ -124,19 +124,22 @@
             "Sorry, now we don't have tournaments registered for this league" : "Sorry, now we don't have tournaments registered for this league"
         }
     },
-    "forms" : {
-        "contact" : {
-            "Your name" : "Your name",
-            "Name" : "Name",
-            "Your email" : "Your email",
-            "E-mail" : "E-mail",
-            "Your message" : "Your message",
-            "Submit" : "Submit",
-            "Message" : "Message"
-        }
+    "contact" : {
+        "title" : "MTG Legacy stats - CAT Legacy - Contact",
+        "description" : "Contact - Catalan MTG Legacy leagues, tournaments, players and cards",
+        "text-title" : "Contact us",
+        "text-description" : "Ask for information about leagues, classifications or what you want . . .",
+        "breadcrumb" : "contact",
+        "Your name" : "Your name",
+        "Name" : "Name",
+        "Your email" : "Your email",
+        "E-mail" : "E-mail",
+        "Your message" : "Your message",
+        "Submit" : "Submit",
+        "Message" : "Message"
     },
     "success" : {
-        "Thank you for contacting us," : "Thank you for contacting us,",
+        "Thank you for contacting us" : "Thank you for contacting us,",
         "Your query is in the stack In response we'll play a brainstorm" : "Your query is in the stack. In response we'll play a brainstorm"
     },
     "not-found" : {
@@ -183,13 +186,6 @@
         "current-leagues" : {
             "text-description" : "Explore current leagues, view standings and decks",
             "pagination" : "Current Leagues"
-        },
-        "contact-form" : {
-            "title" : "MTG Legacy stats - CAT Legacy - Contact",
-            "description" : "Contact - Catalan MTG Legacy leagues, tournaments, players and cards",
-            "text-title" : "Contact us",
-            "text-description" : "Ask for information about leagues, classifications or what you want . . .",
-            "breadcrumb" : "contact"
         }
     }
 }

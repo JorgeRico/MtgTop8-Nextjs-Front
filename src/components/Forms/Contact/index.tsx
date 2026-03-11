@@ -16,65 +16,73 @@ const Contact: React.FC = () => {
     const [ mail_service ]                = useState(process.env.NEXT_PUBLIC_MAIL_SERVICE_ID || '');
     const [ mail_template ]               = useState(process.env.NEXT_PUBLIC_MAIL_TEMPLATE || '');
     const [ mail_public_key ]             = useState(process.env.NEXT_PUBLIC_MAIL_PUBLIC_ID || '');
-    const form                            = useRef<HTMLInputElement>(null);
-    const t                               = useTranslations('forms');
+    const t                               = useTranslations('contact');
     const errors                          = useTranslations('errors');
 
     const onSubmit = (e) => {
         e.preventDefault();
         setShowButton(false);
 
-        // emailjs.sendForm(mail_service, mail_template, form.current?.value, mail_public_key)
-        //     .then((response) => {
-        //         // console.log('SUCCESS!', response.status, response.text);
-        //         setShowSuccess(true);
-        //     })
-        //     .catch((err) => {
-        //         // console.log('FAILED...', err);
-        //         setShowError(true);
-        //         setTimeout(() => {setShowButton(true)}, 2000);
-        //         setTimeout(() => {setShowError(false)}, 2000);
-        //     });
+        emailjs.send(mail_service, mail_template, toSend, mail_public_key)
+            .then((response) => {
+                setShowSuccess(true);
+            })
+            .catch((err) => {
+                // console.log('FAILED...', err);
+                setShowError(true);
+                setTimeout(() => {setShowButton(true)}, 2000);
+                setTimeout(() => {setShowError(false)}, 2000);
+            });
     };
 
     const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
     };
 
-    // <form ref={form} onSubmit={onSubmit} className="left w100 mb40 overflowHidden form contact">
-
     return (
         <>
             <section className="left w100">
                 {showSuccess == true ? (
-                    <>
-                        <Success></Success>
-                    </>
+                    <Success></Success>
                 ) : (
                     <>
                         <form onSubmit={onSubmit} className="left w100 mb40 overflowHidden form contact">
-                            <InputForm name="name" type="text" placeholder={t('contact.Your name')} label={t('contact.Name')} value={toSend.name} toSend={toSend} setToSend={setToSend}></InputForm>
-                            <InputForm name="reply_to" type="email" placeholder={t('contact.Your email')} label={t('contact.E-mail')} value={toSend.reply_to} toSend={toSend} setToSend={setToSend}></InputForm>
+                            <InputForm
+                                name         = "name"
+                                type         = "text"
+                                placeholder  = {t('Your name')}
+                                label        = {t('Name')}
+                                value        = {toSend.name}
+                                handleChange = {handleChange}
+                            />
+                            <InputForm
+                                name         = "reply_to"
+                                type         = "email"
+                                placeholder  = {t('Your email')}
+                                label        = {t('E-mail')}
+                                value        = {toSend.reply_to}
+                                handleChange = {handleChange}
+                            />
                             <div className="left mb20 w100">
-                                <label className="left w100 mb15">{t('contact.Message')}</label>
+                                <label className="left w100 mb15">{t('Message')}</label>
                                 <textarea
-                                    className="left w70 mb10 pad"
-                                    name='message'
-                                    placeholder={t('contact.Your message')}
-                                    value={toSend.message}
-                                    onChange={handleChange}
+                                    className   = "left w70 mb10 pad"
+                                    name        = 'message'
+                                    placeholder = {t('Your message')}
+                                    value       = {toSend.message}
+                                    onChange    = {handleChange}
                                     required
                                 />
                             </div>
 
                             {showButton == true &&
                                 <div className="left w100">
-                                    <button className="pointer pad bg-red color-white" type='submit'>{t('contact.Submit')}</button>
+                                    <button className="pointer pad bg-red color-white" type='submit'>{t('Submit')}</button>
                                 </div>
                             }
 
                             {showError == true &&
-                                <Error message={errors('forms.Please, fill all data fields.')}></Error>
+                                <Error message={errors('forms.Please, fill all data fields')}></Error>
                             }
                         </form>
                     </>
