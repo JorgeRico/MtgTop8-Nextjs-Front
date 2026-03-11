@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import "./../module.css";
 import Success from "@/components/Forms/Success";
 import Error from "@/components/Forms/Error";
-import InputForm from "@/components/Forms/Contact/Input";
+import InputForm from "@/components/Forms/Input";
 import { useTranslations } from 'next-intl';
 
 const Contact: React.FC = () => {
@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
                     <Success></Success>
                 ) : (
                     <>
-                        <form onSubmit={onSubmit} className="left w100 mb40 overflowHidden form contact">
+                        <form onSubmit={onSubmit} className="left mb40 overflowHidden form">
                             <InputForm
                                 name         = "name"
                                 type         = "text"

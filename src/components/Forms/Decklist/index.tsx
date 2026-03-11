@@ -5,8 +5,8 @@ import "../module.css";
 import Error from "@/components/Forms/Error";
 import { degrees, PDFDocument, StandardFonts } from 'pdf-lib';
 import downloadjs from "downloadjs";
-import InputForm from "@/components/Forms/Decklist/Input";
-import TextareaForm from "@/components/Forms/Decklist/Textarea";
+import InputForm from "@/components/Forms/Input";
+import TextareaForm from "@/components/Forms/Textarea";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
 
@@ -134,7 +134,6 @@ const DeckListForm: React.FC = () => {
                 const pages = pdfDoc.getPages();
                 const firstPage = pages[0];
 
-                // await config(pdfDoc, pages[0])
                 // font family
                 const fontFamily        = await pdfDoc.embedFont(StandardFonts.TimesRoman);
                 const { width, height } = firstPage.getSize();
@@ -184,31 +183,75 @@ const DeckListForm: React.FC = () => {
 
     return (
         <section className="left w100 mb20">
-            <form ref={form} onSubmit={onSubmit} className="left w100 mb40 overflowHidden pointer form decklistForm">
-                <article className="left w100">
-                    <InputForm name="name" type="text" placeholder={t('Your name')} label={t('Name')} value={toSend.name} toSend={toSend} setToSend={setToSend}></InputForm>
-                    <InputForm name="surname" type="text" placeholder={t('Your surname')} label={t('Surname')} value={toSend.surname} toSend={toSend} setToSend={setToSend}></InputForm>
+            <form ref={form} onSubmit={onSubmit} className="left mb40 overflowHidden decklist">
+                <article className="left w50">
+                    <InputForm
+                        name         = "name"
+                        type         = "text"
+                        placeholder  = {t('Your name')}
+                        label        = {t('Name')}
+                        value        = {toSend.name}
+                        handleChange = {handleChange}
+                    />
+                </article>
+                <article className="right w50">
+                    <InputForm
+                        name         = "surname"
+                        type         = "text"
+                        placeholder  = {t('Your surname')}
+                        label        = {t('Surname')}
+                        value        = {toSend.surname}
+                        handleChange = {handleChange}
+                    />
                 </article>
 
-                <article className="left w100">
-                    <InputForm name="event" type="text" placeholder={t('Event name')} label={t('Event name')} value={toSend.event} toSend={toSend} setToSend={setToSend}></InputForm>
-                    <InputForm name="deckName" type="text" placeholder={t('Your Deck name')} label={t('Deck name')} value={toSend.deckName} toSend={toSend} setToSend={setToSend}></InputForm>
+                <article className="left w50">
+                    <InputForm
+                        name         = "event"
+                        type         = "text"
+                        placeholder  = {t('Event name')}
+                        label        = {t('Event name')}
+                        value        = {toSend.event}
+                        handleChange = {handleChange}
+                    />
+                </article>
+                <article className="right w50">
+                    <InputForm
+                        name         = "deckName"
+                        type         = "text"
+                        placeholder  = {t('Your Deck name')}
+                        label        = {t('Deck name')}
+                        value        = {toSend.deckName}
+                        handleChange = {handleChange}
+                    />
                 </article>
 
-                <article className="left w100">
-                    <div className="left mb20 w-350">
-                        <TextareaForm name="mainboard" placeholder={t('Your mainboard cards')} label={t('Mainboard cards')} value={toSend.mainboard} toSend={toSend} setToSend={setToSend}></TextareaForm>
-                        <TextareaForm name="sideboard" placeholder={t('Your sideboard cards')} label={t('Sideboard cards')} value={toSend.sideboard} toSend={toSend} setToSend={setToSend}></TextareaForm>
+                <article className="left w100 textarea">
+                    <div className="left w50 mb20">
+                        <TextareaForm
+                            name         = "mainboard"
+                            placeholder  = {t('Your mainboard cards')}
+                            label        = {t('Mainboard cards')}
+                            value        = {toSend.mainboard}
+                            handleChange = {handleChange}
+                        />
+                        <TextareaForm
+                            name         = "sideboard"
+                            placeholder  = {t('Your sideboard cards')}
+                            label        = {t('Sideboard cards')}
+                            value        = {toSend.sideboard}
+                            handleChange = {handleChange}
+                        />
                     </div>
-                    <div className="left mb20 w-350 mt35 pdf">
+                    <div className="right w50 mb20 mt35 pdf">
                          <Image
-                            className="w80 pad radius5 cursorAuto"
-                            src="/images/decklist.png"
-                            width={280}
-                            height={366}
-                            sizes="100vw"
-                            alt={t('decklist pdf - mtg legacy cat')}
-                            title={t('decklist pdf - mtg legacy cat')}
+                            className = "w80 pad radius5 cursorAuto"
+                            src       = "/images/decklist.png"
+                            width     = {280}
+                            height    = {366}
+                            sizes     = "100vw"
+                            alt       = {t('decklist pdf - mtg legacy cat')}
+                            title     = {t('decklist pdf - mtg legacy cat')}
                             priority
                         />
                     </div>

@@ -3,6 +3,11 @@ input, textarea, button {
     border: 1px solid var(--color-gray);
 }
 
+input {
+    width: 230px;
+    max-width: 100%;
+}
+
 .pad {
     padding: 10px 20px;
 }
@@ -10,9 +15,11 @@ input, textarea, button {
 textarea {
     padding: 20px;
     height: 200px;
+    width: 230px;
+    max-width: 100%;
 }
 
-.decklistPdf {    
+.decklistPdf {
     & img {
         max-height: 520px;
     }
@@ -26,37 +33,54 @@ textarea {
     width: 75px;
 }
 
-@media (max-width: 780px) {
-    .decklistForm {
-        & .w-350 {
-            width: 48%;
-        }
-    }
+.form, .decklist {
+    width: 600px;
+    max-width: 600px;
 }
 
-@media (max-width: 596px) {
-    .decklistForm {
-        & .w-350 {
-            width: 100%;
-            margin-left: 0;
+@media (max-width: 650px) {
+    .form, .decklist {
+        width: 99%;
+        max-width: 99%;
+    }
+
+    .form {
+        & div{
+            width: 98%;
+
+            & input, textarea {
+                width: 95%;
+            }
+        }
+    }
+
+    .decklist{
+        & article, .textarea {
+            float: left;
+            width: 99%;
+
+            & .inputform {
+                width: 99%;
+
+                & input {
+                    width: 95%;
+                }
+            }
         }
 
         & .pdf {
             display: none;
         }
+    }
 
-        & textarea {
-            padding: 10px;
+    .textarea {
+        & div {
+            width: 99%;
         }
     }
 
-    & input, & textarea {
-        width: 93% !important;
-    }
-
-    button {
+    label {
         width: 100%;
-        margin: 0 auto;
     }
 
     .pad {

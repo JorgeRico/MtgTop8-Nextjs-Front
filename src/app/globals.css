@@ -110,6 +110,10 @@ a:link, a:visited, a:hover, a:active {
     width: 80%;
 }
 
+.w90 {
+    width: 90%;
+}
+
 .w-15 {
     width: 15px;
 }
