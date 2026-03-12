@@ -25,7 +25,7 @@
 ````
 > All repositories used to develop mtg stats website
 
-> Public development React website + fastapi api    + postgresql (Supabase)
+> Public development nextjs website + fastapi api    + postgresql (Supabase)
 > CMS development    React website + expressjs api  + postgresql (Supabase)
 > Actual Data from python scrapper (mtgtop8 website + scryfall website)
 > Old data (before 2022) access old database data
@@ -34,7 +34,8 @@
 #### Api
 - [https://github.com/JorgeRico/MtgTop8Api](https://github.com/JorgeRico/MtgTop8Api)
 #### Front
-- [https://github.com/JorgeRico/MtgTop8React](https://github.com/JorgeRico/MtgTop8React)
+- [https://github.com/JorgeRico/MtgTop8React](https://github.com/JorgeRico/MtgTop8React) Reactjs
+- [https://github.com/JorgeRico/MtgTop8-Nextjs-Front](https://github.com/JorgeRico/MtgTop8-Nextjs-Front) Nextjs (Actually live version)
 #### BBDD
 - [https://github.com/JorgeRico/MTGTop8Database](https://github.com/JorgeRico/MTGTop8Database)
 #### Backoffice API
