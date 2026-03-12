@@ -16,7 +16,11 @@ export async function generateMetadata({params,}: MetadataProps): Promise<Metada
 
     return {
         title       : t('title'),
-        description : t('description')
+        description : t('description'),
+        openGraph   : {
+            title       : t('title'),
+            description : t('description')
+        }
     }
 }
 
