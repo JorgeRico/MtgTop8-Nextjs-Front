@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://mtg-stats.vercel.app/sitemap.xml
