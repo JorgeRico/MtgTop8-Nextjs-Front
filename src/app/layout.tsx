@@ -6,8 +6,6 @@ import "./styles/styles.css";
 import { getLocale } from 'next-intl/server';
 import type { Viewport, Metadata } from 'next';
 
-const url_image = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL + '/mtg-stats-eternal-catala.jpg' ? process.env.NEXT_PUBLIC_BASE_WEBSITE_URL + '/mtg-stats-eternal-catala.jpg' : 'https://mtg-stats.vercel.app/mtg-stats-eternal-catala.jpg'
-
 export const viewport: Viewport = {
 	width        : 'device-width',
 	initialScale : 1,
@@ -30,7 +28,7 @@ export const metadata: Metadata = {
         siteName    : "MTG Stats - Eternal Català",
         images: [
             {
-                url    : new URL(url_image),
+                url    : '/mtg-stats-eternal-catala.jpg',
                 width  : 1000,
                 height : 829,
                 alt    : "MTG Stats - Eternal Català"
