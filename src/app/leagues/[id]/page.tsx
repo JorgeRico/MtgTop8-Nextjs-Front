@@ -15,13 +15,15 @@ export async function generateMetadata({params,}: MetadataProps): Promise<Metada
     const res  = await fetch(replaceUrlIdParam(endpoints.API_LEAGUE_ID, id));
     const data = await res.json();
 
+    const url = (process.env.NEXT_PUBLIC_BASE_WEBSITE_URL ? process.env.NEXT_PUBLIC_BASE_WEBSITE_URL : 'https://mtg-stats.vercel.app') + '/tournaments/' + id
+
     return {
         title       : `${t('leagues.title')}: ${data.name}`,
         description : t('leagues.description'),
         openGraph   : {
             title       : `${t('leagues.title')}: ${data.name}`,
             description : t('leagues.description'),
-            url         : new URL(process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app' + '/leagues/' + id)
+            url         : new URL(url)
         }
     }
 }

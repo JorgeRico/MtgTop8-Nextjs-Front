@@ -6,6 +6,8 @@ import "./styles/styles.css";
 import { getLocale } from 'next-intl/server';
 import type { Viewport, Metadata } from 'next';
 
+const url_image = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL + '/mtg-stats-eternal-catala.jpg' ? process.env.NEXT_PUBLIC_BASE_WEBSITE_URL + '/mtg-stats-eternal-catala.jpg' : 'https://mtg-stats.vercel.app/mtg-stats-eternal-catala.jpg'
+
 export const viewport: Viewport = {
 	width        : 'device-width',
 	initialScale : 1,
@@ -18,17 +20,17 @@ export const metadata: Metadata = {
         template : '%s | MTG Stats - Eternal Català',
         default  : 'MTG Stats - Eternal Català',
     },
-    description : "%s | MTG Stats - Eternal Català",
+    description : '%s | MTG Stats - Eternal Català',
     keywords    : "Magic the Gathering, Eternal Català, Legacy, Lliga Catalana de Legacy, LCL, Vintage, Lliga Catalana de Vintage, Lliga Minoria, mtg, tcg, stats",
     robots      : "index, follow",
     openGraph   : {
-        title       : "%s | MTG Stats - Eternal Català",
-        description : "%s | MTG Stats - Eternal Català",
+        title       : '%s | MTG Stats - Eternal Català',
+        description : '%s | MTG Stats - Eternal Català',
         url         : new URL(process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app'),
         siteName    : "MTG Stats - Eternal Català",
         images: [
             {
-                url    : new URL((process.env.NEXT_PUBLIC_BASE_WEBSITE_URL+'/mtg-stats-eternal-catala.jpg') || 'https://mtg-stats.vercel.app/mtg-stats-eternal-catala.jpg')),
+                url    : new URL(url_image),
                 width  : 1000,
                 height : 829,
                 alt    : "MTG Stats - Eternal Català"

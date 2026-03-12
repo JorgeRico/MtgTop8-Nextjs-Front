@@ -12,13 +12,15 @@ export async function generateMetadata({params,}: MetadataProps): Promise<Metada
     const { locale } = await params;
     const t          = await getTranslations({ locale, namespace: 'not-found' });
 
+    const url = (process.env.NEXT_PUBLIC_BASE_WEBSITE_URL ? process.env.NEXT_PUBLIC_BASE_WEBSITE_URL : 'https://mtg-stats.vercel.app') + '/not-found'
+
     return {
         title       : t('title'),
         description : t('description'),
         openGraph   : {
             title       : t('title'),
             description : t('description'),
-            url         : new URL(process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app' + '/not-found')
+            url         : new URL(url)
         }
     }
 }
