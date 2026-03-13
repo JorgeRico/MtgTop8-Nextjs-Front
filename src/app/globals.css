@@ -170,6 +170,10 @@ h3 {
     margin-top: 0;
 }
 
+.mt1 {
+    margin-top: 1;
+}
+
 .mt3 {
     margin-top: 3px;
 }
@@ -362,7 +366,7 @@ h3 {
 .block {
     display: block !important;
 }
-  
+
 @keyframes blinker {
     50% {
       opacity: 0;
@@ -384,4 +388,42 @@ h3 {
 .ad-container {
     max-width: 100%; /* Prevent ads from exceeding container width */
     margin: 20px auto;
+}
+
+@media (max-width: 460px) {
+    h1.tournamentName {
+        font-size: 16px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        margin-top: 12px;
+
+        & span {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+    }
+
+    .trophyIcon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .listIcon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .locationItem {
+        & span {
+            float: left;
+            width: 100%;
+            margin-top: 3px;
+            margin-left: 0px;
+        }
+    }
 }

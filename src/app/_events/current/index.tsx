@@ -38,11 +38,12 @@ const Events: React.FC<TitleType> = ({ title }) => {
             <div className="left w100 mb20 grey-bottom">
                 <div className="left mt15 mr10">
                     <Image
-                        src="/images/trophy.webp"
-                        height={32}
-                        width={32}
-                        alt={t('current-leagues.text-description')}
-                        title={t('current-leagues.text-description')}
+                        className = "trophyIcon"
+                        src       = "/images/trophy.webp"
+                        height    = {32}
+                        width     = {32}
+                        alt       = {t('current-leagues.text-description')}
+                        title     = {t('current-leagues.text-description')}
                         priority
                     />
                 </div>

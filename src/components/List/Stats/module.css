@@ -12,6 +12,10 @@
     }
 }
 
+.statsSpan {
+    margin-top: -2px;
+}
+
 @media (max-width: 600px) {
     .showStatsCards {
         width: 100%;

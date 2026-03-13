@@ -6,7 +6,7 @@ const ListImage: React.FC = () => {
 
     return (
         <Image
-            className = "left ml5 pt6"
+            className = "left ml5 pt6 listIcon"
             src       = "/images/list.webp"
             height    = {24}
             width     = {24}

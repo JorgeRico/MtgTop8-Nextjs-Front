@@ -45,11 +45,12 @@ const PastEvents: React.FC<TitleType> = ({ title }) => {
             <div className="left w100 mt20 mb20 grey-bottom">
                 <div className="left mt15 mr10">
                     <Image
-                        src="/images/trophy.webp"
-                        height={32}
-                        width={32}
-                        alt={t('past-leagues.text-description')}
-                        title={t('past-leagues.text-description')}
+                        className = "trophyIcon"
+                        src       = "/images/trophy.webp"
+                        height    = {32}
+                        width     = {32}
+                        alt       = {t('past-leagues.text-description')}
+                        title     = {t('past-leagues.text-description')}
                         priority
                     />
                 </div>

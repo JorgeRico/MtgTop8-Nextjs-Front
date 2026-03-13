@@ -5,7 +5,7 @@ import { BreadcrumbSimpleType } from "@/types/breadcrumb";
 
 const SimpleBreadcrumb: React.FC<BreadcrumbSimpleType> = ({ title, isHome = false }) => {
     return (
-        <section className="left w100 f14 mb40">
+        <section className={!isHome ? "left w100 f14 mb40" : "left w100 f14 mb20"}>
             {!isHome && (
                 <>
                     <HomeItemBreadcrumb></HomeItemBreadcrumb>

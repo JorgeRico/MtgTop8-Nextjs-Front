@@ -15,23 +15,15 @@ const LeagueTournamentBlock: React.FC<TournamentBlockType> = ({ leagueName, form
         return (
             <div className="left w100 f14 mb5">
                 <Link href={`https://maps.app.goo.gl/${location}`} className="" target="_blank" rel="noopener noreferrer" title="">
-                    <HTag
-                        className = ""
-                        Tag       = "p"
-                        text      = {getLocationText()}
-                    />
+                    <div>
+                        <span className="left mr5">{t('tournament.Location')}:</span>
+                        <div className="locationItem">
+                            <LocationImage></LocationImage>
+                            <span className="left ml5">{locationName}</span>
+                        </div>
+                    </div>
                 </Link>
             </div>
-        )
-    }
-
-    const getLocationText = (): any => {
-        return (
-            <>
-                <span className="left mr5">{t('tournament.Location')}:</span>
-                <LocationImage></LocationImage>
-                <span className="left ml5">{locationName}</span>
-            </>
         )
     }
 
@@ -41,16 +33,17 @@ const LeagueTournamentBlock: React.FC<TournamentBlockType> = ({ leagueName, form
                 <div className="left">
                     <div className="left mr10">
                         <Image
-                            src    = "/images/trophy.webp"
-                            height = {32}
-                            width  = {32}
-                            alt    = {`${t('tournament.Tournaments')} - ${leagueName}`}
-                            title  = {`${t('tournament.Tournaments')} - ${leagueName}`}
+                            className = "trophyIcon"
+                            src       = "/images/trophy.webp"
+                            height    = {32}
+                            width     = {32}
+                            alt       = {`${t('tournament.Tournaments')} - ${leagueName}`}
+                            title     = {`${t('tournament.Tournaments')} - ${leagueName}`}
                             priority
                         />
                     </div>
                     {leagueName &&
-                        <HTag Tag="h1" text={`${t('tournament.Tournaments')} - ${leagueName}`} className="left f24 mb5" />
+                        <HTag Tag="h1" text={`${t('tournament.Tournaments')} - ${leagueName}`} className="left f24 mb5 tournamentName" />
                     }
                 </div>
                 {location != null && getLocation()}

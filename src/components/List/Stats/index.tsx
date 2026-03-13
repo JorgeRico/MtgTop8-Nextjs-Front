@@ -24,7 +24,7 @@ const StatsBox: React.FC<MyComponentProps> = ({ id, title, isLeague, endpoint, e
                 <SubTitle title={
                         <>
                             <StatsImage></StatsImage>
-                            <span className="left ml5">{t('Player Stats')}</span>
+                            <span className="left ml5 mt1">{t('Player Stats')}</span>
                         </>
                     }
                 />
@@ -133,7 +133,7 @@ const StatsBox: React.FC<MyComponentProps> = ({ id, title, isLeague, endpoint, e
                         text      = {
                             <>
                                 <StatsImage></StatsImage>
-                                <span className="left ml5">{t('Stats')}</span>
+                                <span className="left ml5 statsSpan">{t('Stats')}</span>
                             </>
                         }
                     />
