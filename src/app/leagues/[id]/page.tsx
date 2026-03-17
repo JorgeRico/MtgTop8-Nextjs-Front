@@ -18,10 +18,10 @@ export async function generateMetadata({params,}: MetadataProps): Promise<Metada
     const url = (process.env.NEXT_PUBLIC_BASE_WEBSITE_URL ? process.env.NEXT_PUBLIC_BASE_WEBSITE_URL : 'https://mtg-stats.vercel.app') + '/tournaments/' + id
 
     return {
-        title       : `${t('leagues.title')}: ${data.name}`,
+        title       : `${t('leagues.title')} | ${data.name}`,
         description : t('leagues.description'),
         openGraph   : {
-            title       : `${t('leagues.title')}: ${data.name}`,
+            title       : `${t('leagues.title')} | ${data.name}`,
             description : t('leagues.description'),
             url         : new URL(url)
         }

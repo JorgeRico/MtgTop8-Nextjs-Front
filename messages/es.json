@@ -1,7 +1,7 @@
 {
     "home" : {
-        "title" : "MTG Legacy stats - MAgic The Gathering - CAT Legacy",
-        "description" : "Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
+        "title" : "MTG Legacy Stats Cataluña | Decks, Jugadores y resultados de torneos",
+        "description" : "Catalan MTG Legacy es una comunidad dedicada al formato Legacy de Magic: The Gathering en Cataluña, centrada en la organización de ligas, torneos y eventos competitivos para jugadores de todos los niveles. A través de encuentros regulares en tiendas locales y competiciones especiales, fomenta un entorno activo donde los participantes pueden poner a prueba sus habilidades, compartir estrategias y disfrutar del juego en un ambiente cercano pero competitivo. La escena catalana destaca por la diversidad de mazos, el alto nivel de juego y la implicación de sus jugadores, quienes contribuyen constantemente a la evolución del metajuego. Además, se promueve el intercambio de cartas, la colaboración entre comunidades y la difusión de contenido relacionado con Legacy. Catalan MTG Legacy no solo es un circuito competitivo, sino también un punto de encuentro para aficionados apasionados por el formato.",
         "text-title"  : "MTG Leagues - Legacy",
         "text-description" : "Torneos de Magic The Gathering en Cataluña",
         "Current Leagues" : "Ligas actuales - Legacy",
@@ -170,13 +170,13 @@
     },
     "seo-tags" : {
         "tournaments" : {
-            "title" : "MTG Stats - Torneos Magic The Gathering - CAT Legacy",
-            "description" : "Torneos - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
+            "title" : "MTG Legacy Stats Cataluña | Decks, Jugadores y resultados de torneos | Torneos Magic The Gathering - CAT Legacy",
+            "description" : "Catalan MTG Legacy es una comunidad dedicada al formato Legacy de Magic: The Gathering en Cataluña, centrada en la organización de ligas, torneos y eventos competitivos para jugadores de todos los niveles. A través de encuentros regulares en tiendas locales y competiciones especiales, fomenta un entorno activo donde los participantes pueden poner a prueba sus habilidades, compartir estrategias y disfrutar del juego en un ambiente cercano pero competitivo. La escena catalana destaca por la diversidad de mazos, el alto nivel de juego y la implicación de sus jugadores, quienes contribuyen constantemente a la evolución del metajuego. Además, se promueve el intercambio de cartas, la colaboración entre comunidades y la difusión de contenido relacionado con Legacy. Catalan MTG Legacy no solo es un circuito competitivo, sino también un punto de encuentro para aficionados apasionados por el formato.",
             "stats" : "Estadisticas de torneos"
         },
         "leagues" : {
-            "title" : "MTG Stats - Ligas de Magic The Gathering - CAT Legacy",
-            "description" : "League - Ligas, torneos, jugadores y cartas de Magic The Gathering - CAT Legacy",
+            "title" : "MTG Legacy Stats Cataluña | Decks, Jugadores y resultados de torneos | Ligas de Magic The Gathering - CAT Legacy",
+            "description" : "Catalan MTG Legacy es una comunidad dedicada al formato Legacy de Magic: The Gathering en Cataluña, centrada en la organización de ligas, torneos y eventos competitivos para jugadores de todos los niveles. A través de encuentros regulares en tiendas locales y competiciones especiales, fomenta un entorno activo donde los participantes pueden poner a prueba sus habilidades, compartir estrategias y disfrutar del juego en un ambiente cercano pero competitivo. La escena catalana destaca por la diversidad de mazos, el alto nivel de juego y la implicación de sus jugadores, quienes contribuyen constantemente a la evolución del metajuego. Además, se promueve el intercambio de cartas, la colaboración entre comunidades y la difusión de contenido relacionado con Legacy. Catalan MTG Legacy no solo es un circuito competitivo, sino también un punto de encuentro para aficionados apasionados por el formato.",
             "stats" : "Estadisticas de la temporada"
         },
         "past-leagues" : {

@@ -1,7 +1,7 @@
 {
     "home" : {
-        "title" : "MTG Legacy stats - Lligues i Tornejos Magic The Gathering - CAT Legacy",
-        "description" : "Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+        "title" : "MTG Legacy Stats Catalunya | Decks, Jugadors i resultats de tornejos",
+        "description" : "Catalan MTG Legacy és una comunitat dedicada al format Legacy de Magic: The Gathering a Catalunya, centrada en l’organització de lligues, tornejos i esdeveniments competitius per a jugadors de tots els nivells. Mitjançant trobades regulars en botigues locals i competicions especials, fomenta un entorn actiu on els participants poden posar a prova les seves habilitats, compartir estratègies i gaudir del joc en un ambient proper però competitiu. L’escena catalana destaca per la diversitat de baralles, l’alt nivell de joc i la implicació dels seus jugadors, que contribueixen constantment a l’evolució del metajoc. A més, es promou l’intercanvi de cartes, la col·laboració entre comunitats i la creació i difusió de contingut relacionat amb Legacy. Catalan MTG Legacy no és només un circuit competitiu, sinó també un punt de trobada per a aficionats apassionats pel format.",
         "text-title"  : "Lligues MTG - Legacy",
         "text-description" : "Tornejos de Catalunya - Magic The Gathering",
         "Current Leagues" : "Lligues actuals - Legacy",
@@ -170,13 +170,13 @@
     },
     "seo-tags" : {
         "tournaments" : {
-            "title" : "Mtg Stats - Tornejos Magic The Gathering - CAT Legacy",
-            "description" : "Tournament - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+            "title" : "MTG Legacy Stats Catalunya | Decks, Jugadors i resultats de tornejos | Tornejos Magic The Gathering - CAT Legacy",
+            "description" : "Catalan MTG Legacy és una comunitat dedicada al format Legacy de Magic: The Gathering a Catalunya, centrada en l’organització de lligues, tornejos i esdeveniments competitius per a jugadors de tots els nivells. Mitjançant trobades regulars en botigues locals i competicions especials, fomenta un entorn actiu on els participants poden posar a prova les seves habilitats, compartir estratègies i gaudir del joc en un ambient proper però competitiu. L’escena catalana destaca per la diversitat de baralles, l’alt nivell de joc i la implicació dels seus jugadors, que contribueixen constantment a l’evolució del metajoc. A més, es promou l’intercanvi de cartes, la col·laboració entre comunitats i la creació i difusió de contingut relacionat amb Legacy. Catalan MTG Legacy no és només un circuit competitiu, sinó també un punt de trobada per a aficionats apassionats pel format.",
             "stats" : "Estadistiques de Tornejos"
         },
         "leagues" : {
-            "title" : "Mtg Stats - Lligues Magic The Gathering - CAT Legacy",
-            "description" : "League - Lligues de magic The Gathering, tornejos de MAgic The Gathering, jugadors i cartes dels tornejos de Catalunya",
+            "title" : "MTG Legacy Stats Catalunya | Decks, Jugadors i resultats de tornejos | Lligues Magic The Gathering - CAT Legacy",
+            "description" : "Catalan MTG Legacy és una comunitat dedicada al format Legacy de Magic: The Gathering a Catalunya, centrada en l’organització de lligues, tornejos i esdeveniments competitius per a jugadors de tots els nivells. Mitjançant trobades regulars en botigues locals i competicions especials, fomenta un entorn actiu on els participants poden posar a prova les seves habilitats, compartir estratègies i gaudir del joc en un ambient proper però competitiu. L’escena catalana destaca per la diversitat de baralles, l’alt nivell de joc i la implicació dels seus jugadors, que contribueixen constantment a l’evolució del metajoc. A més, es promou l’intercanvi de cartes, la col·laboració entre comunitats i la creació i difusió de contingut relacionat amb Legacy. Catalan MTG Legacy no és només un circuit competitiu, sinó també un punt de trobada per a aficionats apassionats pel format.",
             "stats" : "Estadistiques de la temporada"
         },
         "past-leagues" : {
