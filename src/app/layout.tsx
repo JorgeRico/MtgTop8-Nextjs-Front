@@ -13,6 +13,9 @@ export const viewport: Viewport = {
 	userScalable : false,
 }
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app';
+const ogUrl   = `${baseUrl}/og-image.jpg`;
+
 export const metadata: Metadata = {
     title: {
         template : '%s | MTG Stats - Eternal Català',
@@ -24,15 +27,15 @@ export const metadata: Metadata = {
     openGraph   : {
         title       : '%s | MTG Stats - Eternal Català',
         description : '%s | MTG Stats - Eternal Català',
-        url         : process.env.NEXT_PUBLIC_BASE_WEBSITE_URL != undefined ? process.env.NEXT_PUBLIC_BASE_WEBSITE_URL : 'https://mtg-stats.vercel.app',
+        url         : new URL(baseUrl),
+        type        : "website",
         images      : [
             {
-                url: process.env.NEXT_PUBLIC_BASE_WEBSITE_URL != undefined ? process.env.NEXT_PUBLIC_BASE_WEBSITE_URL + '/og-image.jpg' : 'https://mtg-stats.vercel.app/og-image.jpg',
-                width: 200,
-                height: 200,
+                url    : new URL(ogUrl),
+                width  : 200,
+                height : 200,
             },
         ],
-        type        : "website",
     },
 }
 

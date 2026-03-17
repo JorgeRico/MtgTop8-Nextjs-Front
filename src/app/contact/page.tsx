@@ -9,11 +9,12 @@ interface MetadataProps {
     params: Promise<{ locale: string }>
 }
 
+
 export async function generateMetadata({params,}: MetadataProps): Promise<Metadata> {
     const { locale } = await params;
     const t          = await getTranslations({ locale, namespace: 'contact' });
-
-    const url = (process.env.NEXT_PUBLIC_BASE_WEBSITE_URL != undefined ? process.env.NEXT_PUBLIC_BASE_WEBSITE_URL : 'https://mtg-stats.vercel.app') + '/contact'
+    const baseUrl    = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app';
+    const url        = `${baseUrl}/contact`;
 
     return {
         title       : t('title'),

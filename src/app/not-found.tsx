@@ -11,8 +11,8 @@ interface MetadataProps {
 export async function generateMetadata({params,}: MetadataProps): Promise<Metadata> {
     const { locale } = await params;
     const t          = await getTranslations({ locale, namespace: 'not-found' });
-
-    const url = (process.env.NEXT_PUBLIC_BASE_WEBSITE_URL ? process.env.NEXT_PUBLIC_BASE_WEBSITE_URL : 'https://mtg-stats.vercel.app') + '/not-found'
+    const baseUrl    = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app';
+    const url        = `${baseUrl}/not-found`;
 
     return {
         title       : t('title'),
