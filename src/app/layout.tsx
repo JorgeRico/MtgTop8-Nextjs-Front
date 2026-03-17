@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     openGraph   : {
         title       : '%s | MTG Stats - Eternal Català',
         description : '%s | MTG Stats - Eternal Català',
-        url         : new URL(process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app'),
+        url         : process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app',
         siteName    : "MTG Stats - Eternal Català",
-        images: [ new URL(process.env.NEXT_PUBLIC_BASE_WEBSITE_URL ? process.env.NEXT_PUBLIC_BASE_WEBSITE_URL : 'https://mtg-stats.vercel.app' + '/og') ],
-        locale : "en_US",
-        type   : "website",
+        images      : process.env.NEXT_PUBLIC_BASE_WEBSITE_URL + '/og-image.jpg' || 'https://mtg-stats.vercel.app/og-image.jpg',
+        locale      : "en_US",
+        type        : "website",
     },
 }
 
