@@ -1,7 +1,7 @@
 {
     "home" : {
         "title" : "MTG Legacy Stats Catalonia | Decks, Players & Tournament Results",
-        "description" : "Catalan MTG Legacy is a community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting. The Catalan scene stands out for its diversity of decks, high level of play, and the strong involvement of its players, who continuously contribute to the evolution of the metagame. Additionally, it promotes card trading, collaboration between communities, and the creation and sharing of Legacy-related content. Catalan MTG Legacy is not only a competitive circuit, but also a meeting point for passionate fans of the format.",
+        "description" : "CataCnity dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting.",
         "text-title"  : "MTG Leagues - Legacy",
         "text-description" : "Magic The Gathering Catalan Tournaments",
         "Current Leagues" : "Current Leagues - Legacy",
@@ -171,12 +171,12 @@
     "seo-tags" : {
         "tournaments" : {
             "title" : "MTG Legacy Stats Catalonia | Decks, Players & Tournament Results | MTG Legacy Tournament - CAT Legacy",
-            "description" : "Catalan MTG Legacy is a community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting. The Catalan scene stands out for its diversity of decks, high level of play, and the strong involvement of its players, who continuously contribute to the evolution of the metagame. Additionally, it promotes card trading, collaboration between communities, and the creation and sharing of Legacy-related content. Catalan MTG Legacy is not only a competitive circuit, but also a meeting point for passionate fans of the format.",
+            "description" : "Community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting",
             "stats" : "Tournament Stats"
         },
         "leagues" : {
             "title" : "MTG Legacy Stats Catalonia | Decks, Players & Tournament Results | MTG Legacy League - CAT Legacy",
-            "description" : "Catalan MTG Legacy is a community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting. The Catalan scene stands out for its diversity of decks, high level of play, and the strong involvement of its players, who continuously contribute to the evolution of the metagame. Additionally, it promotes card trading, collaboration between communities, and the creation and sharing of Legacy-related content. Catalan MTG Legacy is not only a competitive circuit, but also a meeting point for passionate fans of the format.",
+            "description" : "Community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting.",
             "stats" : "Season Stats"
         },
         "past-leagues" : {

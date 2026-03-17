@@ -17,8 +17,8 @@ export async function GET() {
             >
                 <Image
                         src    = '/og-image.jpg'
-                        height = {400}
-                        width  = {400}
+                        height = {200}
+                        width  = {200}
                         alt    = "MTG Stats- Eternal català"
                         title  = "MTG Stats- Eternal català"
                         priority
@@ -26,8 +26,8 @@ export async function GET() {
             </div>
         ),
         {
-            width: 400,
-            height: 400,
+            width: 200,
+            height: 200,
         }
     )
 }
