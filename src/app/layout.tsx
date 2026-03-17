@@ -5,6 +5,8 @@ import "./globals.css";
 import "./styles/styles.css";
 import { getLocale } from 'next-intl/server';
 import type { Viewport, Metadata } from 'next';
+import { defaultOg } from '@/components/Seo';
+
 
 export const viewport: Viewport = {
 	width        : 'device-width',
@@ -31,13 +33,7 @@ export const metadata: Metadata = {
         description : '%s | MTG Stats - Eternal Català',
         url         : baseUrl,
         type        : "website",
-        images      : [
-            {
-                url    : ogUrl,
-                width  : 1200,
-                height : 630,
-            },
-        ],
+        ...defaultOg,
     },
 }
 
