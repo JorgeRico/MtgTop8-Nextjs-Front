@@ -17,6 +17,8 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.v
 const ogUrl   = `${baseUrl}/og-image.jpg`;
 
 export const metadata: Metadata = {
+    metadataBase: new URL(baseUrl),
+
     title: {
         template : '%s | MTG Stats - Eternal Català',
         default  : 'MTG Stats - Eternal Català',
@@ -27,13 +29,13 @@ export const metadata: Metadata = {
     openGraph   : {
         title       : '%s | MTG Stats - Eternal Català',
         description : '%s | MTG Stats - Eternal Català',
-        url         : new URL(baseUrl),
+        url         : baseUrl,
         type        : "website",
         images      : [
             {
-                url    : new URL(ogUrl),
-                width  : 200,
-                height : 200,
+                url    : ogUrl,
+                width  : 1200,
+                height : 630,
             },
         ],
     },
