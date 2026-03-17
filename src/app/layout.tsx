@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         title       : '%s | MTG Stats - Eternal Català',
         description : '%s | MTG Stats - Eternal Català',
         url         : process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app',
-        images      : [ process.env.NEXT_PUBLIC_BASE_WEBSITE_URL + '/og-image.jpg' || 'https://mtg-stats.vercel.app/og-image.jpg' ]
+        images      : [ process.env.NEXT_PUBLIC_BASE_WEBSITE_URL + '/og-image.jpg' || 'https://mtg-stats.vercel.app/og-image.jpg' ],
         type        : "website",
     },
 }
