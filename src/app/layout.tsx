@@ -7,7 +7,6 @@ import { getLocale } from 'next-intl/server';
 import type { Viewport, Metadata } from 'next';
 import { defaultOg } from '@/components/Seo';
 
-
 export const viewport: Viewport = {
 	width        : 'device-width',
 	initialScale : 1,

@@ -3,12 +3,11 @@ import { replaceUrlIdParam } from '@/hooks/useApi';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import LeagueComponent from './component';
+import { defaultOg } from '@/components/Seo';
 
 interface MetadataProps {
     params: Promise<{ locale: string, id: string }>
 }
-
-
 
 export async function generateMetadata({params,}: MetadataProps): Promise<Metadata> {
     const { locale, id } = await params;
@@ -26,7 +25,9 @@ export async function generateMetadata({params,}: MetadataProps): Promise<Metada
         openGraph   : {
             title       : `${t('leagues.title')} | ${data.name}`,
             description : t('leagues.description'),
-            url         : new URL(url)
+            url         : url,
+            type        : "website",
+            ...defaultOg,
         }
     }
 }

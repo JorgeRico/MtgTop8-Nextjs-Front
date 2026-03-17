@@ -14,6 +14,7 @@ interface MetadataProps {
 export async function generateMetadata({params,}: MetadataProps): Promise<Metadata> {
     const { locale } = await params;
     const t          = await getTranslations({ locale, namespace: 'home' });
+    const baseUrl    = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app';
 
     return {
         title       : t('title'),
@@ -21,6 +22,8 @@ export async function generateMetadata({params,}: MetadataProps): Promise<Metada
         openGraph   : {
             title       : t('title'),
             description : t('description'),
+            url         : baseUrl,
+            type        : "website",
             ...defaultOg,
         }
     }

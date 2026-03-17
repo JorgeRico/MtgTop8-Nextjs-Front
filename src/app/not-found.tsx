@@ -1,8 +1,9 @@
 import Title from "@/components/HTag/Title";
 import SimpleBreadcrumb from "@/components/Breadcrumb/Simple";
 import { useTranslations } from 'next-intl';
-import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { defaultOg } from '@/components/Seo';
 
 interface MetadataProps {
     params: Promise<{ locale: string }>
@@ -20,7 +21,9 @@ export async function generateMetadata({params,}: MetadataProps): Promise<Metada
         openGraph   : {
             title       : t('title'),
             description : t('description'),
-            url         : new URL(url)
+            url         : url,
+            type        : "website",
+            ...defaultOg,
         }
     }
 }
