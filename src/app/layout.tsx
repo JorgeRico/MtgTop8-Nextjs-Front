@@ -5,7 +5,7 @@ import "./globals.css";
 import "./styles/styles.css";
 import { getLocale } from 'next-intl/server';
 import type { Viewport, Metadata } from 'next';
-import { defaultOpenGraph } from '@/components/Seo';
+import { baseUrl } from "@/types/baseUrl";
 
 export const viewport: Viewport = {
 	width        : 'device-width',
@@ -13,8 +13,6 @@ export const viewport: Viewport = {
 	maximumScale : 5,
 	userScalable : false,
 }
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app';
 
 export const metadata: Metadata = {
     metadataBase: new URL(baseUrl),

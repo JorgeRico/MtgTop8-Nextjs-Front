@@ -1,19 +1,10 @@
-import { OpengraphType } from "@/types/opengraph";
+import type { Metadata } from 'next';
+import { defaultOpenGraph } from '@/components/Seo/Opengraph';
 
-export const baseUrl = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app';
-
-export const defaultOpenGraph: React.FC<OpengraphType> = ( title, description, url ): any => {
+export function seo_tags( title: string, description: string, url: string ): NonNullable<Metadata> {
     return {
-            title       : title,
-            description : description,
-            url         : url,
-            type        : "website",
-            images: [
-                {
-                    url    : `${baseUrl}/api/og?page=${url}`,
-                    width  : 1200,
-                    height : 600,
-                },
-            ],
-        }
+        title       : title,
+        description : description,
+        openGraph   : defaultOpenGraph(title, description, url),
+    }
 };

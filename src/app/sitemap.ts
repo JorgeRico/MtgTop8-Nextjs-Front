@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import endpoints from "@/types/endpoints";
+import { baseUrl } from "@/types/baseUrl";
 
 async function getAllLeagues() {
     const res     = await fetch(endpoints.API_LEAGUE_ALL);
@@ -16,9 +17,6 @@ async function getAllTournaments() {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL;
-
-    // páginas estáticas
     const staticPages = [
         {
             url             : baseUrl,

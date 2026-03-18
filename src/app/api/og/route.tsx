@@ -1,12 +1,9 @@
 import { ImageResponse } from 'next/og';
 import { getTranslations } from 'next-intl/server';
-    export const runtime = 'edge';
-
+import { baseUrl } from "@/types/baseUrl";
 
 export async function GET(req: Request) {
-    const baseUrl  = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app';
-    const imageUrl = `${baseUrl}/og-image.jpg`;
-
+    const imageUrl         = `${baseUrl}/og-image.jpg`;
     const { searchParams } = new URL(req.url);
     const title            = searchParams.get('page') || baseUrl;
 
