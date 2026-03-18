@@ -5,7 +5,7 @@ import "./globals.css";
 import "./styles/styles.css";
 import { getLocale } from 'next-intl/server';
 import type { Viewport, Metadata } from 'next';
-import { defaultOg } from '@/components/Seo';
+import { defaultOpenGraph } from '@/components/Seo';
 
 export const viewport: Viewport = {
 	width        : 'device-width',
@@ -15,7 +15,6 @@ export const viewport: Viewport = {
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_WEBSITE_URL || 'https://mtg-stats.vercel.app';
-const ogUrl   = `${baseUrl}/og-image.jpg`;
 
 export const metadata: Metadata = {
     metadataBase: new URL(baseUrl),
@@ -27,13 +26,6 @@ export const metadata: Metadata = {
     description : '%s | MTG Stats - Eternal Català',
     keywords    : "Magic the Gathering, Eternal Català, Legacy, Lliga Catalana de Legacy, LCL, Vintage, Lliga Catalana de Vintage, Lliga Minoria, mtg, tcg, stats",
     robots      : "index, follow",
-    openGraph   : {
-        title       : '%s | MTG Stats - Eternal Català',
-        description : '%s | MTG Stats - Eternal Català',
-        url         : baseUrl,
-        type        : "website",
-        ...defaultOg,
-    },
 }
 
 export default async function RootLayout({children}: LayoutProps<'/'>) {
