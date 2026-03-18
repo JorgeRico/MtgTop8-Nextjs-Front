@@ -4,7 +4,7 @@ export type InputFormType = {
     placeholder  : string;
     label        : string;
     value        : string;
-    handleChange : any;
+    handleChange : (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export type TextareaFormType = {
@@ -12,7 +12,7 @@ export type TextareaFormType = {
     placeholder  : string;
     label        : string;
     value        : string;
-    handleChange : any;
+    handleChange : (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
 export type ErrorMessageFormType = {

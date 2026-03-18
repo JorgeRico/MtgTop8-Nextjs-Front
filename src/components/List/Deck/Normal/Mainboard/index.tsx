@@ -5,25 +5,26 @@ import CardTypeList from "@/components/List/Deck/Normal/CardTypeList";
 import DeckCard from "@/components/List/Deck/Normal/Card";
 import { useTranslations } from 'next-intl';
 import { DeckBoardType } from "@/types/deck";
+import { CardType } from "@/types/card";
 
 const DeckMainboard: React.FC<DeckBoardType> = ({ items }) => {
-    const [ creatureItems, setCreatureItems ]         = useState<any>([]);
-    const [ instantItems, setInstantItems ]           = useState<any>([]);
-    const [ sorceryItems, setSorceryItems ]           = useState<any>([]);
-    const [ planeswalkerItems, setPlaneswalkerItems ] = useState<any>([]);
-    const [ artifactItems, setArtifactItems ]         = useState<any>([]);
-    const [ enchantmentItems, setEnchantmentItems ]   = useState<any>([]);
-    const [ landItems, setLandItems ]                 = useState<any>([]);
+    const [ creatureItems, setCreatureItems ]         = useState<CardType[]>([]);
+    const [ instantItems, setInstantItems ]           = useState<CardType[]>([]);
+    const [ sorceryItems, setSorceryItems ]           = useState<CardType[]>([]);
+    const [ planeswalkerItems, setPlaneswalkerItems ] = useState<CardType[]>([]);
+    const [ artifactItems, setArtifactItems ]         = useState<CardType[]>([]);
+    const [ enchantmentItems, setEnchantmentItems ]   = useState<CardType[]>([]);
+    const [ landItems, setLandItems ]                 = useState<CardType[]>([]);
     const t                                           = useTranslations('deck');
 
-    function getCardTypes(deck: any): void {
-        let planeswalkers: any[] = [];
-        let creatures    : any[] = [];
-        let instants     : any[] = [];
-        let sorceries    : any[] = [];
-        let artifacts    : any[] = [];
-        let enchantments : any[] = [];
-        let lands        : any[] = [];
+    function getCardTypes(deck: CardType): void {
+        let planeswalkers: CardType[] = [];
+        let creatures    : CardType[] = [];
+        let instants     : CardType[] = [];
+        let sorceries    : CardType[] = [];
+        let artifacts    : CardType[] = [];
+        let enchantments : CardType[] = [];
+        let lands        : CardType[] = [];
 
         for (var i = 0; i < deck.length; i++) {
             if (deck[i].cardType === statsTypes.PLANESWALKER) {

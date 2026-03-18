@@ -1,12 +1,13 @@
+import { CardType } from "@/types/card";
 
 export type DeckType = {
-    items    : Array<any>;
+    items    : Array<CardType>;
     deckName : string;
     isBlured : boolean;
 }
 
 export type DeckBoardType = {
-    items : Array<any>
+    items : Array<CardType>
 }
 
 export type DeckCardDescriptionType = {
@@ -16,10 +17,6 @@ export type DeckCardDescriptionType = {
 }
 
 export type DeckCardTListType = {
-    items : Array<any>;
+    items : Array<CardType>;
     text  : string;
-}
-
-export type DeckCardType = {
-    card : any
 }

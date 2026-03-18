@@ -51,9 +51,9 @@ const TournamentComponent: React.FC = () => {
                 loading   = {loading}
                 component = {
                     <TournamentBreadcrumb
-                        title={breadcrumbText}
-                        date={tournament.date}
-                        endpoint={endpoints.HTTP_LEAGUE + tournament.idLeague}
+                        title    = {breadcrumbText}
+                        date     = {tournament.date}
+                        endpoint = {endpoints.HTTP_LEAGUE + tournament.idLeague}
                     />
                 }
             />

@@ -5,7 +5,7 @@ import BluredTournamentList from "@/components/List/League/Tournament/Fake";
 import LeagueTournamentBlock from "@/components/List/League/Tournament/Block";
 import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
-import { TournamentListItemType } from "@/types/tournament";
+import { TournamentType, TournamentListItemType } from "@/types/tournament";
 
 const LeagueTournament: React.FC<TournamentListItemType> = ({ id, format, leagueName, location, locationName }) => {
     const [ renderElements, setRenderElements]  = useState(null);
@@ -17,7 +17,7 @@ const LeagueTournament: React.FC<TournamentListItemType> = ({ id, format, league
     const [ currentPage, setCurrentPage ]       = useState(1);
     const t                                     = useTranslations('league');
 
-    function countPlayers(data: any): void {
+    function countPlayers(data: TournamentType): void {
         var totalPlayers = 0;
         var numTournaments = data.length;
 

@@ -7,14 +7,14 @@ import statsTypes from "@/types/stats-types";
 import { DeckType } from "@/types/deck";
 
 const Deck: React.FC<DeckType> = ({ items, deckName, isBlured }) => {
-    const [ maindeck, setMaindeck ]             = useState<any>([]);
-    const [ sideboard, setSideboard ]           = useState<any>([]);
+    const [ maindeck, setMaindeck ]             = useState<CardType[]>([]);
+    const [ sideboard, setSideboard ]           = useState<CardType[]>([]);
     const [ totalMaindeck, setTotalMaindeck ]   = useState(0);
     const [ totalSideboard, setTotalSideboard ] = useState(0);
 
-    function getDeckCards(deck: any): void {
-        let itemsListMain: any[] = [];
-        let itemsListSide: any[] = [];
+    function getDeckCards(deck: CardType): void {
+        let itemsListMain: CardType[] = [];
+        let itemsListSide: CardType[] = [];
         let totalMain  = 0;
         let totalSide  = 0;
 

@@ -1,18 +1,22 @@
 export type TournamentType = {
-    idLeague : string;
-    name     : string;
-    date     : string;
-    players  : string;
+    id         : number;
+    idLeague   : string;
+    name       : string;
+    date       : string;
+    players    : string;
+    format     : number;
+    leagueName : string;
+    year       : string;
 }
 
 export type TournamentBluredType = {
-    tournament : any;
+    tournament : TournamentType;
     isBlured   : boolean;
 }
 
 export type TournamentSimpleType = {
     id         : string;
-    tournament : any;
+    tournament : TournamentType;
 }
 
 export type TournamentItemType = {
@@ -23,13 +27,13 @@ export type TournamentItemType = {
 
 export type TournamentNormalType = {
     url   : string,
-    items : Array<any>
+    items : Array<TournamentType>
 }
 
 export type TournamentBlockType = {
     leagueName     : string;
     format         : string;
-    renderElements : Array<any> | null;
+    renderElements : Array<TournamentType> | null;
     url            : string;
     isBlured       : boolean;
     numPlayers     : number;
