@@ -10,6 +10,7 @@ import { getFormat } from '@/hooks/useCommon';
 import Breadcrumb from "@/components/Breadcrumb";
 import BreadcrumbLeague from "@/components/Breadcrumb/League";
 import { useTranslations } from 'next-intl';
+import { AxiosResponse } from 'axios';
 
 const LeagueComponent: React.FC = () => {
     const params                                = useParams<{ id: string }>();

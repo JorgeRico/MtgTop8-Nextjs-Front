@@ -5,6 +5,7 @@ import DeckDescription from "@/components/List/Deck/Normal/Description";
 import { useEffect, useState } from "react";
 import statsTypes from "@/types/stats-types";
 import { DeckType } from "@/types/deck";
+import { CardType } from "@/types/card";
 
 const Deck: React.FC<DeckType> = ({ items, deckName, isBlured }) => {
     const [ maindeck, setMaindeck ]             = useState<CardType[]>([]);
@@ -12,7 +13,7 @@ const Deck: React.FC<DeckType> = ({ items, deckName, isBlured }) => {
     const [ totalMaindeck, setTotalMaindeck ]   = useState(0);
     const [ totalSideboard, setTotalSideboard ] = useState(0);
 
-    function getDeckCards(deck: CardType): void {
+    function getDeckCards(deck: CardType[]): void {
         let itemsListMain: CardType[] = [];
         let itemsListSide: CardType[] = [];
         let totalMain  = 0;
@@ -20,11 +21,11 @@ const Deck: React.FC<DeckType> = ({ items, deckName, isBlured }) => {
 
         for (var i = 0; i < deck.length; i++) {
             if (deck[i].board === statsTypes.MD) {
-                totalMain = totalMain + parseInt(deck[i].num);
+                totalMain = totalMain + deck[i].num;
                 itemsListMain.push(deck[i]);
             }
             if (deck[i].board === statsTypes.SB) {
-                totalSide = totalSide + parseInt(deck[i].num);
+                totalSide = totalSide + deck[i].num;
                 itemsListSide.push(deck[i]);
             }
         }

@@ -1,10 +1,10 @@
 export type TournamentType = {
     id         : number;
-    idLeague   : string;
+    idLeague   : number;
     name       : string;
     date       : string;
-    players    : string;
-    format     : number;
+    players    : number;
+    format     : string;
     leagueName : string;
     year       : string;
 }

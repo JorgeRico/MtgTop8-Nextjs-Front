@@ -1,15 +1,9 @@
 import Title from "@/components/Tournament/Title";
+import tournamentsFake from "@/fakeData/tournament";
 
 const TournamentTitleBlured: React.FC = () => {
-    const tournament = {
-        name    : 'Fake Tournament',
-        format  : 'Legacy',
-        players : '35',
-        date    : '22/10/2025'
-    }
-
     return (
-        <Title tournament={tournament} isBlured={true}></Title>
+        <Title tournament={tournamentsFake[0]} isBlured={true}></Title>
     )
 }
 

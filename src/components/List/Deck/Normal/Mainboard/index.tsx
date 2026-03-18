@@ -17,7 +17,7 @@ const DeckMainboard: React.FC<DeckBoardType> = ({ items }) => {
     const [ landItems, setLandItems ]                 = useState<CardType[]>([]);
     const t                                           = useTranslations('deck');
 
-    function getCardTypes(deck: CardType): void {
+    function getCardTypes(deck: CardType[]): void {
         let planeswalkers: CardType[] = [];
         let creatures    : CardType[] = [];
         let instants     : CardType[] = [];

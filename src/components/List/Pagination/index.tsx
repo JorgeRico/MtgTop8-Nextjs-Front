@@ -6,7 +6,7 @@ import { PaginationType } from "@/types/pagination";
 const Pagination: React.FC<PaginationType> = ({ text, total, itemsPerPage, currentPage, setCurrentPage, isDisabled = false }) => {
     const [ firstPage ]               = useState(1);
     const [ lastPage ]                = useState(Math.ceil(total / itemsPerPage));
-    const [ pageArray, setPageArray ] = useState<any>([]);
+    const [ pageArray, setPageArray ] = useState<number[]>([]);
 
     const handleClick = (number) => {
         setCurrentPage(number);

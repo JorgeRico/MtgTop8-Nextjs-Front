@@ -18,7 +18,7 @@ type MyComponentProps = {
 const StatsBox: React.FC<MyComponentProps> = ({ id, title, isLeague, endpoint, endpointCards, isBlured }) => {
     const t = useTranslations('stats');
 
-    const headerTitleBlock = (text: string): any => {
+    const headerTitleBlock = (text: string): React.ReactNode => {
         return (
             <div className="left w100 grey-bottom">
                 <SubTitle title={

@@ -1,15 +1,15 @@
 export type LeagueType = {
+    id           : string;
     current      : boolean;
-    id           : number;
     isLegacy     : boolean;
     location     : string;
     locationName : string;
     name         : string;
-    year         : number;
+    year         : string;
 }
 
 export type LeagueItemsType = {
     url      : string;
-    items    : Array<any>;
+    items    : Array<LeagueType>;
     isBlured : boolean;
 }

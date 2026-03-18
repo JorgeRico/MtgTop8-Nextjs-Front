@@ -1,16 +1,18 @@
 import ModalPopUp from "@/components/Modal";
 import { CardType } from "@/types/card";
 
-const DeckCard: React.FC<CardType> = ({ card }) => {
+interface DeckCardProps {
+    card: CardType;
+}
+
+const DeckCard: React.FC<DeckCardProps> = ({ card }) => {
     return (
-        <>
-            <article className="cardItem">
-                {card.num} {card.name}
-                <span className="modalImg">
-                    <ModalPopUp img={card.imgUrl} name={card.name} modalType={`deck-${card.id}`} />
-                </span>
-            </article>
-        </>
+        <article className="cardItem">
+            {card.num} {card.name}
+            <span className="modalImg">
+                <ModalPopUp img={card.imgUrl} name={card.name} modalType={`deck-${card.id}`} />
+            </span>
+        </article>
     )
 }
 

@@ -6,11 +6,19 @@ export type PlayerLineType = {
 }
 
 export type PlayerItemType = {
-    item  : any;
+    item  : PlayerType;
     index : number;
 }
 
 export type PlayerArrayType = {
-    items    : Array<any>;
+    items    : Array<PlayerType>;
     isBlured : boolean;
+}
+
+export type PlayerType = {
+    id       : number;
+    name     : string;
+    position : number;
+    idDeck   : number;
+    deckName : string;
 }

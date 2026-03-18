@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
  // axios
 const headers = {
@@ -8,7 +8,7 @@ const headers = {
     'Access-Control-Allow-Methods' : 'GET',
 }
 
-export function getAxiosEndpoint (endpoint: string): any {
+export function getAxiosEndpoint<T = any>(endpoint: string): Promise<AxiosResponse<T>> {
     return axios.get(
         endpoint,
         { headers: headers }
@@ -25,6 +25,6 @@ export function addUrlPaginationParams (endpoint: string, numItems: number, curr
     return url.toString();
 }
 
-export function replaceUrlIdParam (endpoint: string, value: any): string {
+export function replaceUrlIdParam (endpoint: string, value: string): string {
     return endpoint.replace('{id}', value)
 }

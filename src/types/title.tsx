@@ -3,11 +3,11 @@ export type TitleType = {
 }
 
 export type TitleAnyType = {
-    title: any;
+    title: React.ReactNode;
 };
 
 export type TitleComponentType = {
-    Tag       : any;
-    className : string;
-    text      : any;
+    Tag        : React.ElementType;
+    className? : string;
+    text       : React.ReactNode;
 };

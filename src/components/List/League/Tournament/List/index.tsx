@@ -6,6 +6,7 @@ import LeagueTournamentBlock from "@/components/List/League/Tournament/Block";
 import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
 import { TournamentType, TournamentListItemType } from "@/types/tournament";
+import { AxiosResponse } from 'axios';
 
 const LeagueTournament: React.FC<TournamentListItemType> = ({ id, format, leagueName, location, locationName }) => {
     const [ renderElements, setRenderElements]  = useState(null);
@@ -17,7 +18,7 @@ const LeagueTournament: React.FC<TournamentListItemType> = ({ id, format, league
     const [ currentPage, setCurrentPage ]       = useState(1);
     const t                                     = useTranslations('league');
 
-    function countPlayers(data: TournamentType): void {
+    function countPlayers(data: TournamentType[]): void {
         var totalPlayers = 0;
         var numTournaments = data.length;
 
@@ -29,7 +30,7 @@ const LeagueTournament: React.FC<TournamentListItemType> = ({ id, format, league
     }
 
     useEffect(() => {
-        async function apiCall(): Promise<any> {
+        async function apiCall(): Promise<void> {
             await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_TOURNAMENTS, id))
                 .then((response) => {
                     setRenderElements(response.data);

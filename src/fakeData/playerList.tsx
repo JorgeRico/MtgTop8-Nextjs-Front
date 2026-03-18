@@ -1,59 +1,75 @@
 const players = [
     {
-        "id": 221,
-        "name": "Carles Mesegue",
-        "position": 1,
-        "idDeck": 221,
-        "deckName": "Temur Delver"
+        "id"       : 221,
+        "name"     : "Carles Mesegue",
+        "position" : 1,
+        "idDeck"   : 221,
+        "deckName" : "Temur Delver",
+        "player"   : "test",
+        "deck"     : "test"
     },
     {
-        "id": 222,
-        "name": "Miguel Ángel Rodríguez",
-        "position": 2,
-        "idDeck": 222,
-        "deckName": "Sneak&show"
+        "id"       : 222,
+        "name"     : "Miguel Ángel Rodríguez",
+        "position" : 2,
+        "idDeck"   : 222,
+        "deckName" : "Sneak&show",
+        "player"   : "test",
+        "deck"     : "test"
     },
     {
-        "id": 223,
-        "name": "Sergio Olivencia",
-        "position": 3,
-        "idDeck": 223,
-        "deckName": "Cephalid Combo"
+        "id"       : 223,
+        "name"     : "Sergio Olivencia",
+        "position" : 3,
+        "idDeck"   : 223,
+        "deckName" : "Cephalid Combo",
+        "player"   : "test",
+        "deck"     : "test"
     },
     {
-        "id": 224,
-        "name": "Aitor Galian",
-        "position": 4,
-        "idDeck": 224,
-        "deckName": "Izzet Delver"
+        "id"       : 224,
+        "name"     : "Aitor Galian",
+        "position" : 4,
+        "idDeck"   : 224,
+        "deckName" : "Izzet Delver",
+        "player"   : "test",
+        "deck"     : "test"
     },
     {
-        "id": 225,
-        "name": "Toni Garcia",
-        "position": 5,
-        "idDeck": 225,
-        "deckName": "Cloudpost Ramp"
+        "id"       : 225,
+        "name"     : "Toni Garcia",
+        "position" : 5,
+        "idDeck"   : 225,
+        "deckName" : "Cloudpost Ramp",
+        "player"   : "test",
+        "deck"     : "test"
     },
     {
-        "id": 226,
-        "name": "David Castillo",
-        "position": 6,
-        "idDeck": 226,
-        "deckName": "Eldrazi"
+        "id"       : 226,
+        "name"     : "David Castillo",
+        "position" : 6,
+        "idDeck"   : 226,
+        "deckName" : "Eldrazi",
+        "player"   : "test",
+        "deck"     : "test"
     },
     {
-        "id": 227,
-        "name": "Sergi Juan De La Cruz",
-        "position": 7,
-        "idDeck": 227,
-        "deckName": "Nadu Combo"
+        "id"       : 227,
+        "name"     : "Sergi Juan De La Cruz",
+        "position" : 7,
+        "idDeck"   : 227,
+        "deckName" : "Nadu Combo",
+        "player"   : "test",
+        "deck"     : "test"
     },
     {
-        "id": 228,
-        "name": "Adrian Zapata",
-        "position": 8,
-        "idDeck": 228,
-        "deckName": "Tes"
+        "id"       : 228,
+        "name"     : "Adrian Zapata",
+        "position" : 8,
+        "idDeck"   : 228,
+        "deckName" : "Tes",
+        "player"   : "test",
+        "deck"     : "test"
     }
 ];
 

@@ -8,14 +8,20 @@ export type StatsPlayerType = {
     isPlayer : boolean;
 }
 
-export type StatsArrayItemsType = {
-    items    : Array<any>;
+export type StatsCardTotal = {
+    num     : number;
+    name    : string;
+    imgUrl? : string | null | undefined;
+}
+
+export type StatsItemType = {
+    item     : StatsCardTotal;
     isPlayer : boolean;
     text     : string;
 }
 
-export type StatsItemType = {
-    item     : any;
+export type StatsArrayItemsType = {
+    items    : Array<StatsCardTotal>;
     isPlayer : boolean;
     text     : string;
 }
@@ -26,3 +32,4 @@ export type StatsCardItemType = {
     endpoint : string;
     isPlayer : boolean;
 }
+

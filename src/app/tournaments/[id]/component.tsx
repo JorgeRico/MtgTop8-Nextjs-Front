@@ -11,10 +11,12 @@ import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import { getFormat } from '@/hooks/useCommon';
 import { useTranslations } from 'next-intl';
 import { TournamentType } from "@/types/tournament";
+import { AxiosResponse } from 'axios';
+import tournamentsFake from "@/fakeData/tournament";
 
 const TournamentComponent: React.FC = () => {
     const params                                = useParams<{ id: string }>();
-    const [ tournament, setTournament]          = useState<TournamentType>({idLeague: '', name:'', date:'', players: ''});
+    const [ tournament, setTournament]          = useState<TournamentType>(tournamentsFake[0]);
     const [ loading, setLoading ]               = useState<boolean>(false);
     const t                                     = useTranslations('seo-tags');
     const [ breadcrumbText, setBreadcrumbText ] = useState<string>('');
@@ -23,17 +25,16 @@ const TournamentComponent: React.FC = () => {
         async function apiCall(): Promise<void> {
             await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_DATA, params.id))
             .then((response) => {
-                setTournament(prevState => ({
-                    ...prevState,
+                setTournament({
+                    'id'         : response.data.id,
                     'idLeague'   : response.data.idLeague,
                     'name'       : response.data.name,
                     'date'       : response.data.date,
                     'players'    : response.data.players,
                     'format'     : getFormat(response.data.format),
-                    'year'       : response.data.year,
-                    'leagueName' : response.data.leagueName
-
-                }));
+                    'leagueName' : response.data.leagueName,
+                    'year'       : response.data.year
+                });
                 setBreadcrumbText(response.data.leagueName + ' ' + response.data.year);
                 setLoading(true);
             })
@@ -52,8 +53,8 @@ const TournamentComponent: React.FC = () => {
                 component = {
                     <TournamentBreadcrumb
                         title    = {breadcrumbText}
-                        date     = {tournament.date}
-                        endpoint = {endpoints.HTTP_LEAGUE + tournament.idLeague}
+                        date     = {tournament?.date}
+                        endpoint = {endpoints.HTTP_LEAGUE + tournament?.idLeague}
                     />
                 }
             />
@@ -64,7 +65,7 @@ const TournamentComponent: React.FC = () => {
             <Stats
                 id       = {params.id}
                 isLeague = {false}
-                title    = {`${t('tournaments.stats')} - ${tournament.name}`}
+                title    = {`${t('tournaments.stats')} - ${tournament?.name}`}
             />
         </main>
     );

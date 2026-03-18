@@ -3,27 +3,47 @@ const items = [
     {
         id: '',
         name: 'Fake League Item',
-        isLegacy: 1
+        isLegacy: true,
+        current: true,
+        location: 'test location',
+        locationName: 'test location name',
+        year: '2016'
     },
     {
         id: '',
         name: 'Fake League Item',
-        isLegacy: 1
+        isLegacy: true,
+        current: true,
+        location: 'test location',
+        locationName: 'test location name',
+        year: '2016'
     },
     {
         id: '',
         name: 'Fake League Item',
-        isLegacy: 1
+        isLegacy: true,
+        current: true,
+        location: 'test location',
+        locationName: 'test location name',
+        year: '2016'
     },
     {
         id: '',
         name: 'Fake League Item',
-        isLegacy: 1
+        isLegacy: true,
+        current: true,
+        location: 'test location',
+        locationName: 'test location name',
+        year: '2016'
     },
     {
         id: '',
         name: 'Fake League Item',
-        isLegacy: 1
+        isLegacy: true,
+        current: true,
+        location: 'test location',
+        locationName: 'test location name',
+        year: '2016'
     }
 ];
 

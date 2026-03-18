@@ -9,6 +9,7 @@ import SubTitle from "@/components/HTag/SubTitle";
 import ListImage from "@/components/Icons/List";
 import { useTranslations } from 'next-intl';
 import { TournamentSimpleType } from "@/types/tournament";
+import { AxiosResponse } from 'axios';
 
 const TournamentPlayers: React.FC<TournamentSimpleType> = ({ id, tournament }) => {
     const [ renderPlayers, setRenderPlayers] = useState([]);
@@ -41,7 +42,7 @@ const TournamentPlayers: React.FC<TournamentSimpleType> = ({ id, tournament }) =
                 <SubTitle title={
                         <>
                             <ListImage></ListImage>
-                            <span className="left ml10 mt3">{`${t('players.Top Players')} ${tournament.name ? '- ' + tournament.name : ''}`}</span>
+                            <span className="left ml10 mt3">{`${t('players.Top Players')} ${tournament?.name ? '- ' + tournament?.name : ''}`}</span>
                         </>
                     }
                 />

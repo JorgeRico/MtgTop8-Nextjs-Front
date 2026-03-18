@@ -4,16 +4,16 @@ import StatsListBlock from "@/components/List/Stats/Block";
 import BluredStatsList from "@/components/List/Stats/Cards/Fake";
 import Block from "@/components/List/Stats/Cards/Block";
 import { useTranslations } from 'next-intl';
-import { StatsCardItemType } from "@/types/stats";
+import { StatsCardTotal, StatsCardItemType } from "@/types/stats";
+import { AxiosResponse } from 'axios';
 
 const StatsBox: React.FC<StatsCardItemType> = ({ text, cardType, endpoint, isPlayer }) => {
-    const [ renderElements, setRenderElements ] = useState<any>([]);
+    const [ renderElements, setRenderElements ] = useState<StatsCardTotal[]>([]);
     const [ noResults, setNoResults ]           = useState(false);
     const [ isLoading, setIsLoading ]           = useState(true);
     const t                                     = useTranslations('errors');
 
-    // api call
-    async function apiCardTypeCall(): Promise<any> {
+    async function apiCardTypeCall(): Promise<void> {
         await getAxiosEndpoint(endpoint)
             .then((response) => {
                 setRenderElements(response.data.stats);

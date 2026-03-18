@@ -8,18 +8,19 @@ import Button from "@/components/List/Button";
 import BlockLine from "@/components/List/Player/Normal/BlockLine";
 import { useTranslations } from 'next-intl';
 import { PlayerItemType } from "@/types/player";
+import { AxiosResponse } from 'axios';
+import { CardType } from "@/types/card";
 
 const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
     const [ loading, setLoading ]                 = useState(false);
-    const [ renderDeckItems, setRenderDeckItems ] = useState([]);
+    const [ renderDeckItems, setRenderDeckItems ] = useState<CardType[]>([]);
     const t                                       = useTranslations('player');
 
-    // api call
-    async function apiCall(id): Promise<any> {
+    async function apiCall(id: number): Promise<void> {
         setRenderDeckItems([]);
         setLoading(true);
 
-        await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_DECK_CARDS, id))
+        await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_DECK_CARDS, id.toString()))
         .then((response) => {
             setLoading(false);
             setRenderDeckItems(response.data);
@@ -34,7 +35,7 @@ const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
         elems.forEach(elem => elem.classList.add('none'));
     }
 
-    function handleCards(index: number, idDeck: string): void {
+    function handleCards(index: number, idDeck: number): void {
         const element = document.querySelector('#deck-'+index);
         const button  = document.querySelector('#button-deck-'+index);
         button?.setAttribute('disabled', 'true');
