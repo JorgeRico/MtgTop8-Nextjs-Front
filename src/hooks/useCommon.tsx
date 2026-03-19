@@ -1,13 +1,11 @@
 import statsTypes from "@/types/stats-types";
 
-export function getFormat(format: number): string {
+export function getFormat(format: boolean): string {
     let value = '';
 
-    if (format === 1) {
+    if (format) {
         value = statsTypes.LEGACY;
-    }
-
-    if (format === 0) {
+    } else {
         value = statsTypes.VINTAGE;
     }
 

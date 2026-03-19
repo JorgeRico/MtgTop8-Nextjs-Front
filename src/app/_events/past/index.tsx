@@ -11,6 +11,7 @@ import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { LeagueType } from '@/types/league';
 import { TitleType } from '@/types/title';
+import { AxiosResponse } from 'axios';
 
 const PastEvents: React.FC<TitleType> = ({ title }) => {
     const [ pastLeagues, setPastLeagues ]           = useState<LeagueType[]>([]);
@@ -25,16 +26,15 @@ const PastEvents: React.FC<TitleType> = ({ title }) => {
             setShowPastElements(false);
             setPastLeagues([]);
 
-            await getAxiosEndpoint(addUrlPaginationParams(endpoints.API_LEAGUE_PAST, numItems, currentPage))
-            .then((response) => {
+            try {
+                const response: AxiosResponse<any> = await getAxiosEndpoint(addUrlPaginationParams(endpoints.API_LEAGUE_PAST, numItems, currentPage))
                 setPastLeagues(response.data.leagues);
                 setTotalPastLeagues(response.data.total)
                 setShowPastElements(true);
-            })
-            .catch((err) => {
+            } catch (err) {
                 console.log(err);
                 console.log('Error')
-            });
+            };
         }
 
         apiCallPast();

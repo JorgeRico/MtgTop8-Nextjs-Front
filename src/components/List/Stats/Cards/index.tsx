@@ -4,8 +4,8 @@ import StatsListBlock from "@/components/List/Stats/Block";
 import BluredStatsList from "@/components/List/Stats/Cards/Fake";
 import Block from "@/components/List/Stats/Cards/Block";
 import { useTranslations } from 'next-intl';
-import { StatsCardTotal, StatsCardItemType } from "@/types/stats";
-import { AxiosResponse } from 'axios';
+import { StatsCardTotal, StatsCardItemType, StatsArrayItemsType } from "@/types/stats";
+import { AxiosResponse, AxiosError } from 'axios';
 
 const StatsBox: React.FC<StatsCardItemType> = ({ text, cardType, endpoint, isPlayer }) => {
     const [ renderElements, setRenderElements ] = useState<StatsCardTotal[]>([]);
@@ -14,18 +14,17 @@ const StatsBox: React.FC<StatsCardItemType> = ({ text, cardType, endpoint, isPla
     const t                                     = useTranslations('errors');
 
     async function apiCardTypeCall(): Promise<void> {
-        await getAxiosEndpoint(endpoint)
-            .then((response) => {
-                setRenderElements(response.data.stats);
-                setIsLoading(false);
-            })
-            .catch((err) => {
-                if (err.status === 404) {
-                    setNoResults(true);
-                    setIsLoading(false);
-                }
-                console.log('error League card stats')
-            });
+        try {
+            const response: AxiosResponse<any> = await getAxiosEndpoint(endpoint);
+            setRenderElements(response.data.stats);
+            setIsLoading(false);
+        } catch (err) {
+            if ((err as AxiosError).response?.status === 404) {
+                setNoResults(true);
+            }
+            setIsLoading(false);
+            console.log('error League card stats')
+        };
     }
 
     const handleClickCardTypes = (): void => {

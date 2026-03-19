@@ -10,6 +10,7 @@ import ListImage from "@/components/Icons/List";
 import { useTranslations } from 'next-intl';
 import { TournamentSimpleType } from "@/types/tournament";
 import { AxiosResponse } from 'axios';
+import { PlayerArrayType } from "@/types/player";
 
 const TournamentPlayers: React.FC<TournamentSimpleType> = ({ id, tournament }) => {
     const [ renderPlayers, setRenderPlayers] = useState([]);
@@ -18,14 +19,13 @@ const TournamentPlayers: React.FC<TournamentSimpleType> = ({ id, tournament }) =
 
     useEffect(() => {
         async function apiCall(): Promise<void>{
-            await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_PLAYERS, id))
-            .then((response) => {
+            try {
+                const response: AxiosResponse<any> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_PLAYERS, id))
                 setRenderPlayers(response.data);
                 setShowPlayers(true);
-            })
-            .catch((err) => {
+            } catch (err) {
                 console.log('error tournament')
-            });
+            };
         }
 
         apiCall();

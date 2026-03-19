@@ -20,14 +20,13 @@ const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
         setRenderDeckItems([]);
         setLoading(true);
 
-        await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_DECK_CARDS, id.toString()))
-        .then((response) => {
+        try {
+            const response: AxiosResponse<CardType[]> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_DECK_CARDS, id.toString()))
             setLoading(false);
             setRenderDeckItems(response.data);
-        })
-        .catch((err) => {
+        } catch (err) {
             console.log('error loading deck')
-        });
+        };
     }
 
     function hideDeckLists(): void {

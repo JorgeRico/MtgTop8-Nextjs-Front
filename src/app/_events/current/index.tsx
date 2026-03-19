@@ -10,6 +10,7 @@ import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { LeagueType } from '@/types/league';
 import { TitleType } from '@/types/title';
+import { AxiosResponse } from 'axios';
 
 const Events: React.FC<TitleType> = ({ title }) => {
     const [ currentLeagues, setCurrentLeagues ]           = useState<LeagueType[]>([]);
@@ -19,15 +20,14 @@ const Events: React.FC<TitleType> = ({ title }) => {
 
     useEffect(() => {
         async function apiCallCurrent(): Promise<void> {
-            await getAxiosEndpoint(endpoints.API_LEAGUE_CURRENT)
-            .then((response) => {
+            try {
+                const response: AxiosResponse<any> = await getAxiosEndpoint(endpoints.API_LEAGUE_CURRENT)
                 setCurrentLeagues(response.data);
                 setTotalLeagues(response.data.length);
                 setShowCurrentElements(true);
-            })
-            .catch((err) => {
+            } catch (err) {
                 console.log('Error')
-            });
+            };
         }
 
         apiCallCurrent();

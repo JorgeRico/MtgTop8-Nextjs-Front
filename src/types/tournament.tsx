@@ -4,7 +4,7 @@ export type TournamentType = {
     name       : string;
     date       : string;
     players    : number;
-    format     : string;
+    format     : boolean;
     leagueName : string;
     year       : string;
 }

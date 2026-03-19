@@ -6,7 +6,7 @@ import LeagueTournamentBlock from "@/components/List/League/Tournament/Block";
 import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
 import { TournamentType, TournamentListItemType } from "@/types/tournament";
-import { AxiosResponse } from 'axios';
+import { AxiosResponse, AxiosError } from 'axios';
 
 const LeagueTournament: React.FC<TournamentListItemType> = ({ id, format, leagueName, location, locationName }) => {
     const [ renderElements, setRenderElements]  = useState(null);
@@ -31,20 +31,19 @@ const LeagueTournament: React.FC<TournamentListItemType> = ({ id, format, league
 
     useEffect(() => {
         async function apiCall(): Promise<void> {
-            await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_TOURNAMENTS, id))
-                .then((response) => {
-                    setRenderElements(response.data);
-                    setShowElements(true);
-                    countPlayers(response.data);
-                    setTotal(response.data.length);
-                    // setClassification('pppp');
-                })
-                .catch((err) => {
-                    if (err.status === 404) {
-                        setNoResults(true);
-                    }
-                    console.log('error league tournament')
-                });
+            try {
+                const response: AxiosResponse<any> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_TOURNAMENTS, id))
+                setRenderElements(response.data);
+                setShowElements(true);
+                countPlayers(response.data);
+                setTotal(response.data.length);
+                // setClassification('pppp');
+            } catch (err) {
+                if ((err as AxiosError).response?.status === 404) {
+                    setNoResults(true);
+                }
+                console.log('error league tournament')
+            };
         }
 
         apiCall();

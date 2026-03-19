@@ -23,24 +23,23 @@ const TournamentComponent: React.FC = () => {
 
     useEffect(() => {
         async function apiCall(): Promise<void> {
-            await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_DATA, params.id))
-            .then((response) => {
+            try {
+                const response: AxiosResponse<TournamentType> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_DATA, params.id))
                 setTournament({
                     'id'         : response.data.id,
                     'idLeague'   : response.data.idLeague,
                     'name'       : response.data.name,
                     'date'       : response.data.date,
                     'players'    : response.data.players,
-                    'format'     : getFormat(response.data.format),
+                    'format'     : response.data.format,
                     'leagueName' : response.data.leagueName,
                     'year'       : response.data.year
                 });
                 setBreadcrumbText(response.data.leagueName + ' ' + response.data.year);
                 setLoading(true);
-            })
-            .catch((err) => {
+            } catch (err) {
                 console.log('error tournamnet')
-            });
+            };
         }
 
         apiCall();

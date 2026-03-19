@@ -7,7 +7,7 @@ const items  = [
         "date"           : "25/01/25",
         "idLeague"       : 4,
         "players"        : 29,
-        "format"         : "Legacy",
+        "format"         : true,
         "leagueName"     : "Lliga Minoria",
         "year"           : "2026"
     },
@@ -17,7 +17,7 @@ const items  = [
         "date"           : "22/02/25",
         "idLeague"       : 4,
         "players"        : 25,
-        "format"         : "Legacy",
+        "format"         : true,
         "leagueName"     : "Lliga Minoria",
         "year"           : "2026"
     },
@@ -27,7 +27,7 @@ const items  = [
         "date"           : "29/03/25",
         "idLeague"       : 4,
         "players"        : 23,
-        "format"         : "Legacy",
+        "format"         : true,
         "leagueName"     : "Lliga Minoria",
         "year"           : "2026"
     }

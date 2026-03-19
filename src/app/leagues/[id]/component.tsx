@@ -11,8 +11,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import BreadcrumbLeague from "@/components/Breadcrumb/League";
 import { useTranslations } from 'next-intl';
 import { AxiosResponse } from 'axios';
+import { LeagueType } from "@/types/league";
 
-const LeagueComponent: React.FC = () => {
+const LeagueComponent = () => {
     const params                                = useParams<{ id: string }>();
     const [ leagueName, setLeagueName ]         = useState<string>('');
     const [ showLeagueName, setShowLeagueName ] = useState<boolean>(false);
@@ -24,19 +25,18 @@ const LeagueComponent: React.FC = () => {
 
     useEffect(() => {
         async function apiCall(): Promise<void> {
-            await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID, params.id))
-                .then((response) => {
-                    setLeagueName(response.data.name);
-                    setLeagueFormat(getFormat(response.data.isLegacy));
-                    setShowLeagueName(true);
-                    setLocation(response.data.location);
-                    setLocationName(response.data.locationName);
-                    setYear(response.data.year);
-                })
-                .catch((err) => {
-                    console.log(err)
-                    console.log('error league id')
-                });
+            try {
+                const response: AxiosResponse<LeagueType> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID, params.id))
+                setLeagueName(response.data.name);
+                setLeagueFormat(getFormat(response.data.isLegacy));
+                setShowLeagueName(true);
+                setLocation(response.data.location);
+                setLocationName(response.data.locationName);
+                setYear(response.data.year);
+            } catch (err) {
+                console.log(err)
+                console.log('error league id')
+            };
         }
 
         apiCall();
