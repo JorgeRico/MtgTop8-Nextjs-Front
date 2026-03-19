@@ -3,17 +3,18 @@
 import { useState, useRef } from "react";
 import "../module.css";
 import Error from "@/components/Forms/Error";
-import { degrees, PDFDocument, StandardFonts } from 'pdf-lib';
+import { degrees, PDFDocument, StandardFonts, PDFFont, PDFPage } from 'pdf-lib';
 import downloadjs from "downloadjs";
 import InputForm from "@/components/Forms/Input";
 import TextareaForm from "@/components/Forms/Textarea";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
+import { PdfItemType, PdfValuesType, PdfType, PdfCardType } from "@/types/pdf";
 
 const DeckListForm: React.FC = () => {
     const [ showButton, setShowButton ]     = useState(true);
     const [ showError, setShowError ]       = useState(false);
-    const [ toSend, setToSend ]             = useState<any>({ name: '', surname: '', event: '', deckName: '', mainboard: [], sideboard: [] });
+    const [ toSend, setToSend ]             = useState<PdfType>({ name: '', surname: '', event: '', deckName: '', mainboard: '', sideboard: '' });
     const form                              = useRef(null);
     const [ line ]                          = useState(18);
     const [ cardGap ]                       = useState(43);
@@ -22,7 +23,7 @@ const DeckListForm: React.FC = () => {
     const t                                 = useTranslations('decklist');
     const errors                            = useTranslations('errors');
 
-    const description = (item: any, firstPage: any, fontFamily: any, values: any): void => {
+    const description = (item: PdfItemType, firstPage: PDFPage, fontFamily: PDFFont, values: PdfValuesType): void => {
         const xTop = 42;
         firstPage.drawText(item.name, { x: xTop, y: 250, size: size, font: fontFamily, rotate: degrees(90) });
         firstPage.drawText(item.surname, { x: xTop, y: 70,  size: size, font: fontFamily, rotate: degrees(90) });
@@ -32,9 +33,9 @@ const DeckListForm: React.FC = () => {
         firstPage.drawText(item.event, { x: values.rightColumn + xMove, y: values.height-70, size: size, font: fontFamily });
     }
 
-    const decklist = (items: any, firstPage: any, fontFamily: any, values: any): void => {
-        const maindeckCards  = cardsList( items.maindeck );
-        const sideboardCards = cardsList( items.sideboard );
+    const decklist = (maindeck: string, sideboard: string, firstPage: PDFPage, fontFamily: PDFFont, values: PdfValuesType): void => {
+        const maindeckCards  = cardsList( maindeck );
+        const sideboardCards = cardsList( sideboard );
 
         let totalMainboard = getMaindeck(maindeckCards, values, firstPage, fontFamily);
         let totalSideboard = getSideboard(sideboardCards, values, firstPage, fontFamily)
@@ -50,12 +51,12 @@ const DeckListForm: React.FC = () => {
         numberOfCards(totalMainboard, totalSideboard, firstPage, fontFamily, values);
     }
 
-    function numberOfCards(totalMainboard: number, totalSideboard: number, firstPage: any, fontFamily: any, values: any): void {
+    function numberOfCards(totalMainboard: number, totalSideboard: number, firstPage: PDFPage, fontFamily: PDFFont, values: PdfValuesType): void {
         firstPage.drawText(totalMainboard.toString(), { x: values.rightColumn - 83, y: 27, size: 18, font: fontFamily });
         firstPage.drawText(totalSideboard.toString(), { x: values.width - 70,   y: 81, size: 17, font: fontFamily });
     }
 
-    function getMaindeck(cards: any, values: any, firstPage: any, fontFamily: any): number {
+    function getMaindeck(cards: PdfCardType[], values: PdfValuesType, firstPage: PDFPage, fontFamily: PDFFont): number {
         const top          = 214.5;
         const MaindeckY    =  values.height / 2 + top
         let totalMainboard = 0;
@@ -72,7 +73,7 @@ const DeckListForm: React.FC = () => {
         return totalMainboard;
     }
 
-    function getSideboard(cards: any, values: any, firstPage: any, fontFamily): number {
+    function getSideboard(cards: PdfCardType[], values: PdfValuesType, firstPage: PDFPage, fontFamily: PDFFont): number {
         const sideBoardY   = values.height / 2 - 38;
         let totalSideboard = 0;
 
@@ -87,34 +88,30 @@ const DeckListForm: React.FC = () => {
         return totalSideboard;
     }
 
-    function cardsList(cards: any): any {
+    function cardsList(cards: string): PdfCardType[] {
         const cardsSplitted = cards.split('\n');
-
-        let items: any[] = [];
+        const items: PdfCardType[] = [];
 
         cardsSplitted.forEach(item => {
-            if (item.trim() !== '') {
-                let num  = null;
-                let card = null;
+            const line = item.trim();
+            if (line === '') return;
 
-                if (item.charAt(1) == ' ') {
-                    num = item.slice(0,2);
-                    card = item.slice(2);
-                } else if (item.charAt(2) == ' ') {
-                    num = item.slice(0,3);
-                    card = item.slice(3);
-                } else {
-                    setShowError(true);
-                    setErrorMessage(errors('forms.Incorrect form - card incorrect format'));
-                    setTimeout(() => {setShowButton(true)}, 2000);
-                    setTimeout(() => {setShowError(false)}, 2000);
-                }
+            // Regex: número + espacio + nombre
+            const match = line.match(/^(\d+)\s+(.+)$/);
 
-                if (!Number.isNaN(num) && card != '') {
-                    items.push({ num: num, card: card });
-                }
+            if (!match) {
+                setShowError(true);
+                setErrorMessage(errors('forms.Incorrect form - card incorrect format'));
+                setTimeout(() => setShowButton(true), 2000);
+                setTimeout(() => setShowError(false), 2000);
+                return;
             }
-        })
+
+            const num  = match[1];   // string
+            const card = match[2];  // string
+
+            items.push({ num, card });
+        });
 
         return items;
     }
@@ -152,15 +149,10 @@ const DeckListForm: React.FC = () => {
                     'event'    : toSend.event
                 }
 
-                const deckItems = {
-                    'maindeck'  : toSend.mainboard,
-                    'sideboard' : toSend.sideboard
-                }
-
                 if (fontFamily != null) {
                     // get info from form
                     description( descriptionItems, firstPage, fontFamily, pdfValues );
-                    decklist( deckItems, firstPage, fontFamily, pdfValues );
+                    decklist( toSend.mainboard, toSend.sideboard, firstPage, fontFamily, pdfValues );
                 }
 
                 const pdfBytes = await pdfDoc.save()
