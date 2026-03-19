@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     description : '%s | MTG Stats - Eternal Català',
     keywords    : "Magic the Gathering, Eternal Català, Legacy, Lliga Catalana de Legacy, LCL, Vintage, Lliga Catalana de Vintage, Lliga Minoria, mtg, tcg, stats",
     robots      : "index, follow",
+    other       : {
+        'google-adsense-account': 'ca-pub-9482818665347681',
+    },
 }
 
 export default async function RootLayout({children}: LayoutProps<'/'>) {
