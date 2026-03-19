@@ -1,7 +1,7 @@
 import "./module.css";
-import DeckSideboard from "@/components/List/Deck/Normal/Sideboard";
-import DeckMainboard from "@/components/List/Deck/Normal/Mainboard";
-import DeckDescription from "@/components/List/Deck/Normal/Description";
+import DeckSideboard from "@/components/List/Deck/Sideboard";
+import DeckMainboard from "@/components/List/Deck/Mainboard";
+import DeckDescription from "@/components/List/Deck/Description";
 import { useEffect, useState } from "react";
 import statsTypes from "@/types/stats-types";
 import { DeckType } from "@/types/deck";
@@ -37,29 +37,25 @@ const Deck: React.FC<DeckType> = ({ items, deckName, isBlured }) => {
     }
 
     useEffect(() => {
-        if (items.length > 0) {
-            getDeckCards(items);
-        }
-    }, [items.length > 0]);
+        getDeckCards(items);
+    }, []);
 
     return (
-        <>
-            {items.length > 0 && (
-                <article className={isBlured ? "blink blured" : ""}>
-                    <DeckDescription
-                        totalMaindeck={totalMaindeck}
-                        totalSideboard={totalSideboard}
-                        deckName={deckName}>
-                    </DeckDescription>
-                    {maindeck.length > 0 &&
-                        <DeckMainboard items={maindeck}></DeckMainboard>
-                    }
-                    {sideboard.length > 0 &&
-                        <DeckSideboard items={sideboard}></DeckSideboard>
-                    }
-                </article>
-            )}
-        </>
+        <section>
+            <article className={isBlured === true ? "blink blured" : ""}>
+                <DeckDescription
+                    totalMaindeck  = {totalMaindeck}
+                    totalSideboard = {totalSideboard}
+                    deckName       = {deckName}
+                />
+                {maindeck.length > 0 &&
+                    <DeckMainboard items={maindeck}></DeckMainboard>
+                }
+                {sideboard.length > 0 &&
+                    <DeckSideboard items={sideboard}></DeckSideboard>
+                }
+            </article>
+        </section>
     )
 }
 

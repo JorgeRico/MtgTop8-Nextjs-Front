@@ -1,29 +1,30 @@
-import { useState, ReactNode } from 'react';
+import { useState, ReactNode, useEffect } from 'react';
 import "../module.css";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import endpoints from "@/types/endpoints";
-import Deck from "@/components/List/Deck/Normal";
-import BluredDeck from "@/components/List/Deck/Fake";
+import Deck from "@/components/List/Deck";
 import Button from "@/components/List/Button";
 import BlockLine from "@/components/List/Player/Normal/BlockLine";
 import { useTranslations } from 'next-intl';
 import { PlayerItemType } from "@/types/player";
 import { AxiosResponse } from 'axios';
 import { CardType } from "@/types/card";
+import decklist from "@/fakeData/decklist";
 
 const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
     const [ loading, setLoading ]                 = useState(false);
     const [ renderDeckItems, setRenderDeckItems ] = useState<CardType[]>([]);
     const t                                       = useTranslations('player');
+    const [ isBlured, setIsBlured ]               = useState(true);
+    const [ loadingDeck, setLoadingDeck ]         = useState(false);
 
     async function apiCall(id: number): Promise<void> {
-        setRenderDeckItems([]);
-        setLoading(true);
+        setIsBlured(true);
 
         try {
-            const response: AxiosResponse<CardType[]> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_DECK_CARDS, id.toString()))
-            setLoading(false);
+            const response: AxiosResponse<any> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_DECK_CARDS, id.toString()));
             setRenderDeckItems(response.data);
+            setIsBlured(false);
         } catch (err) {
             console.log('error loading deck')
         };
@@ -40,10 +41,12 @@ const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
         button?.setAttribute('disabled', 'true');
 
         if (element?.classList.contains('none')) {
+            setLoadingDeck(true);
             hideDeckLists();
             apiCall(idDeck);
             element?.classList.toggle('none');
         } else {
+            setLoadingDeck(false)
             element?.classList.toggle('none');
         }
 
@@ -51,32 +54,34 @@ const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
     }
 
     return (
-        <>
+        <main>
             <section className="item left mb15 bg-footer border-red overflowHidden playersBox" id={'player-'+(index+1)}>
-                {item &&
                 <BlockLine
                     position = {index+1}
                     player   = {item.name}
                     deck     = {item.deckName}
-                />}
+                />
                 <div className="left viewDeck" onClick={() => handleCards((index+1), item.idDeck)}>
                     <Button buttonText={t('View deck')} id={'button-deck-'+(index+1)}/>
                 </div>
             </section>
 
             <section className="left w100 clear"></section>
-
-            <section className="left w100 none decklists mb20" id={'deck-'+(index+1)}>
-                <article className="deck overflowHidden">
-                    {loading === true &&
-                        <BluredDeck></BluredDeck>
-                    }
-                    {renderDeckItems && (
-                        <Deck items={renderDeckItems} deckName={item.deckName} isBlured={false} />
-                    )}
-                </article>
-            </section>
-        </>
+                <section className="left w100 none decklists mb20" id={'deck-'+(index+1)}>
+                    <article className="deck overflowHidden">
+                        {loadingDeck === true &&
+                            <>
+                                {isBlured === true &&
+                                    <Deck items={decklist.deckItems} deckName={item.deckName} isBlured={isBlured} />
+                                }
+                                {isBlured === false &&
+                                    <Deck items={renderDeckItems} deckName={item.deckName} isBlured={isBlured} />
+                                }
+                            </>
+                        }
+                    </article>
+                </section>
+        </main>
     )
 }
 

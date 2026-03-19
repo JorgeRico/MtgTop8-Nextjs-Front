@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import statsTypes from "@/types/stats-types";
-import CardTypeList from "@/components/List/Deck/Normal/CardTypeList";
-import DeckCard from "@/components/List/Deck/Normal/Card";
+import CardTypeList from "@/components/List/Deck/Card/Block";
 import { useTranslations } from 'next-intl';
 import { DeckBoardType } from "@/types/deck";
 import { CardType } from "@/types/card";
@@ -60,39 +59,33 @@ const DeckMainboard: React.FC<DeckBoardType> = ({ items }) => {
     }
 
     useEffect(() => {
-        if (items.length > 0) {
-            getCardTypes(items)
-        }
-    }, [items.length > 0]);
+        getCardTypes(items);
+    }, []);
 
     return (
-        <>
-            {items.length > 0 && (
-                <article className="left maindeck">
-                    {planeswalkerItems.length > 0 &&
-                        <CardTypeList items={planeswalkerItems} text={t('Planeswalkers')}></CardTypeList>
-                    }
-                    {creatureItems.length > 0 &&
-                        <CardTypeList items={creatureItems} text={t('Creatures')}></CardTypeList>
-                    }
-                    {instantItems.length > 0 &&
-                        <CardTypeList items={instantItems} text={t('Instants')}></CardTypeList>
-                    }
-                    {sorceryItems.length > 0 &&
-                        <CardTypeList items={sorceryItems} text={t('Sorceries')}></CardTypeList>
-                    }
-                    {artifactItems.length > 0 &&
-                        <CardTypeList items={artifactItems} text={t('Artifacts')}></CardTypeList>
-                    }
-                    {enchantmentItems.length > 0 &&
-                        <CardTypeList items={enchantmentItems} text={t('Enchantments')}></CardTypeList>
-                    }
-                    {landItems.length > 0 &&
-                        <CardTypeList items={landItems} text={t('Lands')}></CardTypeList>
-                    }
-                </article>
-            )}
-        </>
+        <article className="left maindeck">
+            {planeswalkerItems.length > 0 &&
+                <CardTypeList items={planeswalkerItems} text={t('Planeswalkers')}></CardTypeList>
+            }
+            {creatureItems.length > 0 &&
+                <CardTypeList items={creatureItems} text={t('Creatures')}></CardTypeList>
+            }
+            {instantItems.length > 0 &&
+                <CardTypeList items={instantItems} text={t('Instants')}></CardTypeList>
+            }
+            {sorceryItems.length > 0 &&
+                <CardTypeList items={sorceryItems} text={t('Sorceries')}></CardTypeList>
+            }
+            {artifactItems.length > 0 &&
+                <CardTypeList items={artifactItems} text={t('Artifacts')}></CardTypeList>
+            }
+            {enchantmentItems.length > 0 &&
+                <CardTypeList items={enchantmentItems} text={t('Enchantments')}></CardTypeList>
+            }
+            {landItems.length > 0 &&
+                <CardTypeList items={landItems} text={t('Lands')}></CardTypeList>
+            }
+        </article>
     )
 }
 
