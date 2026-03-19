@@ -10,7 +10,8 @@ import { baseUrl } from "@/types/baseUrl";
 export const viewport: Viewport = {
 	width        : 'device-width',
 	initialScale : 1,
-	maximumScale : 5
+	maximumScale : 5,
+	userScalable : false,
 }
 
 export const metadata: Metadata = {
