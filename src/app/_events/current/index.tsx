@@ -1,7 +1,7 @@
 "use client"
 
-import ListLeague from "@/components/List/League/Normal";
-import BluredLeagueList from "@/components/List/League/Fake";
+import ListLeague from "@/components/List/League";
+import BluredLeagueList from "@/fakeData/components/leagueList";
 import SubTitle from "@/components/HTag/SubTitle";
 import endpoints from "@/types/endpoints";
 import { useState, useEffect } from "react";

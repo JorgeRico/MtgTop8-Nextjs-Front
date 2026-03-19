@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getAxiosEndpoint } from '@/hooks/useApi';
 import StatsListBlock from "@/components/List/Stats/Block";
-import BluredStatsList from "@/components/List/Stats/Cards/Fake";
+import BluredStatsList from "@/fakeData/components/loadingCards";
 import Block from "@/components/List/Stats/Cards/Block";
 import { useTranslations } from 'next-intl';
 import { StatsCardTotal, StatsCardItemType, StatsArrayItemsType } from "@/types/stats";

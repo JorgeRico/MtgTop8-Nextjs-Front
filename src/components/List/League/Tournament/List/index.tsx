@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import endpoints from "@/types/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
-import BluredTournamentList from "@/components/List/League/Tournament/Fake";
+import BluredTournamentList from "@/fakeData/components/tournamentList";
 import LeagueTournamentBlock from "@/components/List/League/Tournament/Block";
 import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
@@ -42,6 +42,7 @@ const LeagueTournament: React.FC<TournamentListItemType> = ({ id, format, league
                 if ((err as AxiosError).response?.status === 404) {
                     setNoResults(true);
                 }
+                setShowElements(true);
                 console.log('error league tournament')
             };
         }
@@ -52,35 +53,36 @@ const LeagueTournament: React.FC<TournamentListItemType> = ({ id, format, league
     return (
         <>
             {!showElements ? (
+                    <BluredTournamentList></BluredTournamentList>
+                ) : (
                     (noResults === true) ? (
                         <div className="radius5 cardsList bg-footer padStatsBox">
                             {t("errors.league.Sorry, now we don't have tournaments registered for this league")}
                         </div>
                     ) : (
-                        <BluredTournamentList></BluredTournamentList>
+                        <>
+                            <LeagueTournamentBlock
+                                format         = {format}
+                                leagueName     = {leagueName}
+                                renderElements = {renderElements}
+                                url            = {endpoints.HTTP_TOURNAMENT}
+                                isBlured       = {false}
+                                numPlayers     = {numPlayers}
+                                classification = {classification}
+                                location       = {location}
+                                locationName   = {locationName}
+                            />
+                            <Pagination
+                                text           = {t('list.Tournaments')}
+                                total          = {total}
+                                itemsPerPage   = {total}
+                                currentPage    = {currentPage}
+                                setCurrentPage = {setCurrentPage}>
+                            </Pagination>
+                        </>
                     )
-                ) : (
-                    <>
-                        <LeagueTournamentBlock
-                            format         = {format}
-                            leagueName     = {leagueName}
-                            renderElements = {renderElements}
-                            url            = {endpoints.HTTP_TOURNAMENT}
-                            isBlured       = {false}
-                            numPlayers     = {numPlayers}
-                            classification = {classification}
-                            location       = {location}
-                            locationName   = {locationName}
-                        />
-                        <Pagination
-                            text           = {t('list.Tournaments')}
-                            total          = {total}
-                            itemsPerPage   = {total}
-                            currentPage    = {currentPage}
-                            setCurrentPage = {setCurrentPage}>
-                        </Pagination>
-                    </>
-            )}
+                )
+            }
         </>
     )
 }

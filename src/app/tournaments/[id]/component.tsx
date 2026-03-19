@@ -12,11 +12,12 @@ import { getFormat } from '@/hooks/useCommon';
 import { useTranslations } from 'next-intl';
 import { TournamentType } from "@/types/tournament";
 import { AxiosResponse } from 'axios';
-import tournamentsFake from "@/fakeData/tournament";
+import fakeTournament from "@/fakeData/tournament";
+import Title from "@/components/Tournament/Title";
 
 const TournamentComponent: React.FC = () => {
     const params                                = useParams<{ id: string }>();
-    const [ tournament, setTournament]          = useState<TournamentType>(tournamentsFake[0]);
+    const [ tournament, setTournament]          = useState<TournamentType>();
     const [ loading, setLoading ]               = useState<boolean>(false);
     const t                                     = useTranslations('seo-tags');
     const [ breadcrumbText, setBreadcrumbText ] = useState<string>('');
@@ -52,19 +53,20 @@ const TournamentComponent: React.FC = () => {
                 component = {
                     <TournamentBreadcrumb
                         title    = {breadcrumbText}
-                        date     = {tournament?.date}
-                        endpoint = {endpoints.HTTP_LEAGUE + tournament?.idLeague}
+                        date     = {tournament ? tournament.date : fakeTournament.date}
+                        endpoint = {`${endpoints.HTTP_LEAGUE}${tournament ? tournament.idLeague : fakeTournament.idLeague}`}
                     />
                 }
             />
+            <Title tournament={tournament ? tournament : fakeTournament} isBlured={!loading}></Title>
             <TournamentPlayers
                 id         = {params.id}
-                tournament = {tournament}
+                tournament = {tournament ? tournament : fakeTournament}
             />
             <Stats
                 id       = {params.id}
                 isLeague = {false}
-                title    = {`${t('tournaments.stats')} - ${tournament?.name}`}
+                title    = {`${t('tournaments.stats')} - ${tournament ? tournament.name : fakeTournament.name}`}
             />
         </main>
     );

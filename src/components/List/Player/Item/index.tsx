@@ -4,7 +4,7 @@ import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import endpoints from "@/types/endpoints";
 import Deck from "@/components/List/Deck";
 import Button from "@/components/List/Button";
-import BlockLine from "@/components/List/Player/Normal/BlockLine";
+import BlockLine from "@/components/List/Player/BlockLine";
 import { useTranslations } from 'next-intl';
 import { PlayerItemType } from "@/types/player";
 import { AxiosResponse } from 'axios';

@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import "./module.css";
-import PlayerItem from "@/components/List/Player/Normal/Item";
-import TournamentHeaderPlayers from "@/components/List/Player/Normal/Header";
+import PlayerItem from "@/components/List/Player/Item";
+import TournamentHeaderPlayers from "@/components/List/Player/Header";
 import { PlayerArrayType } from "@/types/player";
 
 const TournamentPlayers: React.FC<PlayerArrayType> = ({ items, isBlured }) => {

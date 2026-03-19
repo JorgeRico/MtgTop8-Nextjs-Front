@@ -1,4 +1,4 @@
-import TournamentList from "@/components/List/Tournament/Normal";
+import TournamentList from "@/components/List/Tournament";
 import HTag from "@/components/HTag";
 import LocationImage from "@/components/Icons/Location";
 import Link from 'next/link';

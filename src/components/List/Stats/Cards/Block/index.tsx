@@ -9,7 +9,7 @@ const StatsBox: React.FC<MyComponentProps> = ({ text }) => {
     const t = useTranslations('stats');
 
     return (
-        <article className="left w100 mb10 bg-footer">
+        <article className="left w100 bg-footer">
             <div className="wAuto overflowHidden border-red">
                 <div className="left wAuto paddingStatsBox f14">
                     <strong>{text}</strong>

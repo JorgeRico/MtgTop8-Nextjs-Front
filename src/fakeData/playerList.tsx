@@ -1,4 +1,4 @@
-const players = [
+const fakePlayers = [
     {
         "id"       : 221,
         "name"     : "Carles Mesegue",
@@ -73,4 +73,4 @@ const players = [
     }
 ];
 
-export default players;
+export default fakePlayers;
