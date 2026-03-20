@@ -6,7 +6,8 @@ const fakeTournament = {
     "players"        : 23,
     "format"         : true,
     "leagueName"     : "Lliga Minoria",
-    "year"           : "2026"
+    "year"           : "2026",
+    "classification" : null
 }
 
 export default fakeTournament;

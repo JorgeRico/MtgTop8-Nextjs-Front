@@ -1,7 +1,7 @@
 import PlayerList from "@/components/List/Player";
 import fakePlayers from "@/fakeData/playerList";
 
-const BluredTournamentPlayers: React.FC = () => {
+const BluredTournamentPlayers = () => {
     return (
         <PlayerList items={fakePlayers} isBlured={true} />
     )

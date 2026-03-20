@@ -1,5 +1,5 @@
 import HTag from "@/components/HTag";
-import { TitleType } from "@/types/title";
+import { TitleType } from "@/types/schemas/title";
 
 const Title: React.FC<TitleType> = ({ title }) => {
     return (

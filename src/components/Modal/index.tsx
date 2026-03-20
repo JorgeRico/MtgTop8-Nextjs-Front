@@ -2,7 +2,7 @@ import "./module.css"
 import { createModalLink } from '@/hooks/useCommon';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { ModalType } from "@/types/modal";
+import { ModalType } from "@/types/schemas/modal";
 
 const ModalPopUp: React.FC<ModalType> = ({ img, name, modalType }) => {
     const [ modalId, setModalId ] = useState('');

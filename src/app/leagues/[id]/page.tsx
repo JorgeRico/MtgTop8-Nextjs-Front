@@ -1,10 +1,10 @@
-import endpoints from "@/types/endpoints";
+import endpoints from "@/types/server/endpoints";
 import { replaceUrlIdParam } from '@/hooks/useApi';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import LeagueComponent from './component';
 import { seo_tags } from '@/components/Seo';
-import { baseUrl } from "@/types/baseUrl";
+import { baseUrl } from "@/types/server/baseUrl";
 
 interface MetadataProps {
     params: Promise<{ locale: string, id: string }>

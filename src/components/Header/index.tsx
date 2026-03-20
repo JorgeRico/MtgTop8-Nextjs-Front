@@ -1,7 +1,7 @@
 import HeaderLogo from "@/components/Header/Logo";
 import RightBlock from "@/components/Header/RightBlock";
 import Language from "@/components/Language/Language";
-import endpoints from "@/types/endpoints";
+import endpoints from "@/types/server/endpoints";
 import { useTranslations } from 'next-intl';
 
 const Header: React.FC = () => {

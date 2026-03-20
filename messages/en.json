@@ -40,7 +40,7 @@
     },
     "tournaments" : {
         "title" : {
-            "players" : "jugadores"
+            "players" : "players"
         },
         "players" : {
             "Top Players" : "Top Players"

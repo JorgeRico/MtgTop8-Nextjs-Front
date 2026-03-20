@@ -38,7 +38,7 @@ const fakeTournaments = {
     format         : format,
     items          : items,
     leagueName     : "Lliga Minoria",
-    classification : "",
+    classification : null,
     location       : "",
     locationName   : "location test"
 }

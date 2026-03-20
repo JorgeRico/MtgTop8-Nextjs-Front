@@ -3,7 +3,7 @@ import TitleItemBreadcrumb from "@/components/Breadcrumb/Items/Title";
 import DashItemBreadcrumb from "@/components/Breadcrumb/Items/Dash";
 import TitleLinkItemBreadcrumb from "@/components/Breadcrumb/Items/TitleLink";
 import { useTranslations } from 'next-intl';
-import { BreadcrumbTournamentType } from "@/types/breadcrumb";
+import { BreadcrumbTournamentType } from "@/types/schemas/breadcrumb";
 
 const BreadcrumbTournament: React.FC<BreadcrumbTournamentType> = ({ title, date, endpoint }) => {
     const t = useTranslations('header');

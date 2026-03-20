@@ -5,7 +5,7 @@ import "./globals.css";
 import "./styles/styles.css";
 import { getLocale } from 'next-intl/server';
 import type { Viewport, Metadata } from 'next';
-import { baseUrl } from "@/types/baseUrl";
+import { baseUrl } from "@/types/server/baseUrl";
 
 export const viewport: Viewport = {
 	width        : 'device-width',

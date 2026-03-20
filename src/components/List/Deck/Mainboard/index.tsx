@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import statsTypes from "@/types/stats-types";
+import statsTypes from "@/types/server/stats-types";
 import CardTypeList from "@/components/List/Deck/Card/Block";
 import { useTranslations } from 'next-intl';
-import { DeckBoardType } from "@/types/deck";
-import { CardType } from "@/types/card";
+import { DeckBoardType } from "@/types/schemas/deck";
+import { CardType } from "@/types/schemas/card";
 
 const DeckMainboard: React.FC<DeckBoardType> = ({ items }) => {
     const [ creatureItems, setCreatureItems ]         = useState<CardType[]>([]);

@@ -1,6 +1,6 @@
 import DeckCard from "@/components/List/Deck/Card/Item";
 import { v4 as uuidv4 } from "uuid";
-import { DeckCardTListType } from "@/types/deck";
+import { DeckCardTListType } from "@/types/schemas/deck";
 
 const CardTypeList: React.FC<DeckCardTListType> = ({ items, text }) => {
     return (

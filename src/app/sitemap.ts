@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
-import endpoints from "@/types/endpoints";
-import { baseUrl } from "@/types/baseUrl";
+import endpoints from "@/types/server/endpoints";
+import { baseUrl } from "@/types/server/baseUrl";
 
 async function getAllLeagues() {
     const res     = await fetch(endpoints.API_LEAGUE_ALL);

@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import endpoints from "@/types/endpoints";
+import endpoints from "@/types/server/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import PlayerList from "@/components/List/Player";
 import { useTranslations } from 'next-intl';
-import { TournamentSimpleType } from "@/types/tournament";
+import { TournamentSimpleType } from "@/types/schemas/tournament";
 import { AxiosResponse } from 'axios';
-import { PlayerArrayType } from "@/types/player";
+import { PlayerArrayType } from "@/types/schemas/player";
 import BluredTournamentPlayers from "@/fakeData/components/tournamentPlayers";
 
 const TournamentPlayers: React.FC<TournamentSimpleType> = ({ id, tournament }) => {

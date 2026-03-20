@@ -7,7 +7,8 @@ const items = [
         current: true,
         location: 'test location',
         locationName: 'test location name',
-        year: '2016'
+        year: '2016',
+        classification : ''
     },
     {
         id: '',
@@ -16,7 +17,8 @@ const items = [
         current: true,
         location: 'test location',
         locationName: 'test location name',
-        year: '2016'
+        year: '2016',
+        classification : ''
     },
     {
         id: '',
@@ -25,7 +27,8 @@ const items = [
         current: true,
         location: 'test location',
         locationName: 'test location name',
-        year: '2016'
+        year: '2016',
+        classification : ''
     },
     {
         id: '',
@@ -34,7 +37,8 @@ const items = [
         current: true,
         location: 'test location',
         locationName: 'test location name',
-        year: '2016'
+        year: '2016',
+        classification : ''
     },
     {
         id: '',
@@ -43,7 +47,8 @@ const items = [
         current: true,
         location: 'test location',
         locationName: 'test location name',
-        year: '2016'
+        year: '2016',
+        classification : ''
     }
 ];
 

@@ -1,14 +1,14 @@
 import { useState, ReactNode, useEffect } from 'react';
 import "../module.css";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
-import endpoints from "@/types/endpoints";
+import endpoints from "@/types/server/endpoints";
 import Deck from "@/components/List/Deck";
 import Button from "@/components/List/Button";
 import BlockLine from "@/components/List/Player/BlockLine";
 import { useTranslations } from 'next-intl';
-import { PlayerItemType } from "@/types/player";
+import { PlayerItemType } from "@/types/schemas/player";
 import { AxiosResponse } from 'axios';
-import { CardType } from "@/types/card";
+import { CardType } from "@/types/schemas/card";
 import decklist from "@/fakeData/decklist";
 
 const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {

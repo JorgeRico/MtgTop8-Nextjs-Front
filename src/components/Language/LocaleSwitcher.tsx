@@ -2,7 +2,7 @@
 
 import "./module.css";
 import { useRef } from 'react';
-import languages from "@/types/languages";
+import languages from "@/types/server/languages";
 
 import {Locale, useLocale} from 'next-intl';
 

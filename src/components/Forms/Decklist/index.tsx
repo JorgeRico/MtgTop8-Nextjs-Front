@@ -9,7 +9,7 @@ import InputForm from "@/components/Forms/Input";
 import TextareaForm from "@/components/Forms/Textarea";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
-import { PdfItemType, PdfValuesType, PdfType, PdfCardType } from "@/types/pdf";
+import { PdfItemType, PdfValuesType, PdfType, PdfCardType } from "@/types/schemas/pdf";
 
 const DeckListForm: React.FC = () => {
     const [ showButton, setShowButton ]     = useState(true);

@@ -1,4 +1,4 @@
-import statsTypes from "@/types/stats-types";
+import statsTypes from "@/types/server/stats-types";
 
 export function getFormat(format: boolean): string {
     let value = '';

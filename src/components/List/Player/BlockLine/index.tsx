@@ -1,4 +1,4 @@
-import { PlayerLineType } from "@/types/player";
+import { PlayerLineType } from "@/types/schemas/player";
 
 const BlockLine: React.FC<PlayerLineType> = ({ position, player, deck, isHeader = false }) => {
     return (

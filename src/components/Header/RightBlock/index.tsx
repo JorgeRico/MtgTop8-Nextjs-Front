@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from "next/image";
-import { HeaderRightType } from "@/types/header";
+import { HeaderRightType } from "@/types/schemas/header";
 
 const HeaderRightBlock: React.FC<HeaderRightType> = ({ image, text, endpoint }) => {
     const t = useTranslations('header');

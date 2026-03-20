@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./module.css"
-import { PaginationType } from "@/types/pagination";
+import { PaginationType } from "@/types/schemas/pagination";
 
 const Pagination: React.FC<PaginationType> = ({ text, total, itemsPerPage, currentPage, setCurrentPage, isDisabled = false }) => {
     const [ firstPage ]               = useState(1);

@@ -1,4 +1,4 @@
-import statsTypes from "@/types/stats-types";
+import statsTypes from "@/types/server/stats-types";
 import "./module.css";
 import CardBlockStats from "@/components/List/Stats/Cards";
 import SubTitle from "@/components/HTag/SubTitle";

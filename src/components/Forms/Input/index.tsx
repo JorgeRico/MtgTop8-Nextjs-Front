@@ -1,5 +1,5 @@
 import { useState }from "react";
-import { InputFormType } from "@/types/forms";
+import { InputFormType } from "@/types/schemas/forms";
 
 const InputForm: React.FC<InputFormType> = ({ name, type, placeholder, label, value, handleChange }) => {
 

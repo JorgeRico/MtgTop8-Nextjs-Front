@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 import stats from "@/fakeData/statsList";
 import ContentStatsList from "@/components/List/Stats/Block/Content";
 
-const LoadingCards: React.FC = () => {
+const LoadingCards = () => {
     return (
         <div className="left w100 overflowHidden blink blured">
             {stats.map(item =>

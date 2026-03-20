@@ -1,7 +1,7 @@
 import HomeItemBreadcrumb from "@/components/Breadcrumb/Items/Home";
 import TitleItemBreadcrumb from "@/components/Breadcrumb/Items/Title";
 import DashItemBreadcrumb from "@/components/Breadcrumb/Items/Dash";
-import { BreadcrumbSimpleType } from "@/types/breadcrumb";
+import { BreadcrumbSimpleType } from "@/types/schemas/breadcrumb";
 
 const SimpleBreadcrumb: React.FC<BreadcrumbSimpleType> = ({ title, isHome = false }) => {
     return (

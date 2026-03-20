@@ -3,13 +3,13 @@
 import ListLeague from "@/components/List/League";
 import BluredLeagueList from "@/fakeData/components/leagueList";
 import SubTitle from "@/components/HTag/SubTitle";
-import endpoints from "@/types/endpoints";
+import endpoints from "@/types/server/endpoints";
 import { useState, useEffect } from "react";
 import { getAxiosEndpoint } from '@/hooks/useApi';
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
-import { LeagueType } from '@/types/league';
-import { TitleType } from '@/types/title';
+import { LeagueType } from '@/types/schemas/league';
+import { TitleType } from '@/types/schemas/title';
 import { AxiosResponse } from 'axios';
 
 const Events: React.FC<TitleType> = ({ title }) => {

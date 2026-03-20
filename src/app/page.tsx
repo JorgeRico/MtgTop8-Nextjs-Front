@@ -6,7 +6,7 @@ import PastEvents from "@/app/_events/past";
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { seo_tags } from '@/components/Seo';
-import { baseUrl } from "@/types/baseUrl";
+import { baseUrl } from "@/types/server/baseUrl";
 
 interface MetadataProps {
     params: Promise<{ locale: string }>

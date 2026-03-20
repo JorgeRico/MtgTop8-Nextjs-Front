@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { baseUrl } from "@/types/baseUrl";
+import { baseUrl } from "@/types/server/baseUrl";
 
 export function defaultOpenGraph( title: string, description: string, url: string ): NonNullable<Metadata['openGraph']> {
     return {

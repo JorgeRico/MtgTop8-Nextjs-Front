@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 import Link from 'next/link';
 import TournamentItem from "@/components/List/Tournament/Block";
 import { useTranslations } from 'next-intl';
-import { TournamentNormalType } from "@/types/tournament";
+import { TournamentNormalType } from "@/types/schemas/tournament";
 
 const TournamentList: React.FC<TournamentNormalType> = ({ url, items }) => {
     const t = useTranslations('tournaments');

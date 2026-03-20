@@ -1,4 +1,4 @@
-import { CardType } from "@/types/card";
+import { CardType } from "@/types/schemas/card";
 
 export type DeckType = {
     items    : Array<CardType>;

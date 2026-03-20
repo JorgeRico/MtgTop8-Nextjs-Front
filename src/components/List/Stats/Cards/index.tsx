@@ -4,7 +4,7 @@ import StatsListBlock from "@/components/List/Stats/Block";
 import BluredStatsList from "@/fakeData/components/loadingCards";
 import Block from "@/components/List/Stats/Cards/Block";
 import { useTranslations } from 'next-intl';
-import { StatsCardTotal, StatsCardItemType, StatsArrayItemsType } from "@/types/stats";
+import { StatsCardTotal, StatsCardItemType, StatsArrayItemsType } from "@/types/schemas/stats";
 import { AxiosResponse, AxiosError } from 'axios';
 
 const StatsBox: React.FC<StatsCardItemType> = ({ text, cardType, endpoint, isPlayer }) => {

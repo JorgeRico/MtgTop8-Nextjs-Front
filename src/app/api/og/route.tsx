@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 import { getTranslations } from 'next-intl/server';
-import { baseUrl } from "@/types/baseUrl";
+import { baseUrl } from "@/types/server/baseUrl";
 
 export async function GET(req: Request) {
     const imageUrl         = `${baseUrl}/og-image.jpg`;
