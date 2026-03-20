@@ -1,4 +1,4 @@
-import { TitleType } from '@/types/schemas/title';
+import { TitleType } from "@/types/schemas/website/title";
 
 const TitleItemBreadcrumb: React.FC<TitleType> = ({ title }) => {
     return (

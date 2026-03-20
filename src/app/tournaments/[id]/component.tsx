@@ -10,7 +10,7 @@ import endpoints from "@/types/server/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import { getFormat } from '@/hooks/useCommon';
 import { useTranslations } from 'next-intl';
-import { TournamentType } from "@/types/schemas/tournament";
+import { TournamentType } from "@/types/schemas/database/tournament";
 import { AxiosResponse } from 'axios';
 import fakeTournament from "@/fakeData/tournament";
 import Title from "@/components/Tournament/Title";

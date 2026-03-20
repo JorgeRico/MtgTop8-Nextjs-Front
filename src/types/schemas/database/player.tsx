@@ -10,7 +10,7 @@ export type PlayerItemType = {
     index : number;
 }
 
-export type PlayerArrayType = {
+export type PlayerArrayBluredType = {
     items    : Array<PlayerType>;
     isBlured : boolean;
 }

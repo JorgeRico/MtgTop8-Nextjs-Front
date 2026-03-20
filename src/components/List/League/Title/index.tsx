@@ -3,9 +3,9 @@ import LocationImage from "@/components/Icons/Location";
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
-import { TournamentBlockType } from "@/types/schemas/tournament";
+import { LeagueTournamentType } from "@/types/schemas/database/league";
 
-const LeagueTournamentTitle: React.FC<TournamentBlockType> = ({ leagueName, format, isBlured, numPlayers, classification = null, location, locationName }) => {
+const LeagueTournamentTitle: React.FC<LeagueTournamentType> = ({ leagueName, format, isBlured, numPlayers, classification = null, location, locationName }) => {
     const t = useTranslations('league');
 
     const getLocation = () => {

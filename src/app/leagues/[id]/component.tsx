@@ -11,7 +11,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import BreadcrumbLeague from "@/components/Breadcrumb/League";
 import { useTranslations } from 'next-intl';
 import { AxiosResponse } from 'axios';
-import { LeagueType } from "@/types/schemas/league";
+import { LeagueType, AveragePlayersLeague } from "@/types/schemas/database/league";
 import fakeTournament from "@/fakeData/tournament";
 import Title from "@/components/Tournament/Title";
 import fakeLeague from "@/fakeData/league";
@@ -48,7 +48,7 @@ const LeagueComponent = () => {
 
         async function apiAverageCall(): Promise<void> {
             try {
-                const response: AxiosResponse<any> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID_AVERAGE, params.id))
+                const response: AxiosResponse<AveragePlayersLeague> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID_AVERAGE, params.id))
                 setNumPlayers(response.data.average)
             } catch (err) {
                 console.log(err)

@@ -5,20 +5,21 @@ import BluredTournamentList from "@/fakeData/components/tournamentList";
 import LeagueTournamentContent from "@/components/List/League/Content";
 import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
-import { TournamentIdType } from "@/types/schemas/tournament";
+import { TournamentType } from "@/types/schemas/database/tournament";
+import { LeagueIdType } from "@/types/schemas/database/league";
 import { AxiosResponse, AxiosError } from 'axios';
 
-const LeagueTournament: React.FC<TournamentIdType> = ({ id }) => {
-    const [ renderElements, setRenderElements]  = useState([]);
-    const [ showElements, setShowElements ]     = useState(false);
+const LeagueTournament: React.FC<LeagueIdType> = ({ id }) => {
+    const [ renderElements, setRenderElements]  = useState<TournamentType[]>([]);
+    const [ showElements, setShowElements ]     = useState<boolean>(false);
     const t                                     = useTranslations('league');
-    const [ total, setTotal ]                   = useState(0);
-    const [ currentPage, setCurrentPage ]       = useState(1);
+    const [ total, setTotal ]                   = useState<number>(0);
+    const [ currentPage, setCurrentPage ]       = useState<number>(1);
 
     useEffect(() => {
         async function apiCall(): Promise<void> {
             try {
-                const response: AxiosResponse<any> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_TOURNAMENTS, id))
+                const response: AxiosResponse<TournamentType[]> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_TOURNAMENTS, id))
                 setRenderElements(response.data);
                 setTotal(response.data.length);
                 setShowElements(true);

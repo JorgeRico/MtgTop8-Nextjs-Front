@@ -1,5 +1,5 @@
 import ModalPopUp from "@/components/Modal";
-import { CardType } from "@/types/schemas/card";
+import { CardType } from "@/types/schemas/database/card";
 
 interface DeckCardProps {
     card: CardType;

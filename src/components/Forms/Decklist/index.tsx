@@ -9,17 +9,17 @@ import InputForm from "@/components/Forms/Input";
 import TextareaForm from "@/components/Forms/Textarea";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
-import { PdfItemType, PdfValuesType, PdfType, PdfCardType } from "@/types/schemas/pdf";
+import { PdfItemType, PdfValuesType, PdfType, PdfCardType } from "@/types/schemas/website/pdf";
 
 const DeckListForm: React.FC = () => {
-    const [ showButton, setShowButton ]     = useState(true);
-    const [ showError, setShowError ]       = useState(false);
+    const [ showButton, setShowButton ]     = useState<boolean>(true);
+    const [ showError, setShowError ]       = useState<boolean>(false);
     const [ toSend, setToSend ]             = useState<PdfType>({ name: '', surname: '', event: '', deckName: '', mainboard: '', sideboard: '' });
     const form                              = useRef(null);
-    const [ line ]                          = useState(18);
-    const [ cardGap ]                       = useState(43);
-    const [ size ]                          = useState(12);
-    const [ errorMessage, setErrorMessage ] = useState('');
+    const [ line ]                          = useState<number>(18);
+    const [ cardGap ]                       = useState<number>(43);
+    const [ size ]                          = useState<number>(12);
+    const [ errorMessage, setErrorMessage ] = useState<string>('');
     const t                                 = useTranslations('decklist');
     const errors                            = useTranslations('errors');
 

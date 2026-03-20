@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import StatsBox from "@/components/List/Stats";
 import endpoints from "@/types/server/endpoints";
-import { StatsType } from '@/types/schemas/stats';
+import { StatsType } from "@/types/schemas/database/stats";
 
 const LeagueStats: React.FC<StatsType> = ({ id, isLeague, title }) => {
     const [ showElements, setShowElements ] = useState<boolean>(false);

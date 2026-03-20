@@ -18,3 +18,9 @@ export type TextareaFormType = {
 export type ErrorMessageFormType = {
     message: string;
 }
+
+export type SendObjectType = {
+    name     : string;
+    message  : string;
+    reply_to : string;
+}

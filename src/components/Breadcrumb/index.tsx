@@ -1,4 +1,4 @@
-import { BreadcrumbLoadingType } from "@/types/schemas/breadcrumb";
+import { BreadcrumbLoadingType } from "@/types/schemas/website/breadcrumb";
 
 const Breadcrumb: React.FC<BreadcrumbLoadingType> = ({ component, loading }) => {
     return (

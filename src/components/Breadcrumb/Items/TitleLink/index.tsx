@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BreadcrumbTitleLinkType } from "@/types/schemas/breadcrumb";
+import { BreadcrumbTitleLinkType } from "@/types/schemas/website/breadcrumb";
 
 const TitleLinkItemBreadcrumb: React.FC<BreadcrumbTitleLinkType> = ({ endpoint, title }) => {
     return (

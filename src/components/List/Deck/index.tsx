@@ -4,14 +4,14 @@ import DeckMainboard from "@/components/List/Deck/Mainboard";
 import DeckDescription from "@/components/List/Deck/Description";
 import { useEffect, useState } from "react";
 import statsTypes from "@/types/server/stats-types";
-import { DeckType } from "@/types/schemas/deck";
-import { CardType } from "@/types/schemas/card";
+import { DeckType } from "@/types/schemas/database/deck";
+import { CardType } from "@/types/schemas/database/card";
 
 const Deck: React.FC<DeckType> = ({ items, deckName, isBlured }) => {
     const [ maindeck, setMaindeck ]             = useState<CardType[]>([]);
     const [ sideboard, setSideboard ]           = useState<CardType[]>([]);
-    const [ totalMaindeck, setTotalMaindeck ]   = useState(0);
-    const [ totalSideboard, setTotalSideboard ] = useState(0);
+    const [ totalMaindeck, setTotalMaindeck ]   = useState<number>(0);
+    const [ totalSideboard, setTotalSideboard ] = useState<number>(0);
 
     function getDeckCards(deck: CardType[]): void {
         let itemsListMain: CardType[] = [];

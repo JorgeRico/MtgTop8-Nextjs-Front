@@ -1,5 +1,5 @@
 import ModalPopUp from "@/components/Modal";
-import { StatsItemType, StatsCardTotal } from "@/types/schemas/stats";
+import { StatsItemType, StatsCardTotal } from "@/types/schemas/database/stats";
 
 const ContentStatsList: React.FC<StatsItemType> = ({ item, isPlayer, text }) => {
     const playerStats = (item: StatsCardTotal) => {

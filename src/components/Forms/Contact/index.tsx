@@ -7,15 +7,16 @@ import Success from "@/components/Forms/Success";
 import Error from "@/components/Forms/Error";
 import InputForm from "@/components/Forms/Input";
 import { useTranslations } from 'next-intl';
+import { SendObjectType } from "@/types/schemas/website/forms";
 
 const Contact: React.FC = () => {
-    const [ showButton, setShowButton ]   = useState(true);
-    const [ showSuccess, setShowSuccess ] = useState(false);
-    const [ showError, setShowError ]     = useState(false);
-    const [ toSend, setToSend ]           = useState({name: '', message: '', reply_to: '' });
-    const [ mail_service ]                = useState(process.env.NEXT_PUBLIC_MAIL_SERVICE_ID || '');
-    const [ mail_template ]               = useState(process.env.NEXT_PUBLIC_MAIL_TEMPLATE || '');
-    const [ mail_public_key ]             = useState(process.env.NEXT_PUBLIC_MAIL_PUBLIC_ID || '');
+    const [ showButton, setShowButton ]   = useState<boolean>(true);
+    const [ showSuccess, setShowSuccess ] = useState<boolean>(false);
+    const [ showError, setShowError ]     = useState<boolean>(false);
+    const [ toSend, setToSend ]           = useState<SendObjectType>({name: '', message: '', reply_to: '' });
+    const [ mail_service ]                = useState<string>(process.env.NEXT_PUBLIC_MAIL_SERVICE_ID || '');
+    const [ mail_template ]               = useState<string>(process.env.NEXT_PUBLIC_MAIL_TEMPLATE || '');
+    const [ mail_public_key ]             = useState<string>(process.env.NEXT_PUBLIC_MAIL_PUBLIC_ID || '');
     const t                               = useTranslations('contact');
     const errors                          = useTranslations('errors');
 

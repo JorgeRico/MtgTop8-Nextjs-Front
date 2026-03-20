@@ -8,8 +8,8 @@ import { useState, useEffect } from "react";
 import { getAxiosEndpoint } from '@/hooks/useApi';
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
-import { LeagueType } from '@/types/schemas/league';
-import { TitleType } from '@/types/schemas/title';
+import { LeagueType } from "@/types/schemas/database/league";
+import { TitleType } from "@/types/schemas/website/title";
 import { AxiosResponse } from 'axios';
 
 const Events: React.FC<TitleType> = ({ title }) => {
@@ -21,7 +21,7 @@ const Events: React.FC<TitleType> = ({ title }) => {
     useEffect(() => {
         async function apiCallCurrent(): Promise<void> {
             try {
-                const response: AxiosResponse<any> = await getAxiosEndpoint(endpoints.API_LEAGUE_CURRENT)
+                const response: AxiosResponse<LeagueType[]> = await getAxiosEndpoint(endpoints.API_LEAGUE_CURRENT)
                 setCurrentLeagues(response.data);
                 setTotalLeagues(response.data.length);
                 setShowCurrentElements(true);

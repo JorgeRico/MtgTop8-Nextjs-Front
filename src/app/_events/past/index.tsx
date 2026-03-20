@@ -9,8 +9,8 @@ import { getAxiosEndpoint, addUrlPaginationParams } from '@/hooks/useApi';
 import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
-import { LeagueType } from '@/types/schemas/league';
-import { TitleType } from '@/types/schemas/title';
+import { LeagueType, PastLeagues } from "@/types/schemas/database/league";
+import { TitleType } from "@/types/schemas/website/title";
 import { AxiosResponse } from 'axios';
 
 const PastEvents: React.FC<TitleType> = ({ title }) => {
@@ -27,7 +27,7 @@ const PastEvents: React.FC<TitleType> = ({ title }) => {
             setPastLeagues([]);
 
             try {
-                const response: AxiosResponse<any> = await getAxiosEndpoint(addUrlPaginationParams(endpoints.API_LEAGUE_PAST, numItems, currentPage))
+                const response: AxiosResponse<PastLeagues> = await getAxiosEndpoint(addUrlPaginationParams(endpoints.API_LEAGUE_PAST, numItems, currentPage))
                 setPastLeagues(response.data.leagues);
                 setTotalPastLeagues(response.data.total)
                 setShowPastElements(true);

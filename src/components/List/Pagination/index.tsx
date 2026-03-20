@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./module.css"
-import { PaginationType } from "@/types/schemas/pagination";
+import { PaginationType } from "@/types/schemas/website/pagination";
 
 const Pagination: React.FC<PaginationType> = ({ text, total, itemsPerPage, currentPage, setCurrentPage, isDisabled = false }) => {
-    const [ firstPage ]               = useState(1);
-    const [ lastPage ]                = useState(Math.ceil(total / itemsPerPage));
+    const [ firstPage ]               = useState<number>(1);
+    const [ lastPage ]                = useState<number>(Math.ceil(total / itemsPerPage));
     const [ pageArray, setPageArray ] = useState<number[]>([]);
 
     const handleClick = (number) => {

@@ -4,7 +4,7 @@ import Button from "@/components/List/Button";
 import { getFormat } from '@/hooks/useCommon';
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
-import { LeagueItemsType } from "@/types/schemas/league";
+import { LeagueItemsType } from "@/types/schemas/database/league";
 
 const LeagueList: React.FC<LeagueItemsType> = ({ url, items, isBlured }) => {
     const t    = useTranslations('league');

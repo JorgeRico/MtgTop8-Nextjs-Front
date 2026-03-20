@@ -29,23 +29,3 @@ export type TournamentNormalType = {
     url   : string,
     items : Array<TournamentType>
 }
-
-export type TournamentBlockType = {
-    leagueName     : string;
-    format         : string;
-    isBlured       : boolean;
-    numPlayers     : number;
-    location       : string | null;
-    locationName   : string;
-    classification : string;
-}
-
-export type TournamentIdType = {
-    id : string;
-}
-
-export type TournamentElements = {
-    isBlured       : boolean;
-    renderElements : Array<TournamentType>;
-    url            : string;
-}

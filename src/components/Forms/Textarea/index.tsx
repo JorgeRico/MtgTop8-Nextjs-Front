@@ -1,4 +1,4 @@
-import { TextareaFormType } from "@/types/schemas/forms";
+import { TextareaFormType } from "@/types/schemas/website/forms";
 
 const TextareaForm: React.FC<TextareaFormType> = ({ name, placeholder, label, value, handleChange }) => {
     return (

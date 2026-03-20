@@ -6,23 +6,23 @@ import Deck from "@/components/List/Deck";
 import Button from "@/components/List/Button";
 import BlockLine from "@/components/List/Player/BlockLine";
 import { useTranslations } from 'next-intl';
-import { PlayerItemType } from "@/types/schemas/player";
+import { PlayerItemType } from "@/types/schemas/database/player";
 import { AxiosResponse } from 'axios';
-import { CardType } from "@/types/schemas/card";
+import { CardType } from "@/types/schemas/database/card";
 import decklist from "@/fakeData/decklist";
 
 const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
-    const [ loading, setLoading ]                 = useState(false);
+    const [ loading, setLoading ]                 = useState<boolean>(false);
     const [ renderDeckItems, setRenderDeckItems ] = useState<CardType[]>([]);
     const t                                       = useTranslations('player');
-    const [ isBlured, setIsBlured ]               = useState(true);
-    const [ loadingDeck, setLoadingDeck ]         = useState(false);
+    const [ isBlured, setIsBlured ]               = useState<boolean>(true);
+    const [ loadingDeck, setLoadingDeck ]         = useState<boolean>(false);
 
     async function apiCall(id: number): Promise<void> {
         setIsBlured(true);
 
         try {
-            const response: AxiosResponse<any> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_DECK_CARDS, id.toString()));
+            const response: AxiosResponse<CardType[]> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_DECK_CARDS, id.toString()));
             setRenderDeckItems(response.data);
             setIsBlured(false);
         } catch (err) {

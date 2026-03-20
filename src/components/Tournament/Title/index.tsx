@@ -1,6 +1,6 @@
 import HTag from "@/components/HTag";
 import { useTranslations } from 'next-intl';
-import { TournamentBluredType } from "@/types/schemas/tournament";
+import { TournamentBluredType } from "@/types/schemas/database/tournament";
 import { getFormat } from '@/hooks/useCommon';
 import SubTitle from "@/components/HTag/SubTitle";
 import ListImage from "@/components/Icons/List";

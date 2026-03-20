@@ -1,8 +1,8 @@
 import TournamentList from "@/components/List/Tournament";
-import { TournamentElements } from "@/types/schemas/tournament";
+import { LeagueTournamentElements } from "@/types/schemas/database/league";
 import LeagueTournamentTitle from "@/components/List/League/Title";
 
-const LeagueTournamentBlock: React.FC<TournamentElements> = ({ isBlured, renderElements, url }) => {
+const LeagueTournamentBlock: React.FC<LeagueTournamentElements> = ({ isBlured, renderElements, url }) => {
 
     return (
         <main>

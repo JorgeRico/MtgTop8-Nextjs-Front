@@ -1,7 +1,7 @@
 import Button from "@/components/List/Button";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
-import { TournamentItemType } from "@/types/schemas/tournament";
+import { TournamentItemType } from "@/types/schemas/database/tournament";
 
 const TournamentItem: React.FC<TournamentItemType> = ({ name, description, buttonText }) => {
     const t = useTranslations('alt-tags');

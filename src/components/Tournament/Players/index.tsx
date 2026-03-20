@@ -3,21 +3,21 @@ import endpoints from "@/types/server/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import PlayerList from "@/components/List/Player";
 import { useTranslations } from 'next-intl';
-import { TournamentSimpleType } from "@/types/schemas/tournament";
+import { TournamentSimpleType } from "@/types/schemas/database/tournament";
 import { AxiosResponse } from 'axios';
-import { PlayerArrayType } from "@/types/schemas/player";
+import { PlayerType } from "@/types/schemas/database/player";
 import BluredTournamentPlayers from "@/fakeData/components/tournamentPlayers";
 
 const TournamentPlayers: React.FC<TournamentSimpleType> = ({ id, tournament }) => {
-    const [ renderPlayers, setRenderPlayers] = useState([]);
-    const t                                  = useTranslations('tournaments');
-    const [ isBlured, setIsBlured ]          = useState(true);
+    const [ renderPlayers, setRenderPlayers ] = useState<PlayerType[]>([]);
+    const t                                   = useTranslations('tournaments');
+    const [ isBlured, setIsBlured ]           = useState<boolean>(true);
 
     useEffect(() => {
         setIsBlured(true);
         async function apiCall(): Promise<void>{
             try {
-                const response: AxiosResponse<any> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_PLAYERS, id));
+                const response: AxiosResponse<PlayerType[]> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_TOURNAMENT_PLAYERS, id));
                 setIsBlured(false);
                 setRenderPlayers(response.data);
             } catch (err) {

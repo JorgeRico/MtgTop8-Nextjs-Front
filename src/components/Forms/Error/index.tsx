@@ -1,7 +1,7 @@
 import "./../module.css";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
-import { ErrorMessageFormType } from "@/types/schemas/forms";
+import { ErrorMessageFormType } from "@/types/schemas/website/forms";
 
 const ErrorMessage: React.FC<ErrorMessageFormType> = ({ message }) => {
     const errors = useTranslations('errors');
