@@ -126,7 +126,7 @@ const StatsBox: React.FC<MyComponentProps> = ({ id, title, isLeague, endpoint, e
     return (
         <section className={`left mt10 w100 ${isBlured ? 'blink blured' : ''}`}>
             <article className="mb20 statsBoxContent flex-container">
-                <div className="left mt50 mb10 overflowHidden">
+                <div className="left mb10 overflowHidden">
                     <HTag
                         Tag       = "h2"
                         className = "left f24 mb5"
