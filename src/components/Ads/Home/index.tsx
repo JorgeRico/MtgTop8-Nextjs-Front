@@ -1,9 +1,10 @@
+import withNextIntl from '../../../../next.config';
 export default function Home() {
     return (
         <main className="overflowHidden container">
             <section className="mAuto">
-                <article className="pBody overflowHidden" style={{textAlign: 'center', paddingTop: '0px'}}>
-                    <div className="w100">
+                <article className="overflowHidden" style={{textAlign: 'center', paddingTop: '0px'}}>
+                    <div style={{width: '94%'}}>
                         <ins
                             style={{width: '0px', height:'0px'}}
                             data-width="0"
