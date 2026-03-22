@@ -1,4 +1,4 @@
-export default function PreFooter() {
+export default function Home() {
     return (
         <main className="overflowHidden container">
             <section className="mAuto">
@@ -8,9 +8,10 @@ export default function PreFooter() {
                             style={{width: '0px', height:'0px'}}
                             data-width="0"
                             data-height="0"
-                            className="i0034f4db60"
+                            data-max_height="90"
+                            className="x7963755313"
                             data-domain="//data527.click"
-                            data-affquery="/ffb1209d966ca1a5ec8a/0034f4db60/?placementName=footer">
+                            data-affquery="/76ac081b4ac7d4bc4849/7963755313/?placementName=homeLeague">
                                 <script src="//data527.click/js/responsive.js" async></script>
                         </ins>
                     </div>

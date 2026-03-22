@@ -7,6 +7,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { seo_tags } from '@/components/Seo';
 import { baseUrl } from "@/types/server/baseUrl";
+import HomeAds from "@/components/Ads/Home";
 
 interface MetadataProps {
     params: Promise<{ locale: string }>
@@ -30,6 +31,7 @@ const Home = () => {
             <Title title={t('text-title')} />
             <p className="color-gray mb40">{t('text-description')}</p>
             <CurrentEvents title={t('Current Leagues')}></CurrentEvents>
+            <HomeAds></HomeAds>
             <PastEvents title={t('Past Leagues')}></PastEvents>
         </main>
     );
