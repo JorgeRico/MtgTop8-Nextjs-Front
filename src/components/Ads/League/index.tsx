@@ -1,0 +1,23 @@
+import withNextIntl from '../../../../next.config';
+export default function Home() {
+    return (
+        <main className="overflowHidden container">
+            <section className="mAuto">
+                <article className="overflowHidden" style={{textAlign: 'center', paddingTop: '0px'}}>
+                    <div style={{width: '94%'}}>
+                        <ins
+                            style={{width: '0px', height:'0px'}}
+                            data-width="0"
+                            data-height="0"
+                            data-max_height="90"
+                            className="zd103a086c8"
+                            data-domain="//data527.click"
+                            data-affquery="/76ac081b4ac7d4bc4849/d103a086c8/?placementName=league">
+                                <script src="//data527.click/js/responsive.js" async></script>
+                        </ins>
+                    </div>
+                </article>
+            </section>
+        </main>
+    );
+}
