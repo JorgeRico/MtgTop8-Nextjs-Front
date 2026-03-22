@@ -6,6 +6,7 @@ import "./styles/styles.css";
 import { getLocale } from 'next-intl/server';
 import type { Viewport, Metadata } from 'next';
 import { baseUrl } from "@/types/server/baseUrl";
+import PreFooter from "@/components/Ads/PreFooter";
 
 export const viewport: Viewport = {
 	width        : 'device-width',
@@ -48,15 +49,7 @@ export default async function RootLayout({children}: LayoutProps<'/'>) {
                             </article>
                         </section>
                     </main>
-                    <ins
-                        style={{width: '0px', height:'0px'}}
-                        data-width="0"
-                        data-height="0"
-                        className="i0034f4db60"
-                        data-domain="//data527.click"
-                        data-affquery="/ffb1209d966ca1a5ec8a/0034f4db60/?placementName=footer">
-                            <script src="//data527.click/js/responsive.js" async></script>
-                    </ins>
+                    <PreFooter></PreFooter>
                     <Footer></Footer>
                 </body>
             </html>
