@@ -3,7 +3,7 @@ export default function PreFooter() {
         <main className="overflowHidden container">
             <section className="mAuto">
                 <article className="pBody overflowHidden" style={{textAlign: 'center', paddingTop: '0px'}}>
-                    <div className="w100">
+                    <div className="container">
                         <ins
                             style={{width: '0px', height:'0px'}}
                             data-width="0"

@@ -4,7 +4,7 @@ export default function Home() {
         <main className="overflowHidden container">
             <section className="mAuto">
                 <article className="overflowHidden" style={{textAlign: 'center', paddingTop: '0px'}}>
-                    <div style={{width: '94%'}}>
+                    <div className="container">
                         <ins
                             style={{width: '0px', height:'0px'}}
                             data-width="0"

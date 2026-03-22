@@ -24,9 +24,6 @@ export const metadata: Metadata = {
     description : '%s | MTG Stats - Eternal Català',
     keywords    : "Magic the Gathering, Eternal Català, Legacy, Lliga Catalana de Legacy, LCL, Vintage, Lliga Catalana de Vintage, Lliga Minoria, mtg, tcg, stats",
     robots      : "index, follow",
-    other       : {
-        'google-adsense-account': 'ca-pub-9482818665347681',
-    },
 }
 
 export default async function RootLayout({children}: LayoutProps<'/'>) {
@@ -34,11 +31,6 @@ export default async function RootLayout({children}: LayoutProps<'/'>) {
 
     return (
         <NextIntlClientProvider>
-            <script
-                async
-                src = {`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE}`}
-                crossOrigin = "anonymous"
-            />
             <html lang={locale}>
                 <body>
                     <Header></Header>
