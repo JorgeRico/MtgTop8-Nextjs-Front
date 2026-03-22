@@ -80,8 +80,8 @@ const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
                                 }
                             </>
                         }
+                        <DecklistAds></DecklistAds>
                     </article>
-                    <DecklistAds></DecklistAds>
                 </section>
         </main>
     )
