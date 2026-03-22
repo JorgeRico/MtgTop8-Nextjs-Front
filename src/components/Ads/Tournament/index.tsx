@@ -1,4 +1,4 @@
-export default function League() {
+export default function Tournament() {
     return (
         <main className="overflowHidden container">
             <section className="mAuto">
@@ -9,9 +9,9 @@ export default function League() {
                             data-width="0"
                             data-height="0"
                             data-max_height="90"
-                            className="zd103a086c8"
+                            className="w38ba08c8df"
                             data-domain="//data527.click"
-                            data-affquery="/76ac081b4ac7d4bc4849/d103a086c8/?placementName=league">
+                            data-affquery="/76ac081b4ac7d4bc4849/38ba08c8df/?placementName=tournament">
                                 <script src="//data527.click/js/responsive.js" async></script>
                         </ins>
                     </div>
