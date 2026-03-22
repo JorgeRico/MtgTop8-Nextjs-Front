@@ -1,9 +1,9 @@
 export default function PreFooter() {
     return (
-        <main class="overflowHidden container">
-            <section class="mAuto">
-                <article class="pBody overflowHidden" style={{textAlign: 'center'}}>
-                    <div class="w100">
+        <main className="overflowHidden container">
+            <section className="mAuto">
+                <article className="pBody overflowHidden" style={{textAlign: 'center'}}>
+                    <div className="w100">
                         <ins
                             style={{width: '0px', height:'0px'}}
                             data-width="0"
