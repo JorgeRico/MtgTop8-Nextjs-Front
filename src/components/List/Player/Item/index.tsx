@@ -10,6 +10,7 @@ import { PlayerItemType } from "@/types/schemas/database/player";
 import { AxiosResponse } from 'axios';
 import { CardType } from "@/types/schemas/database/card";
 import decklist from "@/fakeData/decklist";
+import DecklistAds from "@/components/Ads/Decklist";
 
 const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
     const [ loading, setLoading ]                 = useState<boolean>(false);
@@ -80,6 +81,7 @@ const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
                             </>
                         }
                     </article>
+                    <DecklistAds></DecklistAds>
                 </section>
         </main>
     )
