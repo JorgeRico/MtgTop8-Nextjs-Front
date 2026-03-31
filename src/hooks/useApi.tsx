@@ -5,7 +5,7 @@ const headers = {
     'Content-Type'                 : 'application/json',
     'Access-Control-Allow-Origin'  : '*',
     'Access-Control-Allow-Headers' : 'Content-Type',
-    'Access-Control-Allow-Methods' : 'GET',
+    'Access-Control-Allow-Methods' : '*',
 }
 
 export function getAxiosEndpoint<T = any>(endpoint: string): Promise<AxiosResponse<T>> {
