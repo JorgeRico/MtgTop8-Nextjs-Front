@@ -8,13 +8,11 @@ import Breadcrumb from "@/components/Breadcrumb";
 import TournamentBreadcrumb from "@/components/Breadcrumb/Tournament";
 import endpoints from "@/types/server/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
-import { getFormat } from '@/hooks/useCommon';
 import { useTranslations } from 'next-intl';
 import { TournamentType } from "@/types/schemas/database/tournament";
 import { AxiosResponse } from 'axios';
 import fakeTournament from "@/fakeData/tournament";
 import Title from "@/components/Tournament/Title";
-import TournamentAds from "@/components/Ads/Tournament";
 
 const TournamentComponent: React.FC = () => {
     const params                                = useParams<{ id: string }>();
@@ -67,7 +65,6 @@ const TournamentComponent: React.FC = () => {
                 id         = {params.id}
                 tournament = {tournament ? tournament : fakeTournament}
             />
-            <TournamentAds></TournamentAds>
             <Stats
                 id       = {params.id}
                 isLeague = {false}

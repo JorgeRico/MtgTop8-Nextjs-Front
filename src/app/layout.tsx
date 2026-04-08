@@ -6,7 +6,6 @@ import "./styles/styles.css";
 import { getLocale } from 'next-intl/server';
 import type { Viewport, Metadata } from 'next';
 import { baseUrl } from "@/types/server/baseUrl";
-import PreFooterAds from "@/components/Ads/PreFooter";
 
 export const viewport: Viewport = {
 	width        : 'device-width',
@@ -41,7 +40,6 @@ export default async function RootLayout({children}: LayoutProps<'/'>) {
                             </article>
                         </section>
                     </main>
-                    <PreFooterAds></PreFooterAds>
                     <Footer></Footer>
                 </body>
             </html>

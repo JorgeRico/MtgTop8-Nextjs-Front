@@ -12,11 +12,8 @@ import BreadcrumbLeague from "@/components/Breadcrumb/League";
 import { useTranslations } from 'next-intl';
 import { AxiosResponse } from 'axios';
 import { LeagueType, AveragePlayersLeague } from "@/types/schemas/database/league";
-import fakeTournament from "@/fakeData/tournament";
-import Title from "@/components/Tournament/Title";
 import fakeLeague from "@/fakeData/league";
 import LeagueTournamentTitle from "@/components/List/League/Title";
-import LeagueAds from "@/components/Ads/League";
 
 const LeagueComponent = () => {
     const params                                = useParams<{ id: string }>();
@@ -82,7 +79,6 @@ const LeagueComponent = () => {
             <LeagueTournamentList
                 id = {params.id}
             />
-            <LeagueAds></LeagueAds>
             <Stats
                 id       = {params.id}
                 isLeague = {true}

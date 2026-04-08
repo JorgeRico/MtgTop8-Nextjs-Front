@@ -1,4 +1,4 @@
-import { useState, ReactNode, useEffect } from 'react';
+import { useState } from 'react';
 import "../module.css";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import endpoints from "@/types/server/endpoints";
@@ -10,10 +10,8 @@ import { PlayerItemType } from "@/types/schemas/database/player";
 import { AxiosResponse } from 'axios';
 import { CardType } from "@/types/schemas/database/card";
 import decklist from "@/fakeData/decklist";
-import DecklistAds from "@/components/Ads/Decklist";
 
 const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
-    const [ loading, setLoading ]                 = useState<boolean>(false);
     const [ renderDeckItems, setRenderDeckItems ] = useState<CardType[]>([]);
     const t                                       = useTranslations('player');
     const [ isBlured, setIsBlured ]               = useState<boolean>(true);
@@ -80,7 +78,6 @@ const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
                                 }
                             </>
                         }
-                        <DecklistAds></DecklistAds>
                     </article>
                 </section>
         </main>
