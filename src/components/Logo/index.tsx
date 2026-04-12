@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import IconsImage from "@/components/Logo/LogoIconsImage";
-import LogoImage from "@/components/Logo/LogoImage";
+import IconsImage from "@/components/Logo/Images/Icons";
+import LogoImage from "@/components/Logo/Images/Image";
 import endpoints from "@/types/server/endpoints";
 
 const Logo: React.FC = () => {
