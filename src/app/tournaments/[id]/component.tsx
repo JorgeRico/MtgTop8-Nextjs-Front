@@ -12,7 +12,7 @@ import { useTranslations } from 'next-intl';
 import { TournamentType } from "@/types/schemas/database/tournament";
 import { AxiosResponse } from 'axios';
 import fakeTournament from "@/fakeData/tournament";
-import Title from "@/components/Tournament/Title";
+import Header from "@/components/Tournament/Header";
 
 const TournamentComponent: React.FC = () => {
     const params                                = useParams<{ id: string }>();
@@ -57,7 +57,7 @@ const TournamentComponent: React.FC = () => {
                     />
                 }
             />
-            <Title
+            <Header
                 tournament={tournament ? tournament : fakeTournament}
                 isBlured={!loading}
             />

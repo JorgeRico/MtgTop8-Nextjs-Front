@@ -14,6 +14,10 @@ export type TournamentBluredType = {
     isBlured   : boolean;
 }
 
+export type TournamentIdType = {
+    id : string;
+}
+
 export type TournamentSimpleType = {
     id         : string;
     tournament : TournamentType;

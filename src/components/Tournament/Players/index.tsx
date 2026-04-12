@@ -2,15 +2,13 @@ import { useState, useEffect } from "react";
 import endpoints from "@/types/server/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import PlayerList from "@/components/List/Player";
-import { useTranslations } from 'next-intl';
-import { TournamentSimpleType } from "@/types/schemas/database/tournament";
+import { TournamentIdType } from "@/types/schemas/database/tournament";
 import { AxiosResponse } from 'axios';
 import { PlayerType } from "@/types/schemas/database/player";
 import BluredTournamentPlayers from "@/fakeData/components/tournamentPlayers";
 
-const TournamentPlayers: React.FC<TournamentSimpleType> = ({ id, tournament }) => {
+const TournamentPlayers: React.FC<TournamentIdType> = ({ id }) => {
     const [ renderPlayers, setRenderPlayers ] = useState<PlayerType[]>([]);
-    const t                                   = useTranslations('tournaments');
     const [ isBlured, setIsBlured ]           = useState<boolean>(true);
 
     useEffect(() => {
