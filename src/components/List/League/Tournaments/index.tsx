@@ -7,7 +7,7 @@ import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
 import { TournamentType } from "@/types/schemas/database/tournament";
 import { LeagueIdType } from "@/types/schemas/database/league";
-import { AxiosResponse, AxiosError } from 'axios';
+import { AxiosResponse } from 'axios';
 
 const LeagueTournament: React.FC<LeagueIdType> = ({ id }) => {
     const [ renderElements, setRenderElements]  = useState<TournamentType[]>([]);

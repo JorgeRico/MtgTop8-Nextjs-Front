@@ -9,7 +9,7 @@ const ModalPopUp: React.FC<ModalType> = ({ img, name, modalType }) => {
     const t                       = useTranslations('cards');
 
     function handleClick (): void {
-        var modal = document.getElementById(modalId);
+        const modal = document.getElementById(modalId);
 
         if (modal != null) {
             modal.style.display = "block";
@@ -18,7 +18,7 @@ const ModalPopUp: React.FC<ModalType> = ({ img, name, modalType }) => {
 
     // When the user clicks on <span> (x), close the modal
     function handleCloseClick (): void {
-        var modal = document.getElementById(modalId);
+        const modal = document.getElementById(modalId);
 
         if (modal != null) {
             modal.style.display = "none";

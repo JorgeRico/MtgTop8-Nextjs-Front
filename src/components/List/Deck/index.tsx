@@ -14,12 +14,12 @@ const Deck: React.FC<DeckType> = ({ items, deckName, isBlured }) => {
     const [ totalSideboard, setTotalSideboard ] = useState<number>(0);
 
     function getDeckCards(deck: CardType[]): void {
-        let itemsListMain: CardType[] = [];
-        let itemsListSide: CardType[] = [];
+        const itemsListMain: CardType[] = [];
+        const itemsListSide: CardType[] = [];
         let totalMain  = 0;
         let totalSide  = 0;
 
-        for (var i = 0; i < deck.length; i++) {
+        for (let i = 0; i < deck.length; i++) {
             if (deck[i].board === statsTypes.MD) {
                 totalMain = totalMain + deck[i].num;
                 itemsListMain.push(deck[i]);

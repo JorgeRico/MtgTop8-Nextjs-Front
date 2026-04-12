@@ -1,7 +1,7 @@
-import {Locale} from 'next-intl';
-import {getLocale, getTranslations} from 'next-intl/server';
+import { Locale } from 'next-intl';
+import { getLocale } from 'next-intl/server';
 import LocaleSwitcher from './LocaleSwitcher';
-import {cookies} from 'next/headers';
+import { cookies } from 'next/headers';
 
 export default async function Language() {
     const locale = await getLocale();

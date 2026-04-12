@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
 import statsTypes from "@/types/server/stats-types";
 import CardTypeList from "@/components/List/Deck/Card/Block";
 import { useTranslations } from 'next-intl';
@@ -17,15 +16,15 @@ const DeckMainboard: React.FC<DeckBoardType> = ({ items }) => {
     const t                                           = useTranslations('deck');
 
     function getCardTypes(deck: CardType[]): void {
-        let planeswalkers: CardType[] = [];
-        let creatures    : CardType[] = [];
-        let instants     : CardType[] = [];
-        let sorceries    : CardType[] = [];
-        let artifacts    : CardType[] = [];
-        let enchantments : CardType[] = [];
-        let lands        : CardType[] = [];
+        const planeswalkers: CardType[] = [];
+        const creatures    : CardType[] = [];
+        const instants     : CardType[] = [];
+        const sorceries    : CardType[] = [];
+        const artifacts    : CardType[] = [];
+        const enchantments : CardType[] = [];
+        const lands        : CardType[] = [];
 
-        for (var i = 0; i < deck.length; i++) {
+        for (let i = 0; i < deck.length; i++) {
             if (deck[i].cardType === statsTypes.PLANESWALKER) {
                 planeswalkers.push(deck[i]);
             }
