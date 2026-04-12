@@ -62,8 +62,7 @@ const TournamentComponent: React.FC = () => {
                 isBlured={!loading}
             />
             <TournamentPlayers
-                id         = {params.id}
-                tournament = {tournament ? tournament : fakeTournament}
+                id = {params.id}
             />
             <Stats
                 id       = {params.id}
