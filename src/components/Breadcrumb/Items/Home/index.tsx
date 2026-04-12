@@ -1,4 +1,4 @@
-import ImageLink from "@/components/Link/ImageLink";
+import ImageLink from "@/components/Link/Link";
 import endpoints from "@/types/server/endpoints";
 
 const HomeItemBreadcrumb: React.FC = () => {

@@ -1,6 +1,6 @@
 import "./module.css";
-import CopyrightFooter from "@/components/Footer/CopyrightFooter";
-import SocialFooter from "@/components/Footer/SocialFooter";
+import CopyrightFooter from "@/components/Footer/Copyright";
+import SocialFooter from "@/components/Footer/Social";
 
 const Footer = () => {
     return (

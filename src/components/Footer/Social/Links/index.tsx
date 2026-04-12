@@ -1,4 +1,4 @@
-import LinkImage from "@/components/Link/Image";
+import LinkImage from "@/components/Link/TargetBlank";
 import { useTranslations } from 'next-intl';
 
 const SocialLinksFooter: React.FC = () => {
