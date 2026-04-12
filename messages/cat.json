@@ -187,5 +187,11 @@
             "text-description" : "Explora les lligues actuals, revisa tops i baralles guanyadores",
             "pagination" : "Lligues actuals"
         }
+    },
+    "language" : {
+        "Select language" : "Selecciona idioma",
+        "Previous page" : "Pàgina anterior",
+        "Next page" : "Pàgina següent",
+        "Current page" : "Pàgina actual"
     }
 }

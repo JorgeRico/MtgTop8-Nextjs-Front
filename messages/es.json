@@ -187,5 +187,11 @@
             "text-description" : "Explora las ligas actuales, revisa tops y barajas",
             "pagination" : "Ligas actuales"
         }
+    },
+    "language" : {
+        "Select language" : "Selecciona idioma",
+        "Previous page" : "Página anterior",
+        "Next page" : "Página siguiente",
+        "Current page" : "Página actual"
     }
 }

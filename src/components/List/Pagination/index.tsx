@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./module.css"
 import { PaginationType } from "@/types/schemas/website/pagination";
+import { useTranslations } from 'next-intl';
+
 
 const Pagination: React.FC<PaginationType> = ({ text, total, itemsPerPage, currentPage, setCurrentPage, isDisabled = false }) => {
     const [ firstPage ]               = useState<number>(1);
     const [ lastPage ]                = useState<number>(Math.ceil(total / itemsPerPage));
     const [ pageArray, setPageArray ] = useState<number[]>([]);
-
+    const t                           = useTranslations('language');
+    
     const handleClick = (number) => {
         setCurrentPage(number);
     }
@@ -36,17 +39,17 @@ const Pagination: React.FC<PaginationType> = ({ text, total, itemsPerPage, curre
             {!isDisabled &&
                 <section className="right padPagination flex">
                     <article key={uuidv4()} className="">
-                        <button disabled={firstPage == currentPage} className={firstPage == currentPage ? "arrowButton disabled" : "arrowButton pointer"} onClick={() => handleClickPrevious()}> 
+                        <button aria-label={t('Previous page')} disabled={firstPage == currentPage} className={firstPage == currentPage ? "arrowButton disabled" : "arrowButton pointer"} onClick={() => handleClickPrevious()}> 
                             <span>&#171;</span>
                         </button>
                     </article>
                     {pageArray?.map((number) => (
                         <article key={uuidv4()} className="">
-                            <button disabled={number == currentPage} className={number != currentPage ? "pagButton pointer" : "pagButton current disabled"} onClick={() => handleClick(number)}>{number}</button>
+                            <button aria-label={t('Current page')} disabled={number == currentPage} className={number != currentPage ? "pagButton pointer" : "pagButton current disabled"} onClick={() => handleClick(number)}>{number}</button>
                         </article>
                     ))}
                     <article key={uuidv4()} className="">
-                        <button className={lastPage == currentPage ? "arrowButton disabled" : "arrowButton pointer" } onClick={() => handleClickNext()}>
+                        <button aria-label={t('Next page')} className={lastPage == currentPage ? "arrowButton disabled" : "arrowButton pointer" } onClick={() => handleClickNext()}>
                             <span>&#187;</span>
                         </button>
                     </article>

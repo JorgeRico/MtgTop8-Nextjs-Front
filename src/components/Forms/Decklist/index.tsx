@@ -37,8 +37,8 @@ const DeckListForm: React.FC = () => {
         const maindeckCards  = cardsList( maindeck );
         const sideboardCards = cardsList( sideboard );
 
-        let totalMainboard = getMaindeck(maindeckCards, values, firstPage, fontFamily);
-        let totalSideboard = getSideboard(sideboardCards, values, firstPage, fontFamily)
+        const totalMainboard = getMaindeck(maindeckCards, values, firstPage, fontFamily);
+        const totalSideboard = getSideboard(sideboardCards, values, firstPage, fontFamily)
 
         // max items check
         if (totalSideboard > 15 ) {
@@ -251,7 +251,7 @@ const DeckListForm: React.FC = () => {
 
                 {showButton == true &&
                     <div className="left w100">
-                        <button className="pointer pad bg-red color-white" type='submit'>{t('Generate Decklist pdf')}</button>
+                        <button className="pointer pad bg-red color-white" type='submit' aria-label={t('Generate Decklist pdf')}>{t('Generate Decklist pdf')}</button>
                     </div>
                 }
 

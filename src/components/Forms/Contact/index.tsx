@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
 
                             {showButton == true &&
                                 <div className="left w100">
-                                    <button className="pointer pad bg-red color-white" type='submit'>{t('Submit')}</button>
+                                    <button className="pointer pad bg-red color-white" type='submit' aria-label={t('Submit')}>{t('Submit')}</button>
                                 </div>
                             }
 

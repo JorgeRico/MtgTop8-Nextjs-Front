@@ -187,5 +187,11 @@
             "text-description" : "Explore current leagues, view standings and decks",
             "pagination" : "Current Leagues"
         }
+    },
+    "language" : {
+        "Select language" : "Select language",
+        "Previous page" : "Previous page",
+        "Next page" : "Next page",
+        "Current page" : "Current page"
     }
 }
