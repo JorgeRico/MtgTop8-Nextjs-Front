@@ -38,6 +38,7 @@ const TournamentComponent: React.FC = () => {
                 setBreadcrumbText(response.data.leagueName + ' ' + response.data.year);
                 setLoading(true);
             } catch (err) {
+                console.log(err);
                 console.log('error tournamnet')
             };
         }

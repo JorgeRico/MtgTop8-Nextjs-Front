@@ -162,6 +162,7 @@ const DeckListForm: React.FC = () => {
             }
         } catch(err) {
             // console.log('FAILED...', err);
+            console.log(err);
             setShowError(true);
             setErrorMessage(errors('forms.Incorrect form - fill form correctly'));
             setTimeout(() => {setShowButton(true)}, 2000);

@@ -15,7 +15,6 @@ import { AxiosResponse } from 'axios';
 const Events: React.FC<TitleType> = ({ title }) => {
     const [ currentLeagues, setCurrentLeagues ]           = useState<LeagueType[]>([]);
     const [ showCurrentElements, setShowCurrentElements ] = useState<boolean>(false);
-    const [ totalLeagues, setTotalLeagues ]               = useState<number>(0);
     const t                                               = useTranslations('seo-tags');
 
     useEffect(() => {
@@ -23,9 +22,9 @@ const Events: React.FC<TitleType> = ({ title }) => {
             try {
                 const response: AxiosResponse<LeagueType[]> = await getAxiosEndpoint(endpoints.API_LEAGUE_CURRENT)
                 setCurrentLeagues(response.data);
-                setTotalLeagues(response.data.length);
                 setShowCurrentElements(true);
             } catch (err) {
+                console.log(err);
                 console.log('Error')
             };
         }

@@ -7,7 +7,7 @@ import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
 import { TournamentType } from "@/types/schemas/database/tournament";
 import { LeagueIdType } from "@/types/schemas/database/league";
-import { AxiosResponse } from 'axios';
+import { AxiosResponse, AxiosError } from 'axios';
 
 const LeagueTournament: React.FC<LeagueIdType> = ({ id }) => {
     const [ renderElements, setRenderElements]  = useState<TournamentType[]>([]);
@@ -24,9 +24,9 @@ const LeagueTournament: React.FC<LeagueIdType> = ({ id }) => {
                 setTotal(response.data.length);
                 setShowElements(true);
             } catch (err) {
-                // if ((err as AxiosError).response?.status === 404) {
-                //     setNoResults(true);
-                // }
+                if ((err as AxiosError).response?.status === 404) {
+                    console.log(err);
+                }
                 setShowElements(true);
                 console.log('error league tournament')
             };

@@ -25,6 +25,7 @@ const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
             setRenderDeckItems(response.data);
             setIsBlured(false);
         } catch (err) {
+            console.log(err);
             console.log('error loading deck')
         };
     }

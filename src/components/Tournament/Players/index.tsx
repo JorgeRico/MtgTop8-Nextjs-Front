@@ -19,6 +19,7 @@ const TournamentPlayers: React.FC<TournamentIdType> = ({ id }) => {
                 setIsBlured(false);
                 setRenderPlayers(response.data);
             } catch (err) {
+                console.log(err);
                 console.log('error tournament')
             };
         }
