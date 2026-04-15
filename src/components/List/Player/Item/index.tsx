@@ -55,7 +55,7 @@ const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
 
     return (
         <main>
-            <section className="item left mb15 bg-footer border-red overflowHidden playersBox" id={'player-'+(index+1)}>
+            <section className="item left mb15 bg-footer border-red overflowHidden playersBox" id={'player-'+(index+1)} aria-label={`${item.name} - ${item.deckName}`}>
                 <BlockLine
                     position = {index+1}
                     player   = {item.name}

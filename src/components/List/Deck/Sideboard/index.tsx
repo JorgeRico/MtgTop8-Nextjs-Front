@@ -6,7 +6,7 @@ const DeckSideboard: React.FC<DeckBoardType> = ({ items }) => {
     const t = useTranslations('deck');
 
     return (
-        <article className="left sideboard">
+        <article className="left sideboard" aria-label={t('Sideboard')}>
             <CardTypeList items={items} text={t('Sideboard')}></CardTypeList>
         </article>
     )

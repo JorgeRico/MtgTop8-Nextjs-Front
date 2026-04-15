@@ -33,7 +33,7 @@ const Pagination: React.FC<PaginationType> = ({ text, total, itemsPerPage, curre
 
     return (
         <section className="left w100 grey-top">
-            <section className="left padPagination flex total">
+            <section className="left padPagination flex total" aria-label={`Total ${text}: ${total}`}>
                 Total {text}: {total}
             </section>
             {!isDisabled &&

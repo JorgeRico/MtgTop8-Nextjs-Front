@@ -44,7 +44,7 @@ const StatsBox: React.FC<StatsCardItemType> = ({ text, cardType, endpoint, isPla
     }
 
     return (
-        <section className="listItem flex-item cardsList pointer" >
+        <section className="listItem flex-item cardsList pointer" aria-label={text}>
             <span onClick={() => handleClickCardTypes()}>
                 <Block text={text}></Block>
             </span>

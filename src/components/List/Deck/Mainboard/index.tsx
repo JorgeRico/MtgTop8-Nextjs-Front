@@ -62,7 +62,7 @@ const DeckMainboard: React.FC<DeckBoardType> = ({ items }) => {
     }, []);
 
     return (
-        <article className="left maindeck">
+        <article className="left maindeck" aria-label={t('Maindeck')}>
             {planeswalkerItems.length > 0 &&
                 <CardTypeList items={planeswalkerItems} text={t('Planeswalkers')}></CardTypeList>
             }

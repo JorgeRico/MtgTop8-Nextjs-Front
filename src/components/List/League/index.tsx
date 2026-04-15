@@ -25,7 +25,7 @@ const LeagueList: React.FC<LeagueItemsType> = ({ url, items, isBlured }) => {
                             priority
                         />
                     </div>
-                    <div className="left format wAuto ml25 tournamentDescription">
+                    <div className="left format wAuto ml25 tournamentDescription" aria-label={`${item.name} ${item.year}`}>
                         <strong>{item.name} {item.year}</strong>
                         <br></br>
                         <span className="left f12 mt5" style={{whiteSpace: 'pre-wrap'}}>

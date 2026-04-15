@@ -12,7 +12,7 @@ const TournamentList: React.FC<TournamentNormalType> = ({ url, items }) => {
             {(items.length > 0) && (
                 <>
                     {items.map((item) => (
-                        <div key={uuidv4()} className="left w100 listItem pointer title mb5">
+                        <div key={uuidv4()} className="left w100 listItem pointer title mb5" aria-label={item.name}>
                             <Link key={Math.random()} href={url + item.id}>
                                 <TournamentItem
                                     name        = {item.name}

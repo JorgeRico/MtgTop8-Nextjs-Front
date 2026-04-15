@@ -41,7 +41,7 @@ const Deck: React.FC<DeckType> = ({ items, deckName, isBlured }) => {
     }, []);
 
     return (
-        <section>
+        <section aria-label={deckName}>
             <article className={isBlured === true ? "blink blured" : ""}>
                 <DeckDescription
                     totalMaindeck  = {totalMaindeck}

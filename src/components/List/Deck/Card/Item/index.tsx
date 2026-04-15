@@ -7,7 +7,7 @@ interface DeckCardProps {
 
 const DeckCard: React.FC<DeckCardProps> = ({ card }) => {
     return (
-        <article className="cardItem">
+        <article className="cardItem" aria-label={card.name}>
             {card.num} {card.name}
             <span className="modalImg">
                 <ModalPopUp img={card.imgUrl} name={card.name} modalType={`deck-${card.id}`} />

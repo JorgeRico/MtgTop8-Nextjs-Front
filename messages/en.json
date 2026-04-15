@@ -52,6 +52,7 @@
         }
     },
     "deck" : {
+        "Maindeck" : "Maindeck",
         "Sideboard": "Sideboard",
         "Planeswalkers" : "Planeswalkers",
         "Creatures" : "Creatures",
