@@ -64,6 +64,16 @@ const LeagueComponent = () => {
         apiCall();
     }, []);
 
+    // <LeagueTournamentTitle
+                //     leagueName     = {isLoading ? fakeLeague.leagueName : leagueName}
+                //     format         = {isLoading ? fakeLeague.format : leagueFormat}
+                //     isBlured       = {isLoading}
+                //     numPlayers     = {isLoading ? fakeLeague.numPlayers : numPlayers}
+                //     classification = {isLoading ? fakeLeague.classification : classification}
+                //     location       = {isLoading ? fakeLeague.location : location}
+                //     locationName   = {isLoading ? fakeLeague.locationName : locationName}
+                // />
+
     return (
         <main>
             <Breadcrumb
@@ -79,15 +89,8 @@ const LeagueComponent = () => {
                     {t('leagues.no-data')}
                 </div>
             ) : (
-                <LeagueTournamentTitle
-                    leagueName     = {isLoading ? fakeLeague.leagueName : leagueName}
-                    format         = {isLoading ? fakeLeague.format : leagueFormat}
-                    isBlured       = {isLoading}
-                    numPlayers     = {isLoading ? fakeLeague.numPlayers : numPlayers}
-                    classification = {isLoading ? fakeLeague.classification : classification}
-                    location       = {isLoading ? fakeLeague.location : location}
-                    locationName   = {isLoading ? fakeLeague.locationName : locationName}
-                />
+                
+                <>ddfdfd</>
             )}
             <LeagueTournamentList
                 id = {params.id}
