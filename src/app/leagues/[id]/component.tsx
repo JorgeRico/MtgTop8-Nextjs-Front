@@ -26,6 +26,7 @@ const LeagueComponent = () => {
     const [ classification, setClassification ] = useState<string>('');
     const t                                     = useTranslations('seo-tags');
     const [ numPlayers, setNumPlayers ]         = useState<number>(0);
+    const [ hasValues, setHasValues ]           = useState<boolean>(true);
 
     useEffect(() => {
         async function apiCall(): Promise<void> {
@@ -39,8 +40,10 @@ const LeagueComponent = () => {
                 setClassification(response.data.classification);
                 setIsLoading(false);
             } catch (err) {
-                console.log(err)
-                console.log('error league id')
+                console.log(err);
+                console.log('error league id');
+                setIsLoading(false);
+                setHasValues(false);
             };
         }
 
@@ -49,8 +52,10 @@ const LeagueComponent = () => {
                 const response: AxiosResponse<AveragePlayersLeague> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID_AVERAGE, params.id))
                 setNumPlayers(response.data.average)
             } catch (err) {
-                console.log(err)
-                console.log('error league id')
+                console.log(err);
+                console.log('error league id');
+                setIsLoading(false);
+                setHasValues(false);
             };
         }
         apiAverageCall();
@@ -67,15 +72,21 @@ const LeagueComponent = () => {
                     />
                 }>
             </Breadcrumb>
-            <LeagueTournamentTitle
-                leagueName     = {isLoading ? fakeLeague.leagueName : leagueName}
-                format         = {isLoading ? fakeLeague.format : leagueFormat}
-                isBlured       = {isLoading}
-                numPlayers     = {isLoading ? fakeLeague.numPlayers : numPlayers}
-                classification = {isLoading ? fakeLeague.classification : classification}
-                location       = {isLoading ? fakeLeague.location : location}
-                locationName   = {isLoading ? fakeLeague.locationName : locationName}
-            />
+            {hasValues === false ? (
+                <div className="text-center text-red-500 text-lg font-bold">
+                    {t('leagues.no-data')}
+                </div>
+            ) : (
+                <LeagueTournamentTitle
+                    leagueName     = {isLoading ? fakeLeague.leagueName : leagueName}
+                    format         = {isLoading ? fakeLeague.format : leagueFormat}
+                    isBlured       = {isLoading}
+                    numPlayers     = {isLoading ? fakeLeague.numPlayers : numPlayers}
+                    classification = {isLoading ? fakeLeague.classification : classification}
+                    location       = {isLoading ? fakeLeague.location : location}
+                    locationName   = {isLoading ? fakeLeague.locationName : locationName}
+                />
+            )}
             <LeagueTournamentList
                 id = {params.id}
             />
