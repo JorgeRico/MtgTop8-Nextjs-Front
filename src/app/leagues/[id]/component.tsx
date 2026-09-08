@@ -43,7 +43,6 @@ const LeagueComponent = () => {
             } catch (err) {
                 console.log(err);
                 console.log('error league id');
-                setIsLoading(false);
                 setHasValues(false);
             } finally {
                 setIsLoading(false);
