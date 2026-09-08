@@ -83,6 +83,13 @@ const LeagueComponent = () => {
                 //     location       = {isLoading ? fakeLeague.location : location}
                 //     locationName   = {isLoading ? fakeLeague.locationName : locationName}
                 // />
+            //     {hasValues && 
+            //     <Stats
+            //         id       = {params.id}
+            //         isLeague = {true}
+            //         title    = {`${t('leagues.stats')} ${leagueName ? ' - ' + leagueName : ''}`}
+            //     />
+            // }
                 */}
 
     return (
@@ -99,13 +106,7 @@ const LeagueComponent = () => {
             <LeagueTournamentList
                 id = {params.id}
             />
-            {hasValues && 
-                <Stats
-                    id       = {params.id}
-                    isLeague = {true}
-                    title    = {`${t('leagues.stats')} ${leagueName ? ' - ' + leagueName : ''}`}
-                />
-            }
+            
         </main>
     );
 }
