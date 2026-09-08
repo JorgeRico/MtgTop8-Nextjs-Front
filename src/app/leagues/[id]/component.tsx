@@ -32,18 +32,21 @@ const LeagueComponent = () => {
         async function apiCall(): Promise<void> {
             try {
                 const response: AxiosResponse<LeagueType> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID, params.id))
-                setLeagueName(response.data.name);
-                setLeagueFormat(getFormat(response.data.isLegacy));
-                setLocation(response.data.location);
-                setLocationName(response.data.locationName);
-                setYear(response.data.year);
-                setClassification(response.data.classification);
-                setIsLoading(false);
+                if (response.data !== null) {
+                    setLeagueName(response.data.name);
+                    setLeagueFormat(getFormat(response.data.isLegacy));
+                    setLocation(response.data.location);
+                    setLocationName(response.data.locationName);
+                    setYear(response.data.year);
+                    setClassification(response.data.classification);
+                }
             } catch (err) {
                 console.log(err);
                 console.log('error league id');
                 setIsLoading(false);
                 setHasValues(false);
+            } finally {
+                setIsLoading(false);
             };
         }
 
