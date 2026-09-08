@@ -72,7 +72,8 @@
             "Tournaments" : "Tornejos",
             "Format" : "Format",
             "Average Players" : "Mitjana de jugadors",
-            "Classification" : "Clasificació"
+            "Classification" : "Clasificació",
+            "NoTournaments" : "No hi ha tornejos registrats per aquesta lliga"
         },
         "list" : {
             "Tournaments" : "Tornejos"

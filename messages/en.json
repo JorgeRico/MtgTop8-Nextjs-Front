@@ -72,7 +72,8 @@
             "Tournaments" : "Tournaments",
             "Format" : "Format",
             "Average Players" : "Average Players",
-            "Classification" : "Classification"
+            "Classification" : "Classification",
+            "NoTournaments" : "No tournaments registered for this league"
         },
         "list" : {
             "Tournaments" : "Tournaments"

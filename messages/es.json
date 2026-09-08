@@ -72,7 +72,8 @@
             "Tournaments" : "Torneos",
             "Format" : "Formato",
             "Average Players" : "Media de jugadores",
-            "Classification" : "Clasificación"
+            "Classification" : "Clasificación",
+            "NoTournaments" : "No hay torneos registrados para esta liga"
         },
         "list" : {
             "Tournaments" : "Torneos"

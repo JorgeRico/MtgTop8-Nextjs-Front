@@ -65,8 +65,8 @@ const LeagueComponent = () => {
                     <BreadcrumbLeague
                         title={`${leagueName} ${year}`}
                     />
-                }>
-            </Breadcrumb>
+                }
+            />
             <LeagueTournamentTitle
                 leagueName     = {isLoading ? fakeLeague.leagueName : leagueName}
                 format         = {isLoading ? fakeLeague.format : leagueFormat}

@@ -44,7 +44,9 @@ const LeagueTournamentTitle: React.FC<LeagueTournamentType> = ({ leagueName, for
             </div>
             {location != null && getLocation()}
             <div className="left w100 f14">{t('tournament.Format')}: {format}</div>
-            <div className="left w100 f14 mt5">{t('tournament.Average Players')}: {numPlayers}</div>
+            {numPlayers > 0 &&
+                <div className="left w100 f14 mt5">{t('tournament.Average Players')}: {numPlayers}</div>
+            }
             {classification != null && (
                 <div className="left w100 f14 mt5">{t('tournament.Classification')}: {classification}</div>
             )}
