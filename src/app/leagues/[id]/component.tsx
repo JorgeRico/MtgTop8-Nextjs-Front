@@ -100,12 +100,18 @@ const LeagueComponent = () => {
                     {t('leagues.no-data')}
                 </div>
             ) : (
-                
-                <>ddfdfd</>
+                <>
+                    <LeagueTournamentList
+                        id = {params.id}
+                    />
+                    <Stats
+                        id       = {params.id}
+                        isLeague = {true}
+                        title    = {`${t('leagues.stats')} ${leagueName ? ' - ' + leagueName : ''}`}
+                    />
+                </>
             )}
-            <LeagueTournamentList
-                id = {params.id}
-            />
+            
             
         </main>
     );
