@@ -51,9 +51,9 @@ const LeagueTournament: React.FC<LeagueIdType> = ({ id }) => {
                                 <Pagination text={t('tournament.Tournaments')} total={total} itemsPerPage={total} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>
                             </>
                         ) : (
-                                <div className="left w100 mt20 mb40">
-                                    <div className="left w100 f14">{t('tournament.NoTournaments')}</div>
-                                </div>
+                            <div className="left w100 mt20 mb40">
+                                <div className="left w100 f14">{t('tournament.NoTournaments')}</div>
+                            </div>
                         )}
                     </>
                 )
