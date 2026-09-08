@@ -41,12 +41,18 @@ const LeagueTournament: React.FC<LeagueIdType> = ({ id }) => {
                     <BluredTournamentList></BluredTournamentList>
                 ) : (
                     <>
-                        <LeagueTournamentContent
-                            renderElements = {renderElements}
-                            url            = {endpoints.HTTP_TOURNAMENT}
-                            isBlured       = {false}
-                        />
-                        <Pagination text={t('tournament.Tournaments')} total={total} itemsPerPage={total} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>
+                    {total > 0 ? (
+                        <>
+                            <LeagueTournamentContent
+                                renderElements = {renderElements}
+                                url            = {endpoints.HTTP_TOURNAMENT}
+                                isBlured       = {false}
+                            />
+                            <Pagination text={t('tournament.Tournaments')} total={total} itemsPerPage={total} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>
+                        </>
+                    ) : (
+                        <>noooo hay values</>
+                    )}
                     </>
                 )
             }

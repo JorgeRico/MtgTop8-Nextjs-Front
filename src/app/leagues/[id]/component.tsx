@@ -19,7 +19,6 @@ const LeagueComponent = () => {
     const params                                = useParams<{ id: string }>();
     const [ leagueName, setLeagueName ]         = useState<string>('');
     const [ isLoading, setIsLoading ]           = useState<boolean>(true);
-    const [ hasValues, setHasValues ]           = useState<boolean>(true);
     const [ leagueFormat, setLeagueFormat ]     = useState<string>('');
     const [ location, setLocation ]             = useState<string | null>(null);
     const [ locationName, setLocationName ]     = useState<string>('');
@@ -38,23 +37,20 @@ const LeagueComponent = () => {
                 setLocationName(response.data.locationName);
                 setYear(response.data.year);
                 setClassification(response.data.classification);
-            } catch (err) {
-                console.log(err);
-                console.log('error league id');
-                setHasValues(false);
-            } finally {
                 setIsLoading(false);
+            } catch (err) {
+                console.log(err)
+                console.log('error league id')
             };
         }
 
         async function apiAverageCall(): Promise<void> {
             try {
                 const response: AxiosResponse<AveragePlayersLeague> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID_AVERAGE, params.id))
-                setNumPlayers(response.data.average);
+                setNumPlayers(response.data.average)
             } catch (err) {
-                console.log(err);
-                console.log('error league id');
-                setHasValues(false);
+                console.log(err)
+                console.log('error league id')
             };
         }
         apiAverageCall();
@@ -71,35 +67,23 @@ const LeagueComponent = () => {
                     />
                 }>
             </Breadcrumb>
-            {hasValues &&
-                <LeagueTournamentTitle
-                    leagueName     = {isLoading ? fakeLeague.leagueName : leagueName}
-                    format         = {isLoading ? fakeLeague.format : leagueFormat}
-                    isBlured       = {isLoading}
-                    numPlayers     = {isLoading ? fakeLeague.numPlayers : numPlayers}
-                    classification = {isLoading ? fakeLeague.classification : classification}
-                    location       = {isLoading ? fakeLeague.location : location}
-                    locationName   = {isLoading ? fakeLeague.locationName : locationName}
-                />
-            }
-            {hasValues && !isLoading &&
-                <>
-                    <LeagueTournamentList
-                        id = {params.id}
-                    />
-                    <Stats
-                        id       = {params.id}
-                        isLeague = {true}
-                        title    = {`${t('leagues.stats')} ${leagueName ? ' - ' + leagueName : ''}`}
-                    />
-                </>
-            }
-            {!hasValues &&
-                <div className="text-center text-red-500 text-lg font-bold">
-                    {t('leagues.no-data')}
-                </div>
-            }
-            
+            <LeagueTournamentTitle
+                leagueName     = {isLoading ? fakeLeague.leagueName : leagueName}
+                format         = {isLoading ? fakeLeague.format : leagueFormat}
+                isBlured       = {isLoading}
+                numPlayers     = {isLoading ? fakeLeague.numPlayers : numPlayers}
+                classification = {isLoading ? fakeLeague.classification : classification}
+                location       = {isLoading ? fakeLeague.location : location}
+                locationName   = {isLoading ? fakeLeague.locationName : locationName}
+            />
+            <LeagueTournamentList
+                id = {params.id}
+            />
+            <Stats
+                id       = {params.id}
+                isLeague = {true}
+                title    = {`${t('leagues.stats')} ${leagueName ? ' - ' + leagueName : ''}`}
+            />
         </main>
     );
 }
