@@ -47,18 +47,18 @@ const LeagueComponent = () => {
             };
         }
 
-        async function apiAverageCall(): Promise<void> {
-            try {
-                const response: AxiosResponse<AveragePlayersLeague> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID_AVERAGE, params.id))
-                setNumPlayers(response.data.average)
-            } catch (err) {
-                console.log(err);
-                console.log('error league id');
-                setIsLoading(false);
-                setHasValues(false);
-            };
-        }
-        apiAverageCall();
+        // async function apiAverageCall(): Promise<void> {
+        //     try {
+        //         const response: AxiosResponse<AveragePlayersLeague> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID_AVERAGE, params.id))
+        //         setNumPlayers(response.data.average)
+        //     } catch (err) {
+        //         console.log(err);
+        //         console.log('error league id');
+        //         setIsLoading(false);
+        //         setHasValues(false);
+        //     };
+        // }
+        // apiAverageCall();
         apiCall();
     }, []);
 
