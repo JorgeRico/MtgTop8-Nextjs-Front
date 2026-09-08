@@ -19,6 +19,7 @@ const LeagueComponent = () => {
     const params                                = useParams<{ id: string }>();
     const [ leagueName, setLeagueName ]         = useState<string>('');
     const [ isLoading, setIsLoading ]           = useState<boolean>(true);
+    const [ hasValues, setHasValues ]           = useState<boolean>(true);
     const [ leagueFormat, setLeagueFormat ]     = useState<string>('');
     const [ location, setLocation ]             = useState<string | null>(null);
     const [ locationName, setLocationName ]     = useState<string>('');
@@ -26,92 +27,72 @@ const LeagueComponent = () => {
     const [ classification, setClassification ] = useState<string>('');
     const t                                     = useTranslations('seo-tags');
     const [ numPlayers, setNumPlayers ]         = useState<number>(0);
-    const [ hasValues, setHasValues ]           = useState<boolean>(true);
 
     useEffect(() => {
         async function apiCall(): Promise<void> {
             try {
                 const response: AxiosResponse<LeagueType> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID, params.id))
-                console.log('--------')
-                console.log(response.data)
-                console.log('--------')
-                if (response.data !== null) {
-                    setLeagueName(response.data.name);
-                    setLeagueFormat(getFormat(response.data.isLegacy));
-                    setLocation(response.data.location);
-                    setLocationName(response.data.locationName);
-                    setYear(response.data.year);
-                    setClassification(response.data.classification);
-                }
+                setLeagueName(response.data.name);
+                setLeagueFormat(getFormat(response.data.isLegacy));
+                setLocation(response.data.location);
+                setLocationName(response.data.locationName);
+                setYear(response.data.year);
+                setClassification(response.data.classification);
+                // setIsLoading(false);
             } catch (err) {
                 console.log(err);
                 console.log('error league id');
                 setHasValues(false);
-            } finally {
-                setIsLoading(false);
             };
         }
 
-        // async function apiAverageCall(): Promise<void> {
-        //     try {
-        //         const response: AxiosResponse<AveragePlayersLeague> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID_AVERAGE, params.id))
-        //         setNumPlayers(response.data.average)
-        //     } catch (err) {
-        //         console.log(err);
-        //         console.log('error league id');
-        //         setIsLoading(false);
-        //         setHasValues(false);
-        //     };
-        // }
-        // apiAverageCall();
+        async function apiAverageCall(): Promise<void> {
+            try {
+                const response: AxiosResponse<AveragePlayersLeague> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID_AVERAGE, params.id))
+                setNumPlayers(response.data.average)
+            } catch (err) {
+                console.log(err);
+                console.log('error league id');
+                setHasValues(false);
+            };
+        }
+        apiAverageCall();
         apiCall();
     }, []);
-{/* <Breadcrumb
+
+    // <LeagueTournamentList
+    //             id = {params.id}
+    //         />
+    //         <Stats
+    //             id       = {params.id}
+    //             isLeague = {true}
+    //             title    = {`${t('leagues.stats')} ${leagueName ? ' - ' + leagueName : ''}`}
+    //         />
+
+    return (
+        <main>
+            <Breadcrumb
                 loading   = {!isLoading}
                 component = {
                     <BreadcrumbLeague
                         title={`${leagueName} ${year}`}
                     />
                 }>
-            </Breadcrumb> 
-    // <LeagueTournamentTitle
-                //     leagueName     = {isLoading ? fakeLeague.leagueName : leagueName}
-                //     format         = {isLoading ? fakeLeague.format : leagueFormat}
-                //     isBlured       = {isLoading}
-                //     numPlayers     = {isLoading ? fakeLeague.numPlayers : numPlayers}
-                //     classification = {isLoading ? fakeLeague.classification : classification}
-                //     location       = {isLoading ? fakeLeague.location : location}
-                //     locationName   = {isLoading ? fakeLeague.locationName : locationName}
-                // />
-            //     {hasValues && 
-            //     <Stats
-            //         id       = {params.id}
-            //         isLeague = {true}
-            //         title    = {`${t('leagues.stats')} ${leagueName ? ' - ' + leagueName : ''}`}
-            //     />
-            // }
-                */}
-
-    return (
-        <main>
-            
-            {!hasValues ? (
+            </Breadcrumb>
+            <LeagueTournamentTitle
+                leagueName     = {isLoading ? fakeLeague.leagueName : leagueName}
+                format         = {isLoading ? fakeLeague.format : leagueFormat}
+                isBlured       = {isLoading}
+                numPlayers     = {isLoading ? fakeLeague.numPlayers : numPlayers}
+                classification = {isLoading ? fakeLeague.classification : classification}
+                location       = {isLoading ? fakeLeague.location : location}
+                locationName   = {isLoading ? fakeLeague.locationName : locationName}
+            />
+            {!hasValues &&
                 <div className="text-center text-red-500 text-lg font-bold">
                     {t('leagues.no-data')}
                 </div>
-            ) : (
-                <>
-                    <LeagueTournamentList
-                        id = {params.id}
-                    />
-                    <Stats
-                        id       = {params.id}
-                        isLeague = {true}
-                        title    = {`${t('leagues.stats')} ${leagueName ? ' - ' + leagueName : ''}`}
-                    />
-                </>
-            )}
-            
+            }
             
         </main>
     );
