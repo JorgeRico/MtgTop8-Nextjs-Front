@@ -90,11 +90,13 @@ const LeagueComponent = () => {
             <LeagueTournamentList
                 id = {params.id}
             />
-            <Stats
-                id       = {params.id}
-                isLeague = {true}
-                title    = {`${t('leagues.stats')} ${leagueName ? ' - ' + leagueName : ''}`}
-            />
+            {hasValues && 
+                <Stats
+                    id       = {params.id}
+                    isLeague = {true}
+                    title    = {`${t('leagues.stats')} ${leagueName ? ' - ' + leagueName : ''}`}
+                />
+            }
         </main>
     );
 }
