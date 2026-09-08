@@ -32,6 +32,9 @@ const LeagueComponent = () => {
         async function apiCall(): Promise<void> {
             try {
                 const response: AxiosResponse<LeagueType> = await getAxiosEndpoint(replaceUrlIdParam(endpoints.API_LEAGUE_ID, params.id))
+                console.log('--------')
+                console.log(response.data)
+                console.log('--------')
                 if (response.data !== null) {
                     setLeagueName(response.data.name);
                     setLeagueFormat(getFormat(response.data.isLegacy));
@@ -63,7 +66,14 @@ const LeagueComponent = () => {
         // apiAverageCall();
         apiCall();
     }, []);
-
+{/* <Breadcrumb
+                loading   = {!isLoading}
+                component = {
+                    <BreadcrumbLeague
+                        title={`${leagueName} ${year}`}
+                    />
+                }>
+            </Breadcrumb> 
     // <LeagueTournamentTitle
                 //     leagueName     = {isLoading ? fakeLeague.leagueName : leagueName}
                 //     format         = {isLoading ? fakeLeague.format : leagueFormat}
@@ -73,18 +83,12 @@ const LeagueComponent = () => {
                 //     location       = {isLoading ? fakeLeague.location : location}
                 //     locationName   = {isLoading ? fakeLeague.locationName : locationName}
                 // />
+                */}
 
     return (
         <main>
-            <Breadcrumb
-                loading   = {!isLoading}
-                component = {
-                    <BreadcrumbLeague
-                        title={`${leagueName} ${year}`}
-                    />
-                }>
-            </Breadcrumb>
-            {hasValues === false ? (
+            
+            {!hasValues ? (
                 <div className="text-center text-red-500 text-lg font-bold">
                     {t('leagues.no-data')}
                 </div>
