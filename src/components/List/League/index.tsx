@@ -40,8 +40,8 @@ const LeagueList: React.FC<LeagueItemsType> = ({ url, items, isBlured }) => {
     return (
         <section className={`left w100 overflowHidden ${isBlured ? 'blink blured' : ''}`}>
             {(items?.length > 0) && (
-                items?.map((item) => (
-                    <article className="listItem pointer title mb15 overflowHidden" key={item.id}>
+                items?.map((item, index) => (
+                    <article className="listItem pointer title mb15 overflowHidden" key={index}>
                         <Link href={url + item.id}>
                             {leagueItemBlock(item)}
                         </Link>
