@@ -7,7 +7,7 @@ import { AxiosResponse } from 'axios';
 import { PlayerType } from "@/types/schemas/database/player";
 import BluredTournamentPlayers from "@/fakeData/components/tournamentPlayers";
 
-const TournamentPlayers: React.FC<TournamentIdType> = ({ id }) => {
+const TournamentPlayers = ({ id }: TournamentIdType) => {
     const [ renderPlayers, setRenderPlayers ] = useState<PlayerType[]>([]);
     const [ isBlured, setIsBlured ]           = useState<boolean>(true);
 

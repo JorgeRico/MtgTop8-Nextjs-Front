@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-const CopyrightFooter: React.FC = () => {
+const CopyrightFooter = () => {
     const t = useTranslations('footer');
 
     return (

@@ -11,7 +11,7 @@ import { AxiosResponse } from 'axios';
 import { CardType } from "@/types/schemas/database/card";
 import decklist from "@/fakeData/decklist";
 
-const TournamentPlayerItem: React.FC<PlayerItemType> = ({ item, index }) => {
+const TournamentPlayerItem = ({ item, index }: PlayerItemType) => {
     const [ renderDeckItems, setRenderDeckItems ] = useState<CardType[]>([]);
     const t                                       = useTranslations('player');
     const [ isBlured, setIsBlured ]               = useState<boolean>(true);

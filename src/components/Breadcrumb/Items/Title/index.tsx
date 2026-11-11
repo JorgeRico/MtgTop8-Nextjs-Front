@@ -1,6 +1,6 @@
 import { TitleType } from "@/types/schemas/website/title";
 
-const TitleItemBreadcrumb: React.FC<TitleType> = ({ title }) => {
+const TitleItemBreadcrumb = ({ title }: TitleType) => {
     return (
         <div className="left ml5">
             {title}

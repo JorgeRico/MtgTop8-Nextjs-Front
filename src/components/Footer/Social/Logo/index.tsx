@@ -1,6 +1,6 @@
 import Logo from "@/components/Logo";
 
-const SocialLogoFooter: React.FC = () => {
+const SocialLogoFooter = () => {
     return (
         <section className="left w100 mt20">
             <Logo></Logo>

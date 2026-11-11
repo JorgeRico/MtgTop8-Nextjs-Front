@@ -12,7 +12,7 @@ import { LeagueType } from "@/types/schemas/database/league";
 import { TitleType } from "@/types/schemas/website/title";
 import { AxiosResponse } from 'axios';
 
-const Events: React.FC<TitleType> = ({ title }) => {
+const Events = ({ title }: TitleType) => {
     const [ currentLeagues, setCurrentLeagues ]           = useState<LeagueType[]>([]);
     const [ showCurrentElements, setShowCurrentElements ] = useState<boolean>(false);
     const t                                               = useTranslations('seo-tags');

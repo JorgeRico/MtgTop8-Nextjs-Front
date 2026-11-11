@@ -6,7 +6,7 @@ import Subtitle from '@/components/HTag/SubTitle';
 import HTag from "@/components/HTag";
 import { useTranslations } from 'next-intl';
 
-const SocialFooter: React.FC = () => {
+const SocialFooter = () => {
     const t = useTranslations('footer');
 
     return (

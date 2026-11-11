@@ -5,7 +5,7 @@ type MyComponentProps = {
     text : string;
 }
 
-const StatsBox: React.FC<MyComponentProps> = ({ text }) => {
+const StatsBox = ({ text }: MyComponentProps) => {
     const t = useTranslations('stats');
 
     return (

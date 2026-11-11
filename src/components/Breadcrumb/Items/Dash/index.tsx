@@ -1,4 +1,4 @@
-const DashItemBreadcrumb: React.FC = () => {
+const DashItemBreadcrumb = () => {
     return (
         <div className="left ml5">/</div>
     );

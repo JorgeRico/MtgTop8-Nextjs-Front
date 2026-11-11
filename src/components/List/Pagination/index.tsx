@@ -4,7 +4,7 @@ import { PaginationType } from "@/types/schemas/website/pagination";
 import { useTranslations } from 'next-intl';
 
 
-const Pagination: React.FC<PaginationType> = ({ text, total, itemsPerPage, currentPage, setCurrentPage, isDisabled = false }) => {
+const Pagination = ({ text, total, itemsPerPage, currentPage, setCurrentPage, isDisabled = false }: PaginationType) => {
     const [ firstPage ]               = useState<number>(1);
     const [ lastPage ]                = useState<number>(Math.ceil(total / itemsPerPage));
     const [ pageArray, setPageArray ] = useState<number[]>([]);

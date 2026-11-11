@@ -1,6 +1,6 @@
 import { TextareaFormType } from "@/types/schemas/website/forms";
 
-const TextareaForm: React.FC<TextareaFormType> = ({ name, placeholder, label, value, handleChange }) => {
+const TextareaForm = ({ name, placeholder, label, value, handleChange }: TextareaFormType) => {
     return (
         <label className="left w90 mb15">
             <span className="left w100 mb20">{label}</span>

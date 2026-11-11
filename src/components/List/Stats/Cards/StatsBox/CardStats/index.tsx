@@ -10,7 +10,7 @@ type MyComponentProps = {
     endpointCards : string;
 }
 
-const CardStats: React.FC<MyComponentProps> = ({ id, endpoint, endpointCards }) => {
+const CardStats = ({ id, endpoint, endpointCards }: MyComponentProps) => {
     const t = useTranslations('stats');
 
     return (

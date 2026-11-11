@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { DeckCardDescriptionType } from "@/types/schemas/database/deck";
 
-const DeckDescription: React.FC<DeckCardDescriptionType> = ({ totalMaindeck, totalSideboard, deckName }) => {
+const DeckDescription = ({ totalMaindeck, totalSideboard, deckName }: DeckCardDescriptionType) => {
     const t = useTranslations('deck');
 
     return (

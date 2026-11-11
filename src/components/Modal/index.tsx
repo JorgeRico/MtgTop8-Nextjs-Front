@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { ModalType } from "@/types/schemas/website/modal";
 
-const ModalPopUp: React.FC<ModalType> = ({ img, name, modalType }) => {
+const ModalPopUp = ({ img, name, modalType }: ModalType) => {
     const [ modalId, setModalId ] = useState<string>('');
     const t                       = useTranslations('cards');
 

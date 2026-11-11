@@ -1,6 +1,6 @@
 import { TitleComponentType } from "@/types/schemas/website/title";
 
-const HTag: React.FC<TitleComponentType> = ({ Tag, className, text }) => {
+const HTag = ({ Tag, className, text }: TitleComponentType) => {
     return (
         <Tag className={className}>
             {text}

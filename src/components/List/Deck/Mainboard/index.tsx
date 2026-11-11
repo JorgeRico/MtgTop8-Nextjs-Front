@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { DeckBoardType } from "@/types/schemas/database/deck";
 import { CardType } from "@/types/schemas/database/card";
 
-const DeckMainboard: React.FC<DeckBoardType> = ({ items }) => {
+const DeckMainboard = ({ items }: DeckBoardType) => {
     const [ creatureItems, setCreatureItems ]         = useState<CardType[]>([]);
     const [ instantItems, setInstantItems ]           = useState<CardType[]>([]);
     const [ sorceryItems, setSorceryItems ]           = useState<CardType[]>([]);

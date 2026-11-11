@@ -14,7 +14,7 @@ type MyComponentProps = {
     isBlured      : boolean;
 }
 
-const StatsBox: React.FC<MyComponentProps> = ({ id, title, isLeague, endpoint, endpointCards, isBlured }) => {
+const StatsBox = ({ id, title, isLeague, endpoint, endpointCards, isBlured }: MyComponentProps) => {
     const t = useTranslations('stats');
 
     return (

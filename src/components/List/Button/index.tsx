@@ -3,7 +3,7 @@ type MyComponentProps = {
     id?        : string;
 }
 
-const Button: React.FC<MyComponentProps> = ({ buttonText, id = '' }) => {
+const Button = ({ buttonText, id = '' }: MyComponentProps) => {
     return (
         <button aria-label={buttonText} id={id} className="listButton right bg-red border-grey radius5 color-white f14 pointer">
             {buttonText}

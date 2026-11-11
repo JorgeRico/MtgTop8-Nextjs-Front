@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { StatsCardTotal, StatsCardItemType } from "@/types/schemas/database/stats";
 import { AxiosResponse, AxiosError } from 'axios';
 
-const StatsBox: React.FC<StatsCardItemType> = ({ text, cardType, endpoint, isPlayer }) => {
+const StatsBox = ({ text, cardType, endpoint, isPlayer }: StatsCardItemType) => {
     const [ renderElements, setRenderElements ] = useState<StatsCardTotal[]>([]);
     const [ noResults, setNoResults ]           = useState<boolean>(false);
     const [ isLoading, setIsLoading ]           = useState<boolean>(true);

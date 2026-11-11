@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { StatsPlayerType } from "@/types/schemas/database/stats";
 
-const TopStatsList: React.FC<StatsPlayerType> = ({ isPlayer }) => {
+const TopStatsList = ({ isPlayer }: StatsPlayerType) => {
     const t = useTranslations('stats');
 
     const topPlayerStats = () => {

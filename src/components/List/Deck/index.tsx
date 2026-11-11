@@ -7,7 +7,7 @@ import statsTypes from "@/types/server/stats-types";
 import { DeckType } from "@/types/schemas/database/deck";
 import { CardType } from "@/types/schemas/database/card";
 
-const Deck: React.FC<DeckType> = ({ items, deckName, isBlured }) => {
+const Deck = ({ items, deckName, isBlured }: DeckType) => {
     const [ maindeck, setMaindeck ]             = useState<CardType[]>([]);
     const [ sideboard, setSideboard ]           = useState<CardType[]>([]);
     const [ totalMaindeck, setTotalMaindeck ]   = useState<number>(0);

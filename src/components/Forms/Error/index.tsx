@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { ErrorMessageFormType } from "@/types/schemas/website/forms";
 
-const ErrorMessage: React.FC<ErrorMessageFormType> = ({ message }) => {
+const ErrorMessage = ({ message }: ErrorMessageFormType) => {
     const errors = useTranslations('errors');
     const tags   = useTranslations('alt-tags');
 

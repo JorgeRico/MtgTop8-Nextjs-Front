@@ -9,7 +9,7 @@ import InputForm from "@/components/Forms/Input";
 import { useTranslations } from 'next-intl';
 import { SendObjectType } from "@/types/schemas/website/forms";
 
-const Contact: React.FC = () => {
+const Contact = () => {
     const [ showButton, setShowButton ]   = useState<boolean>(true);
     const [ showSuccess, setShowSuccess ] = useState<boolean>(false);
     const [ showError, setShowError ]     = useState<boolean>(false);

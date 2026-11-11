@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { PdfItemType, PdfValuesType, PdfType, PdfCardType } from "@/types/schemas/website/pdf";
 
-const DeckListForm: React.FC = () => {
+const DeckListForm = () => {
     const [ showButton, setShowButton ]     = useState<boolean>(true);
     const [ showError, setShowError ]       = useState<boolean>(false);
     const [ toSend, setToSend ]             = useState<PdfType>({ name: '', surname: '', event: '', deckName: '', mainboard: '', sideboard: '' });
@@ -122,7 +122,7 @@ const DeckListForm: React.FC = () => {
 
         try {
             // Fetch an existing PDF document
-            const url              = '/pdf/decklist.pdf'
+            const url              = process.env.NEXT_PUBLIC_DECKLIST_PDF_URL || '/pdf/decklist.pdf'
             const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
 
             // Load a PDFDocument from the existing PDF bytes

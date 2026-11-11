@@ -5,7 +5,7 @@ interface DeckCardProps {
     card: CardType;
 }
 
-const DeckCard: React.FC<DeckCardProps> = ({ card }) => {
+const DeckCard = ({ card }: DeckCardProps) => {
     return (
         <article className="cardItem" aria-label={card.name}>
             {card.num} {card.name}
