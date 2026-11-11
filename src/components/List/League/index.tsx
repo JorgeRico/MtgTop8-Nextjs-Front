@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
 import Link from 'next/link';
 import Button from "@/components/List/Button";
 import { getFormat } from '@/hooks/useCommon';
@@ -42,7 +41,7 @@ const LeagueList: React.FC<LeagueItemsType> = ({ url, items, isBlured }) => {
         <section className={`left w100 overflowHidden ${isBlured ? 'blink blured' : ''}`}>
             {(items?.length > 0) && (
                 items?.map((item) => (
-                    <article className="listItem pointer title mb15 overflowHidden" key={uuidv4()}>
+                    <article className="listItem pointer title mb15 overflowHidden" key={item.id}>
                         <Link href={url + item.id}>
                             {leagueItemBlock(item)}
                         </Link>
