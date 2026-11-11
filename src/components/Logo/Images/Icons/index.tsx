@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
 
-const LogoIconsImage: React.FC = () => {
+const LogoIconsImage = () => {
     const t = useTranslations('alt-tags');
 
     return (

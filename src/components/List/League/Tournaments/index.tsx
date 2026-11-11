@@ -9,7 +9,7 @@ import { TournamentType } from "@/types/schemas/database/tournament";
 import { LeagueIdType } from "@/types/schemas/database/league";
 import { AxiosResponse, AxiosError } from 'axios';
 
-const LeagueTournament: React.FC<LeagueIdType> = ({ id }) => {
+const LeagueTournament = ({ id }: LeagueIdType) => {
     const [ renderElements, setRenderElements]  = useState<TournamentType[]>([]);
     const [ showElements, setShowElements ]     = useState<boolean>(false);
     const t                                     = useTranslations('league');

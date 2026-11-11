@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-const SocialDescriptionFooter: React.FC = () => {
+const SocialDescriptionFooter = () => {
     const t = useTranslations('footer');
 
     return (

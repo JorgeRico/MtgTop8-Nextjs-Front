@@ -19,7 +19,7 @@ interface TournamentComponentProps {
     initialTournament: TournamentType;
 }
 
-const TournamentComponent: React.FC<TournamentComponentProps> = ({ id, initialTournament }) => {
+const TournamentComponent = ({ id, initialTournament }: TournamentComponentProps) => {
     const params                                = useParams<{ id: string }>();
     const [ tournament, setTournament]          = useState<TournamentType>(initialTournament);
     const [ loading, setLoading ]               = useState<boolean>(false);

@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { PdfItemType, PdfValuesType, PdfType, PdfCardType } from "@/types/schemas/website/pdf";
 
-const DeckListForm: React.FC = () => {
+const DeckListForm = () => {
     const [ showButton, setShowButton ]     = useState<boolean>(true);
     const [ showError, setShowError ]       = useState<boolean>(false);
     const [ toSend, setToSend ]             = useState<PdfType>({ name: '', surname: '', event: '', deckName: '', mainboard: '', sideboard: '' });

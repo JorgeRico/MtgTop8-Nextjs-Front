@@ -13,7 +13,7 @@ import { LeagueType, PastLeagues } from "@/types/schemas/database/league";
 import { TitleType } from "@/types/schemas/website/title";
 import { AxiosResponse } from 'axios';
 
-const PastEvents: React.FC<TitleType> = ({ title }) => {
+const PastEvents = ({ title }: TitleType) => {
     const [ pastLeagues, setPastLeagues ]           = useState<LeagueType[]>([]);
     const [ showPastElements, setShowPastElements ] = useState<boolean>(false);
     const [ totalPastLeagues, setTotalPastLeagues ] = useState<number>(0);

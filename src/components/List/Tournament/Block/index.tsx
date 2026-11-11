@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { TournamentItemType } from "@/types/schemas/database/tournament";
 
-const TournamentItem: React.FC<TournamentItemType> = ({ name, description, buttonText }) => {
+const TournamentItem = ({ name, description, buttonText }: TournamentItemType) => {
     const t = useTranslations('alt-tags');
 
     return (

@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { LeagueItemsType } from "@/types/schemas/database/league";
 
-const LeagueList: React.FC<LeagueItemsType> = ({ url, items, isBlured }) => {
+const LeagueList = ({ url, items, isBlured }: LeagueItemsType) => {
     const t    = useTranslations('league');
     const tags = useTranslations('alt-tags');
 

@@ -1,7 +1,7 @@
 import BlockLine from "@/components/List/Player/BlockLine";
 import { useTranslations } from 'next-intl';
 
-const TournamentHeaderPlayers: React.FC = () => {
+const TournamentHeaderPlayers = () => {
     const t = useTranslations('player');
 
     return (

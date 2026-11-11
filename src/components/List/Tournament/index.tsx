@@ -3,7 +3,7 @@ import TournamentItem from "@/components/List/Tournament/Block";
 import { useTranslations } from 'next-intl';
 import { TournamentNormalType } from "@/types/schemas/database/tournament";
 
-const TournamentList: React.FC<TournamentNormalType> = ({ url, items }) => {
+const TournamentList = ({ url, items }: TournamentNormalType) => {
     const t = useTranslations('tournaments');
 
     return (

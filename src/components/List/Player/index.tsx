@@ -3,7 +3,7 @@ import PlayerItem from "@/components/List/Player/Item";
 import TournamentHeaderPlayers from "@/components/List/Player/Header";
 import { PlayerArrayBluredType } from "@/types/schemas/database/player";
 
-const TournamentPlayers: React.FC<PlayerArrayBluredType> = ({ items, isBlured }) => {
+const TournamentPlayers = ({ items, isBlured }: PlayerArrayBluredType) => {
     return (
         <>
             <section className={isBlured ? "blink blured" : ""}>

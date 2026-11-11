@@ -6,7 +6,7 @@ type MyComponentProps = {
     text : string;
 }
 
-const TitleBlock: React.FC<MyComponentProps> = ({ text }) => {    
+const TitleBlock = ({ text }: MyComponentProps) => {
     return (
         <div className="left w100 grey-bottom">
             <SubTitle title={

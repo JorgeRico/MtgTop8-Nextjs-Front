@@ -1,6 +1,6 @@
 import Logo from "@/components/Logo";
 
-const HeaderLogo: React.FC = () => {
+const HeaderLogo = () => {
     return (
         <div className="left pBody mt10">
             <Logo></Logo>

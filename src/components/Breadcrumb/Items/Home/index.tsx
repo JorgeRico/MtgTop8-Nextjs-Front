@@ -1,7 +1,7 @@
 import ImageLink from "@/components/Link/Link";
 import endpoints from "@/types/server/endpoints";
 
-const HomeItemBreadcrumb: React.FC = () => {
+const HomeItemBreadcrumb = () => {
 
     return (
         <div className="left homeIcon">

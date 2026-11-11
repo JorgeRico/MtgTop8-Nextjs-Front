@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { LeagueTournamentType } from "@/types/schemas/database/league";
 
-const LeagueTournamentTitle: React.FC<LeagueTournamentType> = ({ leagueName, format, isBlured, numPlayers, classification = null, location, locationName }) => {
+const LeagueTournamentTitle = ({ leagueName, format, isBlured, numPlayers, classification, location, locationName }: LeagueTournamentType) => {
     const t = useTranslations('league');
 
     const getLocation = () => {

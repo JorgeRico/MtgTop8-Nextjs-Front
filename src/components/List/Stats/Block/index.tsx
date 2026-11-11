@@ -3,7 +3,7 @@ import Header from "@/components/List/Stats/Block/Header";
 import Content from "@/components/List/Stats/Block/Content";
 import { StatsArrayItemsType } from "@/types/schemas/database/stats";
 
-const StatsList: React.FC<StatsArrayItemsType> = ({ items, isPlayer, text }) => {
+const StatsList = ({ items, isPlayer, text }: StatsArrayItemsType) => {
     return (
         <>
             <Header isPlayer={isPlayer} />
