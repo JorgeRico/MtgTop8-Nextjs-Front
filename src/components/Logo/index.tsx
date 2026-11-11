@@ -3,7 +3,7 @@ import IconsImage from "@/components/Logo/Images/Icons";
 import LogoImage from "@/components/Logo/Images/Image";
 import endpoints from "@/types/server/endpoints";
 
-const Logo: React.FC = () => {
+const Logo = () => {
     return (
         <Link href={endpoints.API_HOME}>
             <IconsImage />

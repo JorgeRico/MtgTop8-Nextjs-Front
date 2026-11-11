@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
 import Link from 'next/link';
 import Button from "@/components/List/Button";
 import { getFormat } from '@/hooks/useCommon';
@@ -6,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { LeagueItemsType } from "@/types/schemas/database/league";
 
-const LeagueList: React.FC<LeagueItemsType> = ({ url, items, isBlured }) => {
+const LeagueList = ({ url, items, isBlured }: LeagueItemsType) => {
     const t    = useTranslations('league');
     const tags = useTranslations('alt-tags');
 
@@ -41,8 +40,8 @@ const LeagueList: React.FC<LeagueItemsType> = ({ url, items, isBlured }) => {
     return (
         <section className={`left w100 overflowHidden ${isBlured ? 'blink blured' : ''}`}>
             {(items?.length > 0) && (
-                items?.map((item) => (
-                    <article className="listItem pointer title mb15 overflowHidden" key={uuidv4()}>
+                items?.map((item, index) => (
+                    <article className="listItem pointer title mb15 overflowHidden" key={index}>
                         <Link href={url + item.id}>
                             {leagueItemBlock(item)}
                         </Link>

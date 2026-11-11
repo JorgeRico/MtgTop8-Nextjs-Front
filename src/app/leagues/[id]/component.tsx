@@ -15,17 +15,23 @@ import { LeagueType, AveragePlayersLeague } from "@/types/schemas/database/leagu
 import fakeLeague from "@/fakeData/league";
 import LeagueTournamentTitle from "@/components/List/League/Title";
 
-const LeagueComponent = () => {
+interface LeagueComponentProps {
+    id: string;
+    initialLeague: LeagueType;
+    initialAverage: number;
+}
+
+const LeagueComponent = ({ id, initialLeague, initialAverage }: LeagueComponentProps) => {
     const params                                = useParams<{ id: string }>();
-    const [ leagueName, setLeagueName ]         = useState<string>('');
-    const [ isLoading, setIsLoading ]           = useState<boolean>(true);
-    const [ leagueFormat, setLeagueFormat ]     = useState<string>('');
-    const [ location, setLocation ]             = useState<string | null>(null);
-    const [ locationName, setLocationName ]     = useState<string>('');
-    const [ year, setYear ]                     = useState<string>('');
-    const [ classification, setClassification ] = useState<string>('');
+    const [ leagueName, setLeagueName ]         = useState<string>(initialLeague.name);
+    const [ isLoading, setIsLoading ]           = useState<boolean>(false);
+    const [ leagueFormat, setLeagueFormat ]     = useState<string>(getFormat(initialLeague.isLegacy));
+    const [ location, setLocation ]             = useState<string | null>(initialLeague.location);
+    const [ locationName, setLocationName ]     = useState<string>(initialLeague.locationName);
+    const [ year, setYear ]                     = useState<string>(String(initialLeague.year));
+    const [ classification, setClassification ] = useState<string>(initialLeague.classification);
     const t                                     = useTranslations('seo-tags');
-    const [ numPlayers, setNumPlayers ]         = useState<number>(0);
+    const [ numPlayers, setNumPlayers ]         = useState<number>(initialAverage);
 
     useEffect(() => {
         async function apiCall(): Promise<void> {
@@ -55,7 +61,7 @@ const LeagueComponent = () => {
         }
         apiAverageCall();
         apiCall();
-    }, []);
+    }, [params.id]);
 
     return (
         <main>

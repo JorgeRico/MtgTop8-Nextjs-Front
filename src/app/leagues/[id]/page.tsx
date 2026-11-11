@@ -5,6 +5,7 @@ import { getTranslations } from 'next-intl/server';
 import LeagueComponent from './component';
 import { seo_tags } from '@/components/Seo';
 import { baseUrl } from "@/types/server/baseUrl";
+import { LeagueType, AveragePlayersLeague } from "@/types/schemas/database/league";
 
 interface MetadataProps {
     params: Promise<{ locale: string, id: string }>
@@ -24,10 +25,26 @@ export async function generateMetadata({params,}: MetadataProps): Promise<Metada
     return seo_tags(title, description, url);
 }
 
-const League: React.FC = () => {
-    return (
-        <LeagueComponent></LeagueComponent>
-    );
+interface PageProps {
+    params: Promise<{ locale: string, id: string }>
 }
 
-export default League;
+export default async function LeaguePage({ params }: PageProps) {
+    const { id } = await params;
+
+    const [leagueRes, avgRes] = await Promise.all([
+        fetch(replaceUrlIdParam(endpoints.API_LEAGUE_ID, id)),
+        fetch(replaceUrlIdParam(endpoints.API_LEAGUE_ID_AVERAGE, id))
+    ]);
+
+    const league: LeagueType = await leagueRes.json();
+    const average: AveragePlayersLeague = await avgRes.json();
+
+    return (
+        <LeagueComponent
+            id={id}
+            initialLeague={league}
+            initialAverage={average.average}
+        />
+    );
+}

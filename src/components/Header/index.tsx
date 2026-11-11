@@ -4,7 +4,7 @@ import Language from "@/components/Language/Language";
 import endpoints from "@/types/server/endpoints";
 import { useTranslations } from 'next-intl';
 
-const Header: React.FC = () => {
+const Header = () => {
     const t = useTranslations('header');
 
     return (

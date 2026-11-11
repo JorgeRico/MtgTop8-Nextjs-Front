@@ -1,10 +1,9 @@
-import { v4 as uuidv4 } from "uuid";
 import Link from 'next/link';
 import TournamentItem from "@/components/List/Tournament/Block";
 import { useTranslations } from 'next-intl';
 import { TournamentNormalType } from "@/types/schemas/database/tournament";
 
-const TournamentList: React.FC<TournamentNormalType> = ({ url, items }) => {
+const TournamentList = ({ url, items }: TournamentNormalType) => {
     const t = useTranslations('tournaments');
 
     return (
@@ -12,8 +11,8 @@ const TournamentList: React.FC<TournamentNormalType> = ({ url, items }) => {
             {(items.length > 0) && (
                 <>
                     {items.map((item) => (
-                        <div key={uuidv4()} className="left w100 listItem pointer title mb5" aria-label={item.name}>
-                            <Link key={Math.random()} href={url + item.id}>
+                        <div key={item.id} className="left w100 listItem pointer title mb5" aria-label={item.name}>
+                            <Link key={item.id} href={url + item.id}>
                                 <TournamentItem
                                     name        = {item.name}
                                     description = {`${t('block.Date')}: ${item.date}   |   ${item.players} ${t('block.players')}`}

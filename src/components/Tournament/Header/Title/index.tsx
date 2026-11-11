@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { TournamentBluredType } from "@/types/schemas/database/tournament";
 import { getFormat } from '@/hooks/useCommon';
 
-const TournamentTitle: React.FC<TournamentBluredType> = ({ tournament, isBlured }) => {
+const TournamentTitle = ({ tournament, isBlured }: TournamentBluredType) => {
     const t = useTranslations('tournaments');
 
     return (

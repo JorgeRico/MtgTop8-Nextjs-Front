@@ -1,6 +1,6 @@
 import { PlayerLineType } from "@/types/schemas/database/player";
 
-const BlockLine: React.FC<PlayerLineType> = ({ position, player, deck, isHeader = false }) => {
+const BlockLine = ({ position, player, deck, isHeader = false }: PlayerLineType) => {
     return (
         <>
             <div className="padTournamentBox w-20">

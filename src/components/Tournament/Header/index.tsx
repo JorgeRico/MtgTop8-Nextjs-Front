@@ -2,7 +2,7 @@ import { TournamentBluredType } from "@/types/schemas/database/tournament";
 import HeaderTitle from "@/components/Tournament/Header/Title";
 import HeaderSubTitle from "@/components/Tournament/Header/SubTitle";
 
-const TournamentBlock: React.FC<TournamentBluredType> = ({ tournament, isBlured }) => {
+const TournamentBlock = ({ tournament, isBlured }: TournamentBluredType) => {
     return (
         <main>
             <HeaderTitle

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import { LinkType } from "@/types/schemas/website/link";
 
-const LinkImage: React.FC<LinkType> = ({url, className, img, height, width}) => {
+const LinkImage = ({url, className, img, height, width}: LinkType) => {
     return (
         <Link href={url} className={className}>
             <Image

@@ -4,7 +4,7 @@ import DashItemBreadcrumb from "@/components/Breadcrumb/Items/Dash";
 import { useTranslations } from 'next-intl';
 import { TitleType } from "@/types/schemas/website/title";
 
-const BreadcrumbLeague: React.FC<TitleType> = ({ title }) => {
+const BreadcrumbLeague = ({ title }: TitleType) => {
     const t = useTranslations('header');
 
     return (

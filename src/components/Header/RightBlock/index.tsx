@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import { HeaderRightType } from "@/types/schemas/website/header";
 
-const HeaderRightBlock: React.FC<HeaderRightType> = ({ image, text, endpoint }) => {
+const HeaderRightBlock = ({ image, text, endpoint }: HeaderRightType) => {
     const t = useTranslations('header');
 
     return (

@@ -9,7 +9,7 @@ type MyComponentProps = {
     endpoint : string;
 }
 
-const LeagueStats: React.FC<MyComponentProps> = ({ id, endpoint }) => {
+const LeagueStats = ({ id, endpoint }: MyComponentProps) => {
     const t = useTranslations('stats');
 
     return (

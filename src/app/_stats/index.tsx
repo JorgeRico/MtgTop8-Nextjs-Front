@@ -3,7 +3,7 @@ import StatsBox from "@/components/List/Stats";
 import endpoints from "@/types/server/endpoints";
 import { StatsType } from "@/types/schemas/database/stats";
 
-const LeagueStats: React.FC<StatsType> = ({ id, isLeague, title }) => {
+const LeagueStats = ({ id, isLeague, title }: StatsType) => {
     const [ showElements, setShowElements ] = useState<boolean>(false);
 
     useEffect(() => {
