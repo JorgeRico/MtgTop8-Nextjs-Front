@@ -14,12 +14,17 @@ import { AxiosResponse } from 'axios';
 import fakeTournament from "@/fakeData/tournament";
 import Header from "@/components/Tournament/Header";
 
-const TournamentComponent: React.FC = () => {
+interface TournamentComponentProps {
+    id: string;
+    initialTournament: TournamentType;
+}
+
+const TournamentComponent: React.FC<TournamentComponentProps> = ({ id, initialTournament }) => {
     const params                                = useParams<{ id: string }>();
-    const [ tournament, setTournament]          = useState<TournamentType>();
+    const [ tournament, setTournament]          = useState<TournamentType>(initialTournament);
     const [ loading, setLoading ]               = useState<boolean>(false);
     const t                                     = useTranslations('seo-tags');
-    const [ breadcrumbText, setBreadcrumbText ] = useState<string>('');
+    const [ breadcrumbText, setBreadcrumbText ] = useState<string>(initialTournament.leagueName + ' ' + initialTournament.year);
 
     useEffect(() => {
         async function apiCall(): Promise<void> {
@@ -44,7 +49,7 @@ const TournamentComponent: React.FC = () => {
         }
 
         apiCall();
-    }, []);
+    }, [params.id]);
 
     return (
         <main>
@@ -59,7 +64,7 @@ const TournamentComponent: React.FC = () => {
                 }
             />
             <Header
-                tournament={tournament ? tournament : fakeTournament}
+                tournament={tournament}
                 isBlured={!loading}
             />
             <TournamentPlayers
