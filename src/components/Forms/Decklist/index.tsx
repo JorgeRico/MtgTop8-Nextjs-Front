@@ -122,7 +122,7 @@ const DeckListForm: React.FC = () => {
 
         try {
             // Fetch an existing PDF document
-            const url              = '/pdf/decklist.pdf'
+            const url              = process.env.NEXT_PUBLIC_DECKLIST_PDF_URL || '/pdf/decklist.pdf'
             const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
 
             // Load a PDFDocument from the existing PDF bytes
