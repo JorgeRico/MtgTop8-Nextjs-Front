@@ -16,23 +16,18 @@ Next.js 16 + React 19 frontend for the MTG Stats website (Magic: The Gathering t
 
 ## Project layout (front/)
 ```
-src/app/                  # Next.js App Router pages
-  layout.tsx              # Root layout, NextIntlClientProvider, metadata/viewport
-  page.tsx                # Home (current + past leagues)
-  leagues/[id]/page.tsx   # SSR league detail
-  tournaments/[id]/page.tsx # SSR tournament detail
-  decklist/page.tsx       # Decklist PDF form
-  contact/page.tsx        # EmailJS contact form
-  not-found.tsx           # 404
-  sitemap.ts / robots.ts / manifest.ts / api/og/route.tsx
-src/components/           # Shared UI components (Header, Footer, List, Forms, Tournament, etc.)
-src/hooks/                # useApi (axios helpers), useCommon (format/modal helpers)
-src/i18n/request.ts       # next-intl locale config (cookie-based)
-src/types/                # TypeScript schemas (database + website) and server constants
-src/fakeData/             # Blur/placeholder data for loading states
-messages/                 # en.json, es.json, cat.json
-public/                   # static assets (images, pdf)
-package.json / pnpm-lock.yaml / next.config.ts / tsconfig.json / eslint.config.mjs
+front/
+├── src/
+│   ├── app/              # Next.js App Router pages (layouts, pages, route handlers)
+│   ├── components/       # Shared UI components (Header, Footer, List, Forms, Tournament, etc.)
+│   ├── hooks/            # Custom React hooks (useApi, useCommon)
+│   ├── i18n/             # next-intl locale config
+│   ├── types/            # TypeScript schemas (database + website) and server constants
+│   └── fakeData/         # Blur/placeholder data for loading states
+├── messages/             # i18n messages (en.json, es.json, cat.json)
+└── public/
+    ├── images/           # Static image assets
+    └── pdf/              # PDF templates/assets
 ```
 
 ## Coding rules & conventions
