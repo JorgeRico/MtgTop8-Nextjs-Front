@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
 import "./module.css"
 import { PaginationType } from "@/types/schemas/website/pagination";
 import { useTranslations } from 'next-intl';
@@ -38,17 +37,17 @@ const Pagination: React.FC<PaginationType> = ({ text, total, itemsPerPage, curre
             </section>
             {!isDisabled &&
                 <section className="right padPagination flex">
-                    <article key={uuidv4()} className="">
+                    <article key="prev-button" className="">
                         <button aria-label={t('Previous page')} disabled={firstPage == currentPage} className={firstPage == currentPage ? "arrowButton disabled" : "arrowButton pointer"} onClick={() => handleClickPrevious()}> 
                             <span>&#171;</span>
                         </button>
                     </article>
                     {pageArray?.map((number) => (
-                        <article key={uuidv4()} className="">
+                        <article key={number} className="">
                             <button aria-label={t('Current page')} disabled={number == currentPage} className={number != currentPage ? "pagButton pointer" : "pagButton current disabled"} onClick={() => handleClick(number)}>{number}</button>
                         </article>
                     ))}
-                    <article key={uuidv4()} className="">
+                    <article key="next-button" className="">
                         <button aria-label={t('Next page')} className={lastPage == currentPage ? "arrowButton disabled" : "arrowButton pointer" } onClick={() => handleClickNext()}>
                             <span>&#187;</span>
                         </button>
