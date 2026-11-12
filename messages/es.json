@@ -16,18 +16,11 @@
       "league": "liga"
     }
   },
-  "footer": {
-    "copyright": "The literal and graphical information presented on this site about Magic: The Gathering, including card images and mana symbols, is copyright Wizards of the Coast, LLC. Scryfall is not produced by or endorsed by Wizards of the Coast",
-    "Magic The Gathering Tournaments Stats": "Magic The Gathering Estadisticas de torneos",
-    "Legacy Catalan Tournaments": "Torneos de Magic The Gathering - Legacy en Catalu\u00f1a",
-    "Explore current leagues, view standings and decks": "Explora las ligas actuales, revisa tops y barajas",
-    "Explore past leagues, view standings and decks": "Explora las ligas pasadas, revisa tops y barajas",
-    "check on instagram": "Siguenos en instagram - magic the gathering - legacy.cat",
-    "check on x": "Siguenos en x - magic the gathering - legacy.cat",
-    "check on youtube channel - mtg - catmagiclegacy": "Sigue nuestro canal de youtube - magic the gathering - catmagiclegacy",
-    "check on twitch channel - mtg - catmagiclegacy": "Siguenos en nuestro canal de twitch - magic the gathering - catmagiclegacy",
-    "Change language": "Cambia el idioma",
-    "Follow us": "Siguenos"
+"footer": {
+    "brand-title": "MTG LEGACY STATS",
+    "description": "Seguimiento official de partidas, analisis meta, emparejamientos y base de datos historica para torneos competitivos de Magic: The Gathering Legacy en Cataluna.",
+    "copyright": "© 2025 MTG Legacy Stats Catalunya. All tournament circuits, pairings, and player rankings community maintained.",
+    "trademark": "Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. This website is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC."
   },
   "alt-tags": {
     "decklist pdf - mtg legacy cat": "decklist pdf - mtg legacy cat",
