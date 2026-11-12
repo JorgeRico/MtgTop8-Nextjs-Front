@@ -1,18 +1,34 @@
-import { Locale } from 'next-intl';
-import { getLocale } from 'next-intl/server';
-import LocaleSwitcher from './LocaleSwitcher';
-import { cookies } from 'next/headers';
+
+import { cookies } from "next/headers";
+import LanguageMenu from "./LocaleSwitcher";
+import languages from "@/types/server/languages";
 
 export default async function Language() {
-    const locale = await getLocale();
+    const cookieStore = await cookies();
 
-    async function changeLocaleAction(locale: Locale) {
-        'use server';
+    const localeCode = cookieStore.get("locale")?.value ?? "en";
+
+    const currentLocale =
+        languages.find((lang) => lang.code === localeCode) ??
+        languages.find((lang) => lang.code === "en") ??
+        languages[0];
+
+    async function changeLocaleAction(locale: string) {
+        "use server";
+
         const store = await cookies();
-        store.set('locale', locale);
+
+        store.set("locale", locale, {
+            path: "/",
+            sameSite: "lax",
+            maxAge: 60 * 60 * 24 * 365,
+        });
     }
 
     return (
-        <LocaleSwitcher changeLocaleAction={changeLocaleAction} />
+        <LanguageMenu
+            currentLocale={currentLocale}
+            onLanguageChange={changeLocaleAction}
+        />
     );
 }
