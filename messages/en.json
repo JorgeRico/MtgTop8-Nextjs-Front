@@ -19,7 +19,7 @@
   "footer": {
     "brand-title": "MTG LEGACY STATS",
     "description": "The official match tracker, meta analytics, pairings, and historical circuit database for competitive Magic: The Gathering Legacy tournaments in Catalonia.",
-    "copyright": "© 2025 MTG Legacy Stats Catalunya. All tournament circuits, pairings, and player rankings community maintained.",
+    "copyright": "\u00a9 2025 MTG Legacy Stats Catalunya. All tournament circuits, pairings, and player rankings community maintained.",
     "trademark": "Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. This website is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC."
   },
   "alt-tags": {
@@ -62,6 +62,9 @@
   "league": {
     "Format": "Format",
     "View league": "View league",
+    "Competitors": "Competitors",
+    "Completed": "Completed",
+    "Top 8 Decks": "Top 8 Decks",
     "tournament": {
       "Location": "Location",
       "Tournaments": "Tournaments",
@@ -190,5 +193,11 @@
     "Previous page": "Previous page",
     "Next page": "Next page",
     "Current page": "Current page"
+  },
+  "broadcast": {
+    "community_broadcast_hub": "COMMUNITY BROADCAST HUB",
+    "follow_catalan_legacy_online": "Follow Catalan Legacy Online",
+    "watch_feature_match_replays": "Watch feature match replays with Catalan commentary, deck techs from regional tournament finalists, and live Twitch streams from tournament weekends.",
+    "catalan_legacy_social_channels": "Catalan Legacy social channels"
   }
 }

@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -500,4 +498,252 @@ h3 {
 .bg-gradient-5 {
     background-color: #10b981;
     box-shadow: 0 0 8px rgba(16,185,129,.8);
+}
+
+
+@layer base {
+  :root {
+    color: #f8fafc;
+    background: #0c1117;
+    font-synthesis: none;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100dvh;
+    background: #0c1117;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .broadcast-hub {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 24px;
+    border-radius: 12px;
+    background: #121820;
+    box-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 10%),
+      0 2px 4px -2px rgb(0 0 0 / 10%);
+  }
+
+  .broadcast-copy {
+    min-width: 0;
+    max-width: 576px;
+    display: flex;
+    flex: 1 1 420px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .broadcast-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ef4444;
+    font-family: "Inter:Bold", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0.55px;
+  }
+
+  .live-dot {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 10px;
+    border-radius: 9999px;
+    background: #ef4444;
+    box-shadow: 0 0 0 0 rgb(239 68 68 / 35%);
+    animation: live-pulse 2.4s ease-out infinite;
+  }
+
+  .broadcast-hub h1 {
+    color: #f8fafc;
+    font-family: "Plus Jakarta Sans:SemiBold", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .broadcast-copy > p {
+    max-width: 576px;
+    color: #94a3b8;
+    font-family: "Inter:Regular", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .social-grid {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .social-card {
+    min-width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #1c2025;
+    color: inherit;
+    text-decoration: none;
+    transition:
+      background-color 160ms ease,
+      transform 160ms ease,
+      box-shadow 160ms ease;
+  }
+
+  .social-card:hover {
+    z-index: 1;
+    background: #252a30;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgb(0 0 0 / 22%);
+  }
+
+  .social-card:focus-visible {
+    z-index: 1;
+    outline: 2px solid #f8fafc;
+    outline-offset: 2px;
+  }
+
+  .social-card__top {
+    width: 100%;
+    display: flex;
+    min-height: 19px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+  }
+
+  .social-card__top img {
+    flex: 0 0 auto;
+    display: block;
+    max-width: none;
+  }
+
+  .social-card__tag {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "Inter:Bold", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 15px;
+  }
+
+  .social-card__name {
+    width: 100%;
+    padding-top: 4px;
+    color: #f8fafc;
+    font-family: "Inter:Semi Bold", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.24px;
+  }
+
+  .social-card__detail {
+    color: #94a3b8;
+    font-family: "Inter:Regular", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+}
+
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(239 68 68 / 35%);
+  }
+  60%,
+  100% {
+    box-shadow: 0 0 0 6px rgb(239 68 68 / 0%);
+  }
+}
+
+@media (max-width: 1050px) {
+  .broadcast-hub {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .broadcast-copy {
+    flex-basis: auto;
+  }
+
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .social-card {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .broadcast-hub {
+    min-height: 100dvh;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px 20px;
+    border-radius: 0;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot {
+    animation: none;
+  }
+
+  .social-card {
+    transition: none;
+  }
+}
+
+.social-twitter {
+    filter: brightness(0) saturate(100%) invert(64%) sepia(85%) 
+          saturate(1352%) hue-rotate(145deg) brightness(95%) contrast(101%);    
+}
+
+.social-twitch {
+    filter: brightness(0) saturate(100%) invert(82%) sepia(17%)
+          saturate(1025%) hue-rotate(213deg) brightness(103%) contrast(101%);
+}
+
+.social-youtube {
+    filter: brightness(0) saturate(100%) invert(36%) sepia(79%)
+          saturate(2326%) hue-rotate(333deg) brightness(97%) contrast(94%);
+}
+
+.social-instagram {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(25%)
+          saturate(607%) hue-rotate(321deg) brightness(101%) contrast(101%);
 }
