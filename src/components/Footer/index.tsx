@@ -6,7 +6,7 @@ function Footer() {
     const t = useTranslations("footer");
 
     return (
-        <footer className="w-full bg-[#121820] px-5 py-10 sm:px-8">
+        <footer className="w-full bg-[#121820] mt-10 px-5 py-10 sm:px-8">
             <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-10 sm:px-6 lg:px-12">
                 <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
                     <div className="max-w-xl">

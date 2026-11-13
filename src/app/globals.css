@@ -76,7 +76,7 @@ body {
 }
 
 /* Modern flexbox utilities (additive; existing float classes still work) */
-.flex {
+/* .flex {
     display: flex;
 }
 .flex-col {
@@ -476,7 +476,7 @@ h3 {
             margin-left: 0px;
         }
     }
-}
+} */
 
 /* Gradient circles */
 .bg-gradient-1 {
