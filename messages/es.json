@@ -179,10 +179,6 @@
       "description": "Comunidad dedicada al formato Legacy de Magic: The Gathering en Catalu\u00f1a, centrada en la organizaci\u00f3n de ligas, torneos y eventos competitivos para jugadores de todos los niveles. A trav\u00e9s de encuentros regulares en tiendas locales y competiciones especiales, fomenta un entorno activo donde los participantes pueden poner a prueba sus habilidades, compartir estrategias y disfrutar del juego en un ambiente cercano pero competitivo.",
       "stats": "Estadisticas de la temporada"
     },
-    "past-leagues": {
-      "text-description": "Explora las ligas pasadas, revisa tops y barajas",
-      "pagination": "Ligas pasadas"
-    },
     "current-leagues": {
       "text-description": "Explora las ligas actuales, revisa tops y barajas",
       "pagination": "Ligas actuales"
@@ -199,5 +195,18 @@
     "follow_catalan_legacy_online": "Seguir Catalan Legacy Online",
     "watch_feature_match_replays": "Ver reposiciones de partidos destacados con comentario catal\u00e1n, deck techs de finalistas regionales y transmisiones en vivo de Twitch en los fines de torneo.",
     "catalan_legacy_social_channels": "Canales sociales de Catalan Legacy"
+  },
+  "past-leagues": {
+    "no-leagues-data": "No hay resultados",
+    "text-description": "Explora las ligas pasadas, revisa tops y barajas",
+    "pagination": "Ligas pasadas",
+    "historical-archives": "Archivos hist\u00f3ricos disponibles desde 2016 hasta 2024 (m\u00e1s de 48 etapas de liga completadas).",
+    "season": "Ligas pasadas",
+    "Winner": "Ganador",
+    "Tournaments": "Torneos",
+    "Competitors": "Competidores",
+    "Completed": "Completado",
+    "Top 8 Decks": "Top 8 Barajas",
+    "View league": "Ver liga"
   }
 }

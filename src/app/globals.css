@@ -4,7 +4,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--background);
+    /* background-color: var(--background); */
     color: var(--text-primary);
     margin: 0;
     padding: 0;
@@ -13,8 +13,8 @@ body {
 }
 
 :root {
-    --background:  #151414;
-    --background-black: black;
+    /* --background:  #151414;
+    --background-black: black; */
     --background-footer: #202020;
     --background-even: #112230;
     --background-blue: rgba(25, 25, 112, 0.8);
@@ -31,7 +31,7 @@ body {
     --border-pdf: darkgoldenrod;
     --border-red: #562a1d;
 }
-
+/* 
 .border-red {
     border: 1px solid var(--border-red);
     border-radius: 5px;
@@ -59,7 +59,7 @@ body {
 
 .color-gray {
     color: var(--text-gray);
-}
+} */
 
 .container {
     width: 1260px;

@@ -179,10 +179,6 @@
       "description": "Catalan MTG Legacy \u00e9s una comunitat dedicada al format Legacy de Magic: The Gathering a Catalunya, centrada en l\u2019organitzaci\u00f3 de lligues, tornejos i esdeveniments competitius per a jugadors de tots els nivells. Mitjan\u00e7ant trobades regulars en botigues locals i competicions especials, fomenta un entorn actiu on els participants poden posar a prova les seves habilitats, compartir estrat\u00e8gies i gaudir del joc en un ambient proper per\u00f2 competitiu.",
       "stats": "Estadistiques de la temporada"
     },
-    "past-leagues": {
-      "text-description": "Explora les lligues pasades, revisa tops i baralles guanyadores",
-      "pagination": "Lligues pasades"
-    },
     "current-leagues": {
       "text-description": "Explora les lligues actuals, revisa tops i baralles guanyadores",
       "pagination": "Lligues actuals"
@@ -199,5 +195,18 @@
     "follow_catalan_legacy_online": "Segueix Catalan Legacy Online",
     "watch_feature_match_replays": "Veure reposicions de.partits destacats amb comentari catal\u00e0, deck techs de finalistes regionals i transmits en viu de Twitch en les finals de tornec.",
     "catalan_legacy_social_channels": "Canals socials de Catalan Legacy"
+  },
+  "past-leagues": {
+    "no-leagues-data": "No hi ha resultats",
+    "text-description": "Explora les lligues pasades, revisa tops i baralles guanyadores",
+    "pagination": "Lligues pasades",
+    "historical-archives": "Arxius hist\u00f2rics disponibles de 2016 a 2024 (m\u00e9s de 48 etapes de liga completades).",
+    "season": "Lligues pasades",
+    "Winner": "Guanyador",
+    "Tournaments": "Torneigs",
+    "Competitors": "Competidors",
+    "Completed": "Completat",
+    "Top 8 Decks": "Top 8 Baralles",
+    "View league": "Veure la lliga"
   }
 }

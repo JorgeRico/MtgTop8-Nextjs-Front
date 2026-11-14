@@ -179,10 +179,6 @@
       "description": "Community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting.",
       "stats": "Season Stats"
     },
-    "past-leagues": {
-      "text-description": "Explore past leagues, view standings and decks",
-      "pagination": "Past Leagues"
-    },
     "current-leagues": {
       "text-description": "Explore current leagues, view standings and decks",
       "pagination": "Current Leagues"
@@ -199,5 +195,18 @@
     "follow_catalan_legacy_online": "Follow Catalan Legacy Online",
     "watch_feature_match_replays": "Watch feature match replays with Catalan commentary, deck techs from regional tournament finalists, and live Twitch streams from tournament weekends.",
     "catalan_legacy_social_channels": "Catalan Legacy social channels"
+  },
+  "past-leagues": {
+    "no-leagues-data": "No results",
+    "text-description": "Explore past leagues, view standings and decks",
+    "pagination": "Past Leagues",
+    "historical-archives": "Historical archives available from 2016 through 2024 (over 48 completed league stages).",
+    "season": "Old Leagues",
+    "Winner": "Winner",
+    "Tournaments": "Tournaments",
+    "Competitors": "Competitors",
+    "Completed": "Completed",
+    "Top 8 Decks": "Top 8 Decks",
+    "View league": "View league"
   }
 }

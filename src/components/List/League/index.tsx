@@ -1,55 +1,68 @@
 import Link from 'next/link';
-import Button from "@/components/List/Button";
-import { getFormat } from '@/hooks/useCommon';
+// import Button from "@/components/List/Button";
+// import { getFormat } from '@/hooks/useCommon';
 import { useTranslations } from 'next-intl';
-import Image from "next/image";
+// import Image from "next/image";
 import { LeagueItemsType } from "@/types/schemas/database/league";
+const assetHomePathPrefix = "/images/home";
 
-const LeagueList = ({ url, items, isBlured }: LeagueItemsType) => {
+
+const LeagueList = ({ items }: LeagueItemsType) => {
     const t    = useTranslations('league');
     const tags = useTranslations('alt-tags');
 
     const leagueItemBlock = (item) => {
         return (
-            <div className="left w100 mb10 bg-footer">
-                <div className="wAuto padBox overflowHidden border-red">
-                    <div className="cupBox border-grey left radius5 bg-red p5 w-25">
-                        <Image
-                            className = "cupIcon w-15"
-                            src       = "/images/cup.webp"
-                            height    = {14}
-                            width     = {15}
-                            alt       = {tags('Cup Champion')}
-                            title     = {tags('Cup Champion')}
-                            priority
-                        />
-                    </div>
-                    <div className="left format wAuto ml25 tournamentDescription" aria-label={`${item.name} ${item.year}`}>
-                        <strong>{item.name} {item.year}</strong>
-                        <br></br>
-                        <span className="left f12 mt5" style={{whiteSpace: 'pre-wrap'}}>
-                            {t('Format')}: {getFormat(item.isLegacy)}
+            <div className="rounded-xl bg-surface-card p-space-md md:p-space-lg shadow-sm hover:bg-surface-elevated transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+                <div className="flex items-center gap-space-md">
+                    <div className="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-arcane-gold shrink-0">
+                        <span className="material-symbols-outlined text-[26px]">
+                            <img src={`${assetHomePathPrefix}/badge.png`} alt={tags('Cup Champion')} title={tags('Cup Champion')} className="" />
                         </span>
                     </div>
-                    <Button buttonText={t('View league')}></Button>
+                    <div className="flex flex-col">
+                        <div className="flex items-center gap-2">
+                            <span className="font-label-sm text-label-sm text-mana-black">Sabadell</span>
+                            <span className="text-mana-black">•</span>
+                            <span className="font-label-sm text-label-sm text-primary">Winner: Jordi M. (Death & Taxes)</span>
+                        </div>
+                        <h3 className="font-headline-sm text-headline-sm text-mana-white mt-0.5">{item.name}</h3>
+                        <div className="flex items-center gap-space-md mt-1 font-body-sm text-body-sm text-mana-black">
+                            <span>8 Tournaments</span>
+                            <span>62 Competitors</span>
+                            <span className="text-mana-green">Completed Nov 2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex items-center gap-space-sm self-end md:self-center">
+                    <Link className="px-3.5 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-mana-white font-label-md text-label-md flex items-center gap-1 transition-colors" href="#">
+                        <span className="material-symbols-outlined text-[16px]">
+                            <img src={`${assetHomePathPrefix}/list.png`} alt={tags('Cup Champion')} title={tags('Cup Champion')} className="" />
+                        </span>
+                        <span>Top 8 Decks</span>
+                    </Link>
+                    <a className="px-4 py-2 rounded-lg bg-primary-container hover:bg-on-primary-container text-white font-label-md text-label-md flex items-center gap-1 shadow-sm transition-colors" href="#">
+                        <span>View league</span>
+                        <span className="material-symbols-outlined text-[16px]">
+                            <img src={`${assetHomePathPrefix}/full_arrow_forward.png`} alt={tags('Cup Champion')} title={tags('Cup Champion')} className="" />
+                        </span>
+                    </a>
                 </div>
             </div>
+            
         )
     }
 
     return (
-        <section className={`left w100 overflowHidden ${isBlured ? 'blink blured' : ''}`}>
+        <>
             {(items?.length > 0) && (
                 items?.map((item, index) => (
-                    <article className="listItem pointer title mb15 overflowHidden" key={index}>
-                        <Link href={url + item.id}>
-                            {leagueItemBlock(item)}
-                        </Link>
-                    </article>
+                    <div key={index}>
+                        {leagueItemBlock(item)}
+                    </div>
                 ))
             )}
-        </section>
+        </>
     )
 }
-
 export default LeagueList;

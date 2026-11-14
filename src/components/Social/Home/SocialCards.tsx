@@ -37,7 +37,7 @@ const SocialCards = () => {
     }
 
     return (
-        <main className="mt-10 px-5 sm:px-8">
+        <main className="mt-10">
             <section className="broadcast-hub" aria-labelledby="broadcast-heading">
                 <div className="broadcast-copy">
                     <div className="broadcast-eyebrow">

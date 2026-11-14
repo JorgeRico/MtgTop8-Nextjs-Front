@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
-import "./module.css"
 import { PaginationType } from "@/types/schemas/website/pagination";
 import { useTranslations } from 'next-intl';
 
-
-const Pagination = ({ text, total, itemsPerPage, currentPage, setCurrentPage, isDisabled = false }: PaginationType) => {
+const Pagination = ({ total, itemsPerPage, currentPage, setCurrentPage, isDisabled = false }: PaginationType) => {
     const [ firstPage ]               = useState<number>(1);
     const [ lastPage ]                = useState<number>(Math.ceil(total / itemsPerPage));
     const [ pageArray, setPageArray ] = useState<number[]>([]);
@@ -30,31 +28,24 @@ const Pagination = ({ text, total, itemsPerPage, currentPage, setCurrentPage, is
         getPageNumbersArray();
     }, [])
 
+    // TODO: prev and next button are disabled now
+
     return (
-        <section className="left w100 grey-top">
-            <section className="left padPagination flex total" aria-label={`Total ${text}: ${total}`}>
-                Total {text}: {total}
-            </section>
+        <>
             {!isDisabled &&
-                <section className="right padPagination flex">
-                    <article key="prev-button" className="">
-                        <button aria-label={t('Previous page')} disabled={firstPage == currentPage} className={firstPage == currentPage ? "arrowButton disabled" : "arrowButton pointer"} onClick={() => handleClickPrevious()}> 
-                            <span>&#171;</span>
-                        </button>
-                    </article>
+                <section>
+                    <button aria-label={t('Previous page')} disabled={firstPage == currentPage} className={firstPage == currentPage ? "hidden" : "hidden cursor-pointer"} onClick={() => handleClickPrevious()}> 
+                        <span>&#171;</span>
+                    </button>
                     {pageArray?.map((number) => (
-                        <article key={number} className="">
-                            <button aria-label={t('Current page')} disabled={number == currentPage} className={number != currentPage ? "pagButton pointer" : "pagButton current disabled"} onClick={() => handleClick(number)}>{number}</button>
-                        </article>
+                        <button key={number} aria-label={t('Current page')} disabled={number == currentPage} className={number != currentPage ? "cursor-pointer" : "active currentdisabled"} onClick={() => handleClick(number)}>{number}</button>
                     ))}
-                    <article key="next-button" className="">
-                        <button aria-label={t('Next page')} className={lastPage == currentPage ? "arrowButton disabled" : "arrowButton pointer" } onClick={() => handleClickNext()}>
-                            <span>&#187;</span>
-                        </button>
-                    </article>
+                    <button aria-label={t('Next page')} className={lastPage == currentPage ? "hidden" : "hidden cursor-pointer" } onClick={() => handleClickNext()}>
+                        <span>&#187;</span>
+                    </button>
                 </section>
             }
-        </section>
+        </>
     );
 }
 

@@ -1,12 +1,12 @@
-import SimpleBreadcrumb from '@/components/Breadcrumb/Simple';
 import { useTranslations } from 'next-intl';
-import Title from '@/components/HTag/Title';
-import CurrentEvents from "@/app/_events/current";
+// import Title from '@/components/HTag/Title';
+// import CurrentEvents from "@/app/_events/current";
 import PastEvents from "@/app/_events/past";
+import SocialCards from "@/components/Social/Home/SocialCards";
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { seo_tags } from '@/components/Seo';
-import { baseUrl } from "@/types/server/baseUrl";
+import { baseUrl } from '@/types/server/baseUrl';
 
 interface MetadataProps {
     params: Promise<{ locale: string }>
@@ -25,12 +25,14 @@ const Home = () => {
     const t = useTranslations('home');
 
     return (
-        <main className="left w100">
-            <SimpleBreadcrumb isHome={true} />
-            <Title title={t('text-title')} />
+        <main className="mt-10 px-3">
+            {/* <Title title={t('text-title')} />
             <p className="color-gray mb40">{t('text-description')}</p>
-            <CurrentEvents title={t('Current Leagues')}></CurrentEvents>
+            
+             */}
+            {/* <CurrentEvents title={t('Current Leagues')}></CurrentEvents> */}
             <PastEvents title={t('Past Leagues')}></PastEvents>
+            <SocialCards></SocialCards>
         </main>
     );
 }

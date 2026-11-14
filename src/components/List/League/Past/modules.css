@@ -1,0 +1,475 @@
+.archive-page {
+  min-height: 100dvh;
+  /* background: #0a0e13; */
+  padding: 2px 2px 0;
+}
+
+.past-leagues {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.heading-icon {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #121820;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+.heading-icon img {
+  display: block;
+}
+
+.section-heading h1 {
+  font-family: "Plus Jakarta Sans:SemiBold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.section-heading p {
+  color: #94a3b8;
+  font-family: "Inter:Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.season-picker {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.season-picker span,
+.season-picker button {
+  color: #94a3b8;
+  font-family: "Inter:Bold", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.55px;
+  white-space: nowrap;
+}
+
+.season-picker span {
+  padding-right: 8px;
+}
+
+.season-picker button {
+  border-radius: 4px;
+  padding: 4px 10px;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.season-picker button:hover {
+  color: #f8fafc;
+}
+
+.season-picker button.active {
+  color: #f8fafc;
+  background: #1a222d;
+}
+
+.league-stack {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.league-card {
+  display: flex;
+  width: 100%;
+  min-height: 101px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  background: #121820;
+  padding: 24px;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+.league-summary {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 16px;
+}
+
+.medal-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #1c2025;
+}
+
+.medal-icon img,
+.card-actions img,
+.archive-bar img {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.league-copy {
+  min-width: 0;
+}
+
+.winner-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  font-family: "Inter:Bold", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.55px;
+  white-space: nowrap;
+}
+
+.winner-row .dot {
+  font-family: "Inter:Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.winner-row .winner {
+  color: #ffb690;
+}
+
+.league-copy h2 {
+  padding-top: 2px;
+  color: #f8fafc;
+  font-family: "Plus Jakarta Sans:SemiBold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.league-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 4px;
+  color: #94a3b8;
+  font-family: "Inter:Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.league-meta .completed {
+  color: #10b981;
+}
+
+.card-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-actions button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  padding: 8px 14px;
+  color: #f8fafc;
+  font-family: "Inter:Semi Bold", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.24px;
+  white-space: nowrap;
+  transition:
+    filter 150ms ease,
+    transform 150ms ease;
+}
+
+.card-actions button:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+.card-actions button:active {
+  transform: translateY(0);
+}
+
+.secondary-action {
+  background: #1c2025;
+}
+
+.card-actions .primary-action {
+  background: #f97316;
+  padding-inline: 16px;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+.archive-drawer {
+  overflow: hidden;
+  border-radius: 12px;
+  background: #0a0e13;
+}
+
+.archive-bar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.archive-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  font-family: "Inter:Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.archive-bar > button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #ffb690;
+  font-family: "Inter:Semi Bold", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.55px;
+}
+
+.archive-bar > button:hover {
+  color: #f97316;
+}
+
+.archive-years {
+  margin: 0 16px 16px;
+  border-top: 1px solid #1c2025;
+  padding-top: 14px;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.archive-years > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.archive-years button {
+  border-radius: 5px;
+  background: #1a222d;
+  padding: 5px 10px;
+  color: #f8fafc;
+  font-family: "Inter:Semi Bold", sans-serif;
+}
+
+.dialog-backdrop {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgb(4 7 10 / 78%);
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.league-dialog {
+  width: min(440px, 100%);
+  border: 1px solid #283342;
+  border-radius: 14px;
+  background: #121820;
+  padding: 28px;
+  box-shadow: 0 24px 80px rgb(0 0 0 / 45%);
+}
+
+.dialog-kicker {
+  color: #f97316;
+  font-family: "Inter:Bold", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+}
+
+.league-dialog h2 {
+  margin-top: 6px;
+  font-family: "Plus Jakarta Sans:SemiBold", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.league-dialog p {
+  margin-top: 8px;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.league-dialog button {
+  margin-top: 22px;
+  border-radius: 8px;
+  background: #f97316;
+  padding: 8px 18px;
+  font-family: "Inter:Semi Bold", sans-serif;
+  font-size: 12px;
+}
+
+button:focus-visible {
+  outline: 2px solid #ffb690;
+  outline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+  .archive-page {
+    padding: 16px;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .season-picker {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .season-picker span {
+    width: 100%;
+    padding-right: 0;
+    text-align: right;
+  }
+
+  .league-card {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .winner-row,
+  .league-meta {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 560px) {
+  .section-header,
+  .league-card,
+  .archive-bar {
+    flex-direction: column;
+  }
+
+  .section-header {
+    align-items: stretch;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-heading p {
+    margin-top: 2px;
+  }
+
+  .season-picker {
+    justify-content: flex-start;
+  }
+
+  .season-picker span {
+    width: auto;
+    padding-right: 4px;
+    text-align: left;
+  }
+
+  .league-card {
+    padding: 18px;
+  }
+
+  .league-summary {
+    align-items: flex-start;
+  }
+
+  .medal-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .winner-row .dot {
+    display: none;
+  }
+
+  .winner-row .winner {
+    width: 100%;
+  }
+
+  .card-actions {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .card-actions button {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .archive-bar {
+    align-items: flex-start;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 390px) {
+  .league-summary {
+    gap: 10px;
+  }
+
+  .league-meta {
+    gap: 6px 12px;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+}
