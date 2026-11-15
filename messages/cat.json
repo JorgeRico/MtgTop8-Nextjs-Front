@@ -1,11 +1,14 @@
 {
-	"home": {
+"home": {
 		"title": "MTG Legacy Stats Catalunya | Decks, Jugadors i resultats de tornejos",
-		"description": "Catalan MTG Legacy \u00e9s una comunitat dedicada al format Legacy de Magic: The Gathering a Catalunya, centrada en l\u2019organitzaci\u00f3 de lligues, tornejos i esdeveniments competitius per a jugadors de tots els nivells. Mitjan\u00e7ant trobades regulars en botigues locals i competicions especials, fomenta un entorn actiu on els participants poden posar a prova les seves habilitats, compartir estrat\u00e8gies i gaudir del joc en un ambient proper per\u00f2 competitiu.",
+		"description": "Catalan MTG Legacy \u00e9s una comunitat dedicada al format Legacy de Magic: The Gathering a Catalunya, centrada en l\u2019organitzaci\u00f3 de lligues, tornejos i esdeveniments competitius per a jugadors de tots els nivells. Mitjan\u00e7ant trobades regulars en botigues locals i competicions especials, fomenta un entorn actiu on els participants poden posar a prova les seves habilitats, compartir estratègies i gaudir del joc en un ambient proper per\u00f2 competitiu.",
 		"text-title": "Lligues MTG - Legacy",
 		"text-description": "Tornejos de Catalunya - Magic The Gathering",
 		"Current Leagues": "Lligues actuals - Legacy",
-		"Past Leagues": "Lligues pasades - Legacy"
+		"Past Leagues": "Lligues pasades - Legacy",
+		"catalan-circuit-2026": "Catalan competitive circuit 2026",
+		"league-title": "MTG Leagues — Legacy",
+		"league-description": "Magic: The Gathering Catalan Tournaments. Real-time pairings, Swiss standings, archetype meta-shares, and historical archives from across Barcelona, Vallès, and Girona."
 	},
 	"header": {
 		"Contact us": "Contacte",

@@ -520,6 +520,276 @@ h3 {
   }
 }
 
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter:Bold";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter:Regular";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans:Bold";
+  src: url("https://static.figma.com/font/PlusJakartaSans_wght__2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@layer base {
+  :root {
+    color: #f8fafc;
+    background: #090d12;
+    font-family: "Inter:Regular", Inter, sans-serif;
+    font-synthesis: none;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100dvh;
+    background: #090d12;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+.page-shell {
+  display: flex;
+  /* min-height: 100dvh; */
+  align-items: center;
+  background: #090d12;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 0;
+}
+
+.hero-copy {
+  display: flex;
+  width: 100%;
+  max-width: 672px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.circuit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 9999px;
+  background: #262a30;
+  padding: 4px 10px;
+  color: #ffb690;
+  font-family: "Inter:Bold", Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+}
+
+.circuit-dot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 9999px;
+  background: #ffb690;
+}
+
+.hero h1 {
+  color: #f8fafc;
+  font-family: "Plus Jakarta Sans:Bold", "Plus Jakarta Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.8px;
+}
+
+.hero-description {
+  color: #94a3b8;
+  font-family: "Inter:Regular", Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.stats-grid {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: stretch;
+  gap: 15px;
+}
+
+.stat-card {
+  display: flex;
+  min-width: 104px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #121820;
+  padding: 12px;
+  color: #f8fafc;
+  text-align: left;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.stat-card:last-child {
+  min-width: 134px;
+  padding-bottom: 26px;
+}
+
+.stat-card:hover,
+.stat-card.is-selected {
+  transform: translateY(-2px);
+  border-color: rgb(255 182 144 / 35%);
+  background: #161e27;
+}
+
+.stat-card:focus-visible {
+  outline: 2px solid #ffb690;
+  outline-offset: 3px;
+}
+
+.stat-label {
+  max-width: 80px;
+  color: #94a3b8;
+  font-family: "Inter:Bold", Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+}
+
+.stat-reading {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-top: 4px;
+  white-space: nowrap;
+}
+
+.stat-value {
+  color: #f8fafc;
+  font-family: "Inter:Bold", Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.stat-detail {
+  font-family: "Inter:Bold", Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.55px;
+}
+
+.tone-green {
+  color: #10b981;
+}
+
+.tone-cyan {
+  color: #06b6d4;
+}
+
+.tone-muted {
+  color: #94a3b8;
+}
+
+.tone-peach {
+  color: #ffb690;
+}
+
+@media (max-width: 1120px) {
+  .page-shell {
+    padding: 20px 24px;
+  }
+
+  .hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .stats-grid {
+    width: 100%;
+  }
+
+  .stat-card {
+    min-width: 0;
+    flex: 1 1 0;
+  }
+
+  .stat-card:last-child {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    align-items: flex-start;
+    padding: 28px 18px;
+  }
+
+  .hero {
+    gap: 24px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.7px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stat-card,
+  .stat-card:last-child {
+    min-height: 82px;
+    padding: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-card {
+    transition: none;
+  }
+}
+
 @layer components {
   .broadcast-hub {
     position: relative;
