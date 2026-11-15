@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 // import Title from '@/components/HTag/Title';
-// import CurrentEvents from "@/app/_events/current";
+import CurrentEvents from "@/app/_events/current";
 import PastEvents from "@/app/_events/past";
 import SocialCards from "@/components/Social/Home/SocialCards";
 import type { Metadata } from 'next';
@@ -28,9 +28,8 @@ const Home = () => {
         <main className="mt-10 px-3">
             {/* <Title title={t('text-title')} />
             <p className="color-gray mb40">{t('text-description')}</p>
-            
              */}
-            {/* <CurrentEvents title={t('Current Leagues')}></CurrentEvents> */}
+            <CurrentEvents title={t('Current Leagues')}></CurrentEvents>
             <PastEvents title={t('Past Leagues')}></PastEvents>
             <SocialCards></SocialCards>
         </main>

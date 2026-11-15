@@ -1,6 +1,5 @@
 "use client";
 
-import "./modules.css";
 import { useTranslations } from "next-intl";
 import { LeagueType } from "@/types/schemas/database/league";
 import { useRouter } from "next/navigation";
@@ -23,7 +22,7 @@ export default function PastLeagues({ leagues }: PastLeaguesComponentProps) {
             <section className="past-leagues" aria-labelledby="past-leagues-title">
                 <div className="league-stack" aria-live="polite">
                     {leagues.map((league, index) => (
-                        <article className="league-card mt-2" key={index}>
+                        <article className="league-card mb-1.5" key={index}>
                             <div className="league-summary">
                                 <span className="medal-icon" aria-hidden="true">
                                     <img src={`${assetPath}/badge.png`} alt="" />

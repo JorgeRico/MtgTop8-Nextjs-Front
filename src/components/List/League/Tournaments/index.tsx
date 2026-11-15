@@ -3,7 +3,7 @@ import endpoints from "@/types/server/endpoints";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import BluredTournamentList from "@/fakeData/components/tournamentList";
 import LeagueTournamentContent from "@/components/List/League/Content";
-import Pagination from "@/components/List/Pagination";
+// import Pagination from "@/components/List/Pagination";
 import { useTranslations } from 'next-intl';
 import { TournamentType } from "@/types/schemas/database/tournament";
 import { LeagueIdType } from "@/types/schemas/database/league";
@@ -14,7 +14,7 @@ const LeagueTournament = ({ id }: LeagueIdType) => {
     const [ showElements, setShowElements ]     = useState<boolean>(false);
     const t                                     = useTranslations('league');
     const [ total, setTotal ]                   = useState<number>(0);
-    const [ currentPage, setCurrentPage ]       = useState<number>(1);
+    // const [ currentPage, setCurrentPage ]       = useState<number>(1);
 
     useEffect(() => {
         async function apiCall(): Promise<void> {
@@ -48,7 +48,7 @@ const LeagueTournament = ({ id }: LeagueIdType) => {
                                     url            = {endpoints.HTTP_TOURNAMENT}
                                     isBlured       = {false}
                                 />
-                                <Pagination text={t('tournament.Tournaments')} total={total} itemsPerPage={total} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>
+                                {/* <Pagination text={t('tournament.Tournaments')} total={total} itemsPerPage={total} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination> */}
                             </>
                         ) : (
                             <div className="left w100 mt10 mb40">

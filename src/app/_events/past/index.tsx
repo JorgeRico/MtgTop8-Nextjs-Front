@@ -26,7 +26,7 @@ const PastEvents = ({title} : {title: string}) => {
                         <img src={`${assetPath}/past.png`} alt="" />
                     </span>
                     <div>
-                        <h1 id="past-leagues-title">{title}</h1>
+                        <h2 id="past-leagues-title">{title}</h2>
                         <p>{t("text-description")}</p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ const PastEvents = ({title} : {title: string}) => {
     return (
         <>
             <section className="flex flex-col gap-space-lg" aria-labelledby="past-leagues-title">
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-4">
                         <header className="section-header">
                             <PastLeaguesHeader></PastLeaguesHeader>
