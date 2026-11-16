@@ -75,7 +75,7 @@ const Home = () => {
                             <span>{t('catalan-circuit-2026')}</span>
                         </div>
                         <h1 id="page-title">{t('league-title')}</h1>
-                        <p className="hero-description">
+                        <p className="text-body-md text-[#94a3b8]">
                             {t('league-description')}
                         </p>
                     </div>

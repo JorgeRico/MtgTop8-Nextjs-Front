@@ -1,223 +1,266 @@
 {
-	"home": {
-		"title": "MTG Legacy Stats Catalonia | Decks, Players & Tournament Results",
-		"description": "CataCnity dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting.",
-		"text-title": "MTG Leagues - Legacy",
-		"text-description": "Magic The Gathering Catalan Tournaments",
-		"Current Leagues": "Current Leagues - Legacy",
-		"Past Leagues": "Past Leagues - Legacy",
-		"catalan-circuit-2026": "Catalan competitive circuit 2026",
-		"league-title": "MTG Leagues — Legacy",
-		"league-description": "Magic: The Gathering Catalan Tournaments. Real-time pairings, Swiss standings, archetype meta-shares, and historical archives from across Barcelona, Vallès, and Girona."
-	},
-	"header": {
-		"Contact us": "Contact",
-		"Decklist": "Decklist",
-		"mtg legacy": "mtg legacy",
-		"breadcrumb": {
-			"tournament": "tournament",
-			"league": "league"
-		}
-	},
-	"footer": {
-		"brand-title": "MTG LEGACY STATS",
-		"description": "The official match tracker, meta analytics, pairings, and historical circuit database for competitive Magic: The Gathering Legacy tournaments in Catalonia.",
-		"copyright": "\u00a9 2025 MTG Legacy Stats Catalunya. All tournament circuits, pairings, and player rankings community maintained.",
-		"trademark": "Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. This website is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC."
-	},
-	"alt-tags": {
-		"decklist pdf - mtg legacy cat": "decklist pdf - mtg legacy cat",
-		"legacy mtg cat mail": "legacy mtg cat mail",
-		"mtg legacy image": "mtg legacy image",
-		"mtg stats": "mtg stats",
-		"mtg location": "mtg location",
-		"mtg stats list image": "mtg stats list image",
-		"Cup Champion": "Cup Champion",
-		"mtg legacy stats": "MTG LEGACY STATS",
-		"catalan tournaments & meta circuit": "CATALAN TOURNAMENTS & META CIRCUIT"
-	},
-	"tournaments": {
-		"title": {
-			"players": "players"
-		},
-		"players": {
-			"Top Players": "Top Players"
-		},
-		"block": {
-			"Date": "Date",
-			"players": "players",
-			"View Tournament": "View Tournament"
-		}
-	},
-	"deck": {
-		"Maindeck": "Maindeck",
-		"Sideboard": "Sideboard",
-		"Planeswalkers": "Planeswalkers",
-		"Creatures": "Creatures",
-		"Instants": "Instants",
-		"Sorceries": "Sorceries",
-		"Artifacts": "Artifacts",
-		"Enchantments": "Enchantments",
-		"Lands": "Lands",
-		"Maindeck total cards": "Maindeck total cards",
-		"Sideboard total cards": "Sideboard total cards"
-	},
-	"league": {
-		"Format": "Format",
-		"Active": "Active",
-		"Legacy": "Legacy",
-		"Monthly Event": "Monthly Event",
-		"Stage": "Stage",
-		"Description": "Barcelona central hub monthly championship series with direct qualification to the Catalan Final.",
-		"Current stage": "Current stage",
-		"View league": "View league",
-		"Competitors": "Competitors",
-		"Completed": "Completed",
-		"Top 8 Decks": "Top 8 Decks",
-		"tournament": {
-			"Location": "Location",
-			"Tournaments": "Tournaments",
-			"Format": "Format",
-			"Average Players": "Average Players",
-			"Classification": "Classification",
-			"NoTournaments": "No tournaments registered for this league"
-		},
-		"list": {
-			"Tournaments": "Tournaments"
-		}
-	},
-	"player": {
-		"View deck": "View deck",
-		"Player": "Player",
-		"Deck": "Deck"
-	},
-	"cards": {
-		"modal": {
-			"Close": "Close"
-		}
-	},
-	"stats": {
-		"Top Players": "Top Players",
-		"Card Stats": "Card Stats",
-		"Top Cards": "Top Cards",
-		"Top Creatures": "Top Creatures",
-		"Top Instants": "Top Instants",
-		"Top Sorceries": "Top Sorceries",
-		"Top Artifacts": "Top Artifacts",
-		"Top Enchantments": "Top Enchantments",
-		"Top Planeswalkers": "Top Planeswalkers",
-		"Top Lands": "Top Lands",
-		"Deck Stats": "Deck Stats",
-		"Top Mainboard Cards": "Top Mainboard Cards",
-		"Top Sideboard Cards": "Top Sideboard Cards",
-		"Stats": "Stats",
-		"All tournament stats": "All tournament stats",
-		"Most played cards and main deck and sideboard card stats": "Most played cards and main deck and sideboard card stats",
-		"Total": "Total",
-		"Name": "Name",
-		"Player Stats": "Player Stats",
-		"View": "View"
-	},
-	"errors": {
-		"league": {
-			"Sorry, now we don't have tournaments registered for this league": "Sorry, now we don't have tournaments registered for this league"
-		},
-		"forms": {
-			"Pay 3 extra manas and try again": "Pay 3 extra manas and try again.",
-			"Please, fill all data fields": "Please, fill all data fields.",
-			"Incorrect form - fill form correctly": "Incorrect form - fill form correctly",
-			"Incorrect form - card incorrect format": "Incorrect form - card incorrect format",
-			"Incorrect sideboard - Maximum 15 cards": "Incorrect sideboard - Maximum 15 cards"
-		},
-		"stats": {
-			"Sorry, now we don't have tournaments registered for this league": "Sorry, now we don't have tournaments registered for this league"
-		}
-	},
-	"contact": {
-		"title": "MTG Legacy stats - CAT Legacy - Contact",
-		"description": "Contact - Catalan MTG Legacy leagues, tournaments, players and cards",
-		"text-title": "Contact us",
-		"text-description": "Ask for information about leagues, classifications or what you want . . .",
-		"breadcrumb": "contact",
-		"Your name": "Your name",
-		"Name": "Name",
-		"Your email": "Your email",
-		"E-mail": "E-mail",
-		"Your message": "Your message",
-		"Submit": "Submit",
-		"Message": "Message"
-	},
-	"success": {
-		"Thank you for contacting us": "Thank you for contacting us,",
-		"Your query is in the stack In response we'll play a brainstorm": "Your query is in the stack. In response we'll play a brainstorm"
-	},
-	"not-found": {
-		"title": "MTG Legacy stats - CAT Legacy - Page not found",
-		"description": "Catalan MTG Legacy leagues, tournaments, players and cards - Page not found",
-		"breadcrumb": "404 page not found",
-		"text-title": "Error 404 - Page not found",
-		"text-description": "This url does not exist. Please check the address and try again."
-	},
-	"decklist": {
-		"title": "MTG Legacy stats - CAT Legacy - Decklist",
-		"description": "Decklist - Catalan MTG Legacy leagues, tournaments, players and cards",
-		"text-title": "Decklist generator",
-		"text-description": "Print your deck on a tournament pdf stylesheet",
-		"Your name": "Your name",
-		"Your surname": "Your surname",
-		"Event name": "Event name",
-		"Your Deck name": "Your Deck name",
-		"Your mainboard cards": "Your mainboard cards",
-		"Your sideboard cards": "Your sideboard cards",
-		"decklist pdf - mtg legacy cat": "decklist pdf - mtg legacy cat",
-		"Generate Decklist pdf": "Generate Decklist pdf",
-		"Name": "Name",
-		"Surname": "Surname",
-		"Deck name": "Deck name",
-		"Mainboard cards": "Mainboard cards",
-		"Sideboard cards": "Sideboard cards"
-	},
-	"seo-tags": {
-		"tournaments": {
-			"title": "MTG Legacy Stats Catalonia | Decks, Players & Tournament Results | MTG Legacy Tournament - CAT Legacy",
-			"description": "Community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting",
-			"stats": "Tournament Stats"
-		},
-		"leagues": {
-			"title": "MTG Legacy Stats Catalonia | Decks, Players & Tournament Results | MTG Legacy League - CAT Legacy",
-			"description": "Community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting.",
-			"stats": "Season Stats"
-		}
-	},
-	"language": {
-		"Select language": "Select language",
-		"Previous page": "Previous page",
-		"Next page": "Next page",
-		"Current page": "Current page"
-	},
-	"broadcast": {
-		"community_broadcast_hub": "COMMUNITY BROADCAST HUB",
-		"follow_catalan_legacy_online": "Follow Catalan Legacy Online",
-		"watch_feature_match_replays": "Watch feature match replays with Catalan commentary, deck techs from regional tournament finalists, and live Twitch streams from tournament weekends.",
-		"catalan_legacy_social_channels": "Catalan Legacy social channels"
-	},
-	"past-leagues": {
-		"no-leagues-data": "No results",
-		"text-description": "Explore past leagues, view standings and decks",
-		"pagination": "Past Leagues",
-		"historical-archives": "Historical archives available from 2016 through 2024 (over 48 completed league stages).",
-		"season": "Old Leagues",
-		"Winner": "Winner",
-		"Tournaments": "Tournaments",
-		"Competitors": "Competitors",
-		"Completed": "Completed",
-		"Top 8 Decks": "Top 8 Decks",
-		"View league": "View league"
-	},
-	"current-leagues": {
-		"text-description": "Explore current leagues, view standings and decks",
-		"pagination": "Current Leagues",
-		"Explore current leagues, view standings, round pairings, and decklists": "Explore current leagues, view standings, round pairings, and decklists",
-		"In Progress" : "In Progress"
-	}
+  "home": {
+    "title": "MTG Legacy Stats Catalonia | Decks, Players & Tournament Results",
+    "description": "CataCnity dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting.",
+    "text-title": "MTG Leagues - Legacy",
+    "text-description": "Magic The Gathering Catalan Tournaments",
+    "Current Leagues": "Current Leagues - Legacy",
+    "Past Leagues": "Past Leagues - Legacy",
+    "catalan-circuit-2026": "Catalan competitive circuit 2026",
+    "league-title": "MTG Leagues — Legacy",
+    "league-description": "The official match tracker, meta analytics, pairings, and historical circuit database for competitive Magic: The Gathering Legacy tournaments in Catalonia."
+  },
+  "header": {
+    "Contact us": "Contact",
+    "Decklist": "Decklist",
+    "mtg legacy": "mtg legacy",
+    "breadcrumb": {
+      "tournament": "tournament",
+      "league": "league"
+    }
+  },
+  "footer": {
+    "brand-title": "MTG LEGACY STATS",
+    "description": "The official match tracker, meta analytics, pairings, and historical circuit database for competitive Magic: The Gathering Legacy tournaments in Catalonia.",
+    "copyright": "© 2025 MTG Legacy Stats Catalunya. All tournament circuits, pairings, and player rankings community maintained.",
+    "trademark": "Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. This website is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC."
+  },
+  "alt-tags": {
+    "decklist pdf - mtg legacy cat": "decklist pdf - mtg legacy cat",
+    "legacy mtg cat mail": "legacy mtg cat mail",
+    "mtg legacy image": "mtg legacy image",
+    "mtg stats": "mtg stats",
+    "mtg location": "mtg location",
+    "mtg stats list image": "mtg stats list image",
+    "Cup Champion": "Cup Champion",
+    "mtg legacy stats": "MTG LEGACY STATS",
+    "catalan tournaments & meta circuit": "CATALAN TOURNAMENTS & META CIRCUIT"
+  },
+  "tournaments": {
+    "title": {
+      "players": "players"
+    },
+    "players": {
+      "Top Players": "Top Players"
+    },
+    "block": {
+      "Date": "Date",
+      "players": "players",
+      "View Tournament": "View Tournament"
+    }
+  },
+  "deck": {
+    "Maindeck": "Maindeck",
+    "Sideboard": "Sideboard",
+    "Planeswalkers": "Planeswalkers",
+    "Creatures": "Creatures",
+    "Instants": "Instants",
+    "Sorceries": "Sorceries",
+    "Artifacts": "Artifacts",
+    "Enchantments": "Enchantments",
+    "Lands": "Lands",
+    "Maindeck total cards": "Maindeck total cards",
+    "Sideboard total cards": "Sideboard total cards"
+  },
+  "league": {
+    "Format": "Format",
+    "Active": "Active",
+    "Legacy": "Legacy",
+    "Monthly Event": "Monthly Event",
+    "Stage": "Stage",
+    "Description": "Barcelona central hub monthly championship series with direct qualification to the Catalan Final.",
+    "Current stage": "Current stage",
+    "View league": "View league",
+    "Competitors": "Competitors",
+    "Completed": "Completed",
+    "Top 8 Decks": "Top 8 Decks",
+    "tournament": {
+      "Location": "Location",
+      "Tournaments": "Tournaments",
+      "Format": "Format",
+      "Average Players": "Average Players",
+      "Classification": "Classification",
+      "NoTournaments": "No tournaments registered for this league"
+    },
+    "list": {
+      "Tournaments": "Tournaments"
+    }
+  },
+  "player": {
+    "View deck": "View deck",
+    "Player": "Player",
+    "Deck": "Deck"
+  },
+  "cards": {
+    "modal": {
+      "Close": "Close"
+    }
+  },
+  "stats": {
+    "Top Players": "Top Players",
+    "Card Stats": "Card Stats",
+    "Top Cards": "Top Cards",
+    "Top Creatures": "Top Creatures",
+    "Top Instants": "Top Instants",
+    "Top Sorceries": "Top Sorceries",
+    "Top Artifacts": "Top Artifacts",
+    "Top Enchantments": "Top Enchantments",
+    "Top Planeswalkers": "Top Planeswalkers",
+    "Top Lands": "Top Lands",
+    "Deck Stats": "Deck Stats",
+    "Top Mainboard Cards": "Top Mainboard Cards",
+    "Top Sideboard Cards": "Top Sideboard Cards",
+    "Stats": "Stats",
+    "All tournament stats": "All tournament stats",
+    "Most played cards and main deck and sideboard card stats": "Most played cards and main deck and sideboard card stats",
+    "Total": "Total",
+    "Name": "Name",
+    "Player Stats": "Player Stats",
+    "View": "View"
+  },
+  "errors": {
+    "league": {
+      "Sorry, now we don't have tournaments registered for this league": "Sorry, now we don't have tournaments registered for this league"
+    },
+    "forms": {
+      "Pay 3 extra manas and try again": "Pay 3 extra manas and try again.",
+      "Please, fill all data fields": "Please, fill all data fields.",
+      "Incorrect form - fill form correctly": "Incorrect form - fill form correctly",
+      "Incorrect form - card incorrect format": "Incorrect form - card incorrect format",
+      "Incorrect sideboard - Maximum 15 cards": "Incorrect sideboard - Maximum 15 cards"
+    },
+    "stats": {
+      "Sorry, now we don't have tournaments registered for this league": "Sorry, now we don't have tournaments registered for this league"
+    }
+  },
+  "contact": {
+    "title": "MTG Legacy stats - CAT Legacy - Contact",
+    "description": "Contact - Catalan MTG Legacy leagues, tournaments, players and cards",
+    "text-title": "Contact us",
+    "text-description": "Ask for information about leagues, classifications or what you want . . .",
+    "breadcrumb": "contact",
+    "Your name": "Your name",
+    "Name": "Name",
+    "Your email": "Your email",
+    "E-mail": "E-mail",
+    "Your message": "Your message",
+    "Submit": "Submit",
+    "Message": "Message",
+    "contact_inquiries": "Contact & Inquiries",
+    "organizer_helpdesk": "Organizer Helpdesk & Comms",
+    "contact_title": "Contact the Catalan Legacy Circuit",
+    "contact_lead": "Have inquiries about tournament classifications, seasonal league schedules, venue hosting, or circuit pairings? Reach out directly to the steering committee and local store marshals.",
+    "full_name": "Full Name",
+    "email_address": "Email Address",
+    "inquiry_topic": "Inquiry Topic",
+    "select_category": "Select category...",
+    "topic_standings": "League Standings & Points Audit",
+    "topic_registration": "Tournament Registration & Slots",
+    "topic_decklist": "Decklist Dispute & Archetype Tagging",
+    "topic_feedback": "General Feedback & Suggestions",
+    "target_stage": "Target Circuit Stage",
+    "stage_general": "All Circuits / Circuit-Wide Inquiry",
+    "stage_valles": "Lliga del Vallès (Sabadell / Terrassa)",
+    "stage_minoria": "Lliga Minoria (Barcelona Gothic Hub)",
+    "stage_ingenio": "LCL Ingenio Games Circuit",
+    "message_details": "Message & Match Details",
+    "message_placeholder": "Please provide your DCI/Wizards Account ID, tournament date, round number, and match opponent details if reporting a score discrepancy...",
+    "send_message": "Send Message",
+    "response_time": "Typical response within 24 hours",
+    "dispatch_success": "Inquiry Dispatched Successfully",
+    "dispatch_detail": "Ticket #CAT-8942 assigned. A TO lead has received your message.",
+    "official_channels": "Official Channels & Live Streams",
+    "frequently_asked": "Frequently Asked Questions",
+    "circuit_rules": "Circuit Rules",
+    "social_discord_detail": "450+ Catalan players, live pairings & deck techs",
+    "social_twitch": "Twitch (@catmagiclegacy)",
+    "social_twitch_detail": "Live tournament coverage & feature replays",
+    "social_twitter": "X / Twitter (@Lliga_Legacy)",
+    "social_twitter_detail": "Official announcements & swiss pairings alerts",
+    "social_youtube": "YouTube Channel",
+    "social_youtube_detail": "Full match VODs, player interviews, finals",
+    "social_instagram": "Instagram (@legacy.cat)",
+    "social_instagram_detail": "Tournament photos, trophy awards, hall of fame",
+    "error_name_required": "Your name is required.",
+    "error_name_short": "Please enter at least 2 characters.",
+    "error_email_required": "Your email address is required.",
+    "error_email_invalid": "Please enter a valid email address.",
+    "error_topic_required": "Please choose an inquiry topic.",
+    "error_message_required": "A message is required.",
+    "error_message_short": "Please provide at least 10 characters of detail.",
+    "player_name": "Player name"
+  },
+  "success": {
+    "Thank you for contacting us": "Thank you for contacting us,",
+    "Your query is in the stack In response we'll play a brainstorm": "Your query is in the stack. In response we'll play a brainstorm"
+  },
+  "not-found": {
+    "title": "MTG Legacy stats - CAT Legacy - Page not found",
+    "description": "Catalan MTG Legacy leagues, tournaments, players and cards - Page not found",
+    "breadcrumb": "404 page not found",
+    "text-title": "Error 404 - Page not found",
+    "text-description": "This url does not exist. Please check the address and try again."
+  },
+  "decklist": {
+    "title": "MTG Legacy stats - CAT Legacy - Decklist",
+    "description": "Decklist - Catalan MTG Legacy leagues, tournaments, players and cards",
+    "text-title": "Decklist generator",
+    "text-description": "Print your deck on a tournament pdf stylesheet",
+    "Your name": "Your name",
+    "Your surname": "Your surname",
+    "Event name": "Event name",
+    "Your Deck name": "Your Deck name",
+    "Your mainboard cards": "Your mainboard cards",
+    "Your sideboard cards": "Your sideboard cards",
+    "decklist pdf - mtg legacy cat": "decklist pdf - mtg legacy cat",
+    "Generate Decklist pdf": "Generate Decklist pdf",
+    "Name": "Name",
+    "Surname": "Surname",
+    "Deck name": "Deck name",
+    "Mainboard cards": "Mainboard cards",
+    "Sideboard cards": "Sideboard cards"
+  },
+  "seo-tags": {
+    "tournaments": {
+      "title": "MTG Legacy Stats Catalonia | Decks, Players & Tournament Results | MTG Legacy Tournament - CAT Legacy",
+      "description": "Community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting",
+      "stats": "Tournament Stats"
+    },
+    "leagues": {
+      "title": "MTG Legacy Stats Catalonia | Decks, Players & Tournament Results | MTG Legacy League - CAT Legacy",
+      "description": "Community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting.",
+      "stats": "Season Stats"
+    }
+  },
+  "language": {
+    "Select language": "Select language",
+    "Previous page": "Previous page",
+    "Next page": "Next page",
+    "Current page": "Current page"
+  },
+  "broadcast": {
+    "community_broadcast_hub": "COMMUNITY BROADCAST HUB",
+    "follow_catalan_legacy_online": "Follow Catalan Legacy Online",
+    "watch_feature_match_replays": "Watch feature match replays with Catalan commentary, deck techs from regional tournament finalists, and live Twitch streams from tournament weekends.",
+    "catalan_legacy_social_channels": "Catalan Legacy social channels"
+  },
+  "past-leagues": {
+    "no-leagues-data": "No results",
+    "text-description": "Explore past leagues, view standings and decks",
+    "pagination": "Past Leagues",
+    "historical-archives": "Historical archives available from 2016 through 2024 (over 48 completed league stages).",
+    "season": "Old Leagues",
+    "Winner": "Winner",
+    "Tournaments": "Tournaments",
+    "Competitors": "Competitors",
+    "Completed": "Completed",
+    "Top 8 Decks": "Top 8 Decks",
+    "View league": "View league"
+  },
+  "current-leagues": {
+    "text-description": "Explore current leagues, view standings and decks",
+    "pagination": "Current Leagues",
+    "Explore current leagues, view standings, round pairings, and decklists": "Explore current leagues, view standings, round pairings, and decklists",
+    "In Progress": "In Progress"
+  }
 }
