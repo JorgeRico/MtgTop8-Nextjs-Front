@@ -18,3 +18,15 @@ export type BreadcrumbTitleLinkType = {
     endpoint : string;
     title    : string;
 };
+
+export type BreadcrumbItemType = {
+    label: string;
+    href?: string;
+    icon?: string;
+};
+
+export type BreadcrumbNavType = {
+    ariaLabel?: string;
+    className?: string;
+    items: BreadcrumbItemType[];
+};

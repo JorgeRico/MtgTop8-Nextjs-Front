@@ -1,11 +1,32 @@
-import { BreadcrumbLoadingType } from "@/types/schemas/website/breadcrumb";
+import Link from "next/link";
+import { Fragment } from "react";
 
-const Breadcrumb = ({ component, loading }: BreadcrumbLoadingType) => {
+import { BreadcrumbNavType } from "@/types/schemas/website/breadcrumb";
+
+const BreadcrumbNav = ({ ariaLabel = "Breadcrumb", className = "", items }: BreadcrumbNavType) => {
     return (
-        <section className={`left w100 f14 ${loading === false ? 'blink blured' : ''}`}>
-            {component}
-        </section>
-    );
-}
+        <nav aria-label={ariaLabel} className={`breadcrumb-nav ${className}`.trim()}>
+            {items.map((item, index) => {
+                const isCurrent = index === items.length - 1;
 
-export default Breadcrumb;
+                return (
+                    <Fragment key={`${item.label}-${index}`}>
+                        {index > 0 && <span aria-hidden="true" className="breadcrumb-nav__sep">/</span>}
+                        {item.href && !isCurrent ? (
+                            <Link className="breadcrumb-nav__link" href={item.href}>
+                                {item.icon && <span className="material-symbols-outlined">{item.icon}</span>}
+                                <span>{item.label}</span>
+                            </Link>
+                        ) : (
+                            <span aria-current={isCurrent ? "page" : undefined} className={isCurrent ? "breadcrumb-nav__current" : "breadcrumb-nav__label"}>
+                                {item.label}
+                            </span>
+                        )}
+                    </Fragment>
+                );
+            })}
+        </nav>
+    );
+};
+
+export default BreadcrumbNav;

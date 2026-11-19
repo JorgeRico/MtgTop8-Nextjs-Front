@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import FaqQuestions from "@/app/contact/Faq";
-import Breadcrumb from "@/app/contact/Breadcrumb";
+import Breadcrumb from "@/components/Breadcrumb";
 import Social from "@/app/contact/Social";
 import { faqItems } from "@/app/contact/faqItems";
 
@@ -13,6 +13,7 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 const Contact = () => {
     const t = useTranslations("contact");
+    const tHeader = useTranslations("header");
     const [errors, setErrors] = useState<Partial<Record<FieldName, string>>>({});
 
     const validate = (field: FieldName, value: string): string | undefined => {
@@ -98,7 +99,13 @@ const Contact = () => {
     return (
         <main className="contact-shell">
             <div className="contact-content">
-                <Breadcrumb />
+                <Breadcrumb
+                    ariaLabel = {t("breadcrumb")}
+                    items = {[
+                        { href: "/", icon: "home", label: tHeader("breadcrumb.home") },
+                        { label: t("contact_inquiries") }
+                    ]}
+                />
 
                 <header className="contact-header">
                     <div className="contact-badge">

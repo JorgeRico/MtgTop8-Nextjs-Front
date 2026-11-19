@@ -90,8 +90,10 @@
     /* opacity: 0.6; */
 }
 
-button {
-    padding: 10px 20px;
+@layer base {
+    button {
+        padding: 10px 20px;
+    }
 }
 
 .homeIcon {

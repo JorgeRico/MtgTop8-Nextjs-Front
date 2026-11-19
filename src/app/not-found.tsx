@@ -1,5 +1,5 @@
 import Title from "@/components/HTag/Title";
-import SimpleBreadcrumb from "@/components/Breadcrumb/Simple";
+// import SimpleBreadcrumb from "@/components/Breadcrumb/Simple";
 import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
@@ -25,7 +25,7 @@ const NotFound = () => {
 
     return (
         <main>
-            <SimpleBreadcrumb title={t('breadcrumb')} />
+            {/* <SimpleBreadcrumb title={t('breadcrumb')} /> */}
             <Title title={t('text-title')} />
             <p className="mb40 color-gray">{t('text-description')}</p>
         </main>

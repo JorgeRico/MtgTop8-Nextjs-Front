@@ -8,7 +8,7 @@ const headers = {
     'Access-Control-Allow-Methods' : '*',
 }
 
-export function getAxiosEndpoint<T = any>(endpoint: string): Promise<AxiosResponse<T>> {
+export function getAxiosEndpoint<T = unknown>(endpoint: string): Promise<AxiosResponse<T>> {
     return axios.get(
         endpoint,
         { headers: headers }

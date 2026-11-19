@@ -1,3 +1,4 @@
+import Breadcrumb from "@/components/Breadcrumb";
 import DecklistForm from "@/components/Forms/Decklist";
 import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
@@ -32,14 +33,13 @@ const Decklist = () => {
 
                     {/* 1. Breadcrumbs & live standard badge */}
                     <div className="flex flex-wrap items-center justify-between gap-4 mb-space-md">
-                        <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-label-md text-label-md text-mana-black">
-                            <a className="hover:text-primary transition-colors flex items-center gap-1" href="/">
-                                <span className="material-symbols-outlined text-[16px]">home</span>
-                                <span>{t('breadcrumb_home')}</span>
-                            </a>
-                            <span className="material-symbols-outlined text-[14px]">chevron_right</span>
-                            <span className="text-primary font-semibold">{t('breadcrumb_current')}</span>
-                        </nav>
+                        <Breadcrumb
+                            ariaLabel = {t('breadcrumb_current')}
+                            items = {[
+                                { href: '/', icon: 'home', label: t('breadcrumb_home') },
+                                { label: t('breadcrumb_current') }
+                            ]}
+                        />
                         <div className="flex items-center gap-2 bg-surface-card px-3 py-1 rounded-full shadow-sm">
                             <span className="inline-block w-2 h-2 rounded-full bg-mana-green animate-ping"></span>
                             <span className="inline-block w-2 h-2 rounded-full bg-mana-green -ml-3"></span>

@@ -5,59 +5,7 @@ import { degrees, PDFDocument, StandardFonts, PDFFont, PDFPage } from 'pdf-lib';
 import downloadjs from "downloadjs";
 import { useTranslations } from 'next-intl';
 import { PdfItemType, PdfValuesType, PdfType, PdfCardType } from "@/types/schemas/website/pdf";
-
-const FORMATS = ["Legacy", "Vintage", "Modern", "Pauper", "Pioneer"] as const;
-
-type Format = (typeof FORMATS)[number];
-
-const SAMPLE_MAINBOARD = `4 Dragon's Rage Channeler
-4 Delver of Secrets
-2 Murktide Regent
-4 Brainstorm
-4 Ponder
-4 Expressive Iteration
-4 Force of Will
-3 Daze
-1 Spell Pierce
-4 Lightning Bolt
-1 Unholy Heat
-4 Mishra's Bauble
-4 Wasteland
-4 Flooded Strand
-4 Polluted Delta
-3 Volcanic Island
-2 Steam Vents
-3 Island`;
-
-const SAMPLE_SIDEBOARD = `2 Pyroblast
-2 Red Elemental Blast
-2 Surgical Extraction
-2 Meltdown
-2 Submerge
-2 Flusterstorm
-1 Grafdigger's Cage
-1 Null Rod
-1 Maddening Hex`;
-
-const EVENTS = [
-    "Lliga Catalana de Legacy 2026 - Vallès Open",
-    "Barcelona Eternal Weekend Cup - Stage 4",
-    "Girona Legacy Circuit Monthly",
-    "Tarragona Vintage & Legacy Trial",
-    "Lliga del Vallès 2026 Invitational",
-];
-
-/** Counts the cards in a decklist block, ignoring blank lines and malformed rows. */
-const countCards = (block: string): number => {
-    return block
-        .split('\n')
-        .map((line) => line.trim())
-        .filter((line) => line !== '')
-        .reduce((total, line) => {
-            const match = line.match(/^(\d+)\s+(.+)$/);
-            return match ? total + parseInt(match[1], 10) : total;
-        }, 0);
-};
+import { Format, FORMATS, SAMPLE_MAINBOARD, SAMPLE_SIDEBOARD } from "./fakeData"
 
 const DeckListForm = () => {
     const [ showButton, setShowButton ]     = useState<boolean>(true);
@@ -73,34 +21,44 @@ const DeckListForm = () => {
     const t                                 = useTranslations('decklist');
     const errors                            = useTranslations('errors');
 
+    /** Counts the cards in a decklist block, ignoring blank lines and malformed rows. */
+    const countCards = (block: string): number => {
+        return block
+            .split('\n')
+            .map((line) => line.trim())
+            .filter((line) => line !== '')
+            .reduce((total, line) => {
+                const match = line.match(/^(\d+)\s+(.+)$/);
+                return match ? total + parseInt(match[1], 10) : total;
+            }, 0);
+    };
+
     const mainboardCount = countCards(toSend.mainboard);
     const sideboardCount = countCards(toSend.sideboard);
 
     const isMainboardValid = mainboardCount >= 60;
     const isSideboardValid = sideboardCount === 0 || sideboardCount <= 15;
 
+    const showDeckError = (key: string): void => {
+        setShowError(true);
+        setErrorMessage(errors(`forms.${key}`));
+        setTimeout(() => {setShowButton(true)}, 2000);
+        setTimeout(() => {setShowError(false)}, 2000);
+    };
+
     const description = (item: PdfItemType, firstPage: PDFPage, fontFamily: PDFFont, values: PdfValuesType): boolean => {
         if (!item.name || item.name.trim() === '') {
-            setShowError(true);
-            setErrorMessage(errors('forms.Incorrect form - Name is required'));
-            setTimeout(() => {setShowButton(true)}, 2000);
-            setTimeout(() => {setShowError(false)}, 2000);
+            showDeckError('Incorrect form - Name is required');
             return false;
         }
 
         if (!item.surname || item.surname.trim() === '') {
-            setShowError(true);
-            setErrorMessage(errors('forms.Incorrect form - Surname is required'));
-            setTimeout(() => {setShowButton(true)}, 2000);
-            setTimeout(() => {setShowError(false)}, 2000);
+            showDeckError('Incorrect form - Surname is required');
             return false;
         }
 
         if (!item.deckName || item.deckName.trim() === '') {
-            setShowError(true);
-            setErrorMessage(errors('forms.Incorrect form - Deck name is required'));
-            setTimeout(() => {setShowButton(true)}, 2000);
-            setTimeout(() => {setShowError(false)}, 2000);
+            showDeckError('Incorrect form - Deck name is required');
             return false;
         }
 
@@ -118,73 +76,54 @@ const DeckListForm = () => {
     const decklist = (maindeck: string, sideboard: string, firstPage: PDFPage, fontFamily: PDFFont, values: PdfValuesType): boolean => {
         let hasError = false;
 
-        const maindeckCards  = cardsList( maindeck );
-        const totalMainboard = getMaindeck(maindeckCards, values, null, fontFamily);
-        
+        const maindeckResult = cardsList( maindeck );
+        const sideboardResult = cardsList( sideboard );
+        const maindeckCards  = maindeckResult.items;
+        const sideboardCards = sideboardResult.items;
+        const totalMainboard = maindeckCards.reduce((total, card) => total + parseInt(card.num, 10), 0);
+        const totalSideboard = sideboardCards.reduce((total, card) => total + parseInt(card.num, 10), 0);
+
+        if (maindeckResult.hasError || sideboardResult.hasError) {
+            showDeckError('Incorrect form - card incorrect format');
+            hasError = true;
+        }
+
         if (maindeckCards.length === 0 || totalMainboard === 0) {
-            setShowError(true);
-            setErrorMessage(errors('forms.Incorrect maindeck - No cards found'));
-            setTimeout(() => {setShowButton(true)}, 2000);
-            setTimeout(() => {setShowError(false)}, 2000);
+            showDeckError('Incorrect maindeck - No cards found');
+            hasError = true;
+        } else if (totalMainboard < 40) {
+            showDeckError('Incorrect maindeck - Minimum 40 cards required');
             hasError = true;
         }
-
-        if (totalMainboard < 40) {
-            setShowError(true);
-            setErrorMessage(errors('forms.Incorrect maindeck - Minimum 40 cards required'));
-            setTimeout(() => {setShowButton(true)}, 2000);
-            setTimeout(() => {setShowError(false)}, 2000);
-            hasError = true;
-        }
-
-        const sideboardCards = cardsList( sideboard );
-        const totalSideboard = getSideboard(sideboardCards, values, null, fontFamily)
 
         if (totalSideboard > 15) {
-            setShowError(true);
-            setErrorMessage(errors('forms.Incorrect sideboard - Maximum 15 cards'));
-            setTimeout(() => {setShowButton(true)}, 2000);
-            setTimeout(() => {setShowError(false)}, 2000);
+            showDeckError('Incorrect sideboard - Maximum 15 cards');
             hasError = true;
         }
 
-        // same card, maindeck and sideboard can't be > 4, except "swamp" | "plains" | "mountain" | "forest" | "island"
-        const allowedBaseTypes = ['swamp', 'plains', 'mountain', 'forest', 'island'];
-        const baseTypeCounts: Record<string, number> = {};
-        
-        const allCards = [...maindeckCards.map(c => c.card).filter(Boolean), ...sideboardCards.map(c => c.card).filter(Boolean)];
-        allCards.forEach(card => {
-            const cleanCard = card.toLowerCase().trim();
-            if (cleanCard) {
-                let baseType = '';
-                // Extract base type (e.g., "Swamp", "Plains", "Mountain", etc.)
-                if (cleanCard.endsWith('swamp') || cleanCard.endsWith('swamps')) baseType = 'swamp';
-                else if (cleanCard.endsWith('plains') || cleanCard.endsWith('plains')) baseType = 'plains';
-                else if (cleanCard.endsWith('mountain') || cleanCard.endsWith('mountains')) baseType = 'mountain';
-                else if (cleanCard.endsWith('forest') || cleanCard.endsWith('forests')) baseType = 'forest';
-                else if (cleanCard.endsWith('island') || cleanCard.endsWith('islands')) baseType = 'island';
-                
-                if (baseType) {
-                    baseTypeCounts[baseType] = (baseTypeCounts[baseType] || 0) + 1;
-                }
-            }
+        const basicLands = ['swamp', 'plains', 'mountain', 'forest', 'island'];
+        const cardCounts: Record<string, number> = {};
+
+        [...maindeckCards, ...sideboardCards].forEach(item => {
+            const card = item.card.trim().toLowerCase();
+            const copies = parseInt(item.num, 10);
+
+            if (basicLands.includes(card) || !card || Number.isNaN(copies)) return;
+            cardCounts[card] = (cardCounts[card] || 0) + copies;
         });
 
-        for (const [type, count] of Object.entries(baseTypeCounts)) {
-            if (!allowedBaseTypes.includes(type) && count > 4) {
-                setShowError(true);
-                setErrorMessage(errors('forms.Incorrect card count - Same cards cannot exceed 4 copies in maindeck and sideboard combined, except basic lands'));
-                setTimeout(() => {setShowButton(true)}, 2000);
-                setTimeout(() => {setShowError(false)}, 2000);
-                hasError = true;
-            }
+        if (Object.values(cardCounts).some(copies => copies > 4)) {
+            showDeckError('Incorrect card count - Same cards cannot exceed 4 copies in maindeck and sideboard combined, except basic lands');
+            hasError = true;
         }
 
-        if (!hasError) {
-            numberOfCards(totalMainboard, totalSideboard, firstPage, fontFamily, values);
-        }
-        
-        return !hasError;
+        if (hasError) return false;
+
+        getMaindeck(maindeckCards, values, firstPage, fontFamily);
+        getSideboard(sideboardCards, values, firstPage, fontFamily);
+        numberOfCards(totalMainboard, totalSideboard, firstPage, fontFamily, values);
+
+        return true;
     }
 
     function numberOfCards(totalMainboard: number, totalSideboard: number, firstPage: PDFPage, fontFamily: PDFFont, values: PdfValuesType): void {
@@ -192,68 +131,52 @@ const DeckListForm = () => {
         firstPage.drawText(totalSideboard.toString(), { x: values.width - 70,   y: 81, size: 17, font: fontFamily });
     }
 
-    function getMaindeck(cards: PdfCardType[], values: PdfValuesType, firstPage: PDFPage | null, fontFamily: PDFFont): number {
-        const top          = 214.5;
-        const MaindeckY    =  firstPage ? (values.height / 2 + top) : 0;
-        let totalMainboard = 0;
+    function getMaindeck(cards: PdfCardType[], values: PdfValuesType, firstPage: PDFPage, fontFamily: PDFFont): void {
+        const top       = 214.5;
+        const MaindeckY = values.height / 2 + top;
 
-        // Maindeck left
         cards.forEach((item, index) => {
             if (item != null) {
-                if (firstPage) {
-                    firstPage.drawText(item.num,  { x: values.leftColumn,           y: MaindeckY - (index*line), size: size, font: fontFamily });
-                    firstPage.drawText(item.card, { x: values.leftColumn + cardGap, y: MaindeckY - (index*line), size: size, font: fontFamily });
-                    totalMainboard += parseInt(item.num);
-                }
+                firstPage.drawText(item.num,  { x: values.leftColumn,           y: MaindeckY - (index*line), size: size, font: fontFamily });
+                firstPage.drawText(item.card, { x: values.leftColumn + cardGap, y: MaindeckY - (index*line), size: size, font: fontFamily });
             }
         })
-
-        return totalMainboard;
     }
 
-    function getSideboard(cards: PdfCardType[], values: PdfValuesType, firstPage: PDFPage | null, fontFamily: PDFFont): number {
-        const sideBoardY   = firstPage ? (values.height / 2 - 38) : 0;
-        let totalSideboard = 0;
+    function getSideboard(cards: PdfCardType[], values: PdfValuesType, firstPage: PDFPage, fontFamily: PDFFont): void {
+        const sideBoardY = values.height / 2 - 38;
 
         cards.forEach((item, index) => {
             if (item != null) {
-                if (firstPage) {
-                    firstPage.drawText(item.num,  { x: values.rightColumn,           y: sideBoardY - (index*line), size: size, font: fontFamily });
-                    firstPage.drawText(item.card, { x: values.rightColumn + cardGap, y: sideBoardY - (index*line), size: size, font: fontFamily });
-                    totalSideboard += parseInt(item.num) ;
-                }
+                firstPage.drawText(item.num,  { x: values.rightColumn,           y: sideBoardY - (index*line), size: size, font: fontFamily });
+                firstPage.drawText(item.card, { x: values.rightColumn + cardGap, y: sideBoardY - (index*line), size: size, font: fontFamily });
             }
         });
-
-        return totalSideboard;
     }
 
-    function cardsList(cards: string): PdfCardType[] {
+    function cardsList(cards: string): { items: PdfCardType[], hasError: boolean } {
         const cardsSplitted = cards.split('\n');
         const items: PdfCardType[] = [];
+        let hasError = false;
 
         cardsSplitted.forEach(item => {
             const line = item.trim();
             if (line === '') return;
 
-            // Regex: número + espacio + nombre
             const match = line.match(/^(\d+)\s+(.+)$/);
 
             if (!match) {
-                setShowError(true);
-                setErrorMessage(errors('forms.Incorrect form - card incorrect format'));
-                setTimeout(() => setShowButton(true), 2000);
-                setTimeout(() => setShowError(false), 2000);
+                hasError = true;
                 return;
             }
 
-            const num  = match[1];   // string
-            const card = match[2];  // string
+            const num  = match[1];
+            const card = match[2];
 
             items.push({ num, card });
         });
 
-        return items;
+        return { items, hasError };
     }
 
     const onSubmit = async (e) => {
@@ -413,7 +336,7 @@ const DeckListForm = () => {
                                 <span className="text-mana-blue text-[10px] font-semibold">{t('active_series')}</span>
                             </label>
                             <div className="relative">
-                                <input className={inputClass} id="event-name" list="catalan-events" name="event" onChange={handleChange} placeholder={t('event_name_placeholder')} type="text" value={toSend.event} />
+                                <input className={inputClass} id="event-name" name="event" onChange={handleChange} placeholder={t('event_name_placeholder')} type="text" value={toSend.event} />
                             </div>
                         </div>
 
