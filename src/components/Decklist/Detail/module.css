@@ -1,0 +1,10 @@
+.deck-detail-stats {
+  position: relative;
+  isolation: isolate;
+  width: 100vw;
+  min-height: calc(100dvh - 16rem);
+  margin-left: calc(50% - 50vw);
+  color: var(--on-surface);
+  background: var(--surface);
+  font-family: 'Inter', sans-serif;
+}

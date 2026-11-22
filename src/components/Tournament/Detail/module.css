@@ -1,0 +1,12 @@
+.tournament-detail-stats {
+  position: relative;
+  isolation: isolate;
+  width: 100vw;
+  min-height: calc(100dvh - 5rem);
+  margin-left: calc(50% - 50vw);
+  color: var(--on-surface);
+  background: var(--surface);
+  font-family: 'Inter:Regular', Inter, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
