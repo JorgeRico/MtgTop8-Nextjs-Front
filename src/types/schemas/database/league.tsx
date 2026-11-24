@@ -33,7 +33,7 @@ export type LeagueTournamentType = {
     numPlayers     : number;
     location       : string | null;
     locationName   : string;
-    classification : string;
+    classification : string | null;
 }
 
 export type LeagueIdType = {
