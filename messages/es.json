@@ -8,7 +8,8 @@
     "Past Leagues": "Ligas pasadas - Legacy",
     "catalan-circuit-2026": "Catalan competitive circuit 2026",
     "league-title": "MTG Leagues — Legacy",
-    "league-description": "El rastreador oficial de partidas, análisis de metajuego, emparejamientos y base de datos histórica del circuito para torneos Legacy competitivos de Magic: The Gathering en Cataluña."
+    "league-description": "El rastreador oficial de partidas, análisis de metajuego, emparejamientos y base de datos histórica del circuito para torneos Legacy competitivos de Magic: The Gathering en Cataluña.",
+    "loading-stats": "Cargando estadísticas..."
   },
   "header": {
     "Contact us": "Contacto",
@@ -368,6 +369,7 @@
   },
   "past-leagues": {
     "no-leagues-data": "No hay resultados",
+    "loading-past-leagues": "Cargando ligas pasadas...",
     "text-description": "Explora las ligas pasadas, revisa tops y barajas",
     "pagination": "Ligas pasadas",
     "historical-archives": "Archivos históricos disponibles desde 2016 hasta 2024 (más de 48 etapas de liga completadas).",
@@ -380,6 +382,7 @@
     "View league": "Ver liga"
   },
   "current-leagues": {
+    "loading-current-leagues": "Cargando ligas actuales...",
     "text-description": "Explora las ligas actuales, revisa tops y barajas",
     "pagination": "Ligas actuales",
     "Explore current leagues, view standings, round pairings, and decklists": "Explora las ligas actuales, standings, pairings y decklists",

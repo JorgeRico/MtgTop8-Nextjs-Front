@@ -1,0 +1,19 @@
+.common-spinner {
+  display: flex;
+  min-height: 80px;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--surface-card);
+  color: var(--mana-black);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.common-spinner-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}

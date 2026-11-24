@@ -8,7 +8,8 @@
     "Past Leagues": "Past Leagues - Legacy",
     "catalan-circuit-2026": "Catalan competitive circuit 2026",
     "league-title": "MTG Leagues — Legacy",
-    "league-description": "The official match tracker, meta analytics, pairings, and historical circuit database for competitive Magic: The Gathering Legacy tournaments in Catalonia."
+    "league-description": "The official match tracker, meta analytics, pairings, and historical circuit database for competitive Magic: The Gathering Legacy tournaments in Catalonia.",
+    "loading-stats": "Loading stats..."
   },
   "header": {
     "Contact us": "Contact",
@@ -368,6 +369,7 @@
   },
   "past-leagues": {
     "no-leagues-data": "No results",
+    "loading-past-leagues": "Loading past leagues...",
     "text-description": "Explore past leagues, view standings and decks",
     "pagination": "Past Leagues",
     "historical-archives": "Historical archives available from 2016 through 2024 (over 48 completed league stages).",
@@ -380,6 +382,7 @@
     "View league": "View league"
   },
   "current-leagues": {
+    "loading-current-leagues": "Loading current leagues...",
     "text-description": "Explore current leagues, view standings and decks",
     "pagination": "Current Leagues",
     "Explore current leagues, view standings, round pairings, and decklists": "Explore current leagues, view standings, round pairings, and decklists",

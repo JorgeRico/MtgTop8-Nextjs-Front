@@ -7,29 +7,51 @@ import {useTranslations} from 'next-intl';
 import {LeagueType} from '@/types/schemas/database/league';
 import {AxiosResponse} from 'axios';
 import CurrentComponent from '@/components/List/League/Current/Current';
+import Spinner from '@/components/Spinner';
 import './modules.css';
+
+const MIN_LOADING_MS = 1000;
 
 const CurrentEvents = ({title}: {title: string}) => {
 	const [currentLeagues, setCurrentLeagues] = useState<LeagueType[]>([]);
-	// const [ showCurrentElements, setShowCurrentElements ] = useState<boolean>(false);
+	const [isLoading, setIsLoading]           = useState<boolean>(true);
 	const t                                   = useTranslations('current-leagues');
 	const assetPathPrefix                     = '/images/home';
 
 	useEffect(() => {
+		let active = true;
+		const startedAt = Date.now();
+
 		async function apiCallCurrent(): Promise<void> {
+			setIsLoading(true);
+
 			try {
 				const response: AxiosResponse<LeagueType[]> = await getAxiosEndpoint(
 					endpoints.API_LEAGUE_CURRENT
 				);
+				if (!active) return;
 				setCurrentLeagues(response.data);
-				// setShowCurrentElements(true);
 			} catch (err) {
+				if (!active) return;
 				console.log(err);
 				console.log('Error');
+			} finally {
+				if (!active) return;
+				const remaining = Math.max(0, MIN_LOADING_MS - (Date.now() - startedAt));
+				if (remaining > 0) {
+					await new Promise<void>((resolve) => setTimeout(resolve, remaining));
+				}
+				if (active) {
+					setIsLoading(false);
+				}
 			}
 		}
 
 		apiCallCurrent();
+
+		return () => {
+			active = false;
+		};
 	}, []);
 
 	const CurrentLeaguesHeader = () => {
@@ -45,7 +67,7 @@ const CurrentEvents = ({title}: {title: string}) => {
 					</div>
 					<div>
 						<h2
-							className="current-leagues-title font-jakarta-semibold text-lg leading-6"
+							className="current-leagues-title mb-2 font-jakarta-semibold text-lg leading-6"
 							id="current-leagues-title"
 						>
 							{title}
@@ -79,9 +101,13 @@ const CurrentEvents = ({title}: {title: string}) => {
 						<CurrentLeaguesHeader></CurrentLeaguesHeader>
 					</header>
 					<div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-						{currentLeagues.map((league, index) => (
-							<CurrentComponent key={index} league={league}></CurrentComponent>
-						))}
+						{isLoading ? (
+							<Spinner label={t('loading-current-leagues')} />
+						) : (
+							currentLeagues.map((league, index) => (
+								<CurrentComponent key={index} league={league}></CurrentComponent>
+							))
+						)}
 					</div>
 				</section>
 			</main>

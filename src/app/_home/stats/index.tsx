@@ -1,39 +1,44 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Spinner from '@/components/Spinner';
 import "./modules.css";
 
 type Stat = {
     label: string;
     value: string;
-    detailTone: "green" | "cyan" | "muted" | "peach";
 };
+
+const MIN_LOADING_MS = 1000;
 
 const Stats = () => {
     const [ selectedStat, setSelectedStat ] = useState<number | null>(null);
+    const [ isLoading, setIsLoading ]       = useState<boolean>(true);
     const t                                 = useTranslations('home');
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => setIsLoading(false), MIN_LOADING_MS);
+
+        return () => clearTimeout(timeoutId);
+    }, []);
 
     const stats: Stat[] = [
         {
             label: "Active leagues",
             value: "3",
-            detailTone: "green",
         },
         {
             label: "Tracked decks",
             value: "418",
-            detailTone: "cyan",
         },
         {
             label: "Circuit players",
             value: "164",
-            detailTone: "muted",
         },
         {
             label: "Next event",
             value: "MAR 01",
-            detailTone: "peach",
         },
     ];
 
@@ -51,29 +56,33 @@ const Stats = () => {
                     </p>
                 </div>
 
-                <div className="stats-grid" aria-label="Circuit quick stats">
-                    {stats.map((stat, index) => {
-                        const isSelected = selectedStat === index;
+                {isLoading ? (
+                    <Spinner label={t('loading-stats')} />
+                ) : (
+                    <div className="stats-grid" aria-label="Circuit quick stats">
+                        {stats.map((stat, index) => {
+                            const isSelected = selectedStat === index;
 
-                        return (
-                            <button
-                                className={`stat-card ${isSelected ? "is-selected" : ""}`}
-                                key={stat.label}
-                                type="button"
-                                aria-pressed={isSelected}
-                                aria-label={`${stat.label}`}
-                                onClick={() => setSelectedStat(isSelected ? null : index)}
-                            >
-                                <span className="stat-label">{stat.label}</span>
-                                <span className="stat-reading">
-                                    <span className={`stat-value ${stat.detailTone === "peach" ? "tone-peach" : ""}`}>
-                                        {stat.value}
+                            return (
+                                <button
+                                    className={`stat-card ${isSelected ? "is-selected" : ""}`}
+                                    key={stat.label}
+                                    type="button"
+                                    aria-pressed={isSelected}
+                                    aria-label={`${stat.label}`}
+                                    onClick={() => setSelectedStat(isSelected ? null : index)}
+                                >
+                                    <span className="stat-label">{stat.label}</span>
+                                    <span className="stat-reading">
+                                        <span className={`stat-value tone-cyan`}>
+                                            {stat.value}
+                                        </span>
                                     </span>
-                                </span>
-                            </button>
-                        );
-                    })}
-                </div>
+                                </button>
+                            );
+                        })}
+                    </div>
+                )}
             </section>
         </main>
     );

@@ -57,6 +57,7 @@ body {
     --surface-variant: #31353b;
     --primary-fixed: #ffdbca;
     --on-background: #e0e2ea;
+    --color-cyan: cyan;
 }
 
 .bg-surface-card {
@@ -65,6 +66,10 @@ body {
 
 .tone-peach {
   	color: var(--primary);
+}
+
+.tone-cyan {
+  	color: var(--color-cyan);
 }
 
 .container {
