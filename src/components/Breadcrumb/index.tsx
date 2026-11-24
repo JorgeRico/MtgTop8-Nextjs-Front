@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Fragment } from "react";
-
+import "./modules.css";
 import { BreadcrumbNavType } from "@/types/schemas/website/breadcrumb";
 
 const BreadcrumbNav = ({ ariaLabel = "Breadcrumb", className = "", items }: BreadcrumbNavType) => {

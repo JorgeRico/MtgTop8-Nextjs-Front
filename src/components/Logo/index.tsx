@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import "./modules.css";
 
 const Logo = () => {
     const t = useTranslations('alt-tags');
 
     return (
         <Link href="/" aria-label="MTG Legacy Stats home" className="group flex min-w-0 items-center gap-4 rounded-md pr-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400">
-            <span className="flex shrink-0 items-center gap-1 rounded bg-[#121820] p-1.5">
+            <span className="flex shrink-0 items-center gap-1 rounded bg-surface-card p-1.5">
                 <span className="size-2.5 rounded-full transition-transform duration-200 group-hover:-translate-y-0.5 bg-gradient-1" />
                 <span className="size-2.5 rounded-full transition-transform duration-200 group-hover:-translate-y-0.5 bg-gradient-2" />
                 <span className="size-2.5 rounded-full transition-transform duration-200 group-hover:-translate-y-0.5 bg-gradient-3" />

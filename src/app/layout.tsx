@@ -35,7 +35,7 @@ export default async function RootLayout({children}: LayoutProps<'/'>) {
                     <Header></Header>
                     <main className="overflowHidden container">
                         <section className="mAuto">
-                            <article className="mt-20 px-5 overflowHidden">
+                            <article className="mt-15 px-5 overflowHidden">
                                 {children}
                             </article>
                         </section>

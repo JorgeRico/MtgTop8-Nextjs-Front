@@ -1,0 +1,27 @@
+.current-leagues-icon {
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+.current-leagues-icon-image {
+  width: 15px;
+  height: 15px;
+}
+
+.current-leagues-title {
+  color: var(--mana-white);
+}
+
+.current-leagues-description {
+  color: var(--mana-black);
+}
+
+.current-leagues-status-dot {
+  background: var(--mana-green);
+}
+
+.current-leagues-status-label {
+  color: var(--mana-green);
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.55px;
+}

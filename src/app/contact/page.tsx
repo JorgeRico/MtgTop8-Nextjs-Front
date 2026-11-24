@@ -2,6 +2,7 @@ import { seo_tags } from '@/components/Seo';
 import { getTranslations } from 'next-intl/server';
 import { baseUrl } from '@/types/server/baseUrl';
 import ContactClient from '@/app/contact/ContactForm';
+import "./modules.css";
 
 interface MetadataProps {
     params: Promise<{ locale: string }>

@@ -79,7 +79,7 @@ function LanguageMenu({ currentLocale, onLanguageChange }: Props) {
                 aria-expanded={isOpen}
                 disabled={isPending}
                 onClick={() => setIsOpen((open) => !open)}
-                className="flex items-center gap-1.5 rounded bg-[#121820] px-2.5 py-3 transition-colors hover:bg-[#1a222d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+                className="flex items-center gap-1.5 rounded bg-surface-card px-2.5 py-3 transition-colors hover:bg-[#1a222d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
             >
                 <img
                     src="/images/menu/4f98c.svg"
@@ -105,7 +105,7 @@ function LanguageMenu({ currentLocale, onLanguageChange }: Props) {
                     role="listbox"
                     aria-label="Choose language"
                     aria-busy={isPending}
-                    className="absolute right-0 top-[calc(100%+8px)] z-10 min-w-full overflow-hidden rounded border border-white/5 bg-[#121820] py-1 shadow-xl"
+                    className="absolute right-0 top-[calc(100%+8px)] z-10 min-w-full overflow-hidden rounded border border-white/5 bg-surface-card py-1 shadow-xl"
                 >
                     {languages.map((lang) => (
                         <button

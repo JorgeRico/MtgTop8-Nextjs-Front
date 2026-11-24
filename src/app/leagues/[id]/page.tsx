@@ -44,7 +44,7 @@ export default async function LeaguePage({ params }: PageProps) {
     const tournaments: TournamentType[] = await tournamentsRes.json();
 
     return (
-        <main className="mt-20 px-10">
+        <main>
             <LeagueComponent
                 id                 = {id}
                 initialLeague      = {league}

@@ -1,12 +1,13 @@
 "use client";
 
 import socialLinks from "@/types/social/social";
+import "../modules.css";
 
 function SocialLinks() {
     return (
         <nav
             aria-label="Social media"
-            className="hidden items-center gap-1.5 rounded bg-[#121820] px-2.5 py-1 sm:flex"
+            className="hidden items-center gap-1.5 rounded bg-surface-card px-2.5 py-1 sm:flex"
         >
             {socialLinks.map((social) => (
                 <a

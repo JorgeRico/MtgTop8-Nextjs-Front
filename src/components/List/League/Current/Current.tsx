@@ -16,7 +16,7 @@ const CurrentComponent = ({ league }: CurrentLeagueComponentProps) => {
     }
 
     return (
-        <article className="relative flex min-h-[233px] min-w-0 flex-col justify-between rounded-[12px] bg-[#121820] p-6 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] transition-transform duration-200 hover:-translate-y-0.5">
+        <article className="relative flex min-h-[233px] min-w-0 flex-col justify-between rounded-[12px] bg-surface-card p-6 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] transition-transform duration-200 hover:-translate-y-0.5">
             <div className="flex w-full flex-col gap-4">
                 <div className="flex w-full items-start justify-between gap-3">
                     <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#1c2025]">

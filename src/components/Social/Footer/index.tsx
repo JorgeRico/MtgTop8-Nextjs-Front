@@ -1,6 +1,7 @@
 "use client";
 
 import socialLinks from "@/types/social/social";
+import "../modules.css";
 
 function SocialLink({
     href,

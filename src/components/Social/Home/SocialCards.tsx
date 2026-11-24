@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import socialLinks from "@/types/social/social";
+import "../modules.css";
 
 const SocialCards = () => {
     const t = useTranslations('broadcast');
@@ -37,7 +38,7 @@ const SocialCards = () => {
     }
 
     return (
-        <main className="mt-15 mb-20">
+        <main className="mb-20">
             <section className="broadcast-hub" aria-labelledby="broadcast-heading">
                 <div className="broadcast-copy">
                     <div className="broadcast-eyebrow">

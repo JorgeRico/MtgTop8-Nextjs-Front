@@ -1,0 +1,21 @@
+/* Gradient circles */
+.bg-gradient-1 {
+	background-color: #f8fafc;
+	box-shadow: 0 0 8px rgba(6,182,212,.8);
+}
+.bg-gradient-2 {
+	background-color: #06b6d4;
+	box-shadow: 0 0 8px rgba(6,182,212,.8);
+}
+.bg-gradient-3 {
+	background-color: #94a3b8;
+	box-shadow: 0 0 8px rgba(148,163,184,.8);
+}
+.bg-gradient-4 {
+	background-color: #ef4444;
+	box-shadow: 0 0 8px rgba(239,68,68,.8);
+}
+.bg-gradient-5 {
+	background-color: #10b981;
+	box-shadow: 0 0 8px rgba(16,185,129,.8);
+}
