@@ -1,34 +1,10 @@
-.statsBox {
-    width: 325px;
-
-    & p {
-        margin: 0;
-    }
-}
-
-.showStatsCards {
-    & .total {
-        width: 50px;
-    }
-}
-
 .statsSpan {
     margin-top: -2px;
 }
 
 @media (max-width: 600px) {
-    .showStatsCards {
-        width: 100%;
-    }
-
     .statsSpan {
         margin-top: 5px;
-    }
-}
-
-@media (max-width: 500px) {
-    .statsBox {
-        width: 100%;
     }
 }
 
@@ -69,8 +45,6 @@
     }
 }
 
-@layer base {
-    button {
-        padding: 10px;
-    }
+.statsButton button {
+    padding: 10px;
 }

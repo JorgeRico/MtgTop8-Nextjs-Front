@@ -30,7 +30,7 @@ const ContentStatsList = ({ item, isPlayer, text }: StatsItemType) => {
     }
 
     return (
-        <div className="left w100 cardItem">
+        <div className="left w100 statsCardItem">
             {(isPlayer === true) ? (
                 playerStats(item)
             ) : (

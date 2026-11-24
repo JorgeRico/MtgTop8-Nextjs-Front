@@ -28,7 +28,7 @@ h4 {
 }
 
 @media (max-width: 950px) {
-    .playerList, .maindeck {
+    .maindeck {
         width: 100%;
     }
     

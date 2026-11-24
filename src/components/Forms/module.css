@@ -21,12 +21,6 @@ textarea {
     max-width: 100%;
 }
 
-.decklistPdf {
-    & img {
-        max-height: 520px;
-    }
-}
-
 .sendImage {
     height: 200px;
 }
@@ -35,13 +29,13 @@ textarea {
     width: 75px;
 }
 
-.form, .decklist {
+.form {
     width: 600px;
     max-width: 600px;
 }
 
 @media (max-width: 650px) {
-    .form, .decklist {
+    .form {
         width: 99%;
         max-width: 99%;
     }
@@ -53,31 +47,6 @@ textarea {
             & input, textarea {
                 width: 95%;
             }
-        }
-    }
-
-    .decklist{
-        & article, .textarea {
-            float: left;
-            width: 99%;
-
-            & .inputform {
-                width: 99%;
-
-                & input {
-                    width: 95%;
-                }
-            }
-        }
-
-        & .pdf {
-            display: none;
-        }
-    }
-
-    .textarea {
-        & div {
-            width: 99%;
         }
     }
 

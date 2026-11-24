@@ -57,35 +57,6 @@ body {
     --surface-variant: #31353b;
     --primary-fixed: #ffdbca;
     --on-background: #e0e2ea;
-    --fontFamily-headline: "Plus Jakarta Sans", sans-serif;
-    --fontFamily-display-hero: "Plus Jakarta Sans", sans-serif;
-    --fontFamily-label-lg: Inter;
-    --fontFamily-display-hero-mobile: "Plus Jakarta Sans", sans-serif;
-    --fontFamily-headline-lg: "Plus Jakarta Sans", sans-serif;
-    --fontBody-md: ["Inter"];
-    --fontFamily-headline-lg-mobile: "Plus Jakarta Sans", sans-serif;
-    --fontFamily-label-sm: Inter;
-    --fontBody-lg: ["Inter"];
-    --fontBody-sm: ["Inter"];
-    --fontFamily-headline-sm: "Plus Jakarta Sans", sans-serif;
-    --fontStat-mono: ["Inter"];
-    --fontFamily-label-md: Inter;
-    --fontFamily-headline: "Plus Jakarta Sans", sans-serif;
-    --fontFamily-display: "Plus Jakarta Sans", sans-serif;
-    --fontFamily-body: "Inter", sans-serif;
-    --text-headline-md: 22px; --text-headline-md--line-height: 28px; --text-headline-md--font-weight: 600;
-    --text-display-hero: 48px; --text-display-hero--line-height: 56px; --text-display-hero--letter-spacing: -0.02em; --text-display-hero--font-weight: 800;
-    --text-label-lg: 14px; --text-label-lg--line-height: 20px; --text-label-lg--font-weight: 600;
-    --fontSize-display-hero-mobile: ["32px", {lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "800"}];
-    --text-headline-lg: 32px; --text-headline-lg--line-height: 40px; --text-headline-lg--letter-spacing: -0.02em; --text-headline-lg--font-weight: 700;
-    --text-body-md: 14px; --text-body-md--line-height: 20px; --text-body-md--font-weight: 400;
-    --text-headline-lg-mobile: 24px; --text-headline-lg-mobile--line-height: 32px; --text-headline-lg-mobile--font-weight: 700;
-    --text-label-sm: 11px; --text-label-sm--line-height: 14px; --text-label-sm--font-weight: 700;
-    --fontSize-body-lg: ["16px", {lineHeight: "24px", fontWeight: "400"}];
-    --fontSize-body-sm: ["12px", {lineHeight: "16px", fontWeight: "400"}];
-    --text-headline-sm: 18px; --text-headline-sm--line-height: 24px; --text-headline-sm--font-weight: 600;
-    --fontSize-stat-mono: ["20px", {lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "700"}];
-    --selection-bg-primary-container: var(--primary-container);
 }
 
 .bg-surface-card {
@@ -94,21 +65,6 @@ body {
 
 .tone-peach {
   	color: var(--primary);
-}
-
-.selection::-webkit-selection {
-    background: var(--primary-container);
-    color: white;
-}
-
-.selection::-moz-selection {
-    background: var(--primary-container);
-    color: white;
-}
-
-.selection::selection {
-    background: var(--primary-container);
-    color: white;
 }
 
 .container {
@@ -128,62 +84,6 @@ body {
 @layer base {
   :root {
     color: #f8fafc;
-    background: #0c1117;
-    font-synthesis: none;
-  }
-
-  body {
-    min-width: 320px;
-    min-height: 100dvh;
-    background: #0c1117;
-  }
-
-  button,
-  a {
-    -webkit-tap-highlight-color: transparent;
-  }
-}
-
-@import "tailwindcss";
-
-@font-face {
-  font-family: "Inter:Bold";
-  src: url("https://static.figma.com/font/Inter_1") format("woff2");
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Inter:Regular";
-  src: url("https://static.figma.com/font/Inter_1") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Plus Jakarta Sans:Bold";
-  src: url("https://static.figma.com/font/PlusJakartaSans_wght__2") format("woff2");
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Plus Jakarta Sans:SemiBold";
-  src: url("https://static.figma.com/font/PlusJakartaSans_wght__2") format("woff2");
-  font-style: normal;
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Inter:Semi Bold";
-  src: url("https://static.figma.com/font/Inter_1") format("woff2");
-  font-style: normal;
-  font-weight: 600;
-}
-
-@layer base {
-  :root {
-    color: #f8fafc;
     background: #090d12;
     font-family: "Inter:Regular", Inter, sans-serif;
     font-synthesis: none;
@@ -195,9 +95,49 @@ body {
     background: #090d12;
   }
 
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   button {
     cursor: pointer;
   }
+}
+
+@font-face {
+  font-family: "Inter:Bold";
+  src: url("/fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter:Regular";
+  src: url("/fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans:Bold";
+  src: url("/fonts/plus-jakarta-sans-latin-wght-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans:SemiBold";
+  src: url("/fonts/plus-jakarta-sans-latin-wght-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Inter:Semi Bold";
+  src: url("/fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
 }
 
 @layer components {
@@ -791,109 +731,9 @@ button.form-padding {
     min-height: 16rem;
   }
 
-  .tournament-detail {
-    position: relative;
-    isolation: isolate;
-    width: 100%;
-    max-width: 1280px;
-    min-height: calc(100dvh - 5rem);
-    margin-inline: auto;
-    color: var(--on-surface);
-    background: var(--surface-base);
-    font-family: "Inter:Regular", Inter, sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .tournament-detail::before,
-  .tournament-detail::after {
-    position: absolute;
-    z-index: -1;
-    border-radius: 9999px;
-    content: "";
-    pointer-events: none;
-    filter: blur(80px);
-  }
-
-  .tournament-detail::before {
-    top: -8rem;
-    left: 12%;
-    width: 24rem;
-    height: 24rem;
-    background: var(--ember-glow);
-  }
-
-  .tournament-detail::after {
-    top: 18rem;
-    right: -6rem;
-    width: 22rem;
-    height: 22rem;
-    background: var(--cyan-glow);
-  }
 }
 
 
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
-}
-
-.main {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
-}
-/* 
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
-}
-
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
-}
-
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-} */
 /* 
 .ctas {
   display: flex;
@@ -918,44 +758,6 @@ button.form-padding {
   font-weight: 500;
 } */
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--button-secondary-border);
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-}
-
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
-}
 
 /* @media (prefers-color-scheme: dark) {
   .logo {

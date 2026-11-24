@@ -6,7 +6,7 @@ const TopStatsList = ({ isPlayer }: StatsPlayerType) => {
 
     const topPlayerStats = () => {
         return (
-            <div className="cardItem overflowHidden bg-red p5 mb10">
+            <div className="statsCardItem overflowHidden bg-red p5 mb10">
                 <span className="left ml25">{t('Total')}</span>
                 <span className="left ml15">{t('Name')}</span>
             </div>
@@ -15,7 +15,7 @@ const TopStatsList = ({ isPlayer }: StatsPlayerType) => {
 
     const topCardStats = () => {
         return (
-            <div className="cardItem overflowHidden bg-red p5 mb10">
+            <div className="statsCardItem overflowHidden bg-red p5 mb10">
                 <span className="left ml15 w-15">&nbsp;</span>
                 <span className="left ml15">{t('Total')}</span>
                 <span className="left ml15">{t('Name')}</span>

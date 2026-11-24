@@ -1,12 +1,3 @@
-.logos {
-    width: 100px;
-}
-
-.topLine {
-    height: 5px;
-    background: var(--background-black);
-}
-
 .padBox {
     padding: 15px 20px;
 }
@@ -29,14 +20,6 @@
     }
 }
 
-.headerInfo {
-    width: 230px;
-}
-
-.padheader {
-    padding: 5px 20px;
-}
-
 @media (max-width: 590px) {
     .tournamentDescription {
         margin-bottom: 20px;
@@ -44,21 +27,6 @@
 
     .listButton {
         width: 100%;
-    }
-
-    .headerRight {
-        display: none;
-    }
-
-    .headerInfo {
-        width: auto;
-        margin-right: 25px;
-    }
-
-    .header {
-        & .pBody {
-            padding: 25px 0px 25px 20px;
-        }
     }
 }
 
@@ -75,10 +43,6 @@
     width: 20px;
 }
 
-.radius-50 {
-    border-radius: 50px;
-}
-
 .cupBox {
     width: 25px;
     text-align: center;
@@ -93,14 +57,5 @@
 @layer base {
     button {
         padding: 10px 20px;
-    }
-}
-
-.homeIcon {
-    margin-left: -5px;
-
-    & img {
-        width: 19px;
-        margin-top: 0px;
     }
 }

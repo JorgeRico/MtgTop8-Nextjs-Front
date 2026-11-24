@@ -1,10 +1,3 @@
-.top {
-    font-weight: 600;
-    background: rgba(135, 135, 135, 0.2);
-    border-radius: 3px;
-    margin-bottom: 10px;
-}
-
-.cardItem {
-    overflow: hidden
+.statsCardItem {
+    overflow: hidden;
 }

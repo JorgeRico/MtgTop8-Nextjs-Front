@@ -140,14 +140,6 @@
     color: #eab308;
   }
 
-  .contact-card__meta {
-    color: #94a3b8;
-    font-family: "Inter:Regular", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-  }
-
   /* Form */
   .contact-form {
     display: flex;
@@ -177,12 +169,6 @@
   .contact-input[aria-invalid="true"],
   .contact-select[aria-invalid="true"],
   .contact-textarea[aria-invalid="true"] {
-    border-color: #ef4444;
-  }
-
-  .contact-input[aria-invalid="true"]:focus,
-  .contact-select[aria-invalid="true"]:focus,
-  .contact-textarea[aria-invalid="true"]:focus {
     border-color: #ef4444;
   }
 
