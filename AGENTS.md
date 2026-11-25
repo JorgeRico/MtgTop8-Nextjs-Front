@@ -10,6 +10,7 @@ Next.js 16 + React 19 frontend for the MTG Stats website (Magic: The Gathering t
 - HTTP client: axios
 - Email: emailjs (@emailjs/browser)
 - PDF generation: pdf-lib + downloadjs
+- Styling: Tailwind CSS 4
 - Styling: CSS modules + `globals.css` utility classes
 - Package manager: pnpm
 - Lint/format: ESLint (eslint-config-next/typescript) + Prettier
@@ -18,16 +19,38 @@ Next.js 16 + React 19 frontend for the MTG Stats website (Magic: The Gathering t
 ```
 front/
 ├── src/
-│   ├── app/              # Next.js App Router pages (layouts, pages, route handlers)
-│   ├── components/       # Shared UI components (Header, Footer, List, Forms, Tournament, etc.)
-│   ├── hooks/            # Custom React hooks (useApi, useCommon)
-│   ├── i18n/             # next-intl locale config
-│   ├── types/            # TypeScript schemas (database + website) and server constants
-│   └── fakeData/         # Blur/placeholder data for loading states
-├── messages/             # i18n messages (en.json, es.json, cat.json)
-└── public/
-    ├── images/           # Static image assets
-    └── pdf/              # PDF templates/assets
+│   ├── app/                   # App Router pages, layouts, route handlers, metadata
+│   │   ├── _home/             # Home sections (events, stats)
+│   │   ├── _not-found/        # Localized not-found implementation
+│   │   ├── _stats/            # Shared stats page sections
+│   │   ├── api/               # Route handlers (e.g. OG image)
+│   │   ├── styles/            # Shared CSS for home sections
+│   │   ├── globals.css        # Global CSS + Tailwind v4 @theme tokens
+│   │   └── layout.tsx         # Root layout
+│   ├── components/            # Shared UI components
+│   │   ├── Decklist/Detail/   # Standalone decklist detail component
+│   │   ├── Tournament/Detail/ # Standalone tournament detail component
+│   │   ├── List/              # League/deck/player/stats/tournament lists
+│   │   ├── Spinner/           # Shared minimum-duration loading spinner
+│   │   └── Header, Footer, Forms, League, Social, etc.
+│   ├── hooks/                 # Custom React hooks (useApi, useCommon, useLeagueStandings)
+│   ├── i18n/                  # next-intl locale config
+│   ├── types/                 # Schemas (database/website), server constants, social data
+│   └── fakeData/              # Blur/placeholder data for loading states
+├── messages/                  # i18n messages (en.json, es.json, cat.json)
+├── public/
+│   ├── fonts/                 # Self-hosted Inter/Plus Jakarta Sans + OFL licenses
+│   ├── images/                # Static image assets
+│   ├── pdf/                   # PDF templates/assets
+│   └── og-image.jpg
+├── AGENTS.md
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json / pnpm-lock.yaml
+├── postcss.config.js
+├── tailwind.config.js         # Present for legacy tooling; v4 tokens live in globals.css
+├── tsconfig.json
+└── vite.config.ts
 ```
 
 ## Coding rules & conventions
