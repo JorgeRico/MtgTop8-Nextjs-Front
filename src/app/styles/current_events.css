@@ -17,6 +17,24 @@
 
 .current-leagues-status-dot {
   background: var(--mana-green);
+  animation: current-status-blink 1.5s ease-in-out infinite;
+}
+
+@keyframes current-status-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .current-leagues-status-dot {
+    animation: none;
+  }
 }
 
 .current-leagues-status-label {

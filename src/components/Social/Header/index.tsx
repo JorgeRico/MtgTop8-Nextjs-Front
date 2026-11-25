@@ -7,7 +7,7 @@ function SocialLinks() {
     return (
         <nav
             aria-label="Social media"
-            className="hidden items-center gap-1.5 rounded bg-surface-card px-2.5 py-1 sm:flex"
+            className="hidden items-center gap-1.5 rounded bg-surface-card px-2.5 py-1 mt-2 sm:flex"
         >
             {socialLinks.map((social) => (
                 <a

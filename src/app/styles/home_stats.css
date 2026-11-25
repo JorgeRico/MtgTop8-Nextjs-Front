@@ -40,6 +40,18 @@
 	flex: 0 0 auto;
 	border-radius: 9999px;
 	background: var(--primary);
+	animation: circuit-live-blink 1.5s ease-in-out infinite;
+}
+
+@keyframes circuit-live-blink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.35;
+	}
 }
 
 .hero h1 {
@@ -169,6 +181,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+	.circuit-dot {
+		animation: none;
+	}
+
 	.stat-card {
 		transition: none;
 	}

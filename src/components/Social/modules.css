@@ -43,7 +43,20 @@
     border-radius: 9999px;
     background: #ef4444;
     box-shadow: 0 0 0 0 rgb(239 68 68 / 35%);
-    animation: live-pulse 2.4s ease-out infinite;
+    animation:
+      live-pulse 2.4s ease-out infinite,
+      broadcast-live-blink 1.5s ease-in-out infinite;
+  }
+
+  @keyframes broadcast-live-blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.35;
+    }
   }
 
   .broadcast-hub h1 {
@@ -122,6 +135,7 @@
     font-size: 10px;
     font-weight: 700;
     line-height: 15px;
+    margin-top: -5px;
   }
 
   .social-card__name {
@@ -133,6 +147,7 @@
     font-weight: 600;
     line-height: 16px;
     letter-spacing: 0.24px;
+    padding-left: 5px;
   }
 
   .social-card__detail {
@@ -142,6 +157,7 @@
     font-weight: 400;
     line-height: 16px;
     white-space: nowrap;
+    padding-left: 5px;
   }
 
 
