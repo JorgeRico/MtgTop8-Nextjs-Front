@@ -15,7 +15,7 @@ const LeagueStages = ({ tournaments, champions, url }: LeagueStagesProps) => {
     if (tournaments.length === 0) {
         return (
             <div className="bg-surface-card rounded-xl p-space-lg text-body-md text-mana-black flex items-center gap-2">
-                <span className="material-symbols-outlined text-[18px]">info</span>
+                <span className="material-symbols-outlined text-size-18">info</span>
                 <span>{t('no_tournaments')}</span>
             </div>
         );
@@ -47,7 +47,7 @@ const LeagueStages = ({ tournaments, champions, url }: LeagueStagesProps) => {
                                         <span className="text-mana-black font-body-sm">{item.date}</span>
                                     </div>
                                     <span className="px-2 py-0.5 rounded-full bg-surface-base text-mana-black font-label-sm text-label-sm flex items-center gap-1">
-                                        <span className="material-symbols-outlined text-[14px] text-mana-green">check_circle</span>
+                                        <span className="material-symbols-outlined text-size-14 text-mana-green">check_circle</span>
                                         {t('completed')}
                                     </span>
                                 </div>
@@ -57,12 +57,12 @@ const LeagueStages = ({ tournaments, champions, url }: LeagueStagesProps) => {
                                         {/* <h3 className="font-headline-sm text-headline-sm text-mana-white group-hover:text-primary transition-colors">{item.name}</h3> */}
                                         <div className="flex items-center gap-space-sm mt-1 px-2 text-body-sm text-mana-black">
                                             <span className="flex items-center gap-1">
-                                                <span className="material-symbols-outlined text-[16px]">groups</span>
+                                                <span className="material-symbols-outlined text-size-16">groups</span>
                                                 {item.players} {t('players')}
                                             </span>
                                             <span>•</span>
                                             <span className="flex items-center gap-1">
-                                                <span className="material-symbols-outlined text-[16px]">timer</span>
+                                                <span className="material-symbols-outlined text-size-16">timer</span>
                                                 {item.leagueName}
                                             </span>
                                         </div>
@@ -73,7 +73,7 @@ const LeagueStages = ({ tournaments, champions, url }: LeagueStagesProps) => {
                                     <div className="mt-3 p-2.5 rounded bg-surface-base/80 flex items-center justify-between">
                                         <div className="flex items-center gap-2.5">
                                             <div className="w-8 h-8 rounded-full bg-arcane-gold/20 text-arcane-gold flex items-center justify-center font-bold text-xs shrink-0">
-                                                <span className="material-symbols-outlined text-[16px]">military_tech</span>
+                                                <span className="material-symbols-outlined text-size-16">military_tech</span>
                                             </div>
                                             <div className="flex flex-col">
                                                 <span className="font-label-sm text-label-sm text-mana-black uppercase">{t('champion')}</span>
@@ -89,7 +89,7 @@ const LeagueStages = ({ tournaments, champions, url }: LeagueStagesProps) => {
                                 {/* <span className="text-body-sm text-mana-black">{item.year}</span> */}
                                 <Link className="px-space-md py-1.5 rounded bg-surface-elevated hover:bg-primary-container hover:text-white text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1" href={`${url}${item.id}`}>
                                     <span>{t('view_tournament')}</span>
-                                    <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                    <span className="material-symbols-outlined text-size-16">arrow_forward</span>
                                 </Link>
                             </div>
                                     </div>
@@ -100,7 +100,7 @@ const LeagueStages = ({ tournaments, champions, url }: LeagueStagesProps) => {
                                 {/* <span className="text-body-sm text-mana-black">{item.year}</span> */}
                                 <Link className="px-space-md py-1.5 rounded bg-surface-elevated hover:bg-primary-container hover:text-white text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1" href={`${url}${item.id}`}>
                                     <span>{t('view_tournament')}</span>
-                                    <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                    <span className="material-symbols-outlined text-size-16">arrow_forward</span>
                                 </Link>
                             </div>
                         </div>

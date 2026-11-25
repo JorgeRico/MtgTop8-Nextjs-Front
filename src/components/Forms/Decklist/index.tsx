@@ -296,7 +296,7 @@ const DeckListForm = () => {
                     <div className="bg-surface-card rounded-xl p-space-lg shadow-lg flex flex-col gap-space-md">
                         <div className="flex items-center justify-between pb-space-xs">
                             <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined text-primary text-[22px]">badge</span>
+                                <span className="material-symbols-outlined text-primary text-size-22">badge</span>
                                 <h2 className="font-headline-sm text-headline-sm text-mana-white">{t('competitor_details')}</h2>
                             </div>
                             <span className={`${metaClass} uppercase tracking-wider`}>{t('mtr_section')}</span>
@@ -306,14 +306,14 @@ const DeckListForm = () => {
                             <div className="flex flex-col gap-1">
                                 <label className={labelClass} htmlFor="player-name">
                                     <span>{t('first_name')}</span>
-                                    <span className="text-primary text-[10px]">{t('required')}</span>
+                                    <span className="text-primary text-size-10">{t('required')}</span>
                                 </label>
                                 <input className={inputClass} id="player-name" name="name" onChange={handleChange} placeholder={t('first_name_placeholder')} type="text" value={toSend.name} />
                             </div>
                             <div className="flex flex-col gap-1">
                                 <label className={labelClass} htmlFor="player-surname">
                                     <span>{t('surname')}</span>
-                                    <span className="text-primary text-[10px]">{t('required')}</span>
+                                    <span className="text-primary text-size-10">{t('required')}</span>
                                 </label>
                                 <input className={inputClass} id="player-surname" name="surname" onChange={handleChange} placeholder={t('surname_placeholder')} type="text" value={toSend.surname} />
                             </div>
@@ -325,7 +325,7 @@ const DeckListForm = () => {
                                 <span className={metaClass}>{t('optional_recommended')}</span>
                             </div>
                             <div className="relative flex items-center">
-                                <span className="material-symbols-outlined absolute left-3 text-mana-black text-[18px]">pin</span>
+                                <span className="material-symbols-outlined absolute left-3 text-mana-black text-size-18">pin</span>
                                 <input className={`${inputClass} pl-10 font-stat-mono text-body-md focus:ring-mana-blue`} id="dci-id" onChange={(e) => setPlayerId(e.target.value)} placeholder={t('circuit_player_id_placeholder')} type="text" value={playerId} />
                             </div>
                         </div>
@@ -333,7 +333,7 @@ const DeckListForm = () => {
                         <div className="flex flex-col gap-1">
                             <label className={labelClass} htmlFor="event-name">
                                 <span>{t('event_name')}</span>
-                                <span className="text-mana-blue text-[10px] font-semibold">{t('active_series')}</span>
+                                <span className="text-mana-blue text-size-10 font-semibold">{t('active_series')}</span>
                             </label>
                             <div className="relative">
                                 <input className={inputClass} id="event-name" name="event" onChange={handleChange} placeholder={t('event_name_placeholder')} type="text" value={toSend.event} />
@@ -363,7 +363,7 @@ const DeckListForm = () => {
                                 <span className="flex items-center gap-1">
                                     <span className="w-2 h-2 rounded-full bg-mana-blue"></span>
                                     <span className="w-2 h-2 rounded-full bg-mana-red"></span>
-                                    <span className={`${metaClass} text-[10px]`}>{t('archetype_hint')}</span>
+                                    <span className={`${metaClass} text-size-10`}>{t('archetype_hint')}</span>
                                 </span>
                             </label>
                             <input className={inputClass} id="deck-name" name="deckName" onChange={handleChange} placeholder={t('deck_name_placeholder')} type="text" value={toSend.deckName} />
@@ -378,16 +378,16 @@ const DeckListForm = () => {
                         </div>
                         <div className="grid grid-cols-2 gap-2">
                             <button className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-elevated text-mana-white font-label-md text-label-md hover:bg-surface-container-high transition-all shadow-sm" onClick={loadSample} type="button">
-                                <span className="material-symbols-outlined text-[16px] text-mana-blue">download</span>
+                                <span className="material-symbols-outlined text-size-16 text-mana-blue">download</span>
                                 <span>{t('load_sample')}</span>
                             </button>
                             <button className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-elevated text-error font-label-md text-label-md hover:bg-error-container/20 transition-all shadow-sm" onClick={resetFields} type="button">
-                                <span className="material-symbols-outlined text-[16px]">delete_sweep</span>
+                                <span className="material-symbols-outlined text-size-16">delete_sweep</span>
                                 <span>{t('reset_fields')}</span>
                             </button>
                         </div>
                         <div className="p-2.5 rounded bg-surface-base flex items-start gap-2 text-xs text-mana-black font-body-sm">
-                            <span className="material-symbols-outlined text-arcane-gold text-[16px] shrink-0 mt-0.5">info</span>
+                            <span className="material-symbols-outlined text-arcane-gold text-size-16 shrink-0 mt-0.5">info</span>
                             <span>{t('format_hint')}</span>
                         </div>
                     </div>
@@ -398,11 +398,11 @@ const DeckListForm = () => {
                     <div className="bg-surface-card rounded-xl p-space-lg shadow-lg flex flex-col gap-space-sm relative">
                         <div className="flex flex-wrap items-center justify-between gap-2 pb-space-xs">
                             <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined text-mana-blue text-[22px]">view_column</span>
+                                <span className="material-symbols-outlined text-mana-blue text-size-22">view_column</span>
                                 <h2 className="font-headline-sm text-headline-sm text-mana-white">{t('mainboard_title')}</h2>
                             </div>
                             <div className={`flex items-center gap-1.5 px-3 py-1 rounded-full font-stat-mono text-label-md shadow-sm ${isMainboardValid ? 'bg-mana-green/15 text-mana-green' : 'bg-error-container/20 text-error'}`}>
-                                <span className="material-symbols-outlined text-[16px]">{isMainboardValid ? 'check_circle' : 'error'}</span>
+                                <span className="material-symbols-outlined text-size-16">{isMainboardValid ? 'check_circle' : 'error'}</span>
                                 <span>{mainboardCount}</span> / 60 {t('cards')}
                             </div>
                         </div>
@@ -418,11 +418,11 @@ const DeckListForm = () => {
                     <div className="bg-surface-card rounded-xl p-space-lg shadow-lg flex flex-col gap-space-sm relative">
                         <div className="flex flex-wrap items-center justify-between gap-2 pb-space-xs">
                             <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined text-arcane-gold text-[22px]">auto_stories</span>
+                                <span className="material-symbols-outlined text-arcane-gold text-size-22">auto_stories</span>
                                 <h2 className="font-headline-sm text-headline-sm text-mana-white">{t('sideboard_title')}</h2>
                             </div>
                             <div className={`flex items-center gap-1.5 px-3 py-1 rounded-full font-stat-mono text-label-md shadow-sm ${isSideboardValid ? 'bg-mana-green/15 text-mana-green' : 'bg-error-container/20 text-error'}`}>
-                                <span className="material-symbols-outlined text-[16px]">{isSideboardValid ? 'check_circle' : 'error'}</span>
+                                <span className="material-symbols-outlined text-size-16">{isSideboardValid ? 'check_circle' : 'error'}</span>
                                 <span>{sideboardCount}</span> / 15 {t('cards')}
                             </div>
                         </div>
@@ -448,7 +448,7 @@ const DeckListForm = () => {
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="px-3 py-1 rounded bg-surface-elevated text-mana-white font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
-                                <span className="material-symbols-outlined text-[16px] text-mana-green">lock</span>
+                                <span className="material-symbols-outlined text-size-16 text-mana-green">lock</span>
                                 {t('a4_ready')}
                             </span>
                         </div>
@@ -457,44 +457,44 @@ const DeckListForm = () => {
                     {/* Live styled mini preview bar */}
                     <div className="bg-surface-base rounded-lg p-space-md shadow-inner grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-body-md">
                         <div className="flex flex-col">
-                            <span className="text-mana-black uppercase font-label-sm text-[10px]">{t('preview_pilot')}</span>
+                            <span className="text-mana-black uppercase font-label-sm text-size-10">{t('preview_pilot')}</span>
                             <span className="text-mana-white font-headline-sm text-body-lg font-bold truncate">{fullName || '—'}</span>
-                            <span className="text-primary font-mono text-[11px]">{playerId ? `ID: ${playerId}` : '—'}</span>
+                            <span className="text-primary font-mono text-size-11">{playerId ? `ID: ${playerId}` : '—'}</span>
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-mana-black uppercase font-label-sm text-[10px]">{t('preview_event')}</span>
+                            <span className="text-mana-black uppercase font-label-sm text-size-10">{t('preview_event')}</span>
                             <span className="text-mana-white font-semibold truncate">{toSend.event || '—'}</span>
-                            <span className="text-mana-black text-[11px]">{t('format_prefix')} <strong className="text-mana-blue">{format}</strong></span>
+                            <span className="text-mana-black text-size-11">{t('format_prefix')} <strong className="text-mana-blue">{format}</strong></span>
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-mana-black uppercase font-label-sm text-[10px]">{t('preview_archetype')}</span>
+                            <span className="text-mana-black uppercase font-label-sm text-size-10">{t('preview_archetype')}</span>
                             <span className="text-mana-white font-semibold truncate">{toSend.deckName || '—'}</span>
-                            <span className="text-mana-black text-[11px]">{t('colors_prefix')} <strong className="text-mana-red">{t('colors_value')}</strong></span>
+                            <span className="text-mana-black text-size-11">{t('colors_prefix')} <strong className="text-mana-red">{t('colors_value')}</strong></span>
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-mana-black uppercase font-label-sm text-[10px]">{t('preview_totals')}</span>
+                            <span className="text-mana-black uppercase font-label-sm text-size-10">{t('preview_totals')}</span>
                             <div className="flex items-center gap-2 mt-0.5">
                                 <span className={`font-stat-mono text-body-lg font-bold ${isMainboardValid && isSideboardValid ? 'text-mana-green' : 'text-error'}`}>{mainboardCount} / {sideboardCount}</span>
-                                <span className={`material-symbols-outlined text-[18px] ${isMainboardValid && isSideboardValid ? 'text-mana-green' : 'text-error'}`}>verified_user</span>
+                                <span className={`material-symbols-outlined text-size-18 ${isMainboardValid && isSideboardValid ? 'text-mana-green' : 'text-error'}`}>verified_user</span>
                             </div>
-                            <span className={`text-[11px] ${isMainboardValid && isSideboardValid ? 'text-mana-green' : 'text-error'}`}>{isMainboardValid && isSideboardValid ? t('decklist_legal') : t('decklist_illegal')}</span>
+                            <span className={`text-size-11 ${isMainboardValid && isSideboardValid ? 'text-mana-green' : 'text-error'}`}>{isMainboardValid && isSideboardValid ? t('decklist_legal') : t('decklist_illegal')}</span>
                         </div>
                     </div>
 
                     {/* CTA row */}
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md pt-space-xs">
                         <button className="group relative inline-flex items-center justify-center gap-3 px-space-xl py-3.5 rounded-lg bg-primary-container text-white font-headline-sm text-body-lg font-bold shadow-[0_0_24px_rgba(249,115,22,0.45)] hover:bg-[#ea580c] hover:shadow-[0_0_32px_rgba(249,115,22,0.6)] active:scale-[0.99] transition-all" disabled={!showButton} type="submit">
-                            <span className="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+                            <span className="material-symbols-outlined text-size-24">picture_as_pdf</span>
                             <span>{t('generate_pdf')}</span>
-                            <span className="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+                            <span className="material-symbols-outlined text-size-20 transition-transform group-hover:translate-x-1">arrow_forward</span>
                         </button>
                         <div className="flex items-center gap-2">
                             <button className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-space-md py-3 rounded-lg bg-surface-elevated text-mana-white font-label-lg text-label-lg hover:bg-surface-container-high transition-all shadow-sm" onClick={copyPlaintext} title={t('copy_plaintext')} type="button">
-                                <span className="material-symbols-outlined text-[18px] text-mana-blue">content_copy</span>
+                                <span className="material-symbols-outlined text-size-18 text-mana-blue">content_copy</span>
                                 <span>{t('copy_plaintext')}</span>
                             </button>
                             <button className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-space-md py-3 rounded-lg bg-surface-elevated text-mana-white font-label-lg text-label-lg hover:bg-surface-container-high transition-all shadow-sm" onClick={() => window.print()} title={t('print_direct')} type="button">
-                                <span className="material-symbols-outlined text-[18px] text-arcane-gold">print</span>
+                                <span className="material-symbols-outlined text-size-18 text-arcane-gold">print</span>
                                 <span>{t('print_direct')}</span>
                             </button>
                         </div>
@@ -502,7 +502,7 @@ const DeckListForm = () => {
 
                     {showError == true && (
                         <div className="flex items-center gap-2 rounded-lg bg-error-container/20 px-3.5 py-2.5 text-error text-xs font-body-sm" role="alert">
-                            <span className="material-symbols-outlined text-[18px]">error</span>
+                            <span className="material-symbols-outlined text-size-18">error</span>
                             <span>{errorMessage}</span>
                         </div>
                     )}

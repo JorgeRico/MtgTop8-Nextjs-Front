@@ -8,7 +8,7 @@ import {LeagueType} from '@/types/schemas/database/league';
 import {AxiosResponse} from 'axios';
 import CurrentComponent from '@/components/List/League/Current/Current';
 import Spinner from '@/components/Spinner';
-import './modules.css';
+import '@/app/styles/current_events.css';
 
 const MIN_LOADING_MS = 1000;
 

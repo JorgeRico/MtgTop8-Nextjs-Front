@@ -1,4 +1,4 @@
-import HomeComponent from "@/app/_home/component";
+import HomeComponent from "@/app/_home/index";
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { seo_tags } from '@/components/Seo';

@@ -54,18 +54,18 @@ type Matchup = {
 };
 
 const manaPipColors: Record<string, string> = {
-  W: 'bg-[#f8fafc] text-[#0f172a]',
+  W: 'bg-[#f8fafc] text-color-slate-950',
   U: 'bg-[#0ea5e9] text-white',
   B: 'bg-[#475569] text-white',
   R: 'bg-[#ef4444] text-white',
-  G: 'bg-[#10b981] text-[#052e16]',
+  G: 'bg-[#10b981] text-color-emerald-950',
   C: 'bg-surface-container-highest text-on-surface',
   X: 'bg-surface-container-highest text-on-surface',
-  '0': 'bg-[#94a3b8] text-[#0b1120]',
-  '1': 'bg-[#94a3b8] text-[#0b1120]',
-  '2': 'bg-[#94a3b8] text-[#0b1120]',
-  '3': 'bg-[#94a3b8] text-[#0b1120]',
-  '4': 'bg-[#94a3b8] text-[#0b1120]'
+  '0': 'bg-[#94a3b8] text-color-ink-900',
+  '1': 'bg-[#94a3b8] text-color-ink-900',
+  '2': 'bg-[#94a3b8] text-color-ink-900',
+  '3': 'bg-[#94a3b8] text-color-ink-900',
+  '4': 'bg-[#94a3b8] text-color-ink-900'
 };
 
 const delverImage =
@@ -615,7 +615,7 @@ const ManaPips = ({
     {symbols.map((symbol, index) => (
       <span
         key={`${symbol}-${index}`}
-        className={`inline-flex h-[18px] min-w-[18px] items-center justify-center rounded-full px-1 text-[10px] font-black shadow-sm ring-1 ring-white/10 ${manaPipColors[symbol] ?? manaPipColors.C}`}
+        className={`inline-flex h-[18px] min-w-[18px] items-center justify-center rounded-full px-1 text-size-10 font-black shadow-sm ring-1 ring-white/10 ${manaPipColors[symbol] ?? manaPipColors.C}`}
       >
         {symbol}
       </span>
@@ -685,7 +685,7 @@ const CompactCardRow = ({
       </span>
       <ManaPips symbols={card.mana} />
     </span>
-    <span className="material-symbols-outlined shrink-0 text-[14px] text-outline">
+    <span className="material-symbols-outlined shrink-0 text-size-14 text-outline">
       open_in_new
     </span>
   </button>
@@ -869,10 +869,10 @@ const DecklistDetail = () => {
             href="/"
             className="inline-flex items-center gap-1 transition hover:text-primary"
           >
-            <span className="material-symbols-outlined text-[14px]">home</span>
+            <span className="material-symbols-outlined text-size-14">home</span>
             Inici
           </Link>
-          <span className="material-symbols-outlined text-[14px]">
+          <span className="material-symbols-outlined text-size-14">
             chevron_right
           </span>
           <Link
@@ -881,7 +881,7 @@ const DecklistDetail = () => {
           >
             Tornejos
           </Link>
-          <span className="material-symbols-outlined text-[14px]">
+          <span className="material-symbols-outlined text-size-14">
             chevron_right
           </span>
           <Link
@@ -890,7 +890,7 @@ const DecklistDetail = () => {
           >
             Lliga del Vallès #34
           </Link>
-          <span className="material-symbols-outlined text-[14px]">
+          <span className="material-symbols-outlined text-size-14">
             chevron_right
           </span>
           <span className="font-medium text-mana-white">Temur Delver</span>
@@ -914,7 +914,7 @@ const DecklistDetail = () => {
                   Temur Delver
                 </h1>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-arcane-gold/15 px-3 py-1 font-label-sm text-label-sm text-arcane-gold ring-1 ring-arcane-gold/30">
-                  <span className="material-symbols-outlined text-[18px]">
+                  <span className="material-symbols-outlined text-size-18">
                     trophy
                   </span>
                   1r Lloc — Campió
@@ -927,19 +927,19 @@ const DecklistDetail = () => {
               </p>
               <div className="flex flex-wrap items-center gap-2">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-elevated px-3 py-1 font-label-sm text-label-sm text-mana-white shadow-sm">
-                  <span className="material-symbols-outlined text-[16px] text-arcane-gold">
+                  <span className="material-symbols-outlined text-size-16 text-arcane-gold">
                     casino
                   </span>
                   Aggro-Control / Tempo
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-elevated px-3 py-1 font-label-sm text-label-sm text-mana-white shadow-sm">
-                  <span className="material-symbols-outlined text-[16px] text-mana-blue">
+                  <span className="material-symbols-outlined text-size-16 text-mana-blue">
                     style
                   </span>
                   U/R/G
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-elevated px-3 py-1 font-label-sm text-label-sm text-mana-white shadow-sm">
-                  <span className="material-symbols-outlined text-[16px] text-primary">
+                  <span className="material-symbols-outlined text-size-16 text-primary">
                     groups
                   </span>
                   VALLÈS TEAM
@@ -958,7 +958,7 @@ const DecklistDetail = () => {
                   className="flex min-w-28 flex-col gap-1 rounded-xl border border-outline-variant/15 bg-surface-container-lowest/70 p-3 shadow-sm backdrop-blur"
                 >
                   <span className="flex items-center gap-1 font-label-sm text-label-sm text-outline">
-                    <span className="material-symbols-outlined text-[14px]">
+                    <span className="material-symbols-outlined text-size-14">
                       {stat.icon}
                     </span>
                     {stat.label}
@@ -979,7 +979,7 @@ const DecklistDetail = () => {
               className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-primary/15 px-3 py-2 font-label-md text-label-md text-primary transition hover:bg-primary/25"
               onClick={copyDecklist}
             >
-              <span className="material-symbols-outlined text-[18px]">
+              <span className="material-symbols-outlined text-size-18">
                 {copied ? 'check' : 'content_copy'}
               </span>
               {copied ? 'Copiat!' : 'Copiar Llista'}
@@ -989,7 +989,7 @@ const DecklistDetail = () => {
               className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-mana-blue/15 px-3 py-2 font-label-md text-label-md text-mana-blue transition hover:bg-mana-blue/25"
               onClick={downloadTextDecklist}
             >
-              <span className="material-symbols-outlined text-[18px]">
+              <span className="material-symbols-outlined text-size-18">
                 download
               </span>
               Exportar .TXT
@@ -999,7 +999,7 @@ const DecklistDetail = () => {
               className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-mana-red/15 px-3 py-2 font-label-md text-label-md text-mana-red transition hover:bg-mana-red/25"
               onClick={() => window.print()}
             >
-              <span className="material-symbols-outlined text-[18px]">
+              <span className="material-symbols-outlined text-size-18">
                 picture_as_pdf
               </span>
               Fitxa PDF
@@ -1009,7 +1009,7 @@ const DecklistDetail = () => {
               className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-mana-green/15 px-3 py-2 font-label-md text-label-md text-mana-green transition hover:bg-mana-green/25"
               onClick={openHandSimulator}
             >
-              <span className="material-symbols-outlined text-[18px]">
+              <span className="material-symbols-outlined text-size-18">
                 draw
               </span>
               Simular Mà Inicial
@@ -1025,7 +1025,7 @@ const DecklistDetail = () => {
               }`}
               onClick={() => toggleViewMode('table')}
             >
-              <span className="material-symbols-outlined text-[16px]">
+              <span className="material-symbols-outlined text-size-16">
                 format_list_bulleted
               </span>
               Llista Compacta
@@ -1039,7 +1039,7 @@ const DecklistDetail = () => {
               }`}
               onClick={() => toggleViewMode('visual')}
             >
-              <span className="material-symbols-outlined text-[16px]">
+              <span className="material-symbols-outlined text-size-16">
                 grid_view
               </span>
               Galeria Visual
@@ -1144,7 +1144,7 @@ const DecklistDetail = () => {
                 <h3 className="font-headline-sm text-headline-sm text-mana-white">
                   Vista prèvia de carta
                 </h3>
-                <span className="material-symbols-outlined text-[18px] text-outline">
+                <span className="material-symbols-outlined text-size-18 text-outline">
                   visibility
                 </span>
               </header>
@@ -1171,7 +1171,7 @@ const DecklistDetail = () => {
                   {preview.oracle}
                 </p>
                 <div className="flex items-center gap-2 rounded-lg bg-surface-container-low px-3 py-2 font-label-sm text-label-sm text-outline">
-                  <span className="material-symbols-outlined text-[16px]">
+                  <span className="material-symbols-outlined text-size-16">
                     mouse_click
                   </span>
                   Cliqueja qualsevol carta de la llista per veure'n els detalls.
@@ -1384,7 +1384,7 @@ const DecklistDetail = () => {
                 className="cursor-pointer rounded-full p-2 text-outline transition hover:bg-surface-container-high hover:text-mana-white"
                 onClick={() => setHandOpen(false)}
               >
-                <span className="material-symbols-outlined text-[20px]">
+                <span className="material-symbols-outlined text-size-20">
                   close
                 </span>
               </button>

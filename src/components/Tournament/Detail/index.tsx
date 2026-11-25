@@ -511,17 +511,17 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
           <div className="relative z-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
             <div className="max-w-3xl space-y-4">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="flex items-center gap-1 rounded-full bg-surface-container-high px-2.5 py-1 text-[10px] font-label font-bold uppercase tracking-wider text-primary">
+                <span className="flex items-center gap-1 rounded-full bg-surface-container-high px-2.5 py-1 text-size-10 font-label font-bold uppercase tracking-wider text-primary">
                   <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
                   Sanctioned {getFormat(tournament.format)}
                 </span>
-                <span className="rounded-full bg-surface-container-high px-2.5 py-1 text-[10px] font-label font-bold uppercase tracking-wider text-secondary">
+                <span className="rounded-full bg-surface-container-high px-2.5 py-1 text-size-10 font-label font-bold uppercase tracking-wider text-secondary">
                   Competitive REL
                 </span>
-                <span className="rounded-full bg-surface-container px-2.5 py-1 font-mono text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant">
+                <span className="rounded-full bg-surface-container px-2.5 py-1 font-mono text-size-10 font-label font-bold uppercase tracking-wider text-on-surface-variant">
                   EVENT ID: #{currentId}
                 </span>
-                <span className="rounded-full bg-surface-container-lowest px-2.5 py-1 text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant/70">
+                <span className="rounded-full bg-surface-container-lowest px-2.5 py-1 text-size-10 font-label font-bold uppercase tracking-wider text-on-surface-variant/70">
                   Temporada {tournament.year}
                 </span>
               </div>
@@ -542,7 +542,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
 
               <div className="grid grid-cols-2 gap-3 pt-2 sm:grid-cols-4">
                 <div className="rounded-lg bg-surface-container p-3">
-                  <span className="block text-[11px] font-label uppercase tracking-wider text-on-surface-variant/70">
+                  <span className="block text-size-11 font-label uppercase tracking-wider text-on-surface-variant/70">
                     Format
                   </span>
                   <span className="font-headline text-sm font-bold text-on-surface">
@@ -550,7 +550,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                   </span>
                 </div>
                 <div className="rounded-lg bg-surface-container p-3">
-                  <span className="block text-[11px] font-label uppercase tracking-wider text-on-surface-variant/70">
+                  <span className="block text-size-11 font-label uppercase tracking-wider text-on-surface-variant/70">
                     Data
                   </span>
                   <span className="font-headline text-sm font-bold text-on-surface">
@@ -558,7 +558,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                   </span>
                 </div>
                 <div className="rounded-lg bg-surface-container p-3">
-                  <span className="block text-[11px] font-label uppercase tracking-wider text-on-surface-variant/70">
+                  <span className="block text-size-11 font-label uppercase tracking-wider text-on-surface-variant/70">
                     Assistència
                   </span>
                   <span className="font-headline text-sm font-bold text-primary">
@@ -566,7 +566,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                   </span>
                 </div>
                 <div className="rounded-lg bg-surface-container p-3">
-                  <span className="block text-[11px] font-label uppercase tracking-wider text-on-surface-variant/70">
+                  <span className="block text-size-11 font-label uppercase tracking-wider text-on-surface-variant/70">
                     Estructura
                   </span>
                   <span className="font-headline text-sm font-bold text-on-surface">
@@ -628,7 +628,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
             </div>
 
             <div className="overflow-hidden rounded-xl bg-surface-container-low shadow-lg">
-              <div className="grid grid-cols-12 bg-surface-container px-4 py-2.5 text-[11px] font-label font-bold uppercase tracking-wider text-on-surface-variant/80">
+              <div className="grid grid-cols-12 bg-surface-container px-4 py-2.5 text-size-11 font-label font-bold uppercase tracking-wider text-on-surface-variant/80">
                 <div className="col-span-1 text-center">#</div>
                 <div className="col-span-5 sm:col-span-6">
                   Jugador &amp; Baralla
@@ -662,7 +662,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                         </span>
                         {row.tier && (
                           <span
-                            className={`rounded px-1.5 py-[2px] text-[10px] font-label font-extrabold uppercase ${row.rank === 1 ? 'bg-primary-container/20 text-primary' : 'bg-surface-container-high text-on-surface-variant'}`}
+                            className={`rounded px-1.5 py-[2px] text-size-10 font-label font-extrabold uppercase ${row.rank === 1 ? 'bg-primary-container/20 text-primary' : 'bg-surface-container-high text-on-surface-variant'}`}
                           >
                             {row.tier}
                           </span>
@@ -689,7 +689,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                       <span className="font-mono text-xs font-semibold text-on-surface">
                         {row.record}
                       </span>
-                      <span className="block text-[10px] text-on-surface-variant/70">
+                      <span className="block text-size-10 text-on-surface-variant/70">
                         {row.points} ({row.omw})
                       </span>
                     </div>
@@ -764,7 +764,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                     <span className="font-headline text-xl font-extrabold text-on-surface">
                       Legacy
                     </span>
-                    <span className="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">
+                    <span className="text-size-10 font-label uppercase tracking-wider text-on-surface-variant">
                       Meta
                     </span>
                   </div>
@@ -799,13 +799,13 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
 
               <div className="space-y-3 rounded-lg bg-surface-container p-4">
                 <div className="flex items-center justify-between">
-                  <span className="flex items-center gap-1 text-[10px] font-label font-bold uppercase tracking-wider text-primary">
+                  <span className="flex items-center gap-1 text-size-10 font-label font-bold uppercase tracking-wider text-primary">
                     <span className="material-symbols-outlined text-xs">
                       military_tech
                     </span>
                     Champion Tech Innovation
                   </span>
-                  <span className="font-mono text-[10px] text-on-surface-variant/80">
+                  <span className="font-mono text-size-10 text-on-surface-variant/80">
                     Temur Delver
                   </span>
                 </div>
@@ -816,13 +816,13 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                   per bloquejar el mana dels jugadors de Cloudpost i Breakfast.
                 </p>
                 <div className="flex flex-wrap items-center gap-2 pt-1">
-                  <span className="rounded bg-surface-container-high px-2 py-0.5 text-[10px] font-label font-semibold text-on-surface">
+                  <span className="rounded bg-surface-container-high px-2 py-0.5 text-size-10 font-label font-semibold text-on-surface">
                     4 Wasteland
                   </span>
-                  <span className="rounded bg-surface-container-high px-2 py-0.5 text-[10px] font-label font-semibold text-on-surface">
+                  <span className="rounded bg-surface-container-high px-2 py-0.5 text-size-10 font-label font-semibold text-on-surface">
                     4 Lightning Bolt
                   </span>
-                  <span className="rounded bg-surface-container-high px-2 py-0.5 text-[10px] font-label font-semibold text-on-surface">
+                  <span className="rounded bg-surface-container-high px-2 py-0.5 text-size-10 font-label font-semibold text-on-surface">
                     3 Questing Druid
                   </span>
                 </div>
@@ -893,7 +893,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                         </div>
                         <div className="flex flex-1 items-center justify-between pl-4 text-base text-on-surface transition-colors group-hover:text-primary">
                           <span>{card.name}</span>
-                          <span className="hidden font-mono text-[11px] text-on-surface-variant/50 group-hover:inline">
+                          <span className="hidden font-mono text-size-11 text-on-surface-variant/50 group-hover:inline">
                             {card.detail}
                           </span>
                         </div>
@@ -901,7 +901,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between bg-surface-container-low p-3 text-[11px] font-label text-on-surface-variant/70">
+                  <div className="flex items-center justify-between bg-surface-container-low p-3 text-size-11 font-label text-on-surface-variant/70">
                     <span>Calculat sobre 1,740 cartes registrades</span>
                     <button
                       className="cursor-pointer text-primary hover:underline"
@@ -925,7 +925,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                         {tournament.players} llistes
                       </p>
                     </div>
-                    <span className="rounded bg-surface-container px-2 py-1 font-mono text-[10px] font-semibold text-secondary">
+                    <span className="rounded bg-surface-container px-2 py-1 font-mono text-size-10 font-semibold text-secondary">
                       60 MD / 15 SB
                     </span>
                   </div>
@@ -977,7 +977,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                         <span className="font-headline text-xs font-semibold text-on-surface">
                           {bullet.name}
                         </span>
-                        <span className="rounded bg-surface-container-high px-1.5 py-[2px] font-mono text-[10px] text-primary">
+                        <span className="rounded bg-surface-container-high px-1.5 py-[2px] font-mono text-size-10 text-primary">
                           {bullet.copies}
                         </span>
                       </div>
@@ -1074,7 +1074,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                 onClick={() => setDeckModal(null)}
                 type="button"
               >
-                <span className="material-symbols-outlined text-[20px]">
+                <span className="material-symbols-outlined text-size-20">
                   close
                 </span>
               </button>
@@ -1085,7 +1085,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                   <span className="font-label-md text-label-md text-on-surface">
                     Maindeck (60 Cards)
                   </span>
-                  <div className="flex flex-col gap-1 rounded-lg bg-surface-container-lowest p-3 font-mono text-[13px] text-on-surface/90">
+                  <div className="flex flex-col gap-1 rounded-lg bg-surface-container-lowest p-3 font-mono text-size-13 text-on-surface/90">
                     {maindeck.map((line, index) => (
                       <p key={`${line}-${index}`}>{line}</p>
                     ))}
@@ -1095,7 +1095,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                   <span className="font-label-md text-label-md text-on-surface">
                     Sideboard (15 Cards)
                   </span>
-                  <div className="flex flex-col gap-1 rounded-lg bg-surface-container-lowest p-3 font-mono text-[13px] text-on-surface/90">
+                  <div className="flex flex-col gap-1 rounded-lg bg-surface-container-lowest p-3 font-mono text-size-13 text-on-surface/90">
                     {sideboard.map((line) => (
                       <p key={line}>{line}</p>
                     ))}
@@ -1105,7 +1105,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                     onClick={copyDeckToClipboard}
                     type="button"
                   >
-                    <span className="material-symbols-outlined text-[16px]">
+                    <span className="material-symbols-outlined text-size-16">
                       {copied ? 'check' : 'content_copy'}
                     </span>
                     {copied

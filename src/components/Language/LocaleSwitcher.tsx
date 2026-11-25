@@ -87,7 +87,7 @@ function LanguageMenu({ currentLocale, onLanguageChange }: Props) {
                     className="size-[13.333px]"
                 />
 
-                <span className="font-interface uppercase text-center text-[11px] font-bold leading-[14px] tracking-[0.55px] text-[#e0e2ea]">
+                <span className="font-interface uppercase text-center text-size-11 font-bold leading-[14px] tracking-[0.55px] text-color-slate-200">
                     {language.code}
                 </span>
 
@@ -114,7 +114,7 @@ function LanguageMenu({ currentLocale, onLanguageChange }: Props) {
                             role="option"
                             aria-selected={language.code === lang.code}
                             onClick={() => handleLanguageChange(lang.code)}
-                            className="font-interface block w-full px-3 py-1.5 text-center text-[11px] font-bold tracking-[0.55px] uppercase text-[#94a3b8] hover:bg-[#1a222d] hover:text-[#f8fafc] focus:bg-[#1a222d] focus:text-[#f8fafc] focus:outline-none"
+                            className="font-interface block w-full px-3 py-1.5 text-center text-size-11 font-bold tracking-[0.55px] uppercase text-color-slate-400 hover:bg-[#1a222d] hover-text-color-slate-50 focus:bg-[#1a222d] focus-text-color-slate-50 focus:outline-none"
                         >
                             {lang.code}
                         </button>

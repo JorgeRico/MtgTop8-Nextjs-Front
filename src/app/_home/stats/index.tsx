@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import Spinner from '@/components/Spinner';
-import "./modules.css";
+import "@/app/styles/home_stats.css";
 
 type Stat = {
     label: string;
@@ -51,7 +51,7 @@ const Stats = () => {
                         <span>{t('catalan-circuit-2026')}</span>
                     </div>
                     <h1 id="page-title" className="mb-1">{t('league-title')}</h1>
-                    <p className="text-body-md text-[#94a3b8]">
+                    <p className="text-body-md text-color-slate-400">
                         {t('league-description')}
                     </p>
                 </div>

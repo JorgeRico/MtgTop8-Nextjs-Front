@@ -135,7 +135,7 @@ const LeagueComponent = ({ id, initialLeague, initialAverage, initialTournaments
 
             <section className="bg-surface-card rounded-xl p-space-md md:p-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-lg">
                 <div className="flex items-start gap-space-md">
-                    <span className="material-symbols-outlined text-primary text-[26px]">gavel</span>
+                    <span className="material-symbols-outlined text-primary text-size-26">gavel</span>
                     <div className="flex flex-col gap-space-xs">
                         <h2 className="font-headline-sm text-headline-sm text-mana-white">{t('rulebook_title')}</h2>
                         <p className="font-body-sm text-body-sm text-mana-black max-w-2xl">{t('rulebook_text')}</p>
@@ -143,7 +143,7 @@ const LeagueComponent = ({ id, initialLeague, initialAverage, initialTournaments
                     </div>
                 </div>
                 <Link className="px-space-md py-space-sm rounded-lg bg-surface-elevated hover:bg-primary-container hover:text-white text-on-surface font-label-md text-label-md transition-colors flex items-center gap-2 shrink-0" href={endpoints.HTTP_CONTACT}>
-                    <span className="material-symbols-outlined text-[18px]">contact_support</span>
+                    <span className="material-symbols-outlined text-size-18">contact_support</span>
                     <span>{t('rulebook_contact')}</span>
                 </Link>
             </section>

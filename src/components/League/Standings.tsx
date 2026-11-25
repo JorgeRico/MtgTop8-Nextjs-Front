@@ -15,7 +15,7 @@ const LeagueStandings = ({ standings, isLoading, year }: LeagueStandingsProps) =
     if (isLoading) {
         return (
             <div className="bg-surface-card rounded-xl p-space-lg flex items-center gap-3 text-body-md text-mana-black">
-                <span className="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>
+                <span className="material-symbols-outlined text-size-18 animate-spin">progress_activity</span>
                 <span>{t('loading_standings')}</span>
             </div>
         );
@@ -24,7 +24,7 @@ const LeagueStandings = ({ standings, isLoading, year }: LeagueStandingsProps) =
     if (standings.length === 0) {
         return (
             <div className="bg-surface-card rounded-xl p-space-lg text-body-md text-mana-black flex items-center gap-2">
-                <span className="material-symbols-outlined text-[18px]">info</span>
+                <span className="material-symbols-outlined text-size-18">info</span>
                 <span>{t('no_standings')}</span>
             </div>
         );
@@ -61,7 +61,7 @@ const LeagueStandings = ({ standings, isLoading, year }: LeagueStandingsProps) =
                                             <span className={`w-2 h-2 rounded-full ${index === 0 ? 'bg-arcane-gold' : 'bg-mana-black'}`}></span>
                                             <span className="font-bold text-mana-white group-hover:text-primary transition-colors">{row.name}</span>
                                             {row.wins > 0 && (
-                                                <span className="px-1.5 py-[2px] rounded bg-surface-elevated text-[10px] text-arcane-gold uppercase font-bold">
+                                                <span className="px-1.5 py-[2px] rounded bg-surface-elevated text-size-10 text-arcane-gold uppercase font-bold">
                                                     {row.wins}x {t('champion')}
                                                 </span>
                                             )}

@@ -16,7 +16,7 @@ const LeagueList = ({ items }: LeagueItemsType) => {
             <div className="rounded-xl bg-surface-card p-space-md md:p-space-lg shadow-sm hover:bg-surface-elevated transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-md">
                 <div className="flex items-center gap-space-md">
                     <div className="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-arcane-gold shrink-0">
-                        <span className="material-symbols-outlined text-[26px]">
+                        <span className="material-symbols-outlined text-size-26">
                             <img src={`${assetHomePathPrefix}/badge.png`} alt={tags('Cup Champion')} title={tags('Cup Champion')} className="" />
                         </span>
                     </div>
@@ -36,14 +36,14 @@ const LeagueList = ({ items }: LeagueItemsType) => {
                 </div>
                 <div className="flex items-center gap-space-sm self-end md:self-center">
                     <Link className="px-3.5 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-mana-white font-label-md text-label-md flex items-center gap-1 transition-colors" href="#">
-                        <span className="material-symbols-outlined text-[16px]">
+                        <span className="material-symbols-outlined text-size-16">
                             <img src={`${assetHomePathPrefix}/list.png`} alt={tags('Cup Champion')} title={tags('Cup Champion')} className="" />
                         </span>
                         <span>Top 8 Decks</span>
                     </Link>
                     <a className="px-4 py-2 rounded-lg bg-primary-container hover:bg-on-primary-container text-white font-label-md text-label-md flex items-center gap-1 shadow-sm transition-colors" href="#">
                         <span>View league</span>
-                        <span className="material-symbols-outlined text-[16px]">
+                        <span className="material-symbols-outlined text-size-16">
                             <img src={`${assetHomePathPrefix}/full_arrow_forward.png`} alt={tags('Cup Champion')} title={tags('Cup Champion')} className="" />
                         </span>
                     </a>

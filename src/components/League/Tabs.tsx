@@ -35,10 +35,10 @@ const LeagueTabs = ({ active, setActive, numStages, lastSync }: LeagueTabsProps)
                             role="tab"
                             type="button"
                         >
-                            <span className="material-symbols-outlined text-[18px]">{tab.icon}</span>
+                            <span className="material-symbols-outlined text-size-18">{tab.icon}</span>
                             <span>{tab.label}</span>
                             {tab.id === 'tournaments' && numStages > 0 && (
-                                <span className={`px-1.5 py-[2px] rounded-full text-[10px] font-bold ${isActive ? 'bg-white/20 text-white' : 'bg-surface-elevated text-mana-black'}`}>{numStages}</span>
+                                <span className={`px-1.5 py-[2px] rounded-full text-size-10 font-bold ${isActive ? 'bg-white/20 text-white' : 'bg-surface-elevated text-mana-black'}`}>{numStages}</span>
                             )}
                         </button>
                     );
@@ -47,7 +47,7 @@ const LeagueTabs = ({ active, setActive, numStages, lastSync }: LeagueTabsProps)
 
             {lastSync !== '' && (
                 <div className="hidden sm:flex items-center gap-space-xs text-mana-black font-label-sm text-label-sm whitespace-nowrap">
-                    <span className="material-symbols-outlined text-[16px] text-mana-green">sync</span>
+                    <span className="material-symbols-outlined text-size-16 text-mana-green">sync</span>
                     <span>{t('last_sync', { date: lastSync })}</span>
                 </div>
             )}

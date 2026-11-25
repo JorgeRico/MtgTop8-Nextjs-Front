@@ -50,7 +50,7 @@ const Decklist = () => {
                     {/* 2. Header banner with glassmorphic layout */}
                     <header className="relative rounded-xl bg-surface-card p-space-md md:p-space-xl overflow-hidden shadow-xl mb-space-xl">
                         <div className="absolute -right-16 -top-16 opacity-5 pointer-events-none select-none">
-                            <span className="material-symbols-outlined text-[320px] text-white">description</span>
+                            <span className="material-symbols-outlined text-size-320 text-white">description</span>
                         </div>
                         <div className="relative z-10 flex flex-col gap-space-sm max-w-3xl">
                             <div className="flex items-center gap-2">
@@ -67,19 +67,19 @@ const Decklist = () => {
                             </p>
                             <div className="flex flex-wrap items-center gap-2 pt-space-xs">
                                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-elevated text-mana-white font-label-sm text-label-sm shadow-sm">
-                                    <span className="material-symbols-outlined text-mana-blue text-[16px]">verified</span>
+                                    <span className="material-symbols-outlined text-mana-blue text-size-16">verified</span>
                                     {t('feature_wes')}
                                 </span>
                                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-elevated text-mana-white font-label-sm text-label-sm shadow-sm">
-                                    <span className="material-symbols-outlined text-mana-green text-[16px]">spellcheck</span>
+                                    <span className="material-symbols-outlined text-mana-green text-size-16">spellcheck</span>
                                     {t('feature_validation')}
                                 </span>
                                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-elevated text-mana-white font-label-sm text-label-sm shadow-sm">
-                                    <span className="material-symbols-outlined text-primary text-[16px]">rule</span>
+                                    <span className="material-symbols-outlined text-primary text-size-16">rule</span>
                                     {t('feature_counts')}
                                 </span>
                                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-elevated text-mana-white font-label-sm text-label-sm shadow-sm">
-                                    <span className="material-symbols-outlined text-arcane-gold text-[16px]">picture_as_pdf</span>
+                                    <span className="material-symbols-outlined text-arcane-gold text-size-16">picture_as_pdf</span>
                                     {t('feature_pdf')}
                                 </span>
                             </div>
@@ -93,26 +93,26 @@ const Decklist = () => {
                     <footer className="bg-surface-card rounded-xl p-space-lg shadow-md mb-space-2xl">
                         <div className="flex flex-col md:flex-row items-start gap-space-md">
                             <div className="p-2.5 rounded-lg bg-surface-elevated text-arcane-gold shrink-0">
-                                <span className="material-symbols-outlined text-[28px]">gavel</span>
+                                <span className="material-symbols-outlined text-size-28">gavel</span>
                             </div>
                             <div className="flex flex-col gap-1.5">
                                 <h4 className="font-headline-sm text-headline-sm text-mana-white">{t('mtr_title')}</h4>
                                 <p className="font-body-md text-body-md text-mana-black leading-relaxed">{t('mtr_intro')}</p>
                                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 pt-1 font-body-sm text-body-sm text-mana-black">
                                     <li className="flex items-center gap-2 bg-surface-base/60 p-2 rounded">
-                                        <span className="material-symbols-outlined text-mana-blue text-[16px]">chevron_right</span>
+                                        <span className="material-symbols-outlined text-mana-blue text-size-16">chevron_right</span>
                                         <span>{t('mtr_rule_1')}</span>
                                     </li>
                                     <li className="flex items-center gap-2 bg-surface-base/60 p-2 rounded">
-                                        <span className="material-symbols-outlined text-mana-blue text-[16px]">chevron_right</span>
+                                        <span className="material-symbols-outlined text-mana-blue text-size-16">chevron_right</span>
                                         <span>{t('mtr_rule_2')}</span>
                                     </li>
                                     <li className="flex items-center gap-2 bg-surface-base/60 p-2 rounded">
-                                        <span className="material-symbols-outlined text-mana-blue text-[16px]">chevron_right</span>
+                                        <span className="material-symbols-outlined text-mana-blue text-size-16">chevron_right</span>
                                         <span>{t('mtr_rule_3')}</span>
                                     </li>
                                     <li className="flex items-center gap-2 bg-surface-base/60 p-2 rounded">
-                                        <span className="material-symbols-outlined text-mana-blue text-[16px]">chevron_right</span>
+                                        <span className="material-symbols-outlined text-mana-blue text-size-16">chevron_right</span>
                                         <span>{t('mtr_rule_4')}</span>
                                     </li>
                                 </ul>

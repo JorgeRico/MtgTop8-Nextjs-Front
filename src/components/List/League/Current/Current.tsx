@@ -24,10 +24,10 @@ const CurrentComponent = ({ league }: CurrentLeagueComponentProps) => {
                     </div>
 
                     <div className="flex flex-wrap items-center justify-end gap-1.5">
-                        <span className="rounded-full bg-[#1c2025] px-2 py-0.5 font-inter-bold text-[11px] leading-[14px] tracking-[0.55px] text-[#94a3b8]">
+                        <span className="rounded-full bg-[#1c2025] px-2 py-0.5 font-inter-bold text-size-11 leading-[14px] tracking-[0.55px] text-color-slate-400">
                             {t('Format')}: {t('Legacy')}
                         </span>
-                        <span className="rounded-full bg-[rgba(16,185,129,0.2)] px-2 py-0.5 font-inter-bold text-[11px] leading-[14px] tracking-[0.55px] text-[#10b981]">
+                        <span className="rounded-full bg-[rgba(16,185,129,0.2)] px-2 py-0.5 font-inter-bold text-size-11 leading-[14px] tracking-[0.55px] text-color-emerald-500">
                             {t('Active')}
                         </span>
                     </div>
@@ -35,16 +35,16 @@ const CurrentComponent = ({ league }: CurrentLeagueComponentProps) => {
 
                 <div className="flex w-full flex-col gap-1">
                     <div className="flex min-w-0 items-center gap-2">
-                        <span className="truncate font-inter-semibold text-[11px] leading-[14px] tracking-[0.55px] text-[#ffb690]">
+                        <span className="truncate font-inter-semibold text-size-11 leading-[14px] tracking-[0.55px] text-color-peach">
                             {"league.organizer"}
                         </span>
-                        <span className="font-inter-regular text-base leading-6 text-[#94a3b8]">•</span>
-                        <span className="truncate font-inter-bold text-[11px] leading-[14px] tracking-[0.55px] text-[#94a3b8]">
+                        <span className="font-inter-regular text-base leading-6 text-color-slate-400">•</span>
+                        <span className="truncate font-inter-bold text-size-11 leading-[14px] tracking-[0.55px] text-color-slate-400">
                             {t('Monthly Event')}
                         </span>
                     </div>
-                    <h3 className="font-jakarta-semibold text-lg leading-6 text-[#f8fafc]">{league.name}</h3>
-                    <p className="pt-1 font-inter-regular text-xs leading-4 text-[#94a3b8]">
+                    <h3 className="font-jakarta-semibold text-lg leading-6 text-color-slate-50">{league.name}</h3>
+                    <p className="pt-1 font-inter-regular text-xs leading-4 text-color-slate-400">
                         {t('Description')}
                     </p>
                 </div>
@@ -53,10 +53,10 @@ const CurrentComponent = ({ league }: CurrentLeagueComponentProps) => {
             <div className="w-full pt-6">
                 <div className="flex w-full items-center justify-between gap-4 pt-4">
                     <div className="min-w-0">
-                        <p className="font-inter-bold text-[11px] leading-[14px] tracking-[0.55px] text-[#94a3b8]">
+                        <p className="font-inter-bold text-size-11 leading-[14px] tracking-[0.55px] text-color-slate-400">
                             {t('Stage')}
                         </p>
-                        <p className="truncate font-inter-semibold text-sm leading-5 tracking-[0.14px] text-[#f8fafc]">
+                        <p className="truncate font-inter-semibold text-sm leading-5 tracking-[0.14px] text-color-slate-50">
                             {"league.stage"}
                         </p>
                     </div>

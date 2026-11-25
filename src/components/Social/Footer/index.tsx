@@ -26,7 +26,7 @@ function SocialLink({
                 />
             </span>
 
-            <span className="whitespace-nowrap mt-1 leading-4 tracking-[0.24px] text-[#e0e2ea]">
+            <span className="whitespace-nowrap mt-1 leading-4 tracking-[0.24px] text-color-slate-200">
                 {label}
             </span>
         </a>

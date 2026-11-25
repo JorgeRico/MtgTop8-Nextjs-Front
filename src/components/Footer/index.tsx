@@ -14,7 +14,7 @@ function Footer() {
                             <Logo />
                         </div>
 
-                        <p className="body-copy mt-8 mb-4 text-xs leading-4 text-[#94a3b8]">
+                        <p className="body-copy mt-8 mb-4 text-xs leading-4 text-color-slate-400">
                             {t("description")}
                         </p>
                     </div>
@@ -28,11 +28,11 @@ function Footer() {
                 </div>
 
                 <div className="flex flex-col gap-2 pt-4">
-                    <p className="body-copy text-xs leading-4 text-[#94a3b8]">
+                    <p className="body-copy text-xs leading-4 text-color-slate-400">
                         {t("copyright")}
                     </p>
 
-                    <p className="body-copy text-[11px] leading-4 text-[rgba(148,163,184,0.8)]">
+                    <p className="body-copy text-size-11 leading-4 text-color-slate-400-80">
                         {t("trademark")}
                     </p>
                 </div>

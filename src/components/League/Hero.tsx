@@ -48,7 +48,7 @@ const LeagueHero = ({ leagueName, year, format, location, locationName, classifi
                             {t('season')} {year}
                         </span>
                         <span className="px-2.5 py-0.5 rounded-full bg-surface-elevated text-mana-blue font-label-sm text-label-sm uppercase flex items-center gap-1">
-                            <span className="material-symbols-outlined text-[14px]">bolt</span>
+                            <span className="material-symbols-outlined text-size-14">bolt</span>
                             {format}
                         </span>
                     </div>
@@ -61,16 +61,16 @@ const LeagueHero = ({ leagueName, year, format, location, locationName, classifi
                     <div className="flex flex-wrap items-center gap-space-sm text-mana-black font-body-md text-body-md pt-1">
                         {location != null && location !== '' && (
                             <Link className="flex items-center gap-1 text-on-surface hover:text-primary transition-colors group" href={`https://maps.app.goo.gl/${location}`} rel="noopener noreferrer" target="_blank">
-                                <span className="material-symbols-outlined text-primary text-[18px] group-hover:scale-110 transition-transform">location_on</span>
+                                <span className="material-symbols-outlined text-primary text-size-18 group-hover:scale-110 transition-transform">location_on</span>
                                 <span className="underline decoration-surface-container-highest group-hover:decoration-primary font-semibold">{locationName}</span>
-                                <span className="material-symbols-outlined text-[14px] text-mana-black">open_in_new</span>
+                                <span className="material-symbols-outlined text-size-14 text-mana-black">open_in_new</span>
                             </Link>
                         )}
                         {classification != null && classification !== '' && (
                             <>
                                 <span className="text-surface-container-highest">•</span>
                                 <span className="flex items-center gap-1 text-body-sm text-mana-black">
-                                    <span className="material-symbols-outlined text-[16px]">leaderboard</span>
+                                    <span className="material-symbols-outlined text-size-16">leaderboard</span>
                                     {classification}
                                 </span>
                             </>
@@ -80,7 +80,7 @@ const LeagueHero = ({ leagueName, year, format, location, locationName, classifi
 
                 <div className="flex flex-col sm:flex-row lg:flex-col gap-space-xs shrink-0">
                     <button className="px-space-md py-space-sm rounded-lg bg-surface-elevated hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2" onClick={handleShare} type="button">
-                        <span className="material-symbols-outlined text-[18px]">share</span>
+                        <span className="material-symbols-outlined text-size-18">share</span>
                         <span>{t('share_stats')}</span>
                     </button>
                 </div>
