@@ -19,11 +19,11 @@ const Logo = () => {
 
             <span className="min-w-0">
                 <span className="flex items-center gap-1 mb-2">
-                    <span className="font-brand truncate text-size-18 font-semibold leading-6 tracking-[-0.45px] text-color-slate-50">
+                    <span className="font-brand truncate text-size-18 font-semibold leading-6 tracking-minus-0-45 text-slate-50">
                         {t('mtg legacy stats')}
                     </span>
                 </span>
-                <span className="font-interface hidden truncate text-size-11 font-bold leading-[14px] tracking-[0.55px] text-color-slate-400 sm:block">
+                <span className="font-interface hidden truncate text-size-11 font-bold leading-14 tracking-0-55 text-slate-400 sm:block">
                     {t('catalan tournaments & meta circuit')}
                 </span>
             </span>

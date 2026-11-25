@@ -12,7 +12,7 @@ function SocialLink({
     return (
         <a
             aria-label = {label}
-            className  = "social-link flex items-center gap-2 rounded bg-[#1a222d] px-3 py-1 transition-colors duration-150 hover:bg-[#263240] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#06b6d4]"
+            className  = "social-link flex items-center gap-2 rounded bg-surface-elevated px-3 py-1 transition-colors duration-150 hover:bg-surface-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
             href       = {href}
             rel        = "noopener noreferrer"
             target     = "_blank"
@@ -26,7 +26,7 @@ function SocialLink({
                 />
             </span>
 
-            <span className="whitespace-nowrap mt-1 leading-4 tracking-[0.24px] text-color-slate-200">
+            <span className="whitespace-nowrap mt-1 leading-4 tracking-0-24 text-slate-200">
                 {label}
             </span>
         </a>

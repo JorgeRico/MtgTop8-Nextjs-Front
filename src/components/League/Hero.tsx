@@ -40,7 +40,7 @@ const LeagueHero = ({ leagueName, year, format, location, locationName, classifi
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
                 <div className="flex flex-col gap-space-xs max-w-2xl">
                     <div className="flex flex-wrap items-center gap-space-xs">
-                        <span className={`px-2.5 py-0.5 rounded-full font-label-sm text-label-sm tracking-wider uppercase flex items-center gap-1.5 ${isCurrent ? 'bg-mana-green/10 text-mana-green shadow-[0_0_12px_rgba(16,185,129,0.3)]' : 'bg-surface-elevated text-mana-black'}`}>
+                        <span className={`px-2.5 py-0.5 rounded-full font-label-sm text-label-sm tracking-wider uppercase flex items-center gap-1.5 ${isCurrent ? 'bg-mana-green/10 text-mana-green shadow-emerald-glow' : 'bg-surface-elevated text-mana-black'}`}>
                             <span className={`w-1.5 h-1.5 rounded-full ${isCurrent ? 'bg-mana-green animate-pulse' : 'bg-mana-black'}`}></span>
                             {isCurrent ? t('active_circuit') : t('archived_league')}
                         </span>

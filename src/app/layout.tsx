@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 import "./styles/styles.css";
-import "./styles/text-utilities.css";
 import { getLocale } from 'next-intl/server';
 import type { Viewport, Metadata } from 'next';
 import { baseUrl } from "@/types/server/baseUrl";

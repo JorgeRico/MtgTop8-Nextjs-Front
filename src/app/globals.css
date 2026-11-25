@@ -1,5 +1,68 @@
 @import "tailwindcss";
 
+@theme {
+  --text-size-10: 10px;
+  --text-size-11: 11px;
+  --text-size-13: 13px;
+  --text-size-14: 14px;
+  --text-size-16: 16px;
+  --text-size-18: 18px;
+  --text-size-20: 20px;
+  --text-size-22: 22px;
+  --text-size-24: 24px;
+  --text-size-26: 26px;
+  --text-size-28: 28px;
+  --text-size-320: 320px;
+
+  --color-slate-400: #94a3b8;
+  --color-slate-50: #f8fafc;
+  --color-ink-900: #0b1120;
+  --color-slate-200: #e0e2ea;
+  --color-slate-400-80: rgb(148 163 184 / 80%);
+  --color-peach: #ffb690;
+  --color-emerald-500: #10b981;
+  --color-slate-950: #0f172a;
+  --color-emerald-950: #052e16;
+  --color-surface-hover: #263240;
+  --color-brick: #b94406;
+  --color-primary-hover: #ea680b;
+  --color-emerald-500-20: rgb(16 185 129 / 20%);
+
+  --spacing-flag: 13.333px;
+  --spacing-chevron: 4.317px;
+  --spacing-chevron-width: 7px;
+  --spacing-pip: 18px;
+  --spacing-preview: 68px;
+  --spacing-preview-width: 48px;
+  --spacing-preview-min: 420px;
+  --spacing-social-26: 26px;
+  --spacing-social-27-5: 27.5px;
+  --spacing-social-21-5: 21.5px;
+  --spacing-social-23: 23px;
+  --spacing-233: 233px;
+  --spacing-870: 870px;
+  --spacing-90vh: 90vh;
+  --spacing-65vh: 65vh;
+  --inset-dropdown: calc(100% + 8px);
+
+  --leading-14: 14px;
+  --tracking-0-14: 0.14px;
+  --tracking-0-24: 0.24px;
+  --tracking-0-55: 0.55px;
+  --tracking-minus-0-45: -0.45px;
+  --scale-99: 99%;
+  --border-width-1-5: 1.5px;
+
+  --shadow-header: 0 4px 20px rgb(0 0 0 / 50%);
+  --shadow-orange-glow: 0 0 12px rgb(249 115 22 / 35%);
+  --shadow-orange-glow-lg: 0 0 24px rgb(249 115 22 / 45%);
+  --shadow-orange-glow-xl: 0 0 32px rgb(249 115 22 / 60%);
+  --shadow-emerald-glow: 0 0 12px rgb(16 185 129 / 30%);
+  --shadow-red-glow: 0 0 8px rgb(239 68 68 / 60%);
+  --shadow-hairline: 0 1px 1px rgb(0 0 0 / 5%);
+  --shadow-card-soft: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -58,6 +121,10 @@ body {
     --primary-fixed: #ffdbca;
     --on-background: #e0e2ea;
     --color-cyan: cyan;
+}
+
+.width-1280 { 
+  max-width: 1280px;
 }
 
 .bg-surface-card {

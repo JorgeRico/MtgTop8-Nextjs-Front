@@ -483,7 +483,7 @@ const DeckListForm = () => {
 
                     {/* CTA row */}
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md pt-space-xs">
-                        <button className="group relative inline-flex items-center justify-center gap-3 px-space-xl py-3.5 rounded-lg bg-primary-container text-white font-headline-sm text-body-lg font-bold shadow-[0_0_24px_rgba(249,115,22,0.45)] hover:bg-[#ea580c] hover:shadow-[0_0_32px_rgba(249,115,22,0.6)] active:scale-[0.99] transition-all" disabled={!showButton} type="submit">
+                        <button className="group relative inline-flex items-center justify-center gap-3 px-space-xl py-3.5 rounded-lg bg-primary-container text-white font-headline-sm text-body-lg font-bold shadow-orange-glow-lg hover:bg-orange-600 hover:shadow-orange-glow-xl active:scale-99 transition-all" disabled={!showButton} type="submit">
                             <span className="material-symbols-outlined text-size-24">picture_as_pdf</span>
                             <span>{t('generate_pdf')}</span>
                             <span className="material-symbols-outlined text-size-20 transition-transform group-hover:translate-x-1">arrow_forward</span>

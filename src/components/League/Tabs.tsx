@@ -29,7 +29,7 @@ const LeagueTabs = ({ active, setActive, numStages, lastSync }: LeagueTabsProps)
                     return (
                         <button
                             aria-selected={isActive}
-                            className={`px-space-md py-space-sm rounded-md font-label-lg text-label-lg transition-all flex items-center gap-2 whitespace-nowrap ${isActive ? 'bg-primary-container text-white shadow-[0_0_12px_rgba(249,115,22,0.35)]' : 'text-mana-black hover:text-mana-white hover:bg-surface-elevated'}`}
+                            className={`px-space-md py-space-sm rounded-md font-label-lg text-label-lg transition-all flex items-center gap-2 whitespace-nowrap ${isActive ? 'bg-primary-container text-white shadow-orange-glow' : 'text-mana-black hover:text-mana-white hover:bg-surface-elevated'}`}
                             key={tab.id}
                             onClick={() => setActive(tab.id)}
                             role="tab"
@@ -38,7 +38,7 @@ const LeagueTabs = ({ active, setActive, numStages, lastSync }: LeagueTabsProps)
                             <span className="material-symbols-outlined text-size-18">{tab.icon}</span>
                             <span>{tab.label}</span>
                             {tab.id === 'tournaments' && numStages > 0 && (
-                                <span className={`px-1.5 py-[2px] rounded-full text-size-10 font-bold ${isActive ? 'bg-white/20 text-white' : 'bg-surface-elevated text-mana-black'}`}>{numStages}</span>
+                                <span className={`px-1.5 py-0.5 rounded-full text-size-10 font-bold ${isActive ? 'bg-white/20 text-white' : 'bg-surface-elevated text-mana-black'}`}>{numStages}</span>
                             )}
                         </button>
                     );

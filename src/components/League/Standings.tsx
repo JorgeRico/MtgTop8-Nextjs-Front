@@ -61,7 +61,7 @@ const LeagueStandings = ({ standings, isLoading, year }: LeagueStandingsProps) =
                                             <span className={`w-2 h-2 rounded-full ${index === 0 ? 'bg-arcane-gold' : 'bg-mana-black'}`}></span>
                                             <span className="font-bold text-mana-white group-hover:text-primary transition-colors">{row.name}</span>
                                             {row.wins > 0 && (
-                                                <span className="px-1.5 py-[2px] rounded bg-surface-elevated text-size-10 text-arcane-gold uppercase font-bold">
+                                                <span className="px-1.5 py-0.5 rounded bg-surface-elevated text-size-10 text-arcane-gold uppercase font-bold">
                                                     {row.wins}x {t('champion')}
                                                 </span>
                                             )}

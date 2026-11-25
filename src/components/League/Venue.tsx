@@ -43,7 +43,7 @@ const LeagueVenue = ({ location, locationName, classification, year, tournaments
 
                     {hasLocation && (
                         <div className="pt-space-md flex flex-wrap items-center gap-space-sm">
-                            <Link className="px-space-md py-space-sm rounded-lg bg-primary-container text-white font-label-md text-label-md hover:bg-orange-600 transition-colors flex items-center gap-1.5 shadow-[0_0_12px_rgba(249,115,22,0.35)]" href={`https://maps.app.goo.gl/${location}`} rel="noopener noreferrer" target="_blank">
+                            <Link className="px-space-md py-space-sm rounded-lg bg-primary-container text-white font-label-md text-label-md hover:bg-orange-600 transition-colors flex items-center gap-1.5 shadow-orange-glow" href={`https://maps.app.goo.gl/${location}`} rel="noopener noreferrer" target="_blank">
                                 <span className="material-symbols-outlined text-size-18">navigation</span>
                                 <span>{t('venue_maps')}</span>
                             </Link>

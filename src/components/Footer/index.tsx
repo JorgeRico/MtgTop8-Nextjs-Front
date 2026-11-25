@@ -7,14 +7,14 @@ function Footer() {
 
     return (
         <footer className="w-full bg-surface-card px-5 py-10 sm:px-8">
-            <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-10 sm:px-6 lg:px-12">
+            <div className="mx-auto flex w-full width-1280 flex-col gap-10 sm:px-6 lg:px-12">
                 <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
                     <div className="max-w-xl">
                         <div className="flex items-center gap-2">
                             <Logo />
                         </div>
 
-                        <p className="body-copy mt-8 mb-4 text-xs leading-4 text-color-slate-400">
+                        <p className="body-copy mt-8 mb-4 text-xs leading-4 text-slate-400">
                             {t("description")}
                         </p>
                     </div>
@@ -28,11 +28,11 @@ function Footer() {
                 </div>
 
                 <div className="flex flex-col gap-2 pt-4">
-                    <p className="body-copy text-xs leading-4 text-color-slate-400">
+                    <p className="body-copy text-xs leading-4 text-slate-400">
                         {t("copyright")}
                     </p>
 
-                    <p className="body-copy text-size-11 leading-4 text-color-slate-400-80">
+                    <p className="body-copy text-size-11 leading-4 text-slate-400-80">
                         {t("trademark")}
                     </p>
                 </div>

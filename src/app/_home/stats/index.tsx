@@ -51,7 +51,7 @@ const Stats = () => {
                         <span>{t('catalan-circuit-2026')}</span>
                     </div>
                     <h1 id="page-title" className="mb-1">{t('league-title')}</h1>
-                    <p className="text-body-md text-color-slate-400">
+                    <p className="text-body-md text-slate-400">
                         {t('league-description')}
                     </p>
                 </div>

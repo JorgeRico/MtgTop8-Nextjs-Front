@@ -79,22 +79,22 @@ function LanguageMenu({ currentLocale, onLanguageChange }: Props) {
                 aria-expanded={isOpen}
                 disabled={isPending}
                 onClick={() => setIsOpen((open) => !open)}
-                className="flex items-center gap-1.5 rounded bg-surface-card px-2.5 py-3 transition-colors hover:bg-[#1a222d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+                className="flex items-center gap-1.5 rounded bg-surface-card px-2.5 py-3 transition-colors hover:bg-surface-elevated focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
             >
                 <img
                     src="/images/menu/4f98c.svg"
                     alt=""
-                    className="size-[13.333px]"
+                    className="size-flag"
                 />
 
-                <span className="font-interface uppercase text-center text-size-11 font-bold leading-[14px] tracking-[0.55px] text-color-slate-200">
+                <span className="font-interface uppercase text-center text-size-11 font-bold leading-14 tracking-0-55 text-slate-200">
                     {language.code}
                 </span>
 
                 <img
                     src="/images/menu/c7ef7.svg"
                     alt=""
-                    className={`h-[4.317px] w-[7px] transition-transform ${
+                    className={`h-chevron w-chevron-width transition-transform ${
                         isOpen ? "rotate-180" : ""
                     }`}
                 />
@@ -105,7 +105,7 @@ function LanguageMenu({ currentLocale, onLanguageChange }: Props) {
                     role="listbox"
                     aria-label="Choose language"
                     aria-busy={isPending}
-                    className="absolute right-0 top-[calc(100%+8px)] z-10 min-w-full overflow-hidden rounded border border-white/5 bg-surface-card py-1 shadow-xl"
+                    className="absolute right-0 top-dropdown z-10 min-w-full overflow-hidden rounded border border-white/5 bg-surface-card py-1 shadow-xl"
                 >
                     {languages.map((lang) => (
                         <button
@@ -114,7 +114,7 @@ function LanguageMenu({ currentLocale, onLanguageChange }: Props) {
                             role="option"
                             aria-selected={language.code === lang.code}
                             onClick={() => handleLanguageChange(lang.code)}
-                            className="font-interface block w-full px-3 py-1.5 text-center text-size-11 font-bold tracking-[0.55px] uppercase text-color-slate-400 hover:bg-[#1a222d] hover-text-color-slate-50 focus:bg-[#1a222d] focus-text-color-slate-50 focus:outline-none"
+                            className="font-interface block w-full px-3 py-1.5 text-center text-size-11 font-bold tracking-0-55 uppercase text-slate-400 hover:bg-surface-elevated hover:text-slate-50 focus:bg-surface-elevated focus:text-slate-50 focus:outline-none"
                         >
                             {lang.code}
                         </button>

@@ -26,7 +26,7 @@ const Decklist = () => {
     return (
         <main className="w-full pt-20 bg-surface-base min-h-screen">
             <div className="flex flex-col w-full">
-                <div className="relative w-full max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-lg">
+                <div className="relative w-full max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-lg">
                     {/* Ambient glow orbs */}
                     <div className="absolute top-10 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
                     <div className="absolute top-1/2 right-10 w-80 h-80 bg-mana-blue/10 rounded-full blur-3xl pointer-events-none -z-10"></div>

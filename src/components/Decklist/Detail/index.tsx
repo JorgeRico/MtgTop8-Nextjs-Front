@@ -54,18 +54,18 @@ type Matchup = {
 };
 
 const manaPipColors: Record<string, string> = {
-  W: 'bg-[#f8fafc] text-color-slate-950',
-  U: 'bg-[#0ea5e9] text-white',
-  B: 'bg-[#475569] text-white',
-  R: 'bg-[#ef4444] text-white',
-  G: 'bg-[#10b981] text-color-emerald-950',
+  W: 'bg-slate-50 text-slate-950',
+  U: 'bg-sky-500 text-white',
+  B: 'bg-slate-600 text-white',
+  R: 'bg-red-500 text-white',
+  G: 'bg-emerald-500 text-emerald-950',
   C: 'bg-surface-container-highest text-on-surface',
   X: 'bg-surface-container-highest text-on-surface',
-  '0': 'bg-[#94a3b8] text-color-ink-900',
-  '1': 'bg-[#94a3b8] text-color-ink-900',
-  '2': 'bg-[#94a3b8] text-color-ink-900',
-  '3': 'bg-[#94a3b8] text-color-ink-900',
-  '4': 'bg-[#94a3b8] text-color-ink-900'
+  '0': 'bg-slate-400 text-ink-900',
+  '1': 'bg-slate-400 text-ink-900',
+  '2': 'bg-slate-400 text-ink-900',
+  '3': 'bg-slate-400 text-ink-900',
+  '4': 'bg-slate-400 text-ink-900'
 };
 
 const delverImage =
@@ -527,9 +527,9 @@ const manaCurve = [
 ];
 
 const colorSources: BarItem[] = [
-  {label: 'U', value: '52%', width: 52, color: 'bg-[#0ea5e9]'},
-  {label: 'R', value: '28%', width: 28, color: 'bg-[#ef4444]'},
-  {label: 'G', value: '20%', width: 20, color: 'bg-[#10b981]'}
+  {label: 'U', value: '52%', width: 52, color: 'bg-sky-500'},
+  {label: 'R', value: '28%', width: 28, color: 'bg-red-500'},
+  {label: 'G', value: '20%', width: 20, color: 'bg-emerald-500'}
 ];
 
 const typeDistribution: BarItem[] = [
@@ -615,7 +615,7 @@ const ManaPips = ({
     {symbols.map((symbol, index) => (
       <span
         key={`${symbol}-${index}`}
-        className={`inline-flex h-[18px] min-w-[18px] items-center justify-center rounded-full px-1 text-size-10 font-black shadow-sm ring-1 ring-white/10 ${manaPipColors[symbol] ?? manaPipColors.C}`}
+        className={`inline-flex h-pip min-w-pip items-center justify-center rounded-full px-1 text-size-10 font-black shadow-sm ring-1 ring-white/10 ${manaPipColors[symbol] ?? manaPipColors.C}`}
       >
         {symbol}
       </span>
@@ -635,7 +635,7 @@ const DetailedCardRow = ({
     className="group flex w-full cursor-pointer items-center gap-4 rounded-lg bg-surface-container-lowest p-3 text-left transition-all hover:-translate-y-0.5 hover:bg-surface-container-low hover:shadow-md"
     onClick={() => onPreview(card)}
   >
-    <span className="relative h-[68px] w-[48px] shrink-0 overflow-hidden rounded-md bg-surface-container-high shadow-md ring-1 ring-white/10">
+    <span className="relative h-preview w-preview shrink-0 overflow-hidden rounded-md bg-surface-container-high shadow-md ring-1 ring-white/10">
       <img
         alt={card.name}
         className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
@@ -946,7 +946,7 @@ const DecklistDetail = () => {
                 </span>
               </div>
             </div>
-            <div className="grid min-w-full grid-cols-2 gap-3 md:min-w-[420px] md:grid-cols-4">
+            <div className="grid min-w-full grid-cols-2 gap-3 md:min-w-preview-min md:grid-cols-4">
               {[
                 {label: 'Pilot', value: 'Carles Mesegue', icon: 'badge'},
                 {label: 'Rècord', value: '5 - 0 - 1', icon: 'sports_score'},
@@ -1114,7 +1114,7 @@ const DecklistDetail = () => {
                       className="group cursor-pointer overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest text-left shadow-md transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl"
                       onClick={() => showCardPreview(card.card)}
                     >
-                      <span className="block aspect-[5/7] overflow-hidden bg-surface-container-high">
+                      <span className="block aspect-5/7 overflow-hidden bg-surface-container-high">
                         <img
                           alt={card.name}
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -1363,11 +1363,11 @@ const DecklistDetail = () => {
           role="dialog"
           aria-modal="true"
           aria-label="Simulador de mà inicial"
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black/75 p-4 backdrop-blur-sm"
           onClick={() => setHandOpen(false)}
         >
           <div
-            className="max-h-[90vh] w-full max-w-2xl overflow-hidden rounded-2xl border border-outline-variant/30 bg-surface-container shadow-2xl"
+            className="max-h-90vh w-full max-w-2xl overflow-hidden rounded-2xl border border-outline-variant/30 bg-surface-container shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
             <header className="flex items-center justify-between border-b border-outline-variant/20 px-5 py-4">
@@ -1389,7 +1389,7 @@ const DecklistDetail = () => {
                 </span>
               </button>
             </header>
-            <div className="max-h-[65vh] overflow-y-auto p-5">
+            <div className="max-h-65vh overflow-y-auto p-5">
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
                 {hand.map((card, index) => (
                   <button
@@ -1401,7 +1401,7 @@ const DecklistDetail = () => {
                       setHandOpen(false);
                     }}
                   >
-                    <span className="block aspect-[5/7] overflow-hidden">
+                    <span className="block aspect-5/7 overflow-hidden">
                       <img
                         alt={card.name}
                         className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"

@@ -148,12 +148,12 @@ const fallbackStandings: StandingRow[] = [
 ];
 
 const manaPipClass: Record<string, string> = {
-  U: 'bg-[#06B6D4]',
-  B: 'bg-[#94A3B8]',
-  R: 'bg-[#EF4444]',
-  G: 'bg-[#10B981]',
-  W: 'bg-[#F8FAFC]',
-  C: 'bg-[#94A3B8]'
+  U: 'bg-cyan-500',
+  B: 'bg-slate-400',
+  R: 'bg-red-500',
+  G: 'bg-emerald-500',
+  W: 'bg-slate-50',
+  C: 'bg-slate-400'
 };
 
 const metaSegments: MetaSegment[] = [
@@ -317,11 +317,11 @@ const typeDistribution: TypeDistribution[] = [
 
 const sideboardBullets: SideboardBullet[] = [
   {name: 'Leyline of the Void', copies: '8 cop.', colorClass: 'bg-purple-400'},
-  {name: 'Pyroblast / REB', copies: '12 cop.', colorClass: 'bg-[#EF4444]'},
-  {name: 'Hydroblast', copies: '6 cop.', colorClass: 'bg-[#06B6D4]'},
+  {name: 'Pyroblast / REB', copies: '12 cop.', colorClass: 'bg-red-500'},
+  {name: 'Hydroblast', copies: '6 cop.', colorClass: 'bg-cyan-500'},
   {name: 'Force of Vigor', copies: '7 cop.', colorClass: 'bg-emerald-400'},
   {name: 'Meltdown', copies: '5 cop.', colorClass: 'bg-amber-400'},
-  {name: 'Null Rod', copies: '4 cop.', colorClass: 'bg-[#94A3B8]'}
+  {name: 'Null Rod', copies: '4 cop.', colorClass: 'bg-slate-400'}
 ];
 
 const maindeck = [
@@ -662,7 +662,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                         </span>
                         {row.tier && (
                           <span
-                            className={`rounded px-1.5 py-[2px] text-size-10 font-label font-extrabold uppercase ${row.rank === 1 ? 'bg-primary-container/20 text-primary' : 'bg-surface-container-high text-on-surface-variant'}`}
+                            className={`rounded px-1.5 py-0.5 text-size-10 font-label font-extrabold uppercase ${row.rank === 1 ? 'bg-primary-container/20 text-primary' : 'bg-surface-container-high text-on-surface-variant'}`}
                           >
                             {row.tier}
                           </span>
@@ -834,7 +834,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
         <section className="space-y-4 pt-4">
           <div className="flex items-center justify-between pb-1">
             <div className="flex items-center gap-2">
-              <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full bg-[#EF4444] shadow-[0_0_8px_rgba(239,68,68,0.6)]">
+              <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full bg-red-500 shadow-red-glow">
                 <span className="h-1.5 w-1.5 rounded-full bg-white" />
               </span>
               <h2 className="text-2xl font-headline font-extrabold tracking-tight text-on-surface">
@@ -863,14 +863,14 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                       Top Cards
                     </h3>
                     <button
-                      className="rounded bg-[#B94406] px-5 py-1.5 text-xs font-label font-bold uppercase tracking-wider text-white shadow transition-colors hover:bg-[#ea580c] active:scale-95"
+                      className="rounded bg-brick px-5 py-1.5 text-xs font-label font-bold uppercase tracking-wider text-white shadow transition-colors hover:bg-orange-600 active:scale-95"
                       type="button"
                     >
                       View
                     </button>
                   </div>
 
-                  <div className="flex items-center bg-[#B94406] px-5 py-2.5 text-sm font-headline font-bold tracking-wide text-white">
+                  <div className="flex items-center bg-brick px-5 py-2.5 text-sm font-headline font-bold tracking-wide text-white">
                     <span className="w-20 text-center">Total</span>
                     <span className="pl-2">Name</span>
                   </div>
@@ -977,7 +977,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
                         <span className="font-headline text-xs font-semibold text-on-surface">
                           {bullet.name}
                         </span>
-                        <span className="rounded bg-surface-container-high px-1.5 py-[2px] font-mono text-size-10 text-primary">
+                        <span className="rounded bg-surface-container-high px-1.5 py-0.5 font-mono text-size-10 text-primary">
                           {bullet.copies}
                         </span>
                       </div>
@@ -1052,7 +1052,7 @@ const TournamentDetail = ({id, initialTournament}: TournamentDetailProps) => {
           onClick={() => setDeckModal(null)}
         >
           <div
-            className="flex max-h-[870px] w-full max-w-2xl flex-col overflow-hidden rounded-xl bg-surface-container-low shadow-2xl"
+            className="flex max-h-870 w-full max-w-2xl flex-col overflow-hidden rounded-xl bg-surface-container-low shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex items-center justify-between bg-surface-container p-space-md">
