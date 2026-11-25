@@ -1,0 +1,22 @@
+import type {IconProps} from '@/components/Icons/types';
+
+const ChevronDownIcon = ({
+  className = 'h-chevron w-chevron-width'
+}: IconProps) => (
+  <svg
+    aria-hidden="true"
+    className={className}
+    fill="none"
+    preserveAspectRatio="none"
+    style={{display: 'block'}}
+    viewBox="0 0 7 4.31667"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M3.5 4.31667L0 0.816667L0.816667 0L3.5 2.68333L6.18333 0L7 0.816667L3.5 4.31667V4.31667"
+      fill="#94A3B8"
+    />
+  </svg>
+);
+
+export default ChevronDownIcon;
