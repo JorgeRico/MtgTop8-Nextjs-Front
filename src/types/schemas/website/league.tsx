@@ -1,4 +1,8 @@
-export type LeagueTabType = 'tournaments' | 'standings' | 'meta' | 'location';
+export type LeagueTabType =
+  | 'tournaments'
+  | 'standings'
+  | 'stats'
+  | 'location';
 
 export type LeagueStandingType = {
     name      : string;

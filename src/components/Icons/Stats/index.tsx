@@ -1,20 +1,20 @@
-import { useTranslations } from 'next-intl';
-import Image from "next/image";
+import {useTranslations} from 'next-intl';
+import Image from 'next/image';
 
 const StatsImage = () => {
-    const t = useTranslations('alt-tags');
+  const t = useTranslations('alt-tags');
 
-    return (
-        <Image
-            className = "left"
-            src       = "/images/stats.webp"
-            height    = {32}
-            width     = {32}
-            alt       = {t('mtg stats')}
-            title     = {t('mtg stats')}
-            priority
-        />
-    );
-}
+  return (
+    <Image
+      className="left"
+      src="/images/stats.webp"
+      height={32}
+      width={32}
+      alt={t('mtg stats')}
+      title={t('mtg stats')}
+      priority
+    />
+  );
+};
 
 export default StatsImage;
