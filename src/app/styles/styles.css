@@ -6,14 +6,6 @@
     padding: 10px 15px;
 }
 
-.padStatsBox {
-    padding: 15px 20px;
-}
-
-.paddingStatsBox {
-    padding: 15px 5px 15px 15px;
-}
-
 @media (max-width: 645px) {
     .tournamentDescription {
         max-width: 200px;

@@ -50,6 +50,14 @@
       "Date": "Date",
       "players": "players",
       "View Tournament": "View Tournament"
+    },
+    "detail": {
+      "tabs_label": "Tournament sections",
+      "tab_overview": "Overview",
+      "tab_decklist": "Decklist",
+      "tab_stats": "Stats",
+      "loading_stats": "Loading stats...",
+      "no_stats": "No stats available"
     }
   },
   "deck": {
@@ -98,11 +106,12 @@
       "players_stage": "players / stage",
       "stages_played": "Stages played",
       "season_progress": "Season progress",
-      "tab_tournaments": "Tournaments",
-      "tab_standings": "Standings",
-      "tab_meta": "Meta",
+      "tab_winners": "Winners",
+      "tab_players": "Players",
+      "tab_stats": "Stats",
       "tab_location": "Venue",
       "last_sync": "Synced {date}",
+      "loading_winners": "Loading winners...",
       "no_tournaments": "No tournaments registered for this league",
       "circuit_stages": "Circuit stages",
       "circuit_stages_desc": "Season tournaments and stage champions",
@@ -110,7 +119,6 @@
       "completed": "Completed",
       "players": "players",
       "champion": "Champion",
-      "view_tournament": "View tournament",
       "loading_standings": "Loading standings...",
       "no_standings": "No standings available",
       "leaderboard_title": "{year} season leaderboard",
@@ -163,7 +171,6 @@
     "Most played cards and main deck and sideboard card stats": "Most played cards and main deck and sideboard card stats",
     "Total": "Total",
     "Name": "Name",
-    "Player Stats": "Player Stats",
     "View": "View"
   },
   "errors": {
@@ -171,18 +178,18 @@
       "Sorry, now we don't have tournaments registered for this league": "Sorry, now we don't have tournaments registered for this league"
     },
     "forms": {
-       "Pay 3 extra manas and try again": "Pay 3 extra manas and try again.",
-       "Please, fill all data fields": "Please, fill all data fields.",
-       "Incorrect form - fill form correctly": "Incorrect form - fill form correctly",
-       "Incorrect form - card incorrect format": "Incorrect form - card incorrect format",
-       "Incorrect sideboard - Maximum 15 cards": "Incorrect sideboard - Maximum 15 cards",
-       "Incorrect maindeck - No cards found": "Incorrect maindeck - No cards found",
-       "Incorrect maindeck - Minimum 40 cards required": "Incorrect maindeck - Minimum 40 cards required",
-       "Incorrect card count - Same cards cannot exceed 4 copies in maindeck and sideboard combined, except basic lands": "Incorrect card count - Same cards cannot exceed 4 copies in maindeck and sideboard combined, except basic lands",
-       "Incorrect form - Name is required": "Incorrect form - Name is required",
-       "Incorrect form - Surname is required": "Incorrect form - Surname is required",
-       "Incorrect form - Deck name is required": "Incorrect form - Deck name is required"
-     },
+      "Pay 3 extra manas and try again": "Pay 3 extra manas and try again.",
+      "Please, fill all data fields": "Please, fill all data fields.",
+      "Incorrect form - fill form correctly": "Incorrect form - fill form correctly",
+      "Incorrect form - card incorrect format": "Incorrect form - card incorrect format",
+      "Incorrect sideboard - Maximum 15 cards": "Incorrect sideboard - Maximum 15 cards",
+      "Incorrect maindeck - No cards found": "Incorrect maindeck - No cards found",
+      "Incorrect maindeck - Minimum 40 cards required": "Incorrect maindeck - Minimum 40 cards required",
+      "Incorrect card count - Same cards cannot exceed 4 copies in maindeck and sideboard combined, except basic lands": "Incorrect card count - Same cards cannot exceed 4 copies in maindeck and sideboard combined, except basic lands",
+      "Incorrect form - Name is required": "Incorrect form - Name is required",
+      "Incorrect form - Surname is required": "Incorrect form - Surname is required",
+      "Incorrect form - Deck name is required": "Incorrect form - Deck name is required"
+    },
     "stats": {
       "Sorry, now we don't have tournaments registered for this league": "Sorry, now we don't have tournaments registered for this league"
     }
@@ -352,8 +359,7 @@
     },
     "leagues": {
       "title": "MTG Legacy Stats Catalonia | Decks, Players & Tournament Results | MTG Legacy League - CAT Legacy",
-      "description": "Community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting.",
-      "stats": "Season Stats"
+      "description": "Community dedicated to the Legacy format of Magic: The Gathering in Catalonia, focused on organizing leagues, tournaments, and competitive events for players of all levels. Through regular gatherings in local game stores and special competitions, it fosters an active environment where participants can test their skills, share strategies, and enjoy the game in a friendly yet competitive setting."
     }
   },
   "language": {

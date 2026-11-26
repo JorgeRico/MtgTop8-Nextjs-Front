@@ -1,68 +1,91 @@
-"use client";
+'use client';
 
-import { useTranslations } from "next-intl";
-import { LeagueType } from "@/types/schemas/database/league";
-import { useRouter } from "next/navigation";
+import {useTranslations} from 'next-intl';
+import {LeagueType} from '@/types/schemas/database/league';
+import {useRouter} from 'next/navigation';
+import {useState, useTransition} from 'react';
+import ButtonSpinner from '@/components/Icons/ButtonSpinner';
 
 type PastLeaguesComponentProps = {
-    leagues: LeagueType[];
+  leagues: LeagueType[];
 };
 
-export default function PastLeagues({ leagues }: PastLeaguesComponentProps) {
-    const t         = useTranslations("past-leagues");
-    const assetPath = "/images/home";
-    const router    = useRouter();
+export default function PastLeagues({leagues}: PastLeaguesComponentProps) {
+  const t = useTranslations('past-leagues');
+  const assetPath = '/images/home';
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+  const [pendingLeagueId, setPendingLeagueId] = useState<string | null>(null);
 
-    const handlOnClick = (league: LeagueType) => {
-        router.push("/leagues/" + league.id);
-    }
+  const handlOnClick = (league: LeagueType) => {
+    router.push('/leagues/' + league.id);
+  };
 
-    return (
-        <main className="archive-page">
-            <section className="past-leagues" aria-labelledby="past-leagues-title">
-                <div className="league-stack" aria-live="polite">
-                    {leagues.map((league, index) => (
-                        <article className="league-card bg-surface-card mb-1.5" key={index}>
-                            <div className="league-summary">
-                                <span className="medal-icon" aria-hidden="true">
-                                    <img src={`${assetPath}/badge.png`} alt="" />
-                                </span>
-                                <div className="league-copy">
-                                    <h2>{league.name}</h2>
-                                    <div className="winner-row">
-                                        <span className="dot winner">•</span>
-                                        <span className="winner">{t('Winner')}: {"league.winner"}</span>
-                                    </div>
-                                    <div className="league-meta">
-                                        <span>{"league.tournaments"} {t('Tournaments')}</span>
-                                        <span>{"league.competitors"} {t(('Competitors'))}</span>
-                                        <span className="completed">{t('Completed')}</span>
-                                    </div>
-                                </div>
-                            </div>
+  const handleViewLeague = (league: LeagueType) => {
+    setPendingLeagueId(league.id);
+    startTransition(() => {
+      router.push('/leagues/' + league.id);
+    });
+  };
 
-                            <div className="card-actions">
-                                <button
-                                    className="secondary-action cursor-pointer"
-                                    type="button"
-                                    onClick={() => handlOnClick(league)}
-                                >
-                                    <img src={`${assetPath}/list.png`} alt="" />
-                                    {t('Top 8 Decks')}
-                                </button>
-                                <button
-                                    className="primary-action cursor-pointer"
-                                    type="button"
-                                    onClick={() => handlOnClick(league)}
-                                >
-                                    {t('View league')}
-                                    <img src={`${assetPath}/full_arrow_forward.png`} alt="" />
-                                </button>
-                            </div>
-                        </article>
-                    ))}
+  return (
+    <main className="archive-page">
+      <section className="past-leagues" aria-labelledby="past-leagues-title">
+        <div className="league-stack" aria-live="polite">
+          {leagues.map((league, index) => (
+            <article className="league-card bg-surface-card mb-1.5" key={index}>
+              <div className="league-summary">
+                <span className="medal-icon" aria-hidden="true">
+                  <img src={`${assetPath}/badge.png`} alt="" />
+                </span>
+                <div className="league-copy">
+                  <h2>{league.name}</h2>
+                  <div className="winner-row">
+                    <span className="dot winner">•</span>
+                    <span className="winner">
+                      {t('Winner')}: {'league.winner'}
+                    </span>
+                  </div>
+                  <div className="league-meta">
+                    <span>
+                      {'league.tournaments'} {t('Tournaments')}
+                    </span>
+                    <span>
+                      {'league.competitors'} {t('Competitors')}
+                    </span>
+                    <span className="completed">{t('Completed')}</span>
+                  </div>
                 </div>
-            </section>
-        </main>
-    );
+              </div>
+
+              <div className="card-actions">
+                <button
+                  className="secondary-action cursor-pointer"
+                  type="button"
+                  onClick={() => handlOnClick(league)}
+                >
+                  <img src={`${assetPath}/list.png`} alt="" />
+                  {t('Top 8 Decks')}
+                </button>
+                <button
+                  aria-busy={isPending && pendingLeagueId === league.id}
+                  className="primary-action cursor-pointer"
+                  disabled={isPending && pendingLeagueId === league.id}
+                  type="button"
+                  onClick={() => handleViewLeague(league)}
+                >
+                  {isPending && pendingLeagueId === league.id ? (
+                    <ButtonSpinner />
+                  ) : (
+                    t('View league')
+                  )}
+                  <img src={`${assetPath}/full_arrow_forward.png`} alt="" />
+                </button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
 }

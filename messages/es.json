@@ -50,6 +50,14 @@
       "Date": "Fecha",
       "players": "jugadores",
       "View Tournament": "Ver Torneo"
+    },
+    "detail": {
+      "tabs_label": "Secciones del torneo",
+      "tab_overview": "Resumen",
+      "tab_decklist": "Decklist",
+      "tab_stats": "Estadísticas",
+      "loading_stats": "Cargando estadísticas...",
+      "no_stats": "No hay estadísticas disponibles"
     }
   },
   "deck": {
@@ -98,11 +106,12 @@
       "players_stage": "jugadores / jornada",
       "stages_played": "Jornadas disputadas",
       "season_progress": "Progreso de temporada",
-      "tab_tournaments": "Torneos",
-      "tab_standings": "Clasificación",
-      "tab_meta": "Meta",
+      "tab_winners": "Ganadores",
+      "tab_players": "Jugadores",
+      "tab_stats": "Estadísticas",
       "tab_location": "Sede",
       "last_sync": "Sincronizado {date}",
+      "loading_winners": "Cargando ganadores...",
       "no_tournaments": "No hay torneos registrados para esta liga",
       "circuit_stages": "Jornadas del circuito",
       "circuit_stages_desc": "Torneos de la temporada y campeones de cada jornada",
@@ -110,7 +119,6 @@
       "completed": "Completado",
       "players": "jugadores",
       "champion": "Campeón",
-      "view_tournament": "Ver torneo",
       "loading_standings": "Cargando clasificación...",
       "no_standings": "No hay clasificación disponible",
       "leaderboard_title": "Clasificación de la temporada {year}",
@@ -163,7 +171,6 @@
     "Most played cards and main deck and sideboard card stats": "Estadisticas de las cartas más jugadas, tanto en el mainboard y en el sideboard",
     "Total": "Total",
     "Name": "Nombre",
-    "Player Stats": "Estadisticas jugadores",
     "View": "Ver"
   },
   "errors": {
@@ -171,18 +178,18 @@
       "Sorry, now we don't have tournaments registered for this league": "Lo siento, no tenemos torneos registrados para esta liga"
     },
     "forms": {
-       "Pay 3 extra manas and try again": "Paga 3 manas extra y vuelve a probar.",
-       "Please, fill all data fields": "Por favor, rellena todos los campos del formulario.",
-       "Incorrect form - fill form correctly": "Formulario incorrecto - rellena el formulario correctamente",
-       "Incorrect form - card incorrect format": "Formulario incorrecto - cartas con formato incorrecto",
-       "Incorrect sideboard - Maximum 15 cards": "Sideboard incorrecto - Máximo 15 cartas",
-       "Incorrect maindeck - No cards found": "Maindeck incorrecto - No se encontraron cartas",
-       "Incorrect maindeck - Minimum 40 cards required": "Maindeck incorrecto - Mínimo 40 cartas requeridas",
-       "Incorrect card count - Same cards cannot exceed 4 copies in maindeck and sideboard combined, except basic lands": "Maindeck/Sideboard: Mismo cartón no puede superar 4 copias combinadas, excepto tierras básicas",
-       "Incorrect form - Name is required": "Formulario incorrecto - Se requiere nombre",
-       "Incorrect form - Surname is required": "Formulario incorrecto - Se requiere apellido",
-       "Incorrect form - Deck name is required": "Formulario incorrecto - Se requiere nombre de baraja"
-     },
+      "Pay 3 extra manas and try again": "Paga 3 manas extra y vuelve a probar.",
+      "Please, fill all data fields": "Por favor, rellena todos los campos del formulario.",
+      "Incorrect form - fill form correctly": "Formulario incorrecto - rellena el formulario correctamente",
+      "Incorrect form - card incorrect format": "Formulario incorrecto - cartas con formato incorrecto",
+      "Incorrect sideboard - Maximum 15 cards": "Sideboard incorrecto - Máximo 15 cartas",
+      "Incorrect maindeck - No cards found": "Maindeck incorrecto - No se encontraron cartas",
+      "Incorrect maindeck - Minimum 40 cards required": "Maindeck incorrecto - Mínimo 40 cartas requeridas",
+      "Incorrect card count - Same cards cannot exceed 4 copies in maindeck and sideboard combined, except basic lands": "Maindeck/Sideboard: Mismo cartón no puede superar 4 copias combinadas, excepto tierras básicas",
+      "Incorrect form - Name is required": "Formulario incorrecto - Se requiere nombre",
+      "Incorrect form - Surname is required": "Formulario incorrecto - Se requiere apellido",
+      "Incorrect form - Deck name is required": "Formulario incorrecto - Se requiere nombre de baraja"
+    },
     "stats": {
       "Sorry, now we don't have tournaments registered for this league": "Lo siento, no tenemos torneos registrados para esta liga"
     }
@@ -352,8 +359,7 @@
     },
     "leagues": {
       "title": "MTG Legacy Stats Cataluña | Decks, Jugadores y resultados de torneos | Ligas de Magic The Gathering - CAT Legacy",
-      "description": "Comunidad dedicada al formato Legacy de Magic: The Gathering en Cataluña, centrada en la organización de ligas, torneos y eventos competitivos para jugadores de todos los niveles. A través de encuentros regulares en tiendas locales y competiciones especiales, fomenta un entorno activo donde los participantes pueden poner a prueba sus habilidades, compartir estrategias y disfrutar del juego en un ambiente cercano pero competitivo.",
-      "stats": "Estadisticas de la temporada"
+      "description": "Comunidad dedicada al formato Legacy de Magic: The Gathering en Cataluña, centrada en la organización de ligas, torneos y eventos competitivos para jugadores de todos los niveles. A través de encuentros regulares en tiendas locales y competiciones especiales, fomenta un entorno activo donde los participantes pueden poner a prueba sus habilidades, compartir estrategias y disfrutar del juego en un ambiente cercano pero competitivo."
     }
   },
   "language": {

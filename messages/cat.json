@@ -50,6 +50,14 @@
       "Date": "Data",
       "players": "jugadors",
       "View Tournament": "Veure el Torneig"
+    },
+    "detail": {
+      "tabs_label": "Seccions del torneig",
+      "tab_overview": "Resum",
+      "tab_decklist": "Decklist",
+      "tab_stats": "Estadístiques",
+      "loading_stats": "Carregant estadístiques...",
+      "no_stats": "No hi ha estadístiques disponibles"
     }
   },
   "deck": {
@@ -98,11 +106,12 @@
       "players_stage": "jugadors / jornada",
       "stages_played": "Jornades disputades",
       "season_progress": "Progrés de temporada",
-      "tab_tournaments": "Tornejos",
-      "tab_standings": "Classificació",
-      "tab_meta": "Meta",
+      "tab_winners": "Guanyadors",
+      "tab_players": "Jugadors",
+      "tab_stats": "Estadístiques",
       "tab_location": "Seu",
       "last_sync": "Sincronitzat {date}",
+      "loading_winners": "Carregant guanyadors...",
       "no_tournaments": "No hi ha tornejos registrats per aquesta lliga",
       "circuit_stages": "Jornades del circuit",
       "circuit_stages_desc": "Tornejos de la temporada i campions de cada jornada",
@@ -110,7 +119,6 @@
       "completed": "Completat",
       "players": "jugadors",
       "champion": "Campió",
-      "view_tournament": "Veure el torneig",
       "loading_standings": "Carregant la classificació...",
       "no_standings": "No hi ha classificació disponible",
       "leaderboard_title": "Classificació de la temporada {year}",
@@ -163,26 +171,25 @@
     "Most played cards and main deck and sideboard card stats": "Cartes més jugades y estadistiques de les cartes del main i del sideboard",
     "Total": "Total",
     "Name": "Nom",
-    "Player Stats": "Estadistiques jugadors",
     "View": "Veure"
   },
   "errors": {
     "league": {
       "Sorry, now we don't have tournaments registered for this league": "Ho sentim molt, no tenim cap torneig registrat per aquesta lliga"
     },
-"forms": {
-       "Pay 3 extra manas and try again": "Paga 3 manes extres i prova de nou.",
-       "Please, fill all data fields": "Si us plau, omple tots els camps del formulari.",
-       "Incorrect form - fill form correctly": "Formulari incorrecte - Si us plau, omple el formulari correctament",
-       "Incorrect form - card incorrect format": "Formulari incorrecte - Cartes amb un format incorrecte",
-       "Incorrect sideboard - Maximum 15 cards": "Sideboard incorrecta - Màxim de 15 cartes",
-       "Incorrect maindeck - No cards found": "MainDeck incorrecta - No s'han trobat cartes",
-       "Incorrect maindeck - Minimum 40 cards required": "MainDeck incorrecte - Mínim de 40 cartes requerides",
-       "Incorrect card count - Same cards cannot exceed 4 copies in maindeck and sideboard combined, except basic lands": "Maindeck/Sideboard: El mateix cartó no pot superar les 4 còpies combinades, llevat que siguin terres bàsiques",
-       "Incorrect form - Name is required": "Formulari incorrecte - Nom requerit",
-       "Incorrect form - Surname is required": "Formulari incorrecte - Cognom requerit",
-       "Incorrect form - Deck name is required": "Formulari incorrecte - Nom de baralla requerit"
-     },
+    "forms": {
+      "Pay 3 extra manas and try again": "Paga 3 manes extres i prova de nou.",
+      "Please, fill all data fields": "Si us plau, omple tots els camps del formulari.",
+      "Incorrect form - fill form correctly": "Formulari incorrecte - Si us plau, omple el formulari correctament",
+      "Incorrect form - card incorrect format": "Formulari incorrecte - Cartes amb un format incorrecte",
+      "Incorrect sideboard - Maximum 15 cards": "Sideboard incorrecta - Màxim de 15 cartes",
+      "Incorrect maindeck - No cards found": "MainDeck incorrecta - No s'han trobat cartes",
+      "Incorrect maindeck - Minimum 40 cards required": "MainDeck incorrecte - Mínim de 40 cartes requerides",
+      "Incorrect card count - Same cards cannot exceed 4 copies in maindeck and sideboard combined, except basic lands": "Maindeck/Sideboard: El mateix cartó no pot superar les 4 còpies combinades, llevat que siguin terres bàsiques",
+      "Incorrect form - Name is required": "Formulari incorrecte - Nom requerit",
+      "Incorrect form - Surname is required": "Formulari incorrecte - Cognom requerit",
+      "Incorrect form - Deck name is required": "Formulari incorrecte - Nom de baralla requerit"
+    },
     "stats": {
       "Sorry, now we don't have tournaments registered for this league": "Ho sentim molt, no tenim cap torneig registrat per aquesta lliga"
     }
@@ -352,8 +359,7 @@
     },
     "leagues": {
       "title": "MTG Legacy Stats Catalunya | Decks, Jugadors i resultats de tornejos | Lligues Magic The Gathering - CAT Legacy",
-      "description": "Catalan MTG Legacy és una comunitat dedicada al format Legacy de Magic: The Gathering a Catalunya, centrada en l’organització de lligues, tornejos i esdeveniments competitius per a jugadors de tots els nivells. Mitjançant trobades regulars en botigues locals i competicions especials, fomenta un entorn actiu on els participants poden posar a prova les seves habilitats, compartir estratègies i gaudir del joc en un ambient proper però competitiu.",
-      "stats": "Estadistiques de la temporada"
+      "description": "Catalan MTG Legacy és una comunitat dedicada al format Legacy de Magic: The Gathering a Catalunya, centrada en l’organització de lligues, tornejos i esdeveniments competitius per a jugadors de tots els nivells. Mitjançant trobades regulars en botigues locals i competicions especials, fomenta un entorn actiu on els participants poden posar a prova les seves habilitats, compartir estratègies i gaudir del joc en un ambient proper però competitiu."
     }
   },
   "language": {

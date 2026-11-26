@@ -804,3 +804,7 @@ button.form-padding {
   }
 
 }
+
+.size-8-width {
+  width: calc(var(--spacing) * 8);
+}
