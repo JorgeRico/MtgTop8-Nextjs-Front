@@ -1,4 +1,3 @@
-import Button from "@/components/List/Button";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { TournamentItemType } from "@/types/schemas/database/tournament";
@@ -27,7 +26,13 @@ const TournamentItem = ({ name, description, buttonText }: TournamentItemType) =
                         {description}
                     </span>
                 </div>
-                <Button buttonText={buttonText}></Button>
+                <button
+                    aria-label={buttonText}
+                    className="listButton right bg-red border-grey radius5 color-white f14 pointer"
+                    type="button"
+                >
+                    {buttonText}
+                </button>
             </div>
         </div>
     )

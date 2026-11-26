@@ -3,7 +3,6 @@ import "../module.css";
 import { getAxiosEndpoint, replaceUrlIdParam } from '@/hooks/useApi';
 import endpoints from "@/types/server/endpoints";
 import Deck from "@/components/List/Deck";
-import Button from "@/components/List/Button";
 import BlockLine from "@/components/List/Player/BlockLine";
 import { useTranslations } from 'next-intl';
 import { PlayerItemType } from "@/types/schemas/database/player";
@@ -62,7 +61,14 @@ const TournamentPlayerItem = ({ item, index }: PlayerItemType) => {
                     deck     = {item.deckName}
                 />
                 <div className="left viewDeck" onClick={() => handleCards((index+1), item.idDeck)}>
-                    <Button buttonText={t('View deck')} id={'button-deck-'+(index+1)}/>
+                    <button
+                        aria-label={t('View deck')}
+                        className="listButton right bg-red border-grey radius5 color-white f14 pointer"
+                        id={'button-deck-'+(index+1)}
+                        type="button"
+                    >
+                        {t('View deck')}
+                    </button>
                 </div>
             </section>
 
